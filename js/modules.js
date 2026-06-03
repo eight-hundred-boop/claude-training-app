@@ -301,7 +301,7 @@ const MODULES = [
               <tr>
                 <td><strong>IDE</strong>（VS Code / Cursor / JetBrains 拡張など）</td>
                 <td>Claude Code（より高度）</td>
-                <td>コードや教材ファイルを見ながら作業したい人向け。社内には Cursor 活用のノウハウもある</td>
+                <td>コードや複数のファイルを見ながら作業したい人向け。社内には Cursor 活用のノウハウもある</td>
               </tr>
               <tr>
                 <td>CLI（ターミナル）</td>
@@ -321,7 +321,7 @@ const MODULES = [
           <div class="info-box">
             <strong>📖 CLI と IDE とは？</strong><br>
             <strong>CLI（コマンドラインインターフェース）</strong>：ターミナルやコマンドプロンプトと呼ばれる、文字でコンピューターに指示を出す画面です。並列作業や自動化を求めるようになってから使い始めれば十分です。<br>
-            <strong>IDE（統合開発環境）</strong>：VS Code / Cursor / JetBrains 拡張などのコードエディタ。ファイルを横に並べて見ながら編集できるツールです。コードや教材ファイルを編集する人向けです。
+            <strong>IDE（統合開発環境）</strong>：VS Code / Cursor / JetBrains 拡張などのコードエディタ。ファイルを横に並べて見ながら編集できるツールです。コードや複数のファイルを編集する人向けです。
           </div>
 
           <h3>判断フロー — いつ、どれを使う？</h3>
@@ -485,6 +485,16 @@ const MODULES = [
             </div>
           </div>
 
+          <h3>どのモデルを選ぶ？／どれだけ資料を渡せる？</h3>
+          <div class="info-box">
+            <strong>🧠 どのモデルを選ぶ？</strong><br>
+            Claude には用途別に複数のモデルがあり、Chat 画面のメニューで切り替えられます。<strong>高性能（複雑な分析・難しい長文）＝Opus</strong> ／ <strong>バランス型（日常業務の多くに最適）＝Sonnet</strong> ／ <strong>高速・軽量（短い定型処理）＝Haiku</strong>。迷ったらまず標準（バランス型）で、難所だけ高性能に切り替えれば OK です。
+          </div>
+          <div class="info-box">
+            <strong>📚 どれだけ資料を渡せる？（トークン）</strong><br>
+            Claude は一度に<strong>約15万字（200K トークン）</strong>まで読み込めます。長い議事録や報告書もまるごと貼って質問できます。ただし一度に詰め込みすぎると要点がぼけることもあるので、必要な資料に絞る・分割するのもコツです。
+          </div>
+
           <div class="try-box">
             <strong>✅ やってみよう</strong><br>
             claude.ai を開いて、以下のどれかを試してみましょう：<br><br>
@@ -570,14 +580,27 @@ const MODULES = [
             まず簡潔に指示を出して、返ってきた出力を見て「もっと詳しく」「形式を変えて」と追加指示するのも有効です。1回で完璧を目指すより、対話で磨く方が速いことも多い。
           </div>
 
+          <div class="info-box">
+            <strong>📄 会社の「生成AIプロンプト集」を活用する</strong><br>
+            ゼロからプロンプトを書く前に、まず社内の<a href="https://app.notion.com/p/eight-hundred/22bb14ae3bcd80f4898dd3816448557c?v=22cb14ae3bcd80088278000ca2862351" target="_blank" rel="noopener">生成AIプロンプト集</a>を探すのが近道です。リサーチ・分析・文書作成・資料作成・レビューなどの<strong>業務カテゴリ別／難易度別</strong>に整理されているので、見つけた型を自分の案件に合わせて調整して使いましょう。
+          </div>
+
           <h3>「Claudeへの指示」で毎回の手間を減らす</h3>
           <p>毎回同じ前提（自分の役職、業界、好みのトーンなど）を書くのは面倒です。Claude には<strong>「Claudeへの指示」</strong>（設定 > 一般）という機能があり、全会話で自動的に参照される前提を登録できます。</p>
           <div class="example-box">
-            <strong>📌 設定例</strong><br><br>
-            「私は経営コンサルティングファームのシニアコンサルタントです。<br>
-            出力はです・ます調、結論先行で。<br>
-            根拠のない数字は使わないでください。」
+            <strong>📝 穴埋めテンプレート（〔 〕を自分の業務に置き換える）</strong><br><br>
+            私は〔役割・所属〕です（例：コンサルティングファームのコンサルタント）。<br>
+            出力は結論先行・です・ます調で、要点は箇条書きにしてください。<br>
+            数字・固有名詞は根拠のあるものだけを使い、不確かな点は「要確認」と明記してください。<br>
+            専門用語には簡単な補足を添え、誇張・断定表現は避けてください。
           </div>
+          <div class="example-box">
+            <strong>📌 そのまま使える汎用例</strong><br><br>
+            私は幅広いテーマを扱うビジネスパーソンです。<br>
+            出力は結論先行・です・ます調、要点は箇条書きで簡潔に。<br>
+            根拠のない数字・固有名詞は使わず、不確かな点は「要確認」と明記してください。
+          </div>
+          <p style="color:var(--text-secondary);font-size:14px;">案件ごとの前提（クライアント名・フェーズ等）は Project の Instructions（1-7）に、全業務に共通する自分の作法はこの「Claudeへの指示」に分けると管理しやすい。</p>
 
           <div class="try-box">
             <strong>✅ やってみよう</strong><br>
@@ -1592,6 +1615,32 @@ const MODULES = [
           </ul>
           <p>だから、案件の前提資料やナレッジを手元のフォルダに置いておけば、毎回アップロードし直さなくても、必要なときに Claude がそこを参照する。中身は自分でいつでも確認・編集できるので、常に最新に保てる。</p>
 
+          <div class="visual-comparison">
+            <div class="visual-comparison-card before">
+              <span class="comp-label">クラウド型</span>
+              <h4>💬 Chat</h4>
+              <p style="text-align:center;line-height:2;margin:0;">
+                📄 ファイル<br>
+                ↓ <strong>⬆️ アップロード</strong><br>
+                ☁️ クラウド<br>
+                ↓<br>
+                🤖 Claude が読む
+              </p>
+              <p style="margin-top:10px;"><strong>※「アップロード」のワンクッションが要る</strong></p>
+            </div>
+            <div class="visual-comparison-card after">
+              <span class="comp-label">ローカル型</span>
+              <h4>📂 Cowork</h4>
+              <p style="text-align:center;line-height:2;margin:0;">
+                📁 PC のフォルダ<br>
+                ↕ <strong>直接アクセス</strong><br>
+                🤖 Claude<br>
+                <span style="color:var(--text-muted)">（往復なし）</span>
+              </p>
+              <p style="margin-top:10px;"><strong>※常に最新・フォルダごと一括で扱える</strong></p>
+            </div>
+          </div>
+
           <h3>Chat との決定的な違い — フォルダに直接アクセスできる</h3>
           <p>Chat は「テキストで対話」する場で、ファイルを<strong>添付</strong>し、結果はコピーやダウンロードで持ち出す“持ち込み・持ち出し”型です。1回で渡しきれるタスクに向きます。</p>
           <p>Cowork は<strong>作業フォルダごと Claude に渡し、その中のファイルを直接ひらいて読み・加工し、新しいファイルとして書き出せます</strong>。アップロードとダウンロードの往復がいらないのが最大の違いです（単発なら従来どおり添付でも構いません）。</p>
@@ -1789,7 +1838,7 @@ const MODULES = [
           </div>
 
           <div class="info-box">
-            <p>Scheduled tasks は Cowork（デスクトップアプリ）の機能です。アプリが起動していなくても、設定したスケジュールに従って Claude が自動実行します。</p>
+            <p>Scheduled tasks は Cowork（Claude Desktop）の機能です。実行されるのは <strong>PC が起動していて Claude Desktop が開いている間だけ</strong>で、PC がスリープ／アプリを閉じている間はスキップされ、次に PC を起動してアプリを開いたときに自動実行されます（クラウドで常時動くわけではありません）。</p>
           </div>
         `
       },
@@ -2254,6 +2303,7 @@ const MODULES = [
         { title: 'Claude プロンプトライブラリ', url: 'https://docs.anthropic.com/en/prompt-library/library', desc: '用途別のプロンプト例を多数掲載', category: '📖 プロンプトを学ぶ' },
         { title: 'Claude Tips & Tricks（YouTube）', url: 'https://www.youtube.com/playlist?list=PLf2m23nhTg5VEz8sS0ORurJk3lBL7nB0V', desc: 'Anthropic 公式の使い方動画', category: '📖 プロンプトを学ぶ' },
         { title: 'Anthropic Cookbook', url: 'https://github.com/anthropics/anthropic-cookbook', desc: '実践的なユースケースとコード例', category: '📖 プロンプトを学ぶ' },
+        { title: '生成AIプロンプト集（社内DB）', url: 'https://app.notion.com/p/eight-hundred/22bb14ae3bcd80f4898dd3816448557c?v=22cb14ae3bcd80088278000ca2862351', desc: '社内で作成した業務別プロンプト集。業務カテゴリ別／難易度別に整理', category: '📖 プロンプトを学ぶ' },
         { title: 'Anthropic 公式ドキュメント', url: 'https://docs.anthropic.com/', desc: 'Claude の技術仕様・機能一覧・ベストプラクティス', category: '📚 公式リファレンス' },
         { title: 'Claude サポートサイト', url: 'https://support.claude.com/', desc: 'Project・Artifact・各機能の使い方ガイド', category: '📚 公式リファレンス' },
         { title: 'Claude in Office（Anthropic 公式）', url: 'https://www.anthropic.com/claude-in-office', desc: 'Excel / PowerPoint / Word との連携ガイド', category: '💼 Officeで使う' },
