@@ -312,7 +312,7 @@
             </div>
             <h3>TIPS集</h3>
             <p>研修本編の補助教材。実務で必要なときに参照する実践TIPS。</p>
-            <div class="card-count">${(typeof TIPS !== 'undefined' ? TIPS.length : 0)} 件 &middot; 8カテゴリ</div>
+            <div class="card-count">${(typeof TIPS !== 'undefined' ? TIPS.length : 0)} 件 &middot; ${(typeof TIPS_CATEGORIES !== 'undefined' ? TIPS_CATEGORIES.length : 0)}カテゴリ</div>
           </div>
           <div class="home-hero-card slide-up" data-nav="links" style="animation-delay:.15s">
             <div class="card-icon">
