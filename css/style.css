@@ -2798,6 +2798,17 @@ body.present-mode #page-container:has(.slide-cover) {
   }
 }
 
+/* サイドバー表示時（has-sidebar）は本文コンテナにサイドバー幅ぶんの左ガターを確保し、
+   残りスペースの中央に配置する。サイドバーは fixed（left:12px / width:240px → 右端252px）
+   なので、中央寄せのままだと幅1200〜1368px付近で本文に重なる。
+   サイドバーが隠れる1200px以下には適用しない。スコープを present-mode + :has() に限定。 */
+@media (min-width: 1201px) {
+  body.present-mode #page-container:has(.has-sidebar) {
+    margin-left: calc(276px + max(0px, (100vw - 276px - 960px) / 2));
+    margin-right: auto;
+  }
+}
+
 .sidebar-cover-link {
   padding: 8px 16px;
   font-size: 13px;
