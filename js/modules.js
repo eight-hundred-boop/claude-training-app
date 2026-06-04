@@ -970,29 +970,29 @@ const MODULES = [
               <tr>
                 <th>アドイン</th>
                 <th>用途</th>
-                <th>Marketplace URL</th>
+                <th>インストール / 使い方</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td><strong>Claude for PowerPoint</strong></td>
                 <td>スライド構成・改善</td>
-                <td><a href="https://marketplace.microsoft.com/en-us/product/office/wa200010001" target="_blank" rel="noopener">marketplace.microsoft.com/.../wa200010001</a></td>
+                <td><a href="https://support.claude.com/en/articles/13521390-use-claude-for-powerpoint" target="_blank" rel="noopener">公式ガイドを開く（手順・使い方）</a></td>
               </tr>
               <tr>
                 <td><strong>Claude for Word</strong></td>
                 <td>文書要約・校正・Tracked Changes</td>
-                <td><a href="https://marketplace.microsoft.com/en-us/product/office/wa200010453" target="_blank" rel="noopener">marketplace.microsoft.com/.../wa200010453</a></td>
+                <td><a href="https://support.claude.com/en/articles/14465370-use-claude-for-word" target="_blank" rel="noopener">公式ガイドを開く（手順・使い方）</a></td>
               </tr>
               <tr>
                 <td><strong>Claude for Excel</strong></td>
                 <td>データ分析・集計</td>
-                <td><a href="https://marketplace.microsoft.com/en-us/product/saas/wa200009404" target="_blank" rel="noopener">marketplace.microsoft.com/.../wa200009404</a></td>
+                <td><a href="https://support.claude.com/en/articles/12650343-use-claude-for-excel" target="_blank" rel="noopener">公式ガイドを開く（手順・使い方）</a></td>
               </tr>
             </tbody>
           </table>
 
-          <p>公式ヘルプ：<a href="https://support.claude.com/en/articles/13521390-use-claude-for-powerpoint" target="_blank" rel="noopener">PowerPoint</a> / <a href="https://support.claude.com/en/articles/14465370-use-claude-for-word" target="_blank" rel="noopener">Word</a> / <a href="https://support.claude.com/en/articles/12650343-use-claude-for-excel" target="_blank" rel="noopener">Excel</a></p>
+          <p>アプリ間連携：<a href="https://support.claude.com/en/articles/13892150-work-across-microsoft-365-apps" target="_blank" rel="noopener">Microsoft 365 のアプリをまたいで使う（Excel→PowerPoint 等）</a></p>
 
           <h4>PowerPoint アドインのインストール手順（研修中に実施・約3〜5分）</h4>
           <div class="visual-steps">
@@ -2300,7 +2300,7 @@ const MODULES = [
       links: [
         { title: 'Claude.ai（公式サイト）', url: 'https://claude.ai/', desc: 'Claude のチャット・Cowork はここからアクセス', category: '🚀 はじめる' },
         { title: 'Claude デスクトップアプリ ダウンロード', url: 'https://claude.com/download', desc: 'Mac / Windows 対応', category: '🚀 はじめる' },
-        { title: 'Claude プロンプトライブラリ', url: 'https://docs.anthropic.com/en/prompt-library/library', desc: '用途別のプロンプト例を多数掲載', category: '📖 プロンプトを学ぶ' },
+        { title: 'プロンプト設計ガイド', url: 'https://docs.claude.com/en/resources/prompt-library/library', desc: 'プロンプト作成のコツ・ベストプラクティス', category: '📖 プロンプトを学ぶ' },
         { title: 'Claude Tips & Tricks（YouTube）', url: 'https://www.youtube.com/playlist?list=PLf2m23nhTg5VEz8sS0ORurJk3lBL7nB0V', desc: 'Anthropic 公式の使い方動画', category: '📖 プロンプトを学ぶ' },
         { title: 'Anthropic Cookbook', url: 'https://github.com/anthropics/anthropic-cookbook', desc: '実践的なユースケースとコード例', category: '📖 プロンプトを学ぶ' },
         { title: '生成AIプロンプト集（社内DB）', url: 'https://app.notion.com/p/eight-hundred/22bb14ae3bcd80f4898dd3816448557c?v=22cb14ae3bcd80088278000ca2862351', desc: '社内で作成した業務別プロンプト集。業務カテゴリ別／難易度別に整理', category: '📖 プロンプトを学ぶ' },
