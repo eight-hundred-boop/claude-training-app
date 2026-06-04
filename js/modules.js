@@ -2304,14 +2304,14 @@ const MODULES = [
         { title: 'Claude Tips & Tricks（YouTube）', url: 'https://www.youtube.com/playlist?list=PLf2m23nhTg5VEz8sS0ORurJk3lBL7nB0V', desc: 'Anthropic 公式の使い方動画', category: '📖 プロンプトを学ぶ' },
         { title: 'Anthropic Cookbook', url: 'https://github.com/anthropics/anthropic-cookbook', desc: '実践的なユースケースとコード例', category: '📖 プロンプトを学ぶ' },
         { title: '生成AIプロンプト集（社内DB）', url: 'https://app.notion.com/p/eight-hundred/22bb14ae3bcd80f4898dd3816448557c?v=22cb14ae3bcd80088278000ca2862351', desc: '社内で作成した業務別プロンプト集。業務カテゴリ別／難易度別に整理', category: '📖 プロンプトを学ぶ' },
-        { title: 'Anthropic 公式ドキュメント', url: 'https://docs.anthropic.com/', desc: 'Claude の技術仕様・機能一覧・ベストプラクティス', category: '📚 公式リファレンス' },
+        { title: 'Anthropic 公式ドキュメント', url: 'https://docs.claude.com/', desc: 'Claude の技術仕様・機能一覧・ベストプラクティス', category: '📚 公式リファレンス' },
         { title: 'Claude サポートサイト', url: 'https://support.claude.com/', desc: 'Project・Artifact・各機能の使い方ガイド', category: '📚 公式リファレンス' },
-        { title: 'Claude in Office（Anthropic 公式）', url: 'https://www.anthropic.com/claude-in-office', desc: 'Excel / PowerPoint / Word との連携ガイド', category: '💼 Officeで使う' },
-        { title: 'Cowork 公式ドキュメント', url: 'https://docs.anthropic.com/en/docs/cowork', desc: 'Cowork の機能と使い方ガイド', category: '💼 Officeで使う' },
+        { title: 'Claude in Office（公式ガイド）', url: 'https://support.claude.com/en/articles/13892150-work-across-microsoft-365-apps', desc: 'Excel / PowerPoint / Word との連携ガイド', category: '💼 Officeで使う' },
+        { title: 'Cowork 公式ガイド', url: 'https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork', desc: 'Cowork の機能と使い方ガイド', category: '💼 Officeで使う' },
         { title: 'Claude in Chrome 拡張', url: 'https://chromewebstore.google.com/detail/claude/danfoobapigkipfachmebkhbhegkahpc', desc: 'Chrome 拡張のインストールページ', category: '🌐 Chromeで使う' },
-        { title: 'Artifact ガイド', url: 'https://support.anthropic.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them', desc: 'Artifact の使い方と活用例', category: '📚 公式リファレンス' },
-        { title: 'Research 機能ガイド', url: 'https://support.anthropic.com/en/articles/10120029-how-does-research-work', desc: 'Research の仕組みと活用方法', category: '📚 公式リファレンス' },
-        { title: 'Scheduled tasks ガイド', url: 'https://support.anthropic.com/en/articles/11053627-what-are-scheduled-tasks', desc: 'Scheduled tasks の設定方法', category: '📚 公式リファレンス' }
+        { title: 'Artifact ガイド', url: 'https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them', desc: 'Artifact の使い方と活用例', category: '📚 公式リファレンス' },
+        { title: 'Research 機能ガイド', url: 'https://support.claude.com/en/articles/11088861-use-research-on-claude', desc: 'Research の仕組みと活用方法', category: '📚 公式リファレンス' },
+        { title: 'Scheduled tasks ガイド', url: 'https://support.claude.com/en/articles/13854387-schedule-recurring-tasks-in-claude-cowork', desc: 'Scheduled tasks の設定方法', category: '📚 公式リファレンス' }
       ],
       faq: [
         { q: 'Claude ではまず何から使えばよいですか？', a: 'まずは Chat から始めましょう。壁打ち（論点整理）、下書き（メール・報告書の素案）、要約（長い文書を要点に絞る）の3パターンが最も使用頻度が高いです。慣れてきたら Project で案件の背景を登録し、Artifact で成果物を残すとさらに効率が上がります。', category: '💡 Claudeの基本' },
@@ -3377,13 +3377,13 @@ const MODULES = [
     // ========================================
     selfStudyResources: {
       links: [
-        { title: 'Claude Skills ガイド', url: 'https://docs.anthropic.com/en/docs/claude-code/skills', desc: 'Skills の作成方法と活用例', category: '🔧 Claude Codeで使う' },
-        { title: 'Claude Code 公式ドキュメント', url: 'https://docs.anthropic.com/en/docs/claude-code/overview', desc: 'Claude Code の公式ガイド', category: '🔧 Claude Codeで使う' },
-        { title: 'Claude Code ベストプラクティス', url: 'https://docs.anthropic.com/en/docs/claude-code/best-practices', desc: '効果的な Claude Code の使い方', category: '🔧 Claude Codeで使う' },
-        { title: 'CLAUDE.md ガイド', url: 'https://docs.anthropic.com/en/docs/claude-code/claude-md', desc: 'CLAUDE.md の書き方と設計パターン', category: '🔧 Claude Codeで使う' },
+        { title: 'Claude Skills ガイド', url: 'https://code.claude.com/docs/en/skills', desc: 'Skills の作成方法と活用例', category: '🔧 Claude Codeで使う' },
+        { title: 'Claude Code 公式ドキュメント', url: 'https://code.claude.com/docs/en/overview', desc: 'Claude Code の公式ガイド', category: '🔧 Claude Codeで使う' },
+        { title: 'Claude Code ベストプラクティス', url: 'https://code.claude.com/docs/en/best-practices', desc: '効果的な Claude Code の使い方', category: '🔧 Claude Codeで使う' },
+        { title: 'CLAUDE.md ガイド', url: 'https://code.claude.com/docs/en/memory', desc: 'CLAUDE.md の書き方と設計パターン', category: '🔧 Claude Codeで使う' },
         { title: 'MCP 公式', url: 'https://modelcontextprotocol.io/', desc: 'MCP の仕様・対応サービス一覧', category: '🔗 外部ツールと連携する' },
         { title: 'MCP サーバー一覧', url: 'https://github.com/modelcontextprotocol/servers', desc: 'Slack・Drive・Notion 等の対応一覧', category: '🔗 外部ツールと連携する' },
-        { title: 'Anthropic ブログ', url: 'https://www.anthropic.com/blog', desc: '最新アップデート・事例', category: '📚 公式リファレンス' }
+        { title: 'Anthropic ニュース', url: 'https://www.anthropic.com/news', desc: '最新アップデート・事例', category: '📚 公式リファレンス' }
       ],
       faq: [
         { q: 'Skills はどんな業務に向いていますか？', a: '手順やフォーマットが定型化できる繰り返し業務に向いています。議事録作成、提案書レビュー、調査レポート作成、文体統一、要約フォーマット、Excel 分析の標準手順などが好例です。「毎回同じ品質で出力したい」業務を洗い出し、Skills 化の候補にしてください。', category: '🔧 Claude Code' },
