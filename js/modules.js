@@ -1164,29 +1164,29 @@ const MODULES = [
             <p>Claude in Office は、ファイル内容について Claude と対話する機能です。Chat と同じく、出力を鵜呑みにせず確認してから適用してください。特に数値データの分析結果は、元データと照合する習慣をつけましょう。</p>
           </div>
 
-          <h3>アドインの履歴は「同じファイルを開いている間だけ」残ります</h3>
-          <p>Office アドインのチャット履歴は、同じファイルを開いている間は保持されますが、アプリを閉じるとリセットされます。仕様は以下のとおりです。</p>
+          <h3>アドインの履歴はブラウザに保存され、次回も続きから使えます</h3>
+          <p>Office アドイン（Word / Excel / PowerPoint）のチャット履歴は、お使いのブラウザ内に保存され、アプリやファイルを閉じても残ります。次に開いたとき、前回の会話の続きから作業できます。仕様は以下のとおりです。</p>
 
           <div class="visual-grid cols-2">
             <div class="visual-grid-item">
               <div class="grid-icon">✅</div>
-              <div class="grid-title">同じファイルを開いている間</div>
-              <div class="grid-desc">履歴は保持され、会話の続きから作業できます。</div>
+              <div class="grid-title">セッションをまたいで残る</div>
+              <div class="grid-desc">履歴はブラウザ内（IndexedDB）に保存され、アプリを閉じても次回そのまま続けられます。</div>
             </div>
             <div class="visual-grid-item">
-              <div class="grid-icon">❌</div>
-              <div class="grid-title">PowerPointを閉じる/別ファイルを開く</div>
-              <div class="grid-desc">履歴はリセットされ、過去の会話は復元できません。</div>
+              <div class="grid-icon">✅</div>
+              <div class="grid-title">同じアプリ内ならファイル間で共有</div>
+              <div class="grid-desc">例えば、ある PowerPoint の会話が別の PowerPoint でも表示されます。</div>
             </div>
             <div class="visual-grid-item">
-              <div class="grid-icon">❌</div>
-              <div class="grid-title">エクスポート機能なし</div>
-              <div class="grid-desc">チャット内容をファイルとして保存・書き出す公式機能は提供されていません。</div>
+              <div class="grid-icon">🔒</div>
+              <div class="grid-title">保存先はご自身のブラウザのみ</div>
+              <div class="grid-desc">Anthropic のサーバーには保存されず、別の端末・ブラウザには引き継がれません。</div>
             </div>
             <div class="visual-grid-item">
-              <div class="grid-icon">❌</div>
-              <div class="grid-title">クロスアプリ会話は消える</div>
-              <div class="grid-desc">複数アプリを同時に使った会話は、セッション終了で残りません。</div>
+              <div class="grid-icon">🗑️</div>
+              <div class="grid-title">消したいときは設定から</div>
+              <div class="grid-desc">設定画面で履歴を手動で全消去できます（ブラウザのデータ消去でも消えます）。</div>
             </div>
           </div>
 
@@ -1203,7 +1203,7 @@ const MODULES = [
               <tr>
                 <td><strong>その場で残す</strong></td>
                 <td>チャット欄から内容をコピーして Word やメモに貼り付ける</td>
-                <td>一時的な記録</td>
+                <td>別の端末でも見たい・形に残したい</td>
               </tr>
               <tr>
                 <td><strong>ナレッジに移す</strong></td>
