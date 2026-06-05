@@ -3,10 +3,11 @@
 // ========================================
 
 class QuizEngine {
-  constructor(questions, containerId, onComplete) {
+  constructor(questions, containerId, onComplete, onFinish) {
     this.questions = questions;
     this.containerId = containerId;
-    this.onComplete = onComplete;
+    this.onComplete = onComplete;   // 合格を状態として記録（結果表示時に自動実行）
+    this.onFinish = onFinish;       // 「完了する」ボタン押下時の遷移（任意）
     this.currentIndex = 0;
     this.answers = new Array(questions.length).fill(null);
     this.answered = new Array(questions.length).fill(false);
@@ -286,7 +287,8 @@ class QuizEngine {
     });
 
     container.querySelector('#quiz-complete')?.addEventListener('click', () => {
-      if (this.onComplete) this.onComplete(score, total);
+      if (this.onFinish) this.onFinish(score, total);
+      else if (this.onComplete) this.onComplete(score, total);
     });
 
     // 80%以上なら自動でコールバック（修了テスト用）

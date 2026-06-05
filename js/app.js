@@ -946,9 +946,17 @@
     container.querySelectorAll('[data-nav]').forEach(el => {
       el.addEventListener('click', (e) => { e.preventDefault(); navigateTo(el.dataset.nav); });
     });
-    new QuizEngine(mod.quiz, 'quiz-area', (score, total) => {
-      if (Math.round((score / total) * 100) >= 80) markQuizComplete(moduleIndex);
-    }).render();
+    new QuizEngine(mod.quiz, 'quiz-area',
+      // onComplete: 合格を記録（結果表示時に自動実行）
+      (score, total) => {
+        if (Math.round((score / total) * 100) >= 80) markQuizComplete(moduleIndex);
+      },
+      // onFinish: 「完了する」押下でクイズ一覧へ戻る
+      (score, total) => {
+        if (Math.round((score / total) * 100) >= 80) markQuizComplete(moduleIndex);
+        navigateTo('quiz-hub');
+      }
+    ).render();
   }
 
   // --- 修了テスト ---
