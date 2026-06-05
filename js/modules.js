@@ -828,10 +828,6 @@ const MODULES = [
             5. 「さらにMermaid図で全体像を可視化して」と追加指示<br>
             6. バージョン履歴で前の状態に戻せることを確認
           </div>
-
-          <div class="visual-highlight-card">
-            <p><strong>第1回前半のまとめ</strong>：ここまで学んだ Chat・Project・Artifact だけでも、日常業務の多くのシーンで Claude を活用できます。まずはこの3つを使いこなし、続く後半（Office・Research・Cowork）、第2回（Skills・MCP・Claude Code）へ進みましょう。</p>
-          </div>
         `
       }
 ,
