@@ -1603,6 +1603,10 @@ const MODULES = [
           <h3>このセクションで学ぶこと</h3>
           <p>Cowork の<strong>「フォルダごと渡して、ファイルを直接読み書きさせる」</strong>使い方を理解し、Chat との違いを踏まえてファイル作業を任せられるようになります。Cowork は Claude のデスクトップアプリで使えるモードです。</p>
 
+          <div class="tip-box">
+            💬 Chat が「相談役」なら、Cowork は仕事を<strong>任せる「相棒」</strong>。AI に作業を任せる「エージェント」的な使い方の入口です（考え方は第2回 2-1 でくわしく扱います）。
+          </div>
+
           <h4>データの置き場所が違う：クラウド型（Chat）と ローカル型（Cowork）</h4>
           <p>Chat と Cowork の根っこの違いは「ファイルをどこに置いて読ませるか」。</p>
           <ul>
@@ -2448,6 +2452,36 @@ const MODULES = [
         content: `
           <h3>このセクションで学ぶこと</h3>
           <p>第1回では Artifact（簡易な試作品）と Cowork（ファイル作業の委任）を学びました。Claude Code は、これらをさらに広げて<strong>データ処理・複数ファイル編集・再利用できるツール作成</strong>まで任せられる作業環境です。まずは「何ができるのか」を地図として押さえます。</p>
+
+          <h3>そもそも「AIエージェント」とは</h3>
+          <p>これまでの Chat は「相談役」（聞けば答えてくれる）でした。<strong>エージェントは、仕事を任せられる「相棒」</strong>です——ゴールを伝えると、自分で段取りを考え、必要な道具を使い、最後の成果物まで仕上げてくれます。</p>
+
+          <div class="visual-grid cols-3">
+            <div class="visual-grid-item">
+              <div class="grid-icon">🧭</div>
+              <div class="grid-title">段取りを考える</div>
+              <div class="grid-desc">ゴールから「何をすべきか」を自分で計画する。</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">⏳</div>
+              <div class="grid-title">自律的に進める</div>
+              <div class="grid-desc">複数のステップを続けて実行する。</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">🧰</div>
+              <div class="grid-title">道具を使って完結</div>
+              <div class="grid-desc">検索・ファイル操作などを組み合わせて仕上げる。</div>
+            </div>
+          </div>
+
+          <div class="visual-highlight-card">
+            <p><strong>コパイロット → エージェント</strong>：人が主役で AI が横で補助する使い方から、<strong>任せて、出てきた結果を確認する</strong>使い方へ。Claude Code（と Cowork）は、この「任せられるエージェント」の代表例です。</p>
+          </div>
+
+          <div class="tip-box">
+            <strong>💡 “依頼力”が人間側のスキル</strong><br>
+            「AI に何を任せられるか」を知っているほど、頼める仕事の幅が広がります。
+          </div>
 
           <h3>Claude Code とは</h3>
           <p>Claude Code は、<strong>ゴールを伝えるとファイルを直接読み書きして作業を進めてくれる</strong>環境です。コードやコマンドを自分で書く必要はありません。「このフォルダのデータを集計してレポートにして」「この試作ツールに保存機能を足して」のように、日本語で依頼するだけで、複数ファイルをまたいだ作業や成果物の作成まで進めてくれます。</p>
@@ -3417,6 +3451,61 @@ const MODULES = [
           <h3>全体のまとめ</h3>
           <div class="visual-highlight-card">
             <p>第1回は「個人の初速と成果物」、第2回は「<strong>Claude Code で一段上の成果物を自分で作る</strong>」。“使ってみる” から “<strong>自分の業務の道具を作る</strong>” へ。困ったら <strong>TIPS集</strong> と <strong>FAQ</strong> を見直しながら、自分の業務で効くものから取り入れていきましょう。</p>
+          </div>
+        `
+      },
+      {
+        title: '付録. Claude インストールガイド（Desktop / CLI）',
+        type: 'lecture',
+        content: `
+          <h3>このセクションで学ぶこと</h3>
+          <p>Claude を使い始めるためのインストール手順です。まずは<strong>デスクトップアプリ</strong>、コマンド操作をしたい方は <strong>CLI</strong> もどうぞ。</p>
+
+          <h3>A. デスクトップアプリ版（Mac / Windows）</h3>
+          <div class="visual-steps">
+            <div class="visual-step-item">
+              <div class="step-marker">1</div>
+              <div class="step-body">
+                <div class="step-title">claude.com/download を開く</div>
+                <div class="step-desc">公式ダウンロードページにアクセスします。</div>
+              </div>
+            </div>
+            <div class="visual-step-item">
+              <div class="step-marker">2</div>
+              <div class="step-body">
+                <div class="step-title">自分の OS 版をインストール</div>
+                <div class="step-desc">Mac / Windows から自分の環境に合うものをダウンロードしてインストールします。</div>
+              </div>
+            </div>
+            <div class="visual-step-item">
+              <div class="step-marker">3</div>
+              <div class="step-body">
+                <div class="step-title">起動してログイン</div>
+                <div class="step-desc">Anthropic アカウントでログインすれば完了です。</div>
+              </div>
+            </div>
+          </div>
+          <p>これで Chat・Cowork・Claude Code（Desktop）が使えます。非エンジニアの方はまずこれで OK です。</p>
+
+          <h3>B. CLI 版（Claude Code をコマンドで）</h3>
+          <p><strong>前提</strong>：Git（Windows は Git for Windows）／Claude Pro・Max・Team・Enterprise アカウント（無料プランは対象外）。</p>
+          <p>PowerShell で順に実行します（各コマンドはコピーできます）：</p>
+          <div class="toolkit-copy">
+            <code>irm https://claude.ai/install.ps1 | iex</code>
+            <button class="copy-btn" data-copy="irm https://claude.ai/install.ps1 | iex">コピー</button>
+          </div>
+          <div class="toolkit-copy">
+            <code>claude --version</code>
+            <button class="copy-btn" data-copy="claude --version">コピー</button>
+          </div>
+          <div class="toolkit-copy">
+            <code>claude</code>
+            <button class="copy-btn" data-copy="claude">コピー</button>
+          </div>
+          <p>（install.ps1＝導入、--version＝確認、claude＝初回起動。ブラウザが開くので Anthropic アカウントでログイン）</p>
+
+          <div class="warning-box">
+            <p>⚠️ 社内ネットワークで SSL エラー（接続できない）が出たら、社内セキュリティ（Zscaler）が原因のことがあります。対処の詳細は社内ガイド「<a href="https://app.notion.com/p/7a274acba8f4447e9b9b972e8b04839c" target="_blank">Claude Code インストール手順</a>」を参照してください。</p>
           </div>
         `
       }
