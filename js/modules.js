@@ -1850,7 +1850,7 @@ const MODULES = [
           <p>Skill とは何かを理解し、資料作成やリサーチでの活用イメージを持ち、自分の繰り返し作業を1つ「型」にできるようになります。</p>
 
           <h3>Skill とは</h3>
-          <p>毎回ほぼ同じ指示を打ち込んでいる作業はありませんか。「議事録をこの体裁で整えて」「この観点で競合を調べて」——こうした<strong>よく使う手順・指示・出力形式を「型」として保存し、いつでも呼び出して再利用できる機能</strong>が Skill です。一度作れば、次からは長いプロンプトを書き直さずに、その型を呼ぶだけで同じ品質のアウトプットが返ってきます。</p>
+          <p>毎回ほぼ同じ指示を打ち込んでいる作業はありませんか。「議事録をこの体裁で整えて」「この観点で競合を調べて」——こうした<strong>よく使う手順・指示・出力形式を「型」として保存し、いつでも呼び出して再利用できる機能</strong>が Skill です。手順だけでなく、決まったテンプレートやルールも一緒にまとめておけるのが特長です（くわしくは 2-5）。一度作れば、次からは長いプロンプトを書き直さずに、その型を呼ぶだけで同じ品質のアウトプットが返ってきます。</p>
           <p>属人化しがちな「うまいやり方」を、誰でも同じ品質で再現できる形にできるのが Skill の価値です。</p>
 
           <h3>同じ Skill を Chat でも Cowork でも呼べる</h3>
@@ -2857,6 +2857,31 @@ const MODULES = [
           <h3>このセクションで学ぶこと</h3>
           <p>成果物を繰り返し作るようになると、<strong>毎回品質がブレない仕組み</strong>が欲しくなります。ここでは質と再現性を支える道具 — CLAUDE.md（ルール固定）、Skills（手順の型化）、MCP / Connectors（必要なデータの接続） — を押さえます。</p>
 
+          <h3>まず全体像 — 3つの道具の役割分担</h3>
+          <p>3つの道具は役割が違います。料理にたとえると関係がつかみやすくなります。</p>
+
+          <div class="visual-grid cols-3">
+            <div class="visual-grid-item">
+              <div class="grid-icon">📏</div>
+              <div class="grid-title">CLAUDE.md ＝ 守る作法</div>
+              <div class="grid-desc"><strong>常に</strong>効くルール（毎回自動で読み込む）。例：文体・体裁・禁止事項。料理でいう「店の決まり」。</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">📖</div>
+              <div class="grid-title">Skills ＝ レシピ＋道具箱</div>
+              <div class="grid-desc"><strong>呼んだとき</strong>に効く、手順とテンプレ・決まった処理。料理でいう「レシピ本と調理道具」。</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">🛒</div>
+              <div class="grid-title">MCP ＝ 材料の取り寄せ</div>
+              <div class="grid-desc"><strong>必要なとき</strong>に、社内データなどを外から接続。料理でいう「材料の買い出し」。</div>
+            </div>
+          </div>
+
+          <div class="visual-highlight-card">
+            <p><strong>常に守るルール（CLAUDE.md）の上で、型化した手順と道具（Skills）を使い、足りないデータ（MCP）を取り寄せる</strong> — この役割分担で、成果物の質と再現性が固定されます。<br>※ CLAUDE.md は<strong>常時</strong>、Skills と MCP は<strong>必要なとき</strong>に効く、という「いつ効くか」の違いも押さえておきましょう。</p>
+          </div>
+
           <h3>CLAUDE.md — 作業ルールを書いておく</h3>
           <p>CLAUDE.md は、Claude Code が自動で読み込む<strong>ルールファイル</strong>です。毎回同じ注意を書かなくても、品質を一定に保てます。</p>
 
@@ -2942,6 +2967,38 @@ const MODULES = [
           <h3>Skills — よく使う手順を型にする</h3>
           <p>第1回 1-15 で学んだ Skills（よく使う手順の型）は、成果物づくりでも効きます。「議事録をこの体裁で」「この観点で集計して」といった<strong>手順・ルール・出力形式を型として保存</strong>し、呼び出すだけで同じ品質の成果物を作れます。</p>
 
+          <h4>Skill には「手順」だけでなく「道具」もまとめられる</h4>
+          <p>Skill は手順書（指示）が中心ですが、それに加えて作業に必要な<strong>道具</strong>も一緒に束ねておけます。だから、指示文をただ保存するより一段強力です。</p>
+
+          <div class="visual-grid cols-2">
+            <div class="visual-grid-item">
+              <div class="grid-icon">📋</div>
+              <div class="grid-title">指示書（中心）</div>
+              <div class="grid-desc">やり方・手順・「いつ使うか」。これだけでも Skill は作れる。</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">🧩</div>
+              <div class="grid-title">テンプレート・素材</div>
+              <div class="grid-desc">会社のスライドひな型・ロゴ・フォントなど。体裁やブランドを固定できる。</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">⚙️</div>
+              <div class="grid-title">決まった処理</div>
+              <div class="grid-desc">「表記ゆれを一括で統一」など、必ず同じ結果が要る作業を、ルールどおり正確に実行。</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">📚</div>
+              <div class="grid-title">参照資料</div>
+              <div class="grid-desc">必要なときだけ読み込む補足情報。中心の指示書を軽く保てる。</div>
+            </div>
+          </div>
+
+          <div class="visual-highlight-card">
+            <p><strong>「AI の柔軟さ」と「決まった処理の正確さ」を両立できる</strong>のが Skill の強みです。文章の整え方は AI が柔軟に、表記ゆれの統一のような“絶対に揺らしたくない部分”は決まった処理で正確に — だから成果物の品質が安定します。</p>
+          </div>
+
+          <h4>どんな作業を型にする？ — 3つの条件</h4>
+
           <div class="visual-grid cols-3">
             <div class="visual-grid-item">
               <div class="grid-icon">🔁</div>
@@ -2967,7 +3024,7 @@ const MODULES = [
 
           <div class="toolkit-card">
             <div class="toolkit-head">🧰 当社オリジナルのスキル集「consulting-toolkit-800」</div>
-            <p>コンサル業務のワークフロー（調査提案書・デスクリサーチ・インタビュー設計・議事録・報告書骨子・スライド構成 など）をまとめた<strong>当社製のスキル集（プラグイン）</strong>です。一度インストールすれば、<strong>Chat・Cowork・Claude Code のどこからでも</strong>これらの型化済みスキルを呼び出せます。</p>
+            <p>コンサル業務のワークフロー（調査提案書・デスクリサーチ・インタビュー設計・議事録・報告書骨子・スライド構成 など）をまとめた<strong>当社製のスキル集（プラグイン）</strong>です。上で説明した「手順＋道具」を束ねたスキルの実例で、スライドのテンプレートや生成手順まで含まれています。一度インストールすれば、<strong>Chat・Cowork・Claude Code のどこからでも</strong>これらの型化済みスキルを呼び出せます。</p>
             <a class="toolkit-link" href="https://github.com/eight-hundred-inc/consulting-toolkit-800" target="_blank">GitHub で見る ▸</a>
             <div class="toolkit-install">
               <h5>💻 デスクトップアプリ版（GUI で入れる）</h5>
