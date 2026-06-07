@@ -2517,6 +2517,10 @@ const MODULES = [
             </div>
           </div>
 
+          <div class="info-box">
+            <p>🔍 Claude Code は“作る”だけでなく<strong>“調べる・考える”にも使えます</strong>。複数のエージェントで手分けして、<strong>リサーチや企画・アイデア出し</strong>を広く深く進められます（くわしくは 2-6）。</p>
+          </div>
+
           <h3>Cowork と Claude Code の使い分け</h3>
           <div class="visual-mapping">
             <div class="mapping-header">
@@ -3192,6 +3196,13 @@ const MODULES = [
             </div>
           </div>
 
+          <div class="info-box">
+            <p><strong>なぜ効くのか（机の上の書類のたとえ）</strong>：1体の AI は“作業机”に限りがあり、調べた情報（書類）で机がいっぱいになると判断が鈍ります。サブエージェントに手分けさせ、各自が<strong>要約レポートだけを親エージェントに返す</strong>ようにすると、親の机が空いたままになり、広く・深く・抜け漏れ少なく仕上げられます。</p>
+          </div>
+          <div class="info-box">
+            <p><strong>役割を分けると精度が上がる</strong>：同じ AI に「作って」と「批判して」を同時に頼むと、立場が混ざって批判が甘くなりがちです。役割を物理的に分けると、それぞれが本気で役目を果たします。</p>
+          </div>
+
           <h3>使いどころ</h3>
           <div class="visual-grid cols-3">
             <div class="visual-grid-item">
@@ -3213,6 +3224,42 @@ const MODULES = [
 
           <div class="info-box">
             <p><strong>💡 最初は1つの Claude Code で十分</strong>です。「分担した方が速い」と感じるほど作業が大きくなってきたら、Subagents を取り入れましょう。小さなタスクで無理に分ける必要はありません。</p>
+          </div>
+
+          <h3>成果物づくりだけじゃない — リサーチ・企画にも効く</h3>
+          <p>Claude Code（複数のエージェント）は“作る”だけでなく、“調べる・考える”にも強みがあります。</p>
+
+          <div class="visual-grid cols-2">
+            <div class="visual-grid-item">
+              <div class="grid-icon">🔍</div>
+              <div class="grid-title">リサーチの型</div>
+              <div class="grid-desc">並列で広く調べる → まとめる → 多角で検証 → もう一度まとめる。例：競合・市場調査、イベント設計、キャリア分析。</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">💡</div>
+              <div class="grid-title">アイデア出しの型</div>
+              <div class="grid-desc">成功パターンを調べる → たくさん発散する → 基準で評価して選ぶ。例：ネーミング、施策の発想。</div>
+            </div>
+          </div>
+
+          <p>単に広げるだけでなく、<strong>「一度まとめてから検証する」</strong>過程を挟むと、最終アウトプットの質が上がります。</p>
+
+          <h3>使う／使わないの見極め</h3>
+          <div class="visual-grid cols-2">
+            <div class="visual-grid-item">
+              <div class="grid-icon">✅</div>
+              <div class="grid-title">使う</div>
+              <div class="grid-desc">情報量が多く1つの会話では精度が落ちる／作業を並列に分けられる／違う視点が欲しい</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">⏭️</div>
+              <div class="grid-title">使わない</div>
+              <div class="grid-desc">簡単・短い・手順が一直線の作業（過剰になるので単体の Claude Code でOK）</div>
+            </div>
+          </div>
+
+          <div class="warning-box">
+            <p>⚠️ 背景（前提）を渡さないと、たくさん動く分だけ的外れになりやすいです。目的・前提・判断基準を先に共有しましょう。</p>
           </div>
 
           <h3>実践 TIPS — 作業を速くする小ワザ</h3>
