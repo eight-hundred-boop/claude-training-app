@@ -3536,8 +3536,8 @@ const MODULES = [
             <div class="visual-step-item">
               <div class="step-marker">1</div>
               <div class="step-body">
-                <div class="step-title">claude.com/download を開く</div>
-                <div class="step-desc">公式ダウンロードページにアクセスします。</div>
+                <div class="step-title"><a href="https://claude.com/download" target="_blank" rel="noopener">claude.com/download</a> を開く</div>
+                <div class="step-desc"><a href="https://claude.com/download" target="_blank" rel="noopener">公式ダウンロードページ</a>にアクセスします。</div>
               </div>
             </div>
             <div class="visual-step-item">
