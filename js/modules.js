@@ -2902,7 +2902,31 @@ const MODULES = [
           </div>
 
           <div class="info-box">
-            <p><strong>両方とも効きます</strong>（重ねて読み込まれます）。内容がぶつかったときは、より具体的な<strong>案件用が優先</strong>と考えれば OK です。</p>
+            <p><strong>両方とも効きます</strong>（重ねて読み込まれます）。内容がぶつかったときは、より具体的な<strong>案件用が優先</strong>と考えれば OK です。<br><strong>使い分けの目安</strong>：自分の流儀（結論先行・です・ます調など）は自分用、案件固有（クライアント名・体裁・レビュー観点）は案件用に。</p>
+          </div>
+
+          <p>この「自分用／案件用」は、claude.ai で学んだ仕組みと<strong>同じ2層</strong>です。</p>
+
+          <div class="visual-mapping">
+            <div class="mapping-header">
+              <span class="mapping-from">claude.ai（Chat）で学んだこと</span>
+              <span class="mapping-arrow"></span>
+              <span class="mapping-to">Claude Code では</span>
+            </div>
+            <div class="mapping-row">
+              <span class="mapping-from">「Claudeへの指示」（1-5）＝自分用</span>
+              <span class="mapping-arrow">≈</span>
+              <span class="mapping-to">グローバル CLAUDE.md（自分用）</span>
+            </div>
+            <div class="mapping-row">
+              <span class="mapping-from">Project の Instructions（1-7）＝案件用</span>
+              <span class="mapping-arrow">≈</span>
+              <span class="mapping-to">プロジェクト CLAUDE.md（案件用）</span>
+            </div>
+          </div>
+
+          <div class="info-box">
+            <p>⚠️ 同じ2層構造ですが、<strong>claude.ai と Claude Code は別システムで設定は同期しません</strong>（片方で書いても、もう片方には反映されません）。</p>
           </div>
 
           <div class="visual-grid cols-2">
@@ -2916,6 +2940,24 @@ const MODULES = [
               <div class="grid-title">書かなくてよいこと</div>
               <div class="grid-desc">一般的な知識、一時的な作業指示（それはチャットで伝える）</div>
             </div>
+          </div>
+
+<h4>どこに置く？ — フォルダと置き場所</h4>
+          <p>案件用の CLAUDE.md は、<strong>Claude Code（デスクトップ）で作業フォルダとして開くフォルダの直下</strong>に置かれます。フォルダは普通に PC に作れば OK です。</p>
+
+          <div class="example-box">
+            📁 Claude作業（親フォルダ）<br>
+            &nbsp;&nbsp;├ 📁 A社_新商品案件<br>
+            &nbsp;&nbsp;│&nbsp;&nbsp;└ 📄 CLAUDE.md　← この案件のルール<br>
+            &nbsp;&nbsp;└ 📁 B社_調査案件<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ 📄 CLAUDE.md
+          </div>
+
+          <p>自分で手書きする必要はありません。<code>/init</code> が生成してくれるか、「CLAUDE.md にまとめて」と頼めば Claude がそのフォルダ内に作ってくれます。自分用（グローバル）の CLAUDE.md は、自分の PC の設定フォルダ（<code>.claude</code>）の中にあります。場所が分からなければ <code>/memory</code> で開けますし、「全体の CLAUDE.md はどこ？」と Claude に聞けば教えてくれます。</p>
+
+          <div class="tip-box">
+            <strong>💡 変更は新しいセッションで反映</strong><br>
+            CLAUDE.md は<strong>新しいセッションの開始時に読み込まれます</strong>。会話の途中で書き換えてもその場では反映されないので、変えたら新しいセッションで始めましょう。
           </div>
 
           <h4>準備の仕方 — まず /init、確認は /memory</h4>
@@ -2939,25 +2981,37 @@ const MODULES = [
             ファイルの正確な保存場所を覚える必要はありません。<code>/memory</code> が一覧で見せてくれるので、そこから開いて直すのが簡単です。
           </div>
 
-          <h4>ルールファイルは小さく分ける — DESIGN.md / CONTENT.md / REVIEW.md</h4>
+          <h4>ルールファイルは小さく分ける — 役割別に</h4>
           <p>規模が大きくなると、CLAUDE.md にすべて書くと長くなりすぎます。<strong>役割別のファイルに分け、CLAUDE.md からは「詳しくは○○.md を参照」と参照する</strong>設計が便利です。</p>
 
-          <div class="visual-grid cols-3">
+          <div class="visual-grid cols-2">
             <div class="visual-grid-item">
               <div class="grid-icon">🎨</div>
               <div class="grid-title">DESIGN.md</div>
-              <div class="grid-desc">見た目のトンマナ、配色、コンポーネントの使い方。非デザイナーでも一定品質を保てる。</div>
+              <div class="grid-desc">見た目のトンマナ、配色、体裁。非デザイナーでも一定品質を保てる。</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">📝</div>
               <div class="grid-title">CONTENT.md</div>
-              <div class="grid-desc">文体・用語・構成パターン・「書かないこと」のルール。文書の品質を揃える。</div>
+              <div class="grid-desc">文体・用語・構成パターン・「書かないこと」のルール。</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">📋</div>
               <div class="grid-title">REVIEW.md</div>
               <div class="grid-desc">レビュー観点と合格基準。誰がレビューしても同じ目線でチェックできる。</div>
             </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">📈</div>
+              <div class="grid-title">PROGRESS.md</div>
+              <div class="grid-desc">作業の経過・決定事項・残タスク（次回への申し送り）。</div>
+            </div>
+          </div>
+
+          <p>ほかに GLOSSARY.md（用語集）など、案件に応じて増やせます。</p>
+
+          <div class="tip-box">
+            <strong>📈 PROGRESS.md で進捗を引き継ぐ</strong><br>
+            作業の経過を PROGRESS.md に残し、CLAUDE.md に「<strong>作業開始時に PROGRESS.md も読んで</strong>」と書いておくと、日をまたいでも・新しいセッションでも、前回の続きから作業を引き継げます。
           </div>
 
           <div class="info-box">
