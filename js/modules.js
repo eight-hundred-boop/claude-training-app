@@ -2371,7 +2371,7 @@ const MODULES = [
       { label: 'Claude Codeを知る・始める', icon: '🚀', sections: [1, 2], objectives: ['Claude Codeで何が作れるかを理解する', 'Desktopで安全に始め、適切に指示できる'] },
       { label: '成果物を作る', icon: '🛠️', sections: [3, 4], objectives: ['データ処理・複数ファイル作業を任せる', 'ツール・プロトタイプ・アプリを作る'] },
       { label: '質を上げ、使いこなす', icon: '✅', sections: [5, 6], objectives: ['CLAUDE.md／Skillsで質と再現性を固定する', 'Subagentsで分担・並列化し効率化する'] },
-      { label: '付録：インストール', icon: '📦', appendix: true, sections: [8], objectives: ['Claude を Desktop / CLI でインストールできる'] }
+      { label: 'インストールガイド', icon: '📦', appendix: true, sections: [8], objectives: ['Claude を Desktop / CLI / IDE でインストールできる'] }
     ],
     sections: [
 
@@ -3521,11 +3521,11 @@ const MODULES = [
         `
       },
       {
-        title: '付録. Claude インストールガイド（Desktop / CLI）',
+        title: '付録. Claude インストールガイド（Desktop / CLI / IDE）',
         type: 'lecture',
         content: `
           <h3>このセクションで学ぶこと</h3>
-          <p>Claude を使い始めるためのインストール手順です。まずは<strong>デスクトップアプリ</strong>、コマンド操作をしたい方は <strong>CLI</strong> もどうぞ。</p>
+          <p>Claude を使い始めるためのインストール手順です。まずは<strong>デスクトップアプリ</strong>、コマンド操作をしたい方は <strong>CLI</strong>、普段のエディタで使いたい方は <strong>IDE</strong> もどうぞ。</p>
 
           <div class="info-box">
             <p>💡 <strong>Windows で Claude Code を使うには <a href="https://git-scm.com/downloads/win" target="_blank">Git for Windows</a> が必要です</strong>（インストール時に案内が出ます）。Chat・Cowork だけなら不要。デスクトップ版・CLI版のどちらも同じです。</p>
