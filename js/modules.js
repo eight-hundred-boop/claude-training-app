@@ -129,12 +129,12 @@ const MODULES = [
             <div class="visual-grid-item">
               <div class="grid-icon">📋</div>
               <div class="grid-title">Project</div>
-              <div class="grid-desc">案件ごとに背景情報・ルール・参照資料を保持。毎回説明し直す手間がなくなる。<strong>第1回で学習</strong></div>
+              <div class="grid-desc">案件ごとに背景情報・ルール・参照資料を保持。毎回説明し直す手間がなくなる。<strong>1-7 で学習</strong></div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">🎨</div>
               <div class="grid-title">Artifact</div>
-              <div class="grid-desc">会話とは独立した成果物を生成。文書・図表・Webページ・ダッシュボードなど。<strong>第1回で学習</strong></div>
+              <div class="grid-desc">会話とは独立した成果物を生成。文書・図表・Webページ・ダッシュボードなど。<strong>1-7 で学習</strong></div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">🔍</div>
@@ -144,7 +144,7 @@ const MODULES = [
             <div class="visual-grid-item">
               <div class="grid-icon">🌐</div>
               <div class="grid-title">Web検索 / ファイル添付</div>
-              <div class="grid-desc">最新情報の検索、PDF・Excel・画像の添付と処理。Chat の基本機能</div>
+              <div class="grid-desc">最新情報の検索、PDF・Excel・画像の添付と処理。Chat の基本機能。<strong>1-4 で学習</strong></div>
             </div>
           </div>
 
@@ -158,7 +158,7 @@ const MODULES = [
             <div class="visual-grid-item">
               <div class="grid-icon">⚡</div>
               <div class="grid-title">Claude Code</div>
-              <div class="grid-desc">複数ファイル編集・データ処理・ツール作成など、高度な作業を任せる。Desktop を基本に CLI / IDE でも使える。<strong>第2回（全体）で学習</strong></div>
+              <div class="grid-desc">複数ファイル編集・データ処理・ツール作成など、高度な作業を任せる。Desktop を基本に CLI / IDE でも使える。<strong>第2回（2-3）で学習</strong></div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">📊</div>
@@ -177,12 +177,12 @@ const MODULES = [
             <div class="visual-grid-item">
               <div class="grid-icon">🧩</div>
               <div class="grid-title">Skills</div>
-              <div class="grid-desc">繰り返すタスクの手順を標準化。チームの作法を Claude に覚えさせる。<strong>第1回（1-15 基礎）／第2回（2-5）で学習</strong></div>
+              <div class="grid-desc">繰り返すタスクの手順を標準化。チームの作法を Claude に覚えさせる。<strong>1-15（基礎）／第2回 2-1（発展）で学習</strong></div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">🔗</div>
               <div class="grid-title">MCP / Connectors</div>
-              <div class="grid-desc">Slack・Notion・Google Drive 等の社内ツールと Claude を接続。<strong>第2回（2-5）で学習</strong></div>
+              <div class="grid-desc">Slack・Notion・Google Drive 等の社内ツールと Claude を接続。<strong>第2回（2-2）で学習</strong></div>
             </div>
           </div>
 
