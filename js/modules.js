@@ -3573,6 +3573,12 @@ const MODULES = [
           </div>
           <p>（install.ps1＝導入、--version＝確認、claude＝初回起動。ブラウザが開くので Anthropic アカウントでログイン）</p>
 
+          <h3>C. IDE 版（VS Code / Cursor / JetBrains などで使う）</h3>
+          <p>普段使っているエディタ（IDE）の中から Claude Code を呼び出す方法です。コードや成果物を<strong>画面で見ながら作業でき、変更箇所（差分）も確認しやすい</strong>のが利点です。エディタに拡張機能として追加して使います。</p>
+          <div class="info-box">
+            <p>💡 <strong>Cursor</strong> でのセットアップ手順は、社内ガイド「<a href="https://app.notion.com/p/eight-hundred/309b14ae3bcd819e82d8c499446592fe?source=copy_link" target="_blank" rel="noopener">Cursor のセットアップ手順</a>」を参照してください。</p>
+          </div>
+
           <div class="warning-box">
             <p>⚠️ 社内ネットワークで SSL エラー（接続できない）が出たら、社内セキュリティ（Zscaler）が原因のことがあります。対処の詳細は社内ガイド「<a href="https://app.notion.com/p/7a274acba8f4447e9b9b972e8b04839c" target="_blank">Claude Code インストール手順</a>」を参照してください。</p>
           </div>
