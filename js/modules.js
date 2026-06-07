@@ -182,7 +182,7 @@ const MODULES = [
             <div class="visual-grid-item">
               <div class="grid-icon">🔗</div>
               <div class="grid-title">MCP / Connectors</div>
-              <div class="grid-desc">Slack・Notion・Google Drive 等の社内ツールと Claude を接続。<strong>第2回（2-2）で学習</strong></div>
+              <div class="grid-desc">Slack・Notion 等の社内ツールと Claude を接続。<strong>第2回（2-2）で学習</strong></div>
             </div>
           </div>
 
@@ -2902,7 +2902,7 @@ const MODULES = [
           </div>
 
           <div class="info-box">
-            <p><strong>両方とも効きます</strong>（重ねて読み込まれます）。内容がぶつかったときは、より具体的な<strong>案件用が優先</strong>と考えれば OK です。このほか、会社が全社共通で決めるルールを管理者が設定している場合もありますが、ふだん自分で触ることはありません。</p>
+            <p><strong>両方とも効きます</strong>（重ねて読み込まれます）。内容がぶつかったときは、より具体的な<strong>案件用が優先</strong>と考えれば OK です。</p>
           </div>
 
           <div class="visual-grid cols-2">
@@ -3052,7 +3052,7 @@ const MODULES = [
           </div>
 
           <h3>MCP / Connectors — 必要なデータを接続する</h3>
-          <p>成果物の質は「渡す情報の質」で決まります。MCP / Connectors を使うと、Google Drive・Notion・Slack などの<strong>社内情報を Claude に接続</strong>でき、自社の文脈を踏まえた成果物が作れます。たとえば過去の提案書フォルダを接続しておけば、「この案件、過去の似た提案を踏まえて構成して」が一度で通ります。</p>
+          <p>成果物の質は「渡す情報の質」で決まります。MCP / Connectors を使うと、Notion・Slack などの<strong>社内情報を Claude に接続</strong>でき、自社の文脈を踏まえた成果物が作れます。たとえば過去の提案書フォルダを接続しておけば、「この案件、過去の似た提案を踏まえて構成して」が一度で通ります。</p>
           <div class="visual-mapping">
             <div class="mapping-header">
               <span class="mapping-from">接続の原則</span>
@@ -3506,13 +3506,13 @@ const MODULES = [
         { title: 'Claude Code ベストプラクティス', url: 'https://code.claude.com/docs/en/best-practices', desc: '効果的な Claude Code の使い方', category: '🔧 Claude Codeで使う' },
         { title: 'CLAUDE.md ガイド', url: 'https://code.claude.com/docs/en/memory', desc: 'CLAUDE.md の書き方と設計パターン', category: '🔧 Claude Codeで使う' },
         { title: 'MCP 公式', url: 'https://modelcontextprotocol.io/', desc: 'MCP の仕様・対応サービス一覧', category: '🔗 外部ツールと連携する' },
-        { title: 'MCP サーバー一覧', url: 'https://github.com/modelcontextprotocol/servers', desc: 'Slack・Drive・Notion 等の対応一覧', category: '🔗 外部ツールと連携する' },
+        { title: 'MCP サーバー一覧', url: 'https://github.com/modelcontextprotocol/servers', desc: 'Slack・Notion 等の対応一覧', category: '🔗 外部ツールと連携する' },
         { title: 'Anthropic ニュース', url: 'https://www.anthropic.com/news', desc: '最新アップデート・事例', category: '📚 公式リファレンス' }
       ],
       faq: [
         { q: 'Skills はどんな業務に向いていますか？', a: '手順やフォーマットが定型化できる繰り返し業務に向いています。議事録作成、提案書レビュー、調査レポート作成、文体統一、要約フォーマット、Excel 分析の標準手順などが好例です。「毎回同じ品質で出力したい」業務を洗い出し、Skills 化の候補にしてください。', category: '🔧 Claude Code' },
         { q: 'Project と Skills はどう使い分けますか？', a: 'Project は「案件の背景情報や参照資料を保持する場所」、Skills は「業務手順やルールを再利用する型」です。Project は「この案件について」、Skills は「この作業を毎回この手順で」と使い分けます。Project 内で Skills を呼び出すことで、案件固有の情報 × 標準化された手順の組み合わせが実現します。', category: '🔧 Claude Code' },
-        { q: 'MCP / Connectors は何のために使うのですか？', a: 'Claude の出力品質は渡す情報の質に左右されます。MCP / Connectors を使うと、Google Drive・Slack・Notion 等の社内情報源を Claude から直接参照でき、より正確で自社に即した出力が得られます。ただし、目的に必要な情報だけを適切な粒度で渡すことが重要です。', category: '🔗 外部連携（MCP）' },
+        { q: 'MCP / Connectors は何のために使うのですか？', a: 'Claude の出力品質は渡す情報の質に左右されます。MCP / Connectors を使うと、Slack・Notion 等の社内情報源を Claude から直接参照でき、より正確で自社に即した出力が得られます。ただし、目的に必要な情報だけを適切な粒度で渡すことが重要です。', category: '🔗 外部連携（MCP）' },
         { q: 'Claude Code は非エンジニアでも使うべきですか？', a: 'はい。Claude Code は日本語の指示でコードやツールを作れるため、エンジニアでなくても活用できます。ただし、Chat → Cowork → Claude Code の順で段階的に学ぶことをお勧めします。最初は「Artifact では作れないレベルの成果物が必要になったとき」に Claude Code を使い始めましょう。', category: '🔧 Claude Code' },
         { q: 'Claude Code に修正を依頼するときの注意点は？', a: '4点を意識してください。(1) 変更対象を具体的に指定する、(2) 触ってほしくない部分を禁止事項として明示する、(3) 一度に大きな変更をせず小さな単位で進める、(4) 実装後に必ず動作確認する。「全体を良くして」のような曖昧な指示は、意図しない変更を引き起こすリスクがあります。', category: '🔧 Claude Code' },
         { q: 'CLAUDE.md には何を書くべきですか？', a: 'プロジェクトの概要、ファイル構成、コーディング規約、禁止事項、出力形式のルール、レビュー基準など、プロジェクト固有の永続的なルールを書きます。一時的な作業指示はチャットで伝えます。CLAUDE.md はチームの「品質基準書」として機能し、新メンバーが読めばプロジェクトのルールがわかる状態を目指します。', category: '🔧 Claude Code' },
