@@ -3197,6 +3197,10 @@ const MODULES = [
                 <button class="copy-btn" data-copy="/plugin marketplace add eight-hundred-inc/consulting-toolkit-800">コピー</button>
               </div>
             </div>
+            <div class="info-box">
+              <strong>💡 インストール後に反映するには</strong><br>
+              プラグインは<strong>起動時に読み込まれます</strong>。CLI / IDE では、いったん Claude Code を<strong>終了して再起動</strong>すれば <code>/pm</code> などのコマンドが使えるようになります（PC の再起動までは不要です）。終了・再起動せずに今すぐ反映したいときは <code>/reload-plugins</code> を実行します。デスクトップアプリ版は、新しい会話を始めれば反映されます。
+            </div>
             <p class="toolkit-note">⚠️ スキルは<strong>使用する環境ごとに個別インストールが必要</strong>です。デスクトップアプリ・CLI・IDE は別々に管理されるため、使う環境それぞれでインストールしてください（一方で入れても他方には反映されません）。</p>
           </div>
 
