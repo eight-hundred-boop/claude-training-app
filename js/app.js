@@ -20,6 +20,37 @@
   let currentSection = null;
   let presentSectionIndex = 0;
 
+  // --- コピーボタン（.copy-btn[data-copy] を委譲で処理）---
+  document.addEventListener('click', function (e) {
+    const btn = e.target.closest('.copy-btn');
+    if (!btn) return;
+    const text = btn.getAttribute('data-copy') || '';
+    const show = () => {
+      btn.textContent = '✓ コピーしました';
+      btn.classList.add('copied');
+      setTimeout(() => { btn.textContent = 'コピー'; btn.classList.remove('copied'); }, 1500);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(show).catch(() => fallbackCopy(text, show));
+    } else {
+      fallbackCopy(text, show);
+    }
+  });
+  function fallbackCopy(text, done) {
+    try {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      done();
+    } catch (err) { /* コピー不可環境では無視 */ }
+  }
+
   // ページ遷移時に最上部へ戻す。
   // html に scroll-behavior: smooth が指定されているため、コンテンツ差し替え直後の
   // window.scrollTo はスムーズ動作が中断され Safari / Mac で効かないことがある。

@@ -2928,6 +2928,10 @@ const MODULES = [
             <div class="toolkit-head">🧰 当社オリジナルのスキル集「consulting-toolkit-800」</div>
             <p>コンサル業務のワークフロー（調査提案書・デスクリサーチ・インタビュー設計・議事録・報告書骨子・スライド構成 など）を Claude Code 用のスキルとしてまとめた<strong>当社製プラグイン</strong>です。入れておくと、これらの型化済みスキルをすぐ呼び出せます。</p>
             <a class="toolkit-link" href="https://github.com/eight-hundred-inc/consulting-toolkit-800" target="_blank">GitHub で見る ▸</a>
+            <div class="toolkit-copy">
+              <code>eight-hundred-inc/consulting-toolkit-800</code>
+              <button class="copy-btn" data-copy="eight-hundred-inc/consulting-toolkit-800">コピー</button>
+            </div>
             <div class="toolkit-install">
               <h5>💻 デスクトップアプリ版（GUI で入れる）</h5>
               <ol>
@@ -2940,7 +2944,11 @@ const MODULES = [
             </div>
             <div class="toolkit-install">
               <h5>⌨️ CLI / IDE 版（コマンドで入れる）</h5>
-              <p>Claude Code（ターミナル）または IDE 拡張のチャットで <code>/plugin marketplace add eight-hundred-inc/consulting-toolkit-800</code> を実行し、表示された一覧から <code>consulting-toolkit-800</code> をインストールします。</p>
+              <p>Claude Code（ターミナル）または IDE 拡張のチャットで、次のコマンドを実行します。</p>
+              <div class="toolkit-copy">
+                <code>/plugin marketplace add eight-hundred-inc/consulting-toolkit-800</code>
+                <button class="copy-btn" data-copy="/plugin marketplace add eight-hundred-inc/consulting-toolkit-800">コピー</button>
+              </div>
             </div>
             <p class="toolkit-note">⚠️ スキルは<strong>使用する環境ごとに個別インストールが必要</strong>です。デスクトップアプリ・CLI・IDE は別々に管理されるため、使う環境それぞれでインストールしてください（一方で入れても他方には反映されません）。</p>
           </div>
