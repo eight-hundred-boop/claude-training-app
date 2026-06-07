@@ -48,7 +48,7 @@ const MODULES = [
             <div class="visual-grid-item">
               <div class="grid-icon">🧠</div>
               <div class="grid-title">長文に強い</div>
-              <div class="grid-desc">200Kトークン（約15万字）を一度に処理できます。長い報告書や議事録をそのまま渡して、要約・分析・比較を依頼できます</div>
+              <div class="grid-desc">最大100万トークン（約75万字＝文庫本で数冊分）を一度に処理できます。長い報告書や議事録、複数資料をそのまま渡して、要約・分析・比較を依頼できます</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">🎯</div>
@@ -100,7 +100,7 @@ const MODULES = [
 
           <div class="tip-box">
             <strong>💡 まず Chat から</strong><br>
-            Claude は Chat（対話）を中心に、Cowork（ファイル作業）や Claude Code（高度作業）、Office アドインや Artifact など多彩な接点を持ちます。第1回ではまず Chat から始め、後半・第2回で他の接点へ広げていきます。
+            Claude は Chat（対話）を中心に、Cowork（ファイル作業）や Claude Code（高度作業）、Office アドインや Artifact など多彩な接点を持ちます。第1回ではまず Chat から始め、続けて他の接点へ広げていきます。
           </div>
         `
       },
@@ -139,7 +139,7 @@ const MODULES = [
             <div class="visual-grid-item">
               <div class="grid-icon">🔍</div>
               <div class="grid-title">Research</div>
-              <div class="grid-desc">複数ソースを統合した包括的調査レポート。深く調べたいときに使う。<strong>後半（1-10）で学習</strong></div>
+              <div class="grid-desc">複数ソースを統合した包括的調査レポート。深く調べたいときに使う。<strong>1-10 で学習</strong></div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">🌐</div>
@@ -153,7 +153,7 @@ const MODULES = [
             <div class="visual-grid-item">
               <div class="grid-icon">📂</div>
               <div class="grid-title">Cowork</div>
-              <div class="grid-desc">ゴールを伝えてファイル作業を任せる。PPTX / XLSX / DOCX をフォルダに直接出力。<strong>後半（1-13）で学習</strong></div>
+              <div class="grid-desc">ゴールを伝えてファイル作業を任せる。PPTX / XLSX / DOCX をフォルダに直接出力。<strong>1-13 で学習</strong></div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">⚡</div>
@@ -163,12 +163,12 @@ const MODULES = [
             <div class="visual-grid-item">
               <div class="grid-icon">📊</div>
               <div class="grid-title">Office アドイン</div>
-              <div class="grid-desc">Excel / PowerPoint / Word の中から Claude を呼び出す。<strong>後半（1-9）で学習</strong></div>
+              <div class="grid-desc">Excel / PowerPoint / Word の中から Claude を呼び出す。<strong>1-9 で学習</strong></div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">🌐</div>
               <div class="grid-title">Chrome 拡張</div>
-              <div class="grid-desc">ブラウザで開いたページを Claude に読ませて要約・分析。<strong>後半（1-12）で学習</strong></div>
+              <div class="grid-desc">ブラウザで開いたページを Claude に読ませて要約・分析。<strong>1-12 で学習</strong></div>
             </div>
           </div>
 
@@ -187,7 +187,7 @@ const MODULES = [
           </div>
 
           <div class="visual-highlight-card">
-            <p><strong>今日のフォーカス</strong>：第1回の前半では <strong>Chat・Project・Artifact</strong> を中心に学びます。Office・Research・Cowork・Skill などは後半（1-8〜1-15）、MCP・Claude Code は第2回で順に扱うので、今は「こういうものがある」と頭に入れておけばOKです。</p>
+            <p><strong>今日のフォーカス</strong>：第1回では <strong>Chat・Project・Artifact</strong> を中心に学びます。Office・Research・Cowork・Skill などは 1-8〜1-15、MCP・Claude Code は第2回で順に扱うので、今は「こういうものがある」と頭に入れておけばOKです。</p>
           </div>
         `
       },
@@ -348,7 +348,7 @@ const MODULES = [
             <div class="flow-step">
               <div class="flow-num">📂</div>
               <div class="flow-label">Cowork</div>
-              <div class="flow-desc">後半で詳しく</div>
+              <div class="flow-desc">1-13 で詳しく</div>
             </div>
           </div>
           <div class="visual-flow" style="margin-top: 12px;">
@@ -404,8 +404,8 @@ const MODULES = [
           </div>
 
           <div class="info-box">
-            <strong>ℹ️ Cowork は後半、Claude Code は第2回で詳しく</strong><br>
-            前半は Chat の使い方をしっかり身につけることに集中します。Cowork・Claude Code は「こういうものがある」と知っておけば十分です。
+            <strong>ℹ️ Cowork は 1-13、Claude Code は第2回で詳しく</strong><br>
+            まずは Chat の使い方をしっかり身につけることに集中します。Cowork・Claude Code は「こういうものがある」と知っておけば十分です。
           </div>
         `
       },
@@ -492,7 +492,7 @@ const MODULES = [
           </div>
           <div class="info-box">
             <strong>📚 どれだけ資料を渡せる？（トークン）</strong><br>
-            Claude は一度に<strong>約15万字（200K トークン）</strong>まで読み込めます。長い議事録や報告書もまるごと貼って質問できます。ただし一度に詰め込みすぎると要点がぼけることもあるので、必要な資料に絞る・分割するのもコツです。
+            Claude は一度に<strong>約75万字（最大100万トークン）</strong>まで読み込めます。これは文庫本にして数冊分の分量で、長い議事録や報告書、複数資料もまるごと貼って質問できます。ただし一度に詰め込みすぎると要点がぼけることもあるので、必要な資料に絞る・分割するのもコツです。
           </div>
 
           <div class="try-box">
@@ -841,7 +841,7 @@ const MODULES = [
         type: 'lecture',
         content: `
           <h3>このセクションで学ぶこと</h3>
-          <p>第1回の前半では Chat を使ったテキストのやり取りが中心でした。しかし Claude で作れるものは文章だけではありません。このセクションでは、Claude を使って作れる<strong>成果物の全体像</strong>を一覧し、「こんなものも作れるのか」という視野を広げます。</p>
+          <p>ここまでは Chat を使ったテキストのやり取りが中心でした。しかし Claude で作れるものは文章だけではありません。このセクションでは、Claude を使って作れる<strong>成果物の全体像</strong>を一覧し、「こんなものも作れるのか」という視野を広げます。</p>
 
           <h3>Claude で作れる成果物マップ</h3>
           <p>Claude で作れる成果物は、大きく6つのカテゴリに分かれます。</p>
@@ -942,7 +942,7 @@ const MODULES = [
           </div>
 
           <div class="info-box">
-            <p><strong>後半で学ぶ流れ</strong>：Office → Research → Artifact → Chrome → Cowork → Scheduled tasks の順に、それぞれの機能で何が作れるかを実践します。</p>
+            <p><strong>このあと学ぶ流れ</strong>：Office → Research → Artifact → Chrome → Cowork → Scheduled tasks の順に、それぞれの機能で何が作れるかを実践します。</p>
           </div>
         `
       },
@@ -1418,7 +1418,7 @@ const MODULES = [
         type: 'lecture',
         content: `
           <h3>このセクションで学ぶこと</h3>
-          <p>前半で Artifact の基本を学びました。ここではさらに一歩進んで、<strong>実際に操作できる「プロトタイプ」</strong>を Artifact で作る方法を学びます。診断ツール、シミュレーター、ダッシュボードなど、提案やプロジェクトの論点を具体化するための試作品です。</p>
+          <p>1-7 で Artifact の基本を学びました。ここではさらに一歩進んで、<strong>実際に操作できる「プロトタイプ」</strong>を Artifact で作る方法を学びます。診断ツール、シミュレーター、ダッシュボードなど、提案やプロジェクトの論点を具体化するための試作品です。</p>
 
           <h3>「プロトタイプ」とは</h3>
           <p>文書や表とは違い、<strong>ユーザーが操作して結果が変わる成果物</strong>のことです。Claude の Artifact は HTML・CSS・JavaScript を生成でき、ブラウザ上でそのまま動作します。</p>
@@ -1956,7 +1956,7 @@ const MODULES = [
           <div class="visual-grid cols-2">
             <div class="visual-grid-item">
               <div class="grid-icon">🚀</div>
-              <div class="grid-title">前半：仕事の初速を上げる</div>
+              <div class="grid-title">仕事の初速を上げる</div>
               <div class="grid-desc">
                 <ul>
                   <li><strong>基盤は Chat</strong> — まず Chat。壁打ち・下書き・要約から。</li>
@@ -1968,7 +1968,7 @@ const MODULES = [
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">🏗️</div>
-              <div class="grid-title">後半：成果物を作る</div>
+              <div class="grid-title">成果物を作る</div>
               <div class="grid-desc">
                 <ul>
                   <li><strong>使い分け</strong> — Office／Research／Artifact／Cowork を成果物に応じて選ぶ。</li>
@@ -2052,7 +2052,7 @@ const MODULES = [
       },
       {
         question: 'Cowork と Claude Code について、第1回の時点で正しい理解はどれですか？',
-        options: ['今すぐ全機能を使いこなす必要がある', 'Chat で十分なので、Cowork と Claude Code は不要', 'Chat をまず使いこなし、必要に応じて Cowork（後半）、Claude Code（第2回）へ進む', 'Cowork と Claude Code は同じ機能'],
+        options: ['今すぐ全機能を使いこなす必要がある', 'Chat で十分なので、Cowork と Claude Code は不要', 'Chat をまず使いこなし、必要に応じて Cowork、Claude Code（第2回）へ進む', 'Cowork と Claude Code は同じ機能'],
         correct: 2,
         explanation: 'まずは Chat で壁打ち・下書き・要約をしっかり使いこなすことが大切です。ファイル作成が必要になったら Cowork、品質の固定が必要になったら Claude Code を学びましょう。'
       },
@@ -2314,7 +2314,7 @@ const MODULES = [
         { q: 'Chat / Cowork / Claude Code はどう使い分けますか？', a: '「対話で済むか？」→ Chat。「ファイルを直接作ってほしいか？」→ Cowork。「毎回同じ品質で繰り返したいか？」→ Claude Code。迷ったら Chat からで問題ありません。', category: '💡 Claudeの基本' },
         { q: 'Project とは何ですか？', a: 'Project は案件固有の背景情報・ルール・参照資料を Claude に覚えさせる仕組みです。Instructions（指示文）とナレッジベース（参照資料）を設定すると、その Project 内の全会話で自動参照されます。毎回同じ前提を説明し直す手間がなくなります。', category: '🖥️ Chat・Projects' },
         { q: 'Artifact とは何ですか？', a: 'Artifact は会話とは独立した成果物です。文書・表・図表・Webページ・ダッシュボードなどを生成でき、追加指示で修正するとバージョンが記録されます。チャットの回答は流れていきますが、Artifact は残ります。「これを Artifact にして」と依頼するか、Claude が自動的に生成します。', category: '🖥️ Chat・Projects' },
-        { q: 'Cowork や Claude Code は最初から使うべきですか？', a: 'いいえ。まずは Chat で壁打ち・下書き・要約を使いこなすことが最優先です。ファイルを直接作ってほしい場面が出てきたら Cowork（後半）、品質の再現性が必要になったら Claude Code（第2回）を学びましょう。', category: '💡 Claudeの基本' },
+        { q: 'Cowork や Claude Code は最初から使うべきですか？', a: 'いいえ。まずは Chat で壁打ち・下書き・要約を使いこなすことが最優先です。ファイルを直接作ってほしい場面が出てきたら Cowork（1-13）、品質の再現性が必要になったら Claude Code（第2回）を学びましょう。', category: '💡 Claudeの基本' },
         { q: 'Claude の出力をそのまま使ってよいですか？', a: 'そのまま提出することは推奨しません。Claude の出力は「たたき台」です。特に数字・固有名詞・引用元は裏取りが必要です。確認→修正→仕上げのプロセスを経て、自分の責任で最終成果物にしてください。', category: '✍️ プロンプト・品質' },
         { q: 'プロンプトの3要素は必ず全部入れるべきですか？', a: '必ずしも全部必要ではありません。簡単な質問なら不要ですが、業務で精度の高い出力が欲しいときは3要素（前提の共有・タスク定義・ルール指定）を意識すると品質が上がります。まず簡潔に指示して、返ってきた出力を見て追加指示するやり方も有効です。', category: '✍️ プロンプト・品質' },
         { q: 'Claude in Office では具体的に何ができますか？', a: 'Excel ではデータの傾向分析・集計観点の提案・グラフ化方針の相談・異常値の洗い出し、PowerPoint では構成案の作成・タイトル改善・ストーリーライン整理、Word では要約・文体統一・章立て見直し・クライアント向け表現変換ができます。Office 内で直接 Claude と対話する形で利用します。', category: '💼 Office・Chrome' },
@@ -2369,7 +2369,7 @@ const MODULES = [
           <h3>このセクションのゴール</h3>
           <p>第1回で身につけた「初速の出し方」と「成果物の作り方」を1画面で振り返り、第2回（Claude Code で成果物を作る）への足場を整えます。</p>
 
-          <h3>前半：初速を出す基本</h3>
+          <h3>初速を出す基本</h3>
           <div class="visual-grid cols-3">
             <div class="visual-grid-item">
               <div class="grid-icon">💬</div>
@@ -2394,7 +2394,7 @@ const MODULES = [
             ・<strong>Artifact</strong> — 文書やコード・ツールを本文と切り離し、単独で編集・再利用できる
           </div>
 
-          <h3>後半：成果物につなげる</h3>
+          <h3>成果物につなげる</h3>
           <table class="info-table">
             <thead>
               <tr>
