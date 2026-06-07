@@ -2858,7 +2858,27 @@ const MODULES = [
           <p>成果物を繰り返し作るようになると、<strong>毎回品質がブレない仕組み</strong>が欲しくなります。ここでは質と再現性を支える道具 — CLAUDE.md（ルール固定）、Skills（手順の型化）、MCP / Connectors（必要なデータの接続） — を押さえます。</p>
 
           <h3>CLAUDE.md — 作業ルールを書いておく</h3>
-          <p>CLAUDE.md は、プロジェクトフォルダに置く<strong>ルールファイル</strong>です。Claude Code はこのファイルを自動で読み込み、記載されたルールに従って作業します。毎回同じ注意を書かなくても、品質を一定に保てます。</p>
+          <p>CLAUDE.md は、Claude Code が自動で読み込む<strong>ルールファイル</strong>です。毎回同じ注意を書かなくても、品質を一定に保てます。</p>
+
+          <h4>ルールには「置き場所」が2段ある — 自分用と案件用</h4>
+          <p>CLAUDE.md は1か所だけでなく、効かせたい範囲に応じて置き場所を選べます。大きく「自分用（グローバル）」と「案件用（プロジェクト）」の2段です。</p>
+
+          <div class="visual-grid cols-2">
+            <div class="visual-grid-item">
+              <div class="grid-icon">🌐</div>
+              <div class="grid-title">自分用（グローバル）</div>
+              <div class="grid-desc">自分の PC に1つ置く。自分が関わる<strong>すべての作業</strong>に共通で効く。例：「結論から書く」「です・ます調」「専門用語には説明を添える」など“自分の仕事の流儀”。</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">📁</div>
+              <div class="grid-title">案件用（プロジェクト）</div>
+              <div class="grid-desc">その<strong>案件フォルダ</strong>に置く。その案件だけに効く。<strong>チームで共有</strong>でき、メンバー全員が同じ前提で動ける。例：「クライアントは B社」「成果物はこの体裁」「この観点でレビュー」。</div>
+            </div>
+          </div>
+
+          <div class="info-box">
+            <p><strong>両方とも効きます</strong>（重ねて読み込まれます）。内容がぶつかったときは、より具体的な<strong>案件用が優先</strong>と考えれば OK です。このほか、会社が全社共通で決めるルールを管理者が設定している場合もありますが、ふだん自分で触ることはありません。</p>
+          </div>
 
           <div class="visual-grid cols-2">
             <div class="visual-grid-item">
@@ -2871,6 +2891,27 @@ const MODULES = [
               <div class="grid-title">書かなくてよいこと</div>
               <div class="grid-desc">一般的な知識、一時的な作業指示（それはチャットで伝える）</div>
             </div>
+          </div>
+
+          <h4>準備の仕方 — まず /init、確認は /memory</h4>
+          <p>ゼロから書く必要はありません。2つのコマンドで準備できます。</p>
+
+          <div class="visual-grid cols-2">
+            <div class="visual-grid-item">
+              <div class="grid-icon">⚡</div>
+              <div class="grid-title">/init</div>
+              <div class="grid-desc">案件フォルダで実行すると、フォルダの中身を見て CLAUDE.md の<strong>たたき台を自動生成</strong>。ゼロから書かず、それを直すところから始められる。</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">🔍</div>
+              <div class="grid-title">/memory</div>
+              <div class="grid-desc">いま効いている CLAUDE.md を<strong>一覧表示・編集</strong>。自分用／案件用のどちらに何が書いてあるか、ここで確認・追記できる。</div>
+            </div>
+          </div>
+
+          <div class="tip-box">
+            <strong>💡 置き場所は覚えなくて大丈夫</strong><br>
+            ファイルの正確な保存場所を覚える必要はありません。<code>/memory</code> が一覧で見せてくれるので、そこから開いて直すのが簡単です。
           </div>
 
           <h4>ルールファイルは小さく分ける — DESIGN.md / CONTENT.md / REVIEW.md</h4>
