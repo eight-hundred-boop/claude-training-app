@@ -5541,6 +5541,69 @@ body.landing-mode #global-footer {
   15%, 45% { background-color: var(--primary-bg); }
 }
 
+/* エージェントチームの図解（Subagents） */
+.agent-team {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.agent-team-lead {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 540px;
+  background: var(--primary-bg);
+  border: 1px solid var(--primary);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+}
+.agent-team-lead.result {
+  background: var(--surface);
+  border-color: var(--border);
+}
+.agent-team .at-icon { font-size: 24px; flex-shrink: 0; }
+.agent-team .at-body { display: flex; flex-direction: column; }
+.agent-team .at-body strong { font-size: 14px; color: var(--text); }
+.agent-team .at-body span { font-size: 12px; color: var(--text-secondary); }
+.agent-team-down, .agent-team-up {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+.agent-team-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+  max-width: 540px;
+}
+.agent-team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 8px;
+}
+.agent-team-member .at-icon { font-size: 22px; }
+.agent-team-member strong { font-size: 13px; color: var(--text); }
+.agent-team-member span { font-size: 11px; color: var(--text-secondary); }
+.agent-team-parallel {
+  font-size: 12px;
+  color: var(--primary);
+  font-weight: 600;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .agent-team-row { grid-template-columns: 1fr; }
+}
+
 /* 検索結果をキーボードで操作できるように（button化に伴う見た目維持） */
 button.search-result-item {
   width: 100%;

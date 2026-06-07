@@ -3270,6 +3270,27 @@ const MODULES = [
             </div>
           </div>
 
+          <h4>エージェントチームの動き方</h4>
+          <p>1つの大きな仕事を、親（あなた）が手分けして渡し、各担当が<strong>並列</strong>で動き、<strong>要約だけ</strong>を返す——というチームのイメージです。</p>
+          <div class="agent-team">
+            <div class="agent-team-lead">
+              <span class="at-icon">🧑‍💼</span>
+              <div class="at-body"><strong>あなた（親エージェント）</strong><span>ゴールと役割を決め、手分けして渡す</span></div>
+            </div>
+            <div class="agent-team-down">↓ 手分けして指示</div>
+            <div class="agent-team-row">
+              <div class="agent-team-member"><span class="at-icon">🔍</span><strong>調査担当</strong><span>情報を集める</span></div>
+              <div class="agent-team-member"><span class="at-icon">🔧</span><strong>実装担当</strong><span>成果物を作る</span></div>
+              <div class="agent-team-member"><span class="at-icon">✅</span><strong>レビュー担当</strong><span>品質を点検</span></div>
+            </div>
+            <div class="agent-team-parallel">＝ それぞれが並列で同時に作業し、要約だけを親に返す</div>
+            <div class="agent-team-up">↑ 要約レポートを返す</div>
+            <div class="agent-team-lead result">
+              <span class="at-icon">🧑‍💼</span>
+              <div class="at-body"><strong>あなたが統合・最終判断</strong><span>受け取った要約をまとめ、責任を持って仕上げる</span></div>
+            </div>
+          </div>
+
           <h3>なぜ成果物づくりに効くのか</h3>
           <div class="visual-before-after">
             <div class="ba-item before">
@@ -3322,22 +3343,24 @@ const MODULES = [
           </div>
 
           <h3>成果物づくりだけじゃない — リサーチ・企画にも効く</h3>
-          <p>Claude Code（複数のエージェント）は“作る”だけでなく、“調べる・考える”にも強みがあります。</p>
+          <p>Subagents（複数のエージェント）は“作る”だけでなく、<strong>“調べる・考える”でこそ威力を発揮します</strong>。1体では「1つの視点」「1つの机（一度に扱える情報量）」に限られますが、手分けすれば<strong>広さ</strong>と<strong>客観性</strong>を同時に手に入れられます。</p>
 
           <div class="visual-grid cols-2">
             <div class="visual-grid-item">
               <div class="grid-icon">🔍</div>
-              <div class="grid-title">リサーチの型</div>
-              <div class="grid-desc">並列で広く調べる → まとめる → 多角で検証 → もう一度まとめる。例：競合・市場調査、イベント設計、キャリア分析。</div>
+              <div class="grid-title">リサーチの型：観点を分担して並行調査</div>
+              <div class="grid-desc">観点ごとに別の担当が<strong>同時に</strong>調べる → 親が統合 → 別の担当が<strong>多角で検証</strong> → もう一度まとめる。各自が要約だけ返すので、広く深く、抜けも減ります。例：競合3社を「価格／提供価値／顧客層」で分担、市場規模・需要・参入障壁を手分けして調査。</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">💡</div>
-              <div class="grid-title">アイデア出しの型</div>
-              <div class="grid-desc">成功パターンを調べる → たくさん発散する → 基準で評価して選ぶ。例：ネーミング、施策の発想。</div>
+              <div class="grid-title">アイデアの型：発散役と評価役を分ける</div>
+              <div class="grid-desc">成功パターンを調べる → 案を一気に<strong>発散</strong> → 別の“<strong>評価役</strong>”が基準で採点して選別。作り手と評価役が分かれるので甘い自己評価にならず、検討に値する案が残ります。例：施策アイデア出し、サービス・コミュニティのネーミング。</div>
             </div>
           </div>
 
-          <p>単に広げるだけでなく、<strong>「一度まとめてから検証する」</strong>過程を挟むと、最終アウトプットの質が上がります。</p>
+          <div class="info-box">
+            <p><strong>カギは「独立した目」と「広さ」</strong>：調べる役と検証する役、作る役と選ぶ役を分けるほど、思い込み・抜け・身内びいきが減ります。広げたら<strong>一度まとめ、別のエージェントで検証する</strong>ひと手間で、最終アウトプットの質がぐっと上がります（従来は複数のAIに投げてコピペで手作業統合していた工程が、一度の依頼で通せます）。</p>
+          </div>
 
           <h3>使う／使わないの見極め</h3>
           <div class="visual-grid cols-2">
