@@ -2312,6 +2312,7 @@ const MODULES = [
       faq: [
         { q: 'Claude ではまず何から使えばよいですか？', a: 'まずは Chat から始めましょう。壁打ち（論点整理）、下書き（メール・報告書の素案）、要約（長い文書を要点に絞る）の3パターンが最も使用頻度が高いです。慣れてきたら Project で案件の背景を登録し、Artifact で成果物を残すとさらに効率が上がります。', category: '💡 Claudeの基本' },
         { q: 'Chat / Cowork / Claude Code はどう使い分けますか？', a: '「対話で済むか？」→ Chat。「ファイルを直接作ってほしいか？」→ Cowork。「毎回同じ品質で繰り返したいか？」→ Claude Code。迷ったら Chat からで問題ありません。', category: '💡 Claudeの基本' },
+        { q: 'Claude と ChatGPT / Gemini の違いは何ですか？', a: 'Claude は長文処理の安定性（200Kトークン）、指示への忠実さ（出力形式・ルール遵守）、構造化・論点整理の精度に強みがあります。また、ファイルを直接操作する Cowork モードは Claude 独自の機能です。ChatGPT は画像生成やプラグインエコシステム、Gemini は Google サービスとの連携が充実しています。タスクに応じて使い分けるのが現実的です。', category: '💡 Claudeの基本' },
         { q: 'Project とは何ですか？', a: 'Project は案件固有の背景情報・ルール・参照資料を Claude に覚えさせる仕組みです。Instructions（指示文）とナレッジベース（参照資料）を設定すると、その Project 内の全会話で自動参照されます。毎回同じ前提を説明し直す手間がなくなります。', category: '🖥️ Chat・Projects' },
         { q: 'Artifact とは何ですか？', a: 'Artifact は会話とは独立した成果物です。文書・表・図表・Webページ・ダッシュボードなどを生成でき、追加指示で修正するとバージョンが記録されます。チャットの回答は流れていきますが、Artifact は残ります。「これを Artifact にして」と依頼するか、Claude が自動的に生成します。', category: '🖥️ Chat・Projects' },
         { q: 'Cowork や Claude Code は最初から使うべきですか？', a: 'いいえ。まずは Chat で壁打ち・下書き・要約を使いこなすことが最優先です。ファイルを直接作ってほしい場面が出てきたら Cowork（1-13）、品質の再現性が必要になったら Claude Code（第2回）を学びましょう。', category: '💡 Claudeの基本' },
