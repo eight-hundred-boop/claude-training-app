@@ -13,7 +13,9 @@
 :root {
   --primary: #127D70;
   --primary-light: #1a9e8e;
+  --primary-dark: #0e6a5f;
   --primary-bg: #E3F5F3;
+  --primary-faint: #f0faf8;
   --accent: #127D70;
   --accent-light: #E3F5F3;
   --dark-green: #1B3928;
@@ -22,7 +24,7 @@
   --surface-hover: #f0f5f4;
   --text: #0D0D0D;
   --text-secondary: #4a5c56;
-  --text-muted: #8a9692;
+  --text-muted: #5e6b66;
   --border: #d4e0dd;
   --border-light: #e8f0ee;
   --success: #127D70;
@@ -5402,4 +5404,161 @@ body.landing-mode #global-footer {
   .product-sub-features {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/* ============================================================
+   UI/UX レビュー対応（focus / motion / モバイルナビ / テーブル / 投影 ほか）
+   ============================================================ */
+
+/* キーボードフォーカスの可視化 */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+#search-input:focus-visible,
+.tip-search-input:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 0;
+}
+
+/* 動きの抑制（前庭障害などへの配慮） */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* hover で主色が一段暗くなる（--accent==--primary 問題の補正） */
+.btn-primary:hover { background: var(--primary-dark); border-color: var(--primary-dark); }
+.btn-complete-section:hover { background: var(--primary-dark); }
+
+/* 情報ボックス4種の体裁を統一（tip-box の 4px/14px を他と揃える） */
+.tip-box, .info-box, .warning-box, .try-box, .example-box {
+  border-left-width: 3px;
+  font-size: 14px;
+}
+
+/* テーブルの横溢れ対策（モバイルでビューポートごと溢れるのを防ぐ） */
+.section-body table,
+.topic-content table,
+.slide-section-body table {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+}
+.toolkit-copy code { overflow-wrap: anywhere; }
+
+/* ハンバーガーメニュー（モバイルナビ） */
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  cursor: pointer;
+}
+.nav-toggle:hover { background: var(--surface-hover); }
+
+@media (max-width: 768px) {
+  .nav-toggle { display: inline-flex; }
+  #global-header.nav-open .header-nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow-md);
+    padding: 8px 16px;
+    gap: 2px;
+    z-index: 200;
+  }
+  #global-header.nav-open .header-nav-link {
+    padding: 12px 8px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border-light);
+  }
+}
+
+/* 研修モード（スライド投影）のレスポンシブ */
+@media (max-width: 768px) {
+  .slide-cover-groups { grid-template-columns: 1fr; }
+  .slide-cover-title { font-size: 26px; }
+  .slide-cover-desc { font-size: 15px; }
+  .present-session-tabs { flex-wrap: wrap; }
+  .present-nav-bar { flex-wrap: wrap; gap: 8px; }
+}
+
+/* 付録バッジ（STEP連番ではないことを示す） */
+.cover-group-num-appendix { color: var(--text-muted); }
+
+/* 検索からの遷移時に該当項目をハイライト */
+.search-flash {
+  animation: searchFlash 1.6s ease;
+}
+@keyframes searchFlash {
+  0%, 100% { background-color: transparent; }
+  15%, 45% { background-color: var(--primary-bg); }
+}
+
+/* 検索結果をキーボードで操作できるように（button化に伴う見た目維持） */
+button.search-result-item {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* ホームの「続きから」導線 */
+.home-resume {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 16px;
+  background: var(--primary-faint);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--primary);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin-bottom: 24px;
+}
+.home-resume-text { flex: 1; min-width: 200px; }
+.home-resume-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+.home-resume-title { font-size: 16px; font-weight: 700; color: var(--text); margin-top: 2px; }
+.home-resume-bar {
+  height: 6px;
+  background: var(--border-light);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+.home-resume-bar span { display: block; height: 100%; background: var(--primary); }
+.home-onboard-hint {
+  font-size: 14px;
+  color: var(--text-secondary);
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  margin-bottom: 24px;
 }

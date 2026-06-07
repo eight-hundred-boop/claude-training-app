@@ -141,7 +141,11 @@
     });
 
     presentSectionIndex = 0;
-    navigateTo('home');
+    // モード切替時、モジュール閲覧中なら現在地（回）を保持する
+    const inModule = (currentPage === 'module' || currentPage === 'topic-detail') && currentModule !== null;
+    if (inModule && mode === 'present') navigateTo('module', currentModule);
+    else if (inModule && mode === 'self-study') navigateTo('topic-detail', currentModule, currentSection || 0);
+    else navigateTo('home');
   }
 
   function enterLanding() {
@@ -152,6 +156,7 @@
     document.body.classList.remove('present-mode');
     removePresentModeBar();
     renderLanding(document.getElementById('page-container'));
+    enhanceInteractive(document.getElementById('page-container'));
   }
 
   function addPresentModeBar() {
@@ -177,6 +182,34 @@
 
   // TIPS集の遷移時フォーカス用（特定TIPSにスクロール・ハイライトする）
   let pendingTipFocus = null;
+  // 検索からの遷移時に、該当項目へスクロール&ハイライトする
+  let pendingScroll = null;
+
+  function applyPendingScroll() {
+    if (!pendingScroll) return;
+    const title = pendingScroll.title;
+    pendingScroll = null;
+    const container = document.getElementById('page-container');
+    if (!container) return;
+    const cards = container.querySelectorAll('.faq-item, .practices-card, .link-item');
+    let target = null;
+    cards.forEach(el => { if (!target && el.textContent && el.textContent.indexOf(title) !== -1) target = el; });
+    if (!target) return;
+    if (target.tagName === 'DETAILS') target.open = true;
+    target.scrollIntoView({ block: 'center' });
+    target.classList.add('search-flash');
+    setTimeout(() => target.classList.remove('search-flash'), 1600);
+  }
+
+  // クリック可能な要素（div等）にキーボード操作の手がかり（role/tabindex）を付与
+  function enhanceInteractive(root) {
+    const sel = '[data-nav],[data-go-module],[data-resume],[data-quiz-module],[data-nav-final],[data-goto-slide],[data-go-section],.landing-card,.overview-session,.quiz-option,.section-header,.present-session-card';
+    (root || document).querySelectorAll(sel).forEach(el => {
+      if (el.tagName === 'BUTTON' || el.tagName === 'A') return;
+      if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '0');
+      if (!el.hasAttribute('role')) el.setAttribute('role', 'button');
+    });
+  }
 
   // --- ナビゲーション ---
   function navigateTo(page, moduleIndex, sectionIndex, options) {
@@ -221,6 +254,8 @@
       }
     }
     scrollToTop();
+    enhanceInteractive(container);
+    applyPendingScroll();
   }
 
   // ========================================
@@ -270,12 +305,38 @@
     const totalFaqs = getAllFaqs().reduce((s, g) => s + g.items.length, 0);
     const totalQuizzes = MODULES.reduce((s, m) => s + m.quiz.length, 0);
 
+    const prog = loadProgress();
+    let doneSections = 0, nextMi = null, nextSi = null;
+    MODULES.forEach((m, mi) => {
+      m.sections.forEach((_, si) => {
+        if (prog[`m${mi}_s${si}`]) doneSections++;
+        else if (nextMi === null) { nextMi = mi; nextSi = si; }
+      });
+    });
+    const overallPct = totalSections ? Math.round(doneSections / totalSections * 100) : 0;
+    const started = doneSections > 0;
+    const resumeHtml = (started && nextMi !== null) ? `
+        <div class="home-resume" data-resume="${nextMi},${nextSi}">
+          <div class="home-resume-text">
+            <div class="home-resume-label">続きから学ぶ — 全体 ${overallPct}% 完了</div>
+            <div class="home-resume-title">${MODULES[nextMi].shortTitle}　${MODULES[nextMi].sections[nextSi].title}</div>
+            <div class="home-resume-bar"><span style="width:${overallPct}%"></span></div>
+          </div>
+          <span class="btn btn-primary">続きを開く</span>
+        </div>` : '';
+    const hintHtml = !started ? `
+        <div class="home-onboard-hint">👋 はじめての方へ：まずは下の「<strong>学習コンテンツ</strong>」から第1回を順に進めましょう。各回の最後にクイズで理解度を確認できます。進捗はこの端末に自動保存されます。</div>`
+      : (nextMi === null ? `
+        <div class="home-onboard-hint">🎉 全セクションを完了しました。クイズ・修了テストで仕上げ、必要なときに TIPS集・FAQ を見直しましょう。</div>` : '');
+
     container.innerHTML = `
       <div class="fade-in">
         <div class="home-hero">
           <h1>Claude スキルアップ講座</h1>
           <p class="subtitle">学習コンテンツの復習・練習問題・クイズ・TIPS集・リンク集・FAQで、Claude活用スキルを自分のペースで高めましょう。</p>
         </div>
+        ${resumeHtml}
+        ${hintHtml}
 
         <div class="training-overview">
           <h2 class="overview-title">研修の全体像</h2>
@@ -371,6 +432,12 @@
     container.querySelectorAll('[data-go-module]').forEach(el => {
       el.addEventListener('click', () => {
         navigateTo('topic-detail', parseInt(el.dataset.goModule), 0);
+      });
+    });
+    container.querySelectorAll('[data-resume]').forEach(el => {
+      el.addEventListener('click', () => {
+        const parts = el.dataset.resume.split(',');
+        navigateTo('topic-detail', parseInt(parts[0]), parseInt(parts[1]));
       });
     });
   }
@@ -1220,8 +1287,26 @@
   // ========================================
   function init() {
     // ヘッダーナビ
+    const headerEl = document.getElementById('global-header');
+    const navToggle = document.getElementById('nav-toggle');
+    function closeNav() { headerEl?.classList.remove('nav-open'); navToggle?.setAttribute('aria-expanded', 'false'); }
+    navToggle?.addEventListener('click', () => {
+      const open = headerEl.classList.toggle('nav-open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
     document.querySelectorAll('.header-nav-link').forEach(el => {
-      el.addEventListener('click', (e) => { e.preventDefault(); navigateTo(el.dataset.page); });
+      el.addEventListener('click', (e) => { e.preventDefault(); closeNav(); navigateTo(el.dataset.page); });
+    });
+
+    // クリック可能な div 等を Enter / Space でも操作可能に（キーボード操作）
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== 'Enter' && e.key !== ' ' && e.key !== 'Spacebar') return;
+      const el = e.target.closest && e.target.closest('[data-nav],[data-go-module],[data-resume],[data-quiz-module],[data-nav-final],[data-goto-slide],[data-go-section],.landing-card,.overview-session,.quiz-option,.section-header,.present-session-card');
+      if (!el) return;
+      const tag = el.tagName;
+      if (tag === 'BUTTON' || tag === 'A' || tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+      e.preventDefault();
+      el.click();
     });
 
     // ロゴ → ホーム
@@ -1273,8 +1358,10 @@
     const searchInput = document.getElementById('search-input');
     const searchResults = document.getElementById('search-results');
 
+    let lastFocusedBeforeSearch = null;
     function openSearch() {
       if (currentMode === 'present') return;
+      lastFocusedBeforeSearch = document.activeElement;
       searchModal.classList.add('open');
       searchInput.value = '';
       searchResults.innerHTML = '<div class="search-hint">キーワードを入力してください</div>';
@@ -1282,7 +1369,17 @@
     }
     function closeSearch() {
       searchModal.classList.remove('open');
+      if (lastFocusedBeforeSearch && lastFocusedBeforeSearch.focus) lastFocusedBeforeSearch.focus();
     }
+    // モーダル内にフォーカスを閉じ込める
+    searchModal?.addEventListener('keydown', (e) => {
+      if (e.key !== 'Tab' || !searchModal.classList.contains('open')) return;
+      const focusables = searchModal.querySelectorAll('input, button, [href], [tabindex]:not([tabindex="-1"])');
+      if (!focusables.length) return;
+      const first = focusables[0], last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    });
 
     function buildSearchIndex() {
       const items = [];
@@ -1335,17 +1432,17 @@
         searchResults.innerHTML = '<div class="search-hint">該当する結果がありません</div>';
         return;
       }
-      const icons = { section: '📄', faq: '❓', link: '🔗' };
+      const icons = { section: '📄', practice: '✏️', faq: '❓', link: '🔗' };
       const labels = { section: 'セクション', practice: '練習問題', faq: 'FAQ', link: 'リンク' };
       searchResults.innerHTML = matches.slice(0, 20).map((m, i) => `
-        <div class="search-result-item" data-search-idx="${i}">
-          <span class="search-result-icon">${icons[m.type]}</span>
+        <button type="button" class="search-result-item" data-search-idx="${i}">
+          <span class="search-result-icon" aria-hidden="true">${icons[m.type] || '🔍'}</span>
           <div class="search-result-body">
             <div class="search-result-title">${m.title}</div>
             ${m.subtitle ? `<span class="search-result-tag">${m.subtitle}</span>` : ''}
             <span class="search-result-tag">${labels[m.type]}</span>
           </div>
-        </div>
+        </button>
       `).join('');
       // 結果を保持
       searchResults._matches = matches.slice(0, 20);
@@ -1360,10 +1457,10 @@
       const idx = parseInt(item.dataset.searchIdx);
       const m = searchResults._matches[idx];
       closeSearch();
-      if (m.type === 'section') navigateTo('topic-detail', m.mi, m.si);
-      else if (m.type === 'practice') navigateTo('practices');
-      else if (m.type === 'faq') navigateTo('faq');
-      else if (m.type === 'link') navigateTo('links');
+      if (m.type === 'section') { navigateTo('topic-detail', m.mi, m.si); }
+      else if (m.type === 'practice') { pendingScroll = { title: m.title }; navigateTo('practices'); }
+      else if (m.type === 'faq') { pendingScroll = { title: m.title }; navigateTo('faq'); }
+      else if (m.type === 'link') { pendingScroll = { title: m.title }; navigateTo('links'); }
     });
 
     // Ctrl+K / Escape

@@ -41,7 +41,7 @@ class QuizEngine {
 
           <div class="quiz-options">
             ${q.options.map((opt, i) => `
-              <div class="quiz-option ${this.getOptionClass(i)}" data-index="${i}">
+              <div class="quiz-option ${this.getOptionClass(i)}" data-index="${i}" role="button" tabindex="0">
                 <span class="option-marker">${markers[i]}</span>
                 <span class="option-text">${opt}</span>
                 ${isAnswered && this.getOptionFeedback(i) ? `<div class="option-feedback ${i === q.correct ? 'correct' : 'incorrect'}">${this.getOptionFeedback(i)}</div>` : ''}
