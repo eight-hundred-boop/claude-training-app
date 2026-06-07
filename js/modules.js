@@ -48,7 +48,7 @@ const MODULES = [
             <div class="visual-grid-item">
               <div class="grid-icon">🧠</div>
               <div class="grid-title">長文に強い</div>
-              <div class="grid-desc">最大100万トークン（約75万字＝文庫本で数冊分）を一度に処理できます。長い報告書や議事録、複数資料をそのまま渡して、要約・分析・比較を依頼できます</div>
+              <div class="grid-desc">一度に約75万字＝文庫本で数冊分（最大100万トークン）まで読み込めます。長い報告書や議事録、複数資料をそのまま渡して、要約・分析・比較を依頼できます</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">🎯</div>
@@ -546,7 +546,7 @@ const MODULES = [
               <div class="ba-label">After：3要素あり</div>
               <p>「あなたはITコンサルタントです。<br>
               A社・B社・C社のクラウドERPを、機能・価格・導入実績で比較してください。<br>
-              比較表（Markdown）で出力し、最後に推奨を1段落で述べてください。」</p>
+              比較表（Markdown＝そのまま資料に貼れる軽い書式）で出力し、最後に推奨を1段落で述べてください。」</p>
             </div>
           </div>
 
@@ -957,6 +957,10 @@ const MODULES = [
           <h3>このセクションで学ぶこと</h3>
           <p>Claude in Office を使うと、Excel・PowerPoint・Word の中で直接 Claude に指示が出せます。普段の Office 作業にAIを組み込むことで、分析・資料作成・文書校正の質とスピードを同時に上げられます。</p>
 
+          <div class="info-box">
+            <p>📑 このセクションは <strong>①アドインを入れる（インストール）→ ②各アプリでの使い方 → ③【応用】スライドの段階生成</strong> の3部構成です。まずは①を研修中に終わらせ、②③は必要なところから読んでください。</p>
+          </div>
+
           <h3>インストール手順（PowerPoint アドインを研修中にセット）</h3>
           <p>普段使う Office アプリ（PowerPoint / Word / Excel）に Claude のアドインを追加すると、ファイルを開いたまま Claude を呼び出せるようになります。研修中は <strong>PowerPoint アドインを実際にインストール</strong>します。Word / Excel は同じ手順なので研修後にご自身で入れてください。</p>
 
@@ -1219,7 +1223,7 @@ const MODULES = [
             うまくいった「指示の型化」や「定型ワークフローの再利用」は第2回で扱います。
           </div>
 
-          <h3>スライドは「いきなり完成形」を作らせない — 段階生成のコツ</h3>
+          <h3>【応用】スライドは「いきなり完成形」を作らせない — 段階生成のコツ</h3>
           <p>「提案書を10枚作って」と一気に依頼すると、見た目は整っていても<strong>論点・ストーリー・意思決定への接続が弱い</strong>スライドが返ってきがちです。次の順で段階的に作らせ、各段階で人がレビューします。</p>
 
           <div class="visual-steps">
@@ -1994,6 +1998,11 @@ const MODULES = [
             </ul>
           </div>
 
+          <div class="tip-box">
+            <strong>✏️ 手を動かして定着させる</strong><br>
+            各セクションの演習は「<strong>練習問題</strong>」ページにまとまっています（自習モード）。講義を見たら、練習問題で1つ手を動かすと定着します。
+          </div>
+
           <h3>次回（第2回）へ</h3>
           <div class="visual-highlight-card">
             <p>第1回は「個人で速く・成果物を作る」。第2回は <strong>Claude Code</strong> で「<strong>一段上の成果物を自分で作る</strong>」段階に進みます。</p>
@@ -2331,7 +2340,8 @@ const MODULES = [
         { q: 'Scheduled tasks はどのような業務に使えますか？', a: '毎週の業界ニュース収集、定例会議前の確認事項整理、週次レポートの下書き、タスクのリマインド、定期的な競合情報チェックなど、「繰り返し」「定型」「準備作業」に効果を発揮します。「毎回同じようにやっている作業」を洗い出し、Claude に任せられないか考えてみてください。', category: '📂 Cowork' },
         { q: 'Claude で作った成果物はそのまま提出してよいですか？', a: '第1回の復習になりますが、どの機能で作った成果物も「たたき台」です。特に Research の数値・出典、Artifact の計算ロジック、Office 連携の分析結果は、自分で確認してから使ってください。成果物の最終責任は常に自分にあります。', category: '✍️ プロンプト・品質' },
         { q: 'スライド生成を Claude に任せる時のコツは何ですか？', a: 'いきなり「10枚作って」と任せると、見た目は整っても論点・ストーリーが弱くなりがちです。次の順で段階的に作らせるのがコツです：(1) 構成・ストーリーラインを作る、(2) 1枚ごとのキーメッセージを作る、(3) 図表案・本文を作る、(4) 論理飛び・数字根拠・読み手目線で点検する。各段階で人がレビューし、デザインは最後に整えます。うまくいった生成手順自体は Skill 化して再利用すると効率的です。', category: '✍️ プロンプト・品質' },
-        { q: 'NotebookLM など他のAIツールと Claude はどう併用できますか？', a: '役割分担で考えると整理しやすいです。Web 横断調査・出典付きレポートは Claude の Research、手元の大量資料を読ませて Q&A・図解化する用途は NotebookLM のような資料連動型ツール、調査→示唆→提案→スライド化の一連の流れは Claude（Chat / Artifact / Skills の組み合わせ）が向きます。「すべて Claude」ではなく、得意分野で使い分けるのが効率的です。', category: '💡 Claudeの基本' }
+        { q: 'NotebookLM など他のAIツールと Claude はどう併用できますか？', a: '役割分担で考えると整理しやすいです。Web 横断調査・出典付きレポートは Claude の Research、手元の大量資料を読ませて Q&A・図解化する用途は NotebookLM のような資料連動型ツール、調査→示唆→提案→スライド化の一連の流れは Claude（Chat / Artifact / Skills の組み合わせ）が向きます。「すべて Claude」ではなく、得意分野で使い分けるのが効率的です。', category: '💡 Claudeの基本' },
+        { q: '自分のアカウントで何が使えますか？料金プランや使用量の上限は？', a: '利用できる機能・プラン・使用量の上限は、社内のライセンス契約によって決まります。最新の利用範囲や申請方法は社内ガイド（Notion）を確認するか、AI推進担当に問い合わせてください。プランや上限は変わることがあるため、本教材では具体的な数値は記載していません。', category: '💡 Claudeの基本' }
       ]
     }
   },
@@ -2595,7 +2605,7 @@ const MODULES = [
         type: 'lecture',
         content: `
           <h3>このセクションで学ぶこと</h3>
-          <p>Claude Code の成果は<strong>最初の準備で8〜9割が決まります</strong>。「どこで動かすか」を選び、作業前の準備5点と安全な指示の型を押さえて、安心して任せられる状態を作ります。</p>
+          <p>Claude Code の成果は<strong>最初の準備で8割が決まります</strong>。「どこで動かすか」を選び、作業前の準備5点と安全な指示の型を押さえて、安心して任せられる状態を作ります。</p>
 
           <h3>1. どこで動かすか — Desktop / CLI / IDE</h3>
           <p>Claude Code はいろんなタッチポイントから使えます。<strong>自分の作業スタイルに合わせて選びましょう</strong>。</p>
@@ -2622,6 +2632,42 @@ const MODULES = [
             </div>
           </div>
           <p><strong>最初は Desktop から始めると迷いません</strong>。CLI や IDE は、並列作業や自動化を求めるようになってから検討すれば十分です。</p>
+
+          <h4>最初の一歩 — Desktop で起動して作業フォルダを開く</h4>
+          <p>「準備5点」を整えても、最初の起動で迷う方が多いポイントです。流れはシンプルで、次の4ステップです。</p>
+          <div class="visual-steps">
+            <div class="visual-step-item">
+              <div class="step-marker">1</div>
+              <div class="step-body">
+                <div class="step-title">Claude デスクトップアプリを起動する</div>
+                <div class="step-desc">インストール済みの Claude アプリを開きます（インストールは巻末の「付録. インストールガイド」を参照）。</div>
+              </div>
+            </div>
+            <div class="visual-step-item">
+              <div class="step-marker">2</div>
+              <div class="step-body">
+                <div class="step-title">Claude Code を開く</div>
+                <div class="step-desc">アプリのメニューから Claude Code を選びます（Cowork と同じ画面まわりから入れます）。</div>
+              </div>
+            </div>
+            <div class="visual-step-item">
+              <div class="step-marker">3</div>
+              <div class="step-body">
+                <div class="step-title">作業フォルダを開く</div>
+                <div class="step-desc">用意したローカルの作業用フォルダを指定します。Claude Code に渡すのは、この1つのフォルダです。</div>
+              </div>
+            </div>
+            <div class="visual-step-item">
+              <div class="step-marker">4</div>
+              <div class="step-body">
+                <div class="step-title">最初の指示を1つ入れて試す</div>
+                <div class="step-desc">いきなり大きな作業を頼まず、まず「このフォルダに何があるか教えて」と聞いて、つながりを確認します。</div>
+              </div>
+            </div>
+          </div>
+          <div class="info-box">
+            <p>💡 画面の表記やボタン位置はバージョンで変わることがあります。社内の<a href="https://app.notion.com/p/7a274acba8f4447e9b9b972e8b04839c" target="_blank">インストール手順（社内ガイド）</a>もあわせて参照してください。</p>
+          </div>
 
           <h3>2. 始める前の準備 — 5点を整える</h3>
           <p>作業を始める前に、次の5点を整えてから着手します。</p>
@@ -3016,7 +3062,7 @@ const MODULES = [
             <div class="visual-grid-item">
               <div class="grid-icon">⚡</div>
               <div class="grid-title">/init</div>
-              <div class="grid-desc">案件フォルダで実行すると、フォルダの中身を見て CLAUDE.md の<strong>たたき台を自動生成</strong>。ゼロから書かず、それを直すところから始められる。</div>
+              <div class="grid-desc">案件フォルダで実行すると、フォルダの中身を見て CLAUDE.md の<strong>たたき台を自動生成</strong>。ゼロから書かず、それを直すところから始められる。すでに CLAUDE.md がある場合は、上書きせず改善点を提案してくれる。</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">🔍</div>
@@ -3459,6 +3505,11 @@ const MODULES = [
             </ul>
           </div>
 
+          <div class="tip-box">
+            <strong>✏️ 手を動かして定着させる</strong><br>
+            第2回の演習も「<strong>練習問題</strong>」ページにまとまっています（自習モード）。Desktop で実際に1つ作ってみるのがいちばんの近道です。
+          </div>
+
           <h3>全体のまとめ</h3>
           <div class="visual-highlight-card">
             <p>第1回は「個人の初速と成果物」、第2回は「<strong>Claude Code で一段上の成果物を自分で作る</strong>」。“使ってみる” から “<strong>自分の業務の道具を作る</strong>” へ。困ったら <strong>TIPS集</strong> と <strong>FAQ</strong> を見直しながら、自分の業務で効くものから取り入れていきましょう。</p>
@@ -3526,7 +3577,7 @@ const MODULES = [
     ],
 
     // ========================================
-    // 第2回 クイズ（11問）
+    // 第2回 クイズ（12問）
     // ========================================
     quiz: [
       {
@@ -3649,11 +3700,22 @@ const MODULES = [
         ],
         correct: 2,
         explanation: 'Claude Code の出力は常に「初稿」です。CLAUDE.md・Skills・Subagents で品質を安定させても、最終的な確認と承認は人間が行います。'
+      },
+      {
+        question: 'Claude Code が指示どおりに動かず迷走してしまったとき、最も効果的な対処はどれですか？',
+        options: [
+          'とにかく「ちゃんとやって」と強い言葉で何度も指示し直す',
+          '新しいスレッドで目的・現状・残課題を整理し直し、作業範囲を絞って準備（フォルダ・目的・成果物・禁止事項・変更対象）に戻る',
+          'すぐにあきらめて手作業に切り替える',
+          'バックアップを取らずに、大きな変更をまとめて一気に依頼し直す'
+        ],
+        correct: 1,
+        explanation: '「もっと強い指示」より「準備に戻る」が近道です。文脈を整理する（新しいスレッドで目的・現状・残課題を再提示）／作業を分割する／対象ファイルを限定する／現状調査で認識のズレを揃える。長時間うまくいかない時は、準備5点を整え直すのが効果的です。'
       }
     ],
 
     // ========================================
-    // 第2回 練習問題（7問）
+    // 第2回 練習問題（8問）
     // ========================================
     practices: [
       {
@@ -3685,6 +3747,12 @@ const MODULES = [
         title: '成果物づくりの Skill を1つ設計する',
         task: 'よく作る成果物（議事録、集計表、提案書レビューなど）の手順を Skill にしてみましょう。\n\n1. 必ず含める項目・出力形式を定義する\n2. 守るルール（文体、粒度、順序等）を書き出す\n3. 実際のデータで「この手順で作って」と試す\n4. 出力を見て足りない部分を Skill に追記する',
         hint: 'まず実際の素材（簡単なものでOK）を用意し、Skill の定義と一緒に渡して試しましょう。発動・品質・効率の3点で確認して育てます。'
+      },
+      {
+        section: '2-5. AIを“自分仕様”にする道具 — CLAUDE.md・Skills・MCP',
+        title: '配布スキル（consulting-toolkit-800）を入れて1つ呼び出す',
+        task: '2-5 の手順で当社スキル集「consulting-toolkit-800」をインストールし、実際に1つ呼び出して成果物を出してみましょう。\n\n1. デスクトップアプリ（または CLI）に consulting-toolkit-800 をインストールする\n2. 新しい会話で「どんなスキルが使える？」と聞いて、使えるスキルの一覧を確認する\n3. 議事録・スライド構成など身近な1つを選び、実データ（簡単なものでOK）で呼び出す\n4. 出てきた成果物を確認し、自分の業務に合うか・どこを直すかを見極める',
+        hint: 'まずは1つ呼び出して「型化済みスキルの便利さ」を体感するのが目的です。MCP（Notion・Slack 等の接続）も、必要になったら同じ感覚で1つだけ試してみましょう。'
       },
       {
         section: '2-6. 使いこなす：Subagents・実践TIPS・立て直し方',
