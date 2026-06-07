@@ -2357,7 +2357,7 @@ const MODULES = [
       'Subagents で作業を分担・並列化し、大きめの成果物づくりを効率化できる'
     ],
     coverGroups: [
-      { label: '第1回の復習', icon: '🔁', sections: [0], objectives: ['第1回の要点を振り返り、Claude Code へ橋渡しする'] },
+      { label: '第1回の復習', icon: '🔁', sections: [0], objectives: ['第1回の要点を振り返り、第2回（Claude Code）の土台にする'] },
       { label: 'Claude Codeを知る・始める', icon: '🚀', sections: [1, 2], objectives: ['Claude Codeで何が作れるかを理解する', 'Desktopで安全に始め、適切に指示できる'] },
       { label: '成果物を作る', icon: '🛠️', sections: [3, 4], objectives: ['データ処理・複数ファイル作業を任せる', 'ツール・プロトタイプ・アプリを作る'] },
       { label: '質を上げ、使いこなす', icon: '✅', sections: [5, 6], objectives: ['CLAUDE.md／Skillsで質と再現性を固定する', 'Subagentsで分担・並列化し効率化する'] },
@@ -2433,13 +2433,19 @@ const MODULES = [
           </table>
 
           <div class="info-box">
-            <strong>⚠️ 第1回 1-11 / 1-13 を思い出す</strong><br>
+            <strong>💡 第1回の Artifact（触れる試作品）と Cowork（フォルダのファイル作業）を思い出す</strong><br>
             Artifact で「触れる試作品」を、Cowork で「フォルダのファイル作業」を体験しました。第2回の Claude Code は、この2つをさらに広げて<strong>保存できる・複数ファイルを横断する・再利用できる成果物</strong>を作る段階です。
           </div>
 
-          <h3>第2回への橋渡し</h3>
+          <h3>ここから第2回でやること</h3>
           <div class="visual-highlight-card">
-            <p>第2回は、これらを土台に <strong>Claude Code で一段上の成果物を自分の手で作れるようになる</strong>段階へ。データ処理・ツール作成・プロトタイプづくりを、コードもコマンドも書かずに任せていきます。</p>
+            <p>第1回は“個人で速く・成果物を作る”。第2回はそれを土台に、<strong>Claude Code</strong> で次のことを、コードもコマンドも書かずに進めます。</p>
+            <ul>
+              <li>複数ファイル／データ処理をまとめて任せる</li>
+              <li>保存して再利用できるツール・プロトタイプを作る</li>
+              <li>CLAUDE.md・Skills・MCP で品質を“自分仕様”に固定する</li>
+              <li>Subagents（エージェントチーム）でリサーチ・企画まで広げる</li>
+            </ul>
           </div>
         `
       },
@@ -3184,14 +3190,14 @@ const MODULES = [
       },
 
       // ========================================
-      // 2-6: 使いこなす：Subagents・実践TIPS・戻り道
+      // 2-6: 使いこなす：Subagents・実践TIPS・立て直し方
       // ========================================
       {
-        title: '2-6. 使いこなす：Subagents・実践TIPS・戻り道',
+        title: '2-6. 使いこなす：Subagents・実践TIPS・立て直し方',
         type: 'lecture',
         content: `
           <h3>このセクションで学ぶこと</h3>
-          <p>大きめ・複雑な成果物を効率よく作るための使いこなしを押さえます。中心は <strong>Subagents（作業の分担・並列化）</strong>。あわせて、日々の作業が速くなる実践 TIPS と、うまく動かない時の戻り道を扱います。</p>
+          <p>大きめ・複雑な成果物を効率よく作るための使いこなしを押さえます。中心は <strong>Subagents（作業の分担・並列化）</strong>。あわせて、日々の作業が速くなる実践 TIPS と、うまく動かない時の立て直し方を扱います。</p>
 
           <h3>Subagents — 作業を分担・並列化する</h3>
           <p>Subagents は、1つの大きなタスクを<strong>役割を分けた複数のエージェントに任せる</strong>仕組みです。「調べる人・作る人・チェックする人」を分けるイメージです。</p>
@@ -3349,7 +3355,7 @@ const MODULES = [
             <p><strong>📚 TIPS はあとから参照できます</strong>：拡張機能・上級の小ワザを含む全 TIPS は、自習モードの「TIPS集」ページにカテゴリ別・レベル別でまとまっています。研修中に全部覚える必要はありません。</p>
           </div>
 
-          <h3>うまく動かない時の戻り道</h3>
+          <h3>うまく動かない時の立て直し方</h3>
           <p>Claude Code が意図と違う動きをする・出力品質が落ちる・修正を延々と続ける、といった場面では、<strong>「もっと強い指示を出す」より「準備に戻る」</strong>のが効きます。</p>
 
           <div class="visual-steps">
@@ -3437,7 +3443,7 @@ const MODULES = [
               <div class="grid-desc">
                 <ul>
                   <li><strong>Subagents</strong> — 調査・実装・レビューを分担／並列で効率化。</li>
-                  <li><strong>実践TIPS・戻り道</strong> — スラッシュコマンド・小ワザ／困ったら準備に戻る。</li>
+                  <li><strong>実践TIPS・立て直し方</strong> — スラッシュコマンド・小ワザ／困ったら準備に戻る。</li>
                 </ul>
               </div>
             </div>
@@ -3681,13 +3687,13 @@ const MODULES = [
         hint: 'まず実際の素材（簡単なものでOK）を用意し、Skill の定義と一緒に渡して試しましょう。発動・品質・効率の3点で確認して育てます。'
       },
       {
-        section: '2-6. 使いこなす：Subagents・実践TIPS・戻り道',
+        section: '2-6. 使いこなす：Subagents・実践TIPS・立て直し方',
         title: 'Subagents の分担を設計する',
         task: '大きめの成果物づくりを想定し、Subagents での役割分担を設計してみましょう。\n\n1. 大きいタスクを1つ選ぶ（例：複数資料を調査して提案ドラフトを作る）\n2. 「調査担当・実装担当・レビュー担当」に分けて、それぞれの役割を書き出す\n3. どこを並列で進められるか、どこは順番が必要かを整理する\n4. 1人（1エージェント）でやる場合と比べて、どこが速くなるかを考える',
         hint: '最初は1つの Claude Code で十分です。「分担した方が速い」と感じる規模のタスクを選ぶと、Subagents の効果がイメージしやすくなります。'
       },
       {
-        section: '2-6. 使いこなす：Subagents・実践TIPS・戻り道',
+        section: '2-6. 使いこなす：Subagents・実践TIPS・立て直し方',
         title: '実践TIPSを実際に試す',
         task: 'Claude Code の使いこなし TIPS を、実際に手を動かして試しましょう。\n\n1. /help でコマンド一覧を表示し、/context で使用量を確認する\n2. 会話が長くなったら /compact で圧縮してみる\n3. ESC 2回・↑キーで直前の指示を書き直す／再利用する\n4. ファイルのパスをコピーしてチャット欄に貼り、フォルダ外のファイルを渡してみる',
         hint: 'すべてを一度に覚える必要はありません。まずは /help と /context、ESC 2回の3つから。詳しい一覧は自習モードの TIPS集 を参照してください。'
@@ -3820,7 +3826,7 @@ const TIPS = [
     ],
     caution: 'IDE 上で開いていても、対象範囲は明示する。「見えている＝編集してよい」ではない。Cursor は全員必須ではなく、IDE を使わなくても Claude Code は CLI で使える。',
     relatedSession: '第2回',
-    relatedSections: [{ m: 1, s: 6, label: '第2回 2-6. 使いこなす：Subagents・実践TIPS・戻り道' }]
+    relatedSections: [{ m: 1, s: 6, label: '第2回 2-6. 使いこなす：Subagents・実践TIPS・立て直し方' }]
   },
   {
     id: 'tip-005',
@@ -3854,7 +3860,7 @@ const TIPS = [
     ],
     caution: '無理に続けるより、フォルダ・目的・成果物・禁止事項・変更対象の準備5点に戻るほうが早い。',
     relatedSession: '第2回',
-    relatedSections: [{ m: 1, s: 6, label: '第2回 2-6. 使いこなす：Subagents・実践TIPS・戻り道' }]
+    relatedSections: [{ m: 1, s: 6, label: '第2回 2-6. 使いこなす：Subagents・実践TIPS・立て直し方' }]
   },
 
   // ---- Cowork ----
@@ -4163,7 +4169,7 @@ const TIPS = [
     ],
     caution: '複数遡りたい場合は ↑ キー（tip-025）で履歴をたどる。',
     relatedSession: '第2回',
-    relatedSections: [{ m: 1, s: 6, label: '第2回 2-6. 使いこなす：Subagents・実践TIPS・戻り道' }]
+    relatedSections: [{ m: 1, s: 6, label: '第2回 2-6. 使いこなす：Subagents・実践TIPS・立て直し方' }]
   },
   {
     id: 'tip-025',
@@ -4179,7 +4185,7 @@ const TIPS = [
     ],
     caution: 'ターミナル経験者には馴染みのある操作。慣れると指示の再利用が高速化する。',
     relatedSession: '第2回',
-    relatedSections: [{ m: 1, s: 6, label: '第2回 2-6. 使いこなす：Subagents・実践TIPS・戻り道' }]
+    relatedSections: [{ m: 1, s: 6, label: '第2回 2-6. 使いこなす：Subagents・実践TIPS・立て直し方' }]
   },
   {
     id: 'tip-026',
@@ -4196,7 +4202,7 @@ const TIPS = [
     example: '「~/Documents/契約書.pdf をレビューしてください。」',
     caution: '機密情報を含むファイルは特に慎重に。作業コピーを使う原則は同じ。',
     relatedSession: '第2回',
-    relatedSections: [{ m: 1, s: 6, label: '第2回 2-6. 使いこなす：Subagents・実践TIPS・戻り道' }]
+    relatedSections: [{ m: 1, s: 6, label: '第2回 2-6. 使いこなす：Subagents・実践TIPS・立て直し方' }]
   },
   {
     id: 'tip-027',
@@ -4212,7 +4218,7 @@ const TIPS = [
     ],
     caution: '共有前に必ず人が目視確認。',
     relatedSession: '第2回',
-    relatedSections: [{ m: 1, s: 6, label: '第2回 2-6. 使いこなす：Subagents・実践TIPS・戻り道' }]
+    relatedSections: [{ m: 1, s: 6, label: '第2回 2-6. 使いこなす：Subagents・実践TIPS・立て直し方' }]
   },
   {
     id: 'tip-028',
@@ -4245,7 +4251,7 @@ const TIPS = [
     ],
     caution: '全タスクで最高設定にすると時間とコストが増える。タスクの重さに応じて選ぶ。',
     relatedSession: '第2回',
-    relatedSections: [{ m: 1, s: 6, label: '第2回 2-6. 使いこなす：Subagents・実践TIPS・戻り道' }]
+    relatedSections: [{ m: 1, s: 6, label: '第2回 2-6. 使いこなす：Subagents・実践TIPS・立て直し方' }]
   }
 ];
 
