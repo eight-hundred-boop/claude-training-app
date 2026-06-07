@@ -1611,6 +1611,19 @@ const MODULES = [
             💬 Chat が「相談役」なら、Cowork は仕事を<strong>任せる「相棒」</strong>。AI に作業を任せる「エージェント」的な使い方の入口です（考え方は第2回 2-1 でくわしく扱います）。
           </div>
 
+          <div class="agent-team">
+            <div class="agent-team-lead">
+              <span class="at-icon">🧑</span>
+              <div class="at-body"><strong>あなた</strong><span>「このフォルダの資料、案件ごとに整理して」とゴールだけ伝える</span></div>
+            </div>
+            <div class="agent-team-down">▼ あとは任せる</div>
+            <div class="agent-team-lead result">
+              <span class="at-icon">🤖</span>
+              <div class="at-body"><strong>Cowork（相棒）</strong><span>フォルダを開いて読む → 案件ごとに仕分ける → 整理した表を作る まで自分で進める</span></div>
+            </div>
+          </div>
+          <p>新しく人を採って教える手間なく、手元の作業を頼める“相棒”が増えるイメージ。やり方の細かい指示までは要らず、まずは<strong>ゴールを伝えるだけ</strong>でよいのがポイント。</p>
+
           <h4>データの置き場所が違う：クラウド型（Chat）と ローカル型（Cowork）</h4>
           <p>Chat と Cowork の根っこの違いは「ファイルをどこに置いて読ませるか」。</p>
           <ul>
@@ -2491,13 +2504,74 @@ const MODULES = [
             </div>
           </div>
 
+          <p>言葉だけだとピンと来ないので、よくある場面で比べてみる。「明日の企画書、構成案と裏付け調査をお願い」と頼んだとき——</p>
+          <div class="visual-before-after">
+            <div class="ba-item before">
+              <div class="ba-label">相談役（これまで）</div>
+              <h4>💬 きれいな構成案を返して終わり</h4>
+              <p>「完璧な構成案です。あとはご自身で調査して、資料に仕上げてください」——アイデアはくれるが、手を動かすのは結局こちら。</p>
+            </div>
+            <div class="ba-arrow">→</div>
+            <div class="ba-item after">
+              <div class="ba-label">相棒（エージェント）</div>
+              <h4>🤝 調べて、書いて、資料まで仕上げる</h4>
+              <p>ゴールから自分でやることリストを立て、調べ、本文を書き、資料の形にして手元に出す。こちらは出てきたものを確認するだけ。</p>
+            </div>
+          </div>
+          <p>同じ「お願い」でも、返ってくるのが<strong>「下書きのタネ」</strong>か<strong>「ほぼ仕上がった成果物」</strong>かが違う。これがエージェントの正体。</p>
+
           <div class="visual-highlight-card">
             <p><strong>コパイロット → エージェント</strong>：人が主役で AI が横で補助する使い方から、<strong>任せて、出てきた結果を確認する</strong>使い方へ。Claude Code（と Cowork）は、この「任せられるエージェント」の代表例です。</p>
           </div>
 
+          <h4>“ひと続きの作業”を一気に任せる、とはこういうこと</h4>
+          <p>たとえば「この案件フォルダの問い合わせメモから、よくある相談内容を集計して、傾向を1枚の説明資料にまとめて」と頼むと、エージェントは指示を分解して順番にこなします。</p>
+          <div class="visual-steps">
+            <div class="visual-step-item">
+              <div class="step-marker">1</div>
+              <div class="step-body">
+                <div class="step-title">段取りを立てる</div>
+                <div class="step-desc">ゴールから「メモを読む→相談内容を分類→集計→資料化」とやることリストを自分で組む。</div>
+              </div>
+            </div>
+            <div class="visual-step-item">
+              <div class="step-marker">2</div>
+              <div class="step-body">
+                <div class="step-title">道具を使い分けて進める</div>
+                <div class="step-desc">フォルダのファイルを読む・表に集計する・資料に書き出す、と必要な手を順に動かす。</div>
+              </div>
+            </div>
+            <div class="visual-step-item">
+              <div class="step-marker">3</div>
+              <div class="step-body">
+                <div class="step-title">成果物まで仕上げて差し出す</div>
+                <div class="step-desc">ひとつの依頼で、集計表と説明資料という“仕上がり”まで作って手元に出す。</div>
+              </div>
+            </div>
+          </div>
+          <p><strong>ゴールを1回伝えれば、間の手順はエージェントが自分で埋めてくれる</strong>——上の3つの力（段取り・自律・道具）が、実際の作業ではこう1本の流れになります。</p>
+
           <div class="tip-box">
             <strong>💡 “依頼力”が人間側のスキル</strong><br>
             「AI に何を任せられるか」を知っているほど、頼める仕事の幅が広がります。
+          </div>
+
+          <div class="visual-mapping">
+            <div class="mapping-header">
+              <span class="mapping-from">役割分担</span>
+              <span class="mapping-arrow"></span>
+              <span class="mapping-to">担当</span>
+            </div>
+            <div class="mapping-row">
+              <span class="mapping-from">🧑 人間</span>
+              <span class="mapping-arrow">→</span>
+              <span class="mapping-to">ゴールを決める／出てきた成果物を確認し、採用・修正・やり直しを最終判断する</span>
+            </div>
+            <div class="mapping-row">
+              <span class="mapping-from">🤖 エージェント</span>
+              <span class="mapping-arrow">→</span>
+              <span class="mapping-to">段取り・道具の操作・仕上げまでの“間の作業”を進める</span>
+            </div>
           </div>
 
           <h3>Claude Code とは</h3>
@@ -2668,6 +2742,34 @@ const MODULES = [
           <div class="info-box">
             <p>💡 画面の表記やボタン位置はバージョンで変わることがあります。社内の<a href="https://app.notion.com/p/7a274acba8f4447e9b9b972e8b04839c" target="_blank">インストール手順（社内ガイド）</a>もあわせて参照してください。</p>
           </div>
+
+          <div class="example-box">
+            <strong>📌 最初の1回はこう打つ（コピーして使える例）</strong><br><br>
+            上のステップ4「最初の指示」は、いきなり作業を頼むのではなく<strong>「まず中身を見てもらう」</strong>1文から始めると安全です。つながりの確認と、Claude が何を読めるかの把握を同時にできます。<br><br>
+            <strong>例：</strong>「このフォルダに何のファイルがあるか、一覧と内容の概要を教えて。まだ何も変更しないで。」<br><br>
+            これは新しいメンバーに仕事を頼むとき、いきなり成果物ではなく、まず「手元の資料に何があるか、ざっと見て教えて」と状況把握から入るのと同じです。実際の作り方（計画の出させ方や範囲の絞り方）は、このあとの「3. 安全な指示の出し方」と 2-3 で扱います。
+          </div>
+
+          <h4>最初に必ず出る「許可しますか？」の答え方</h4>
+          <p>起動して最初の指示を出すと、Claude Code は「このファイルを読んでいいですか？」「変更していいですか？」と、作業のたびに<strong>確認ダイアログ</strong>を出します。これは暴走を防ぐ安全装置なので、止まったと勘違いせず落ち着いて答えれば大丈夫です。選択肢は基本2つです。</p>
+          <div class="visual-mapping">
+            <div class="mapping-header">
+              <span class="mapping-from">ボタン</span>
+              <span class="mapping-arrow"></span>
+              <span class="mapping-to">意味と使い分け</span>
+            </div>
+            <div class="mapping-row">
+              <span class="mapping-from">1回だけ許可</span>
+              <span class="mapping-arrow">→</span>
+              <span class="mapping-to">この1回だけ実行を認める。次の作業ではまた確認が出る。中身をよく見てから進めたいときに</span>
+            </div>
+            <div class="mapping-row">
+              <span class="mapping-from">常に許可</span>
+              <span class="mapping-arrow">→</span>
+              <span class="mapping-to">同じフォルダ内の同種の操作（読み込みなど）は次回から確認なしで進む。安全だと納得できた操作だけに使う</span>
+            </div>
+          </div>
+          <p>最初は確認が何度も出て戸惑いますが、「常に許可」を押した操作はその作業フォルダ内では次から省かれ、だんだんスムーズになります。<strong>迷ったら「1回だけ許可」を選べば安全です</strong>。作業フォルダの外を触ろうとしたときほど、中身を確かめてから答えましょう。</p>
 
           <h3>2. 始める前の準備 — 5点を整える</h3>
           <p>作業を始める前に、次の5点を整えてから着手します。</p>
@@ -3146,6 +3248,37 @@ const MODULES = [
             <p><strong>「AI の柔軟さ」と「決まった処理の正確さ」を両立できる</strong>のが Skill の強みです。文章の整え方は AI が柔軟に、表記ゆれの統一のような“絶対に揺らしたくない部分”は決まった処理で正確に — だから成果物の品質が安定します。</p>
           </div>
 
+          <h4>具体例 — 1つの Skill の中身を見てみる</h4>
+          <p>「手順＋道具の束」は、実例で見ると一気に腹落ちする。上の4要素が実際にどう束ねられるか、たとえば毎週つくる<strong>「競合ウォッチ週報」Skill</strong>を1つ用意した場合で見てみる。</p>
+
+          <div class="example-box">
+            📦 Skill「競合ウォッチ週報」<br>
+            &nbsp;&nbsp;├ 📋 指示書 … 「競合の動きを整理 → 自社への示唆 → 次アクションを提案」の手順と、いつ使うか<br>
+            &nbsp;&nbsp;├ 🧩 テンプレート … 週報のひな型（見出し・表の体裁・トンマナ）<br>
+            &nbsp;&nbsp;├ ⚙️ 決まった処理 … 社名・製品名の表記ゆれを正式名称に一括統一<br>
+            &nbsp;&nbsp;└ 📚 参照資料 … 自社の競合定義・用語集（必要なときだけ読む）
+          </div>
+
+          <p>呼び出すと、AI が柔軟に書く部分（示唆・提案）と、毎回ブレてはいけない部分（体裁・表記）が<strong>1回でまとめて</strong>仕上がる。指示文をコピペし直す手間も、体裁を整え直す手間も消える。</p>
+
+          <div class="visual-mapping">
+            <div class="mapping-header">
+              <span class="mapping-from">いつもの手作業</span>
+              <span class="mapping-arrow"></span>
+              <span class="mapping-to">Skill 化すると</span>
+            </div>
+            <div class="mapping-row">
+              <span class="mapping-from">前回の週報を探して指示を書き直す</span>
+              <span class="mapping-arrow">→</span>
+              <span class="mapping-to">Skill を呼ぶだけで手順とひな型が揃う</span>
+            </div>
+            <div class="mapping-row">
+              <span class="mapping-from">体裁・社名表記を毎回直す</span>
+              <span class="mapping-arrow">→</span>
+              <span class="mapping-to">決まった処理が毎回同じ品質で固定</span>
+            </div>
+          </div>
+
           <h4>どんな作業を型にする？ — 3つの条件</h4>
 
           <div class="visual-grid cols-3">
@@ -3166,9 +3299,41 @@ const MODULES = [
             </div>
           </div>
 
+          <h4>どう作って育てる？ — まず指示文だけ、あとから道具を足す</h4>
+          <p>最初から完成形を目指さなくてよい。<strong>まずは指示文（手順）だけ</strong>で作り、使いながら足りないものを足して育てる、の3ステップが現実的だ。プログラムを書く必要はない。</p>
+          <div class="visual-steps">
+            <div class="visual-step-item">
+              <div class="step-marker">1</div>
+              <div class="step-body">
+                <div class="step-title">手順を文章で書く（これだけで動く）</div>
+                <div class="step-desc">うまくいった依頼文を「やり方・順番・いつ使うか」として書き起こす。手書きせず「この手順を Skill にして」と Claude に頼めば下書きを作ってくれる。</div>
+              </div>
+            </div>
+            <div class="visual-step-item">
+              <div class="step-marker">2</div>
+              <div class="step-body">
+                <div class="step-title">道具を足す</div>
+                <div class="step-desc">体裁がブレるならテンプレートを、絶対に揺らしたくない処理（表記統一など）があれば決まった処理を、説明が長いなら参照資料を後付けで束ねる。</div>
+              </div>
+            </div>
+            <div class="visual-step-item">
+              <div class="step-marker">3</div>
+              <div class="step-body">
+                <div class="step-title">使って直す</div>
+                <div class="step-desc">実際に呼び出し、物足りない点を指示文に追記する。何度か回すうちに「自分（自社）仕様」に育っていく。</div>
+              </div>
+            </div>
+          </div>
+
           <div class="tip-box">
             <strong>💡 作って終わりにしない</strong><br>
             作った Skill は「発動（正しく呼ばれるか）・品質（期待した成果物か）・効率（手作業より速いか）」の3点で確認し、物足りない部分を追記して育てます。
+          </div>
+
+          <div class="info-box">
+            <p><strong>🔔 Skill は「いつ呼ばれるか」が肝心 — 名前を出すのが確実</strong><br>
+            どの Skill を使うかは、AI が依頼内容と各 Skill の説明文を見て<strong>自分で判断</strong>します。だから「どんなときに使うか」を説明文に分かりやすく書いておくほど、狙ったときに発動しやすくなります。</p>
+            <p>確実に使わせたいときは、依頼文で<strong>Skill 名を名指し</strong>するのが手堅い方法です（例：「競合ウォッチ週報の Skill で今週分を作って」）。「作ったのに呼ばれない」ときは、まず説明文を具体的にし、それでも不安なら名指しします。</p>
           </div>
 
           <div class="toolkit-card">
@@ -3418,6 +3583,10 @@ const MODULES = [
                 <td>選択ファイルの絶対パスをコピー。チャット欄に貼ればフォルダ外のファイルも渡せる</td>
               </tr>
               <tr>
+                <td><strong>右クリック →「パスのコピー」（Windows / エクスプローラー）</strong></td>
+                <td>選択ファイルの絶対パスをコピー。チャット欄に貼ればフォルダ外のファイルも渡せる（Mac の Opt + ⌘ + C と同じ役割）</td>
+              </tr>
+              <tr>
                 <td><strong>Effort 設定（思考の深さを調整）</strong></td>
                 <td>戦略立案・複雑な作業では思考を深く、軽い作業ではデフォルト、とタスクの重さで使い分ける</td>
               </tr>
@@ -3579,6 +3748,11 @@ const MODULES = [
             </div>
           </div>
           <p>これで Chat・Cowork・Claude Code（Desktop）が使えます。非エンジニアの方はまずこれで OK です。</p>
+
+          <div class="tip-box">
+            <strong>💡 作った「.md」ファイルが開けない時（Windows）</strong><br>
+            Claude / Claude Code は、調査結果やメモを <code>.md</code>（マークダウン）という形式で書き出すことがよくあります。Windows 標準ではダブルクリックしても開けないことがありますが、中身はただのテキストなので壊れているわけではありません。ファイルを右クリック →「プログラムから開く」→「メモ帳」を選べば、そのまま中身を読めます。なお Cowork でファイルを開くと、見やすく整形された状態で表示されます。
+          </div>
 
           <h3>B. CLI 版（Claude Code をコマンドで）</h3>
           <p>PowerShell で順に実行します（各コマンドはコピーできます）：</p>
