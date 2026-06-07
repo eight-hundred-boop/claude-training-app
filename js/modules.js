@@ -3440,21 +3440,17 @@ const MODULES = [
           <div class="agent-team">
             <div class="agent-team-lead">
               <span class="at-icon">🧑‍💼</span>
-              <div class="at-body"><strong>あなた（親エージェント）</strong><span>ゴールと役割を決め、手分けして渡す</span></div>
+              <div class="at-body"><strong>あなた（親エージェント）</strong><span>ゴールと役割を決めて手分けし、戻ってきた要約を統合して最終判断する</span></div>
             </div>
-            <div class="agent-team-down">↓ 手分けして指示</div>
+            <div class="agent-team-down">↓ 手分けして指示　　↑ 要約が戻る</div>
             <div class="agent-team-row">
               <div class="agent-team-member"><span class="at-icon">🔍</span><strong>調査担当</strong><span>情報を集める</span></div>
               <div class="agent-team-member"><span class="at-icon">🔧</span><strong>実装担当</strong><span>成果物を作る</span></div>
               <div class="agent-team-member"><span class="at-icon">✅</span><strong>レビュー担当</strong><span>品質を点検</span></div>
             </div>
-            <div class="agent-team-parallel">＝ それぞれが並列で同時に作業し、要約だけを親に返す</div>
-            <div class="agent-team-up">↑ 要約レポートを返す</div>
-            <div class="agent-team-lead result">
-              <span class="at-icon">🧑‍💼</span>
-              <div class="at-body"><strong>あなたが統合・最終判断</strong><span>受け取った要約をまとめ、責任を持って仕上げる</span></div>
-            </div>
+            <div class="agent-team-parallel">それぞれが並列で同時に作業し、要約だけを「あなた」に返す</div>
           </div>
+          <p>調査・実装・レビューの担当は、いわば<strong>あなたの“分身”</strong>。出ていって調べ・作り・点検し、要約を持って戻ってきます。上下関係ではなく、<strong>あなたを起点に「出て→戻る」往復</strong>のイメージで、最後に統合して仕上げるのは<strong>あなた一人</strong>です。</p>
 
           <h3>なぜ成果物づくりに効くのか</h3>
           <div class="visual-before-after">
