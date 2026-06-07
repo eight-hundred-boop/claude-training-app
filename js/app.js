@@ -1085,7 +1085,7 @@
             ${groups.map((g, gi) => `
               <div class="cover-group">
                 <div class="cover-group-header">
-                  <span class="cover-group-num"><small>STEP</small>${gi + 1}</span>
+                  ${g.appendix ? `<span class="cover-group-num cover-group-num-appendix"><small>付録</small>${g.icon || '📦'}</span>` : `<span class="cover-group-num"><small>STEP</small>${gi + 1}</span>`}
                   <span class="cover-group-label">${g.label}</span>
                 </div>
                 ${g.objectives ? `<div class="cover-group-objectives">${g.objectives.map(o => `<div class="cover-obj-item">${o}</div>`).join('')}</div>` : ''}

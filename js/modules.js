@@ -2371,7 +2371,7 @@ const MODULES = [
       { label: 'Claude Codeを知る・始める', icon: '🚀', sections: [1, 2], objectives: ['Claude Codeで何が作れるかを理解する', 'Desktopで安全に始め、適切に指示できる'] },
       { label: '成果物を作る', icon: '🛠️', sections: [3, 4], objectives: ['データ処理・複数ファイル作業を任せる', 'ツール・プロトタイプ・アプリを作る'] },
       { label: '質を上げ、使いこなす', icon: '✅', sections: [5, 6], objectives: ['CLAUDE.md／Skillsで質と再現性を固定する', 'Subagentsで分担・並列化し効率化する'] },
-      { label: '付録：インストール', icon: '📦', sections: [8], objectives: ['Claude を Desktop / CLI でインストールできる'] }
+      { label: '付録：インストール', icon: '📦', appendix: true, sections: [8], objectives: ['Claude を Desktop / CLI でインストールできる'] }
     ],
     sections: [
 
