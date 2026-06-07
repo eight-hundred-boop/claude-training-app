@@ -4724,6 +4724,33 @@ body.landing-mode #global-footer {
   margin-bottom: 0;
 }
 
+/* ハイライトカード内のリスト：中央寄せでも読みやすい左揃え＋✓マーカー */
+.visual-highlight-card ul {
+  list-style: none;
+  text-align: left;
+  max-width: 560px;
+  margin: 14px auto 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.visual-highlight-card ul li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
+}
+.visual-highlight-card ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 2px;
+  top: 0;
+  color: var(--primary);
+  font-weight: 700;
+}
+.visual-highlight-card.opening ul { margin-left: 0; }
+
 /* 当社スキル集 ハイライトカード */
 .toolkit-card {
   border: 2px solid var(--primary);
