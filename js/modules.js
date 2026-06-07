@@ -2931,15 +2931,16 @@ const MODULES = [
             <div class="toolkit-install">
               <h5>💻 デスクトップアプリ版（GUI で入れる）</h5>
               <ol>
-                <li>左サイドバーの「Customize」パネル →「Skills」を開きます。</li>
-                <li>「Personal plugins」の「＋」を押し、リポジトリパス <code>eight-hundred-inc/consulting-toolkit-800</code> を入力します。</li>
-                <li>「Sync」を押し、一覧に出た <code>consulting-toolkit-800</code> の「Install」を押します。</li>
+                <li>左上の「Customize」を開きます。</li>
+                <li>左サイドバーの「個人用プラグイン」の横の「＋」→「プラグインを作成」→「マーケットプレイスを追加」を選びます。</li>
+                <li>「URL」欄にリポジトリパス <code>eight-hundred-inc/consulting-toolkit-800</code> を入力し、「同期」を押します。</li>
+                <li>一覧に出た <code>consulting-toolkit-800</code> を「インストール」します。</li>
                 <li>新しい会話を開始すれば使えます。</li>
               </ol>
             </div>
             <div class="toolkit-install">
               <h5>⌨️ CLI / IDE 版（コマンドで入れる）</h5>
-              <p>Claude Code（ターミナル）または IDE 拡張のチャットで、次の2コマンドを実行します。<br><code>/plugin marketplace add eight-hundred-inc/consulting-toolkit-800</code><br><code>/plugin install consulting-toolkit-800@consulting-toolkit-800</code></p>
+              <p>Claude Code（ターミナル）または IDE 拡張のチャットで <code>/plugin marketplace add eight-hundred-inc/consulting-toolkit-800</code> を実行し、表示された一覧から <code>consulting-toolkit-800</code> をインストールします。</p>
             </div>
             <p class="toolkit-note">⚠️ スキルは<strong>使用する環境ごとに個別インストールが必要</strong>です。デスクトップアプリ・CLI・IDE は別々に管理されるため、使う環境それぞれでインストールしてください（一方で入れても他方には反映されません）。</p>
           </div>
