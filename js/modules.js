@@ -2924,19 +2924,24 @@ const MODULES = [
             作った Skill は「発動（正しく呼ばれるか）・品質（期待した成果物か）・効率（手作業より速いか）」の3点で確認し、物足りない部分を追記して育てます。
           </div>
 
-          <h4>当社のスキル集「consulting-toolkit-800」</h4>
-          <p>コンサル業務のワークフロー（調査提案書・デスクリサーチ・インタビュー設計・議事録・報告書骨子・スライド構成 など）を Claude Code 用のスキルとしてまとめた社内プラグインです。入れておくと、これらの型化済みスキルをすぐ呼び出せます。</p>
-
-          <div class="info-box">
-            <p><strong>インストール（デスクトップアプリ＝GUI）</strong></p>
-            <ol>
-              <li>左サイドバーの「Customize」パネル →「Skills」を開きます。</li>
-              <li>「Personal plugins」の「＋」を押し、リポジトリパス <code>eight-hundred-inc/consulting-toolkit-800</code> を入力します。</li>
-              <li>「Sync」を押し、一覧に出た <code>consulting-toolkit-800</code> の「Install」を押します。</li>
-              <li>新しい会話を開始すれば使えます。</li>
-            </ol>
-            <p>CLI / IDE では <code>/plugin marketplace add eight-hundred-inc/consulting-toolkit-800</code> → <code>/plugin install consulting-toolkit-800@consulting-toolkit-800</code> の2コマンドでも導入できます。</p>
-            <p>詳細・スキル一覧 → <a href="https://github.com/eight-hundred-inc/consulting-toolkit-800" target="_blank">consulting-toolkit-800（GitHub）</a></p>
+          <div class="toolkit-card">
+            <div class="toolkit-head">🧰 当社オリジナルのスキル集「consulting-toolkit-800」</div>
+            <p>コンサル業務のワークフロー（調査提案書・デスクリサーチ・インタビュー設計・議事録・報告書骨子・スライド構成 など）を Claude Code 用のスキルとしてまとめた<strong>当社製プラグイン</strong>です。入れておくと、これらの型化済みスキルをすぐ呼び出せます。</p>
+            <a class="toolkit-link" href="https://github.com/eight-hundred-inc/consulting-toolkit-800" target="_blank">GitHub で見る ▸</a>
+            <div class="toolkit-install">
+              <h5>💻 デスクトップアプリ版（GUI で入れる）</h5>
+              <ol>
+                <li>左サイドバーの「Customize」パネル →「Skills」を開きます。</li>
+                <li>「Personal plugins」の「＋」を押し、リポジトリパス <code>eight-hundred-inc/consulting-toolkit-800</code> を入力します。</li>
+                <li>「Sync」を押し、一覧に出た <code>consulting-toolkit-800</code> の「Install」を押します。</li>
+                <li>新しい会話を開始すれば使えます。</li>
+              </ol>
+            </div>
+            <div class="toolkit-install">
+              <h5>⌨️ CLI / IDE 版（コマンドで入れる）</h5>
+              <p>Claude Code（ターミナル）または IDE 拡張のチャットで、次の2コマンドを実行します。<br><code>/plugin marketplace add eight-hundred-inc/consulting-toolkit-800</code><br><code>/plugin install consulting-toolkit-800@consulting-toolkit-800</code></p>
+            </div>
+            <p class="toolkit-note">⚠️ スキルは<strong>使用する環境ごとに個別インストールが必要</strong>です。デスクトップアプリ・CLI・IDE は別々に管理されるため、使う環境それぞれでインストールしてください（一方で入れても他方には反映されません）。</p>
           </div>
 
           <h3>MCP / Connectors — 必要なデータを接続する</h3>

@@ -4722,6 +4722,69 @@ body.landing-mode #global-footer {
   margin-bottom: 0;
 }
 
+/* 当社スキル集 ハイライトカード */
+.toolkit-card {
+  border: 2px solid var(--primary);
+  background: var(--primary-bg);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  margin: 20px 0;
+}
+.toolkit-card .toolkit-head {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+.toolkit-card > p {
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0 0 12px;
+}
+.toolkit-card .toolkit-link {
+  display: inline-block;
+  margin: 0 0 16px;
+  padding: 8px 18px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+}
+.toolkit-card .toolkit-install {
+  background: var(--surface);
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin: 10px 0;
+}
+.toolkit-card .toolkit-install h5 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 8px;
+}
+.toolkit-card .toolkit-install ol {
+  margin: 0;
+  padding-left: 20px;
+}
+.toolkit-card .toolkit-install li {
+  font-size: 13.5px;
+  line-height: 1.7;
+  margin-bottom: 4px;
+}
+.toolkit-card .toolkit-install p {
+  font-size: 13.5px;
+  line-height: 1.7;
+  margin: 0;
+}
+.toolkit-card .toolkit-note {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 12px 0 0;
+}
+
 /* --- 横並びラベルカード --- */
 .visual-label-row {
   display: flex;
