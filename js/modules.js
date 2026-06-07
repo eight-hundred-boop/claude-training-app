@@ -2852,17 +2852,17 @@ const MODULES = [
       },
 
       // ========================================
-      // 2-5: 質を固定する道具：CLAUDE.md と Skills
+      // 2-5: AIを“自分仕様”にする道具（CLAUDE.md・Skills・MCP）
       // ========================================
       {
-        title: '2-5. 質を固定する道具：CLAUDE.md と Skills',
+        title: '2-5. AIを“自分仕様”にする道具 — CLAUDE.md・Skills・MCP',
         type: 'lecture',
         content: `
           <h3>このセクションで学ぶこと</h3>
           <p>成果物を繰り返し作るようになると、<strong>毎回品質がブレない仕組み</strong>が欲しくなります。ここでは質と再現性を支える道具 — CLAUDE.md（ルール固定）、Skills（手順の型化）、MCP / Connectors（必要なデータの接続） — を押さえます。</p>
 
           <h3>まず全体像 — 3つの道具の役割分担</h3>
-          <p>3つの道具は役割が違います。料理にたとえると関係がつかみやすくなります。</p>
+          <p>3つの道具はどれも、汎用の AI に自分（自社）の文脈を渡して<strong>“自分仕様”</strong>にするための道具です。役割は違い、料理にたとえると関係がつかみやすくなります。</p>
 
           <div class="visual-grid cols-3">
             <div class="visual-grid-item">
@@ -3572,13 +3572,13 @@ const MODULES = [
         hint: '第1回で作った Artifact の試作品を「保存できる形にして」と頼むのが、いちばん入りやすい第一歩です。本番システムではなく試作・社内ツールとして扱いましょう。'
       },
       {
-        section: '2-5. 質を固定する道具：CLAUDE.md と Skills',
+        section: '2-5. AIを“自分仕様”にする道具 — CLAUDE.md・Skills・MCP',
         title: 'CLAUDE.md を1つ書く',
         task: '自分が関わるプロジェクト（社内ツール、資料置き場、教材など）の CLAUDE.md を作成してください。\n\n1. プロジェクトの概要・ファイル構成を書く\n2. 守るルール・禁止事項（触ってはいけないファイル等）を書く\n3. 出力形式やレビュー基準を書く\n4. 長くなりそうなら DESIGN.md / CONTENT.md などに分け、CLAUDE.md から参照する形にする',
         hint: '最初から完璧を目指さず、「毎回同じ注意を書いているな」という内容を1つ書き出すところから始めましょう。Claude Code の /init でたたき台を生成させるのも有効です。'
       },
       {
-        section: '2-5. 質を固定する道具：CLAUDE.md と Skills',
+        section: '2-5. AIを“自分仕様”にする道具 — CLAUDE.md・Skills・MCP',
         title: '成果物づくりの Skill を1つ設計する',
         task: 'よく作る成果物（議事録、集計表、提案書レビューなど）の手順を Skill にしてみましょう。\n\n1. 必ず含める項目・出力形式を定義する\n2. 守るルール（文体、粒度、順序等）を書き出す\n3. 実際のデータで「この手順で作って」と試す\n4. 出力を見て足りない部分を Skill に追記する',
         hint: 'まず実際の素材（簡単なものでOK）を用意し、Skill の定義と一緒に渡して試しましょう。発動・品質・効率の3点で確認して育てます。'
@@ -3894,7 +3894,7 @@ const TIPS = [
     relatedSession: '第1回 / 第2回',
     relatedSections: [
       { m: 0, s: 9, label: '第1回 1-10. Research で調査する' },
-      { m: 1, s: 5, label: '第2回 2-5. 質を固定する道具：CLAUDE.md と Skills' }
+      { m: 1, s: 5, label: '第2回 2-5. AIを“自分仕様”にする道具 — CLAUDE.md・Skills・MCP' }
     ]
   },
 
@@ -3914,7 +3914,7 @@ const TIPS = [
     example: '候補例：議事録作成、提案書レビュー、調査レポート、PPT 構成生成、Excel 分析、UI レビュー、プロトタイプ手順。',
     caution: '一度しか使わない作業は、無理に Skill 化しなくてよい。',
     relatedSession: '第2回',
-    relatedSections: [{ m: 1, s: 5, label: '第2回 2-5. 質を固定する道具：CLAUDE.md と Skills' }]
+    relatedSections: [{ m: 1, s: 5, label: '第2回 2-5. AIを“自分仕様”にする道具 — CLAUDE.md・Skills・MCP' }]
   },
   {
     id: 'tip-016',
@@ -3930,7 +3930,7 @@ const TIPS = [
     ],
     caution: '作った後の検証と改善がないと、形だけの Skill になる。',
     relatedSession: '第2回',
-    relatedSections: [{ m: 1, s: 5, label: '第2回 2-5. 質を固定する道具：CLAUDE.md と Skills' }]
+    relatedSections: [{ m: 1, s: 5, label: '第2回 2-5. AIを“自分仕様”にする道具 — CLAUDE.md・Skills・MCP' }]
   },
   {
     id: 'tip-017',
@@ -3947,7 +3947,7 @@ const TIPS = [
     ],
     caution: '古いルールが残ると逆効果。定期的に見直し、使われていない規約は外す。',
     relatedSession: '第2回',
-    relatedSections: [{ m: 1, s: 5, label: '第2回 2-5. 質を固定する道具：CLAUDE.md と Skills' }]
+    relatedSections: [{ m: 1, s: 5, label: '第2回 2-5. AIを“自分仕様”にする道具 — CLAUDE.md・Skills・MCP' }]
   },
 
   // ---- チーム展開 ----
@@ -3965,7 +3965,7 @@ const TIPS = [
     ],
     caution: 'テンプレートは使いっぱなしにせず、運用しながら改善する。',
     relatedSession: '第2回',
-    relatedSections: [{ m: 1, s: 5, label: '第2回 2-5. 質を固定する道具：CLAUDE.md と Skills' }]
+    relatedSections: [{ m: 1, s: 5, label: '第2回 2-5. AIを“自分仕様”にする道具 — CLAUDE.md・Skills・MCP' }]
   },
   {
     id: 'tip-019',
@@ -3982,7 +3982,7 @@ const TIPS = [
     ],
     caution: '運用ルールが複雑すぎると使われない。最初はシンプルにする。',
     relatedSession: '第2回',
-    relatedSections: [{ m: 1, s: 5, label: '第2回 2-5. 質を固定する道具：CLAUDE.md と Skills' }]
+    relatedSections: [{ m: 1, s: 5, label: '第2回 2-5. AIを“自分仕様”にする道具 — CLAUDE.md・Skills・MCP' }]
   },
   {
     id: 'tip-020',
@@ -3998,7 +3998,7 @@ const TIPS = [
     ],
     caution: '「Claude がやったから OK」は通らない。最終チェックは必ず人が行う。',
     relatedSession: '第2回',
-    relatedSections: [{ m: 1, s: 5, label: '第2回 2-5. 質を固定する道具：CLAUDE.md と Skills' }]
+    relatedSections: [{ m: 1, s: 5, label: '第2回 2-5. AIを“自分仕様”にする道具 — CLAUDE.md・Skills・MCP' }]
   },
 
   // ---- 上級・補助 ----
@@ -4016,7 +4016,7 @@ const TIPS = [
     ],
     caution: '便利さだけで選ばない。誤操作の影響範囲を先に想定する。',
     relatedSession: '第2回（補助資料）',
-    relatedSections: [{ m: 1, s: 5, label: '第2回 2-5. 質を固定する道具：CLAUDE.md と Skills' }]
+    relatedSections: [{ m: 1, s: 5, label: '第2回 2-5. AIを“自分仕様”にする道具 — CLAUDE.md・Skills・MCP' }]
   },
   {
     id: 'tip-022',
@@ -4032,7 +4032,7 @@ const TIPS = [
     ],
     caution: 'ファイル構造や役割を理解しないまま触ると、想定外の挙動につながる。',
     relatedSession: '第2回（補助資料）',
-    relatedSections: [{ m: 1, s: 5, label: '第2回 2-5. 質を固定する道具：CLAUDE.md と Skills' }]
+    relatedSections: [{ m: 1, s: 5, label: '第2回 2-5. AIを“自分仕様”にする道具 — CLAUDE.md・Skills・MCP' }]
   },
   {
     id: 'tip-023',
@@ -4048,7 +4048,7 @@ const TIPS = [
     ],
     caution: '研修本編の必須事項ではなく、必要な人が使う発展 TIPS として扱う。',
     relatedSession: '第2回（補助資料）',
-    relatedSections: [{ m: 1, s: 5, label: '第2回 2-5. 質を固定する道具：CLAUDE.md と Skills' }]
+    relatedSections: [{ m: 1, s: 5, label: '第2回 2-5. AIを“自分仕様”にする道具 — CLAUDE.md・Skills・MCP' }]
   },
 
   // ---- 知っておくと効く小ワザ系（追加） ----
@@ -4132,7 +4132,7 @@ const TIPS = [
     ],
     caution: '中身を不用意に編集しない（tip-022 参照）。読むだけのつもりが事故につながる。',
     relatedSession: '第2回（補助資料）',
-    relatedSections: [{ m: 1, s: 5, label: '第2回 2-5. 質を固定する道具：CLAUDE.md と Skills' }]
+    relatedSections: [{ m: 1, s: 5, label: '第2回 2-5. AIを“自分仕様”にする道具 — CLAUDE.md・Skills・MCP' }]
   },
   {
     id: 'tip-029',
