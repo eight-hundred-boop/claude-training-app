@@ -2980,8 +2980,8 @@ const MODULES = [
             </div>
           </div>
 
-<h4>どこに置く？ — フォルダと置き場所</h4>
-          <p>案件用の CLAUDE.md は、<strong>Claude Code（デスクトップ）で作業フォルダとして開くフォルダの直下</strong>に置かれます。フォルダは普通に PC に作れば OK です。</p>
+          <h4>どこに置く？ — フォルダと置き場所</h4>
+          <p>案件用の CLAUDE.md は、<strong>Claude Code（デスクトップ）で作業フォルダとして開くフォルダの直下</strong>に置かれます。作業フォルダは<strong>必ず自分の PC 上（ローカル）に作ります</strong>。</p>
 
           <div class="example-box">
             📁 Claude作業（親フォルダ）<br>
@@ -2989,6 +2989,10 @@ const MODULES = [
             &nbsp;&nbsp;│&nbsp;&nbsp;└ 📄 CLAUDE.md　← この案件のルール<br>
             &nbsp;&nbsp;└ 📁 B社_調査案件<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ 📄 CLAUDE.md
+          </div>
+
+          <div class="warning-box">
+            <p>⚠️ <strong>社内ルール：作業は必ずローカルフォルダで</strong>。Google ドライブ・BOX などのクラウド共有には直接つながないでください（現状、これらは Claude から接続できないようになっています）。クラウド上のファイルは、いったんローカルの作業用フォルダにコピーして使います。</p>
           </div>
 
           <p>自分で手書きする必要はありません。<code>/init</code> が生成してくれるか、「CLAUDE.md にまとめて」と頼めば Claude がそのフォルダ内に作ってくれます。自分用（グローバル）の CLAUDE.md は、自分の PC の設定フォルダ（<code>.claude</code>）の中にあります。場所が分からなければ <code>/memory</code> で開けますし、「全体の CLAUDE.md はどこ？」と Claude に聞けば教えてくれます。</p>
@@ -3488,7 +3492,7 @@ const MODULES = [
           <p>これで Chat・Cowork・Claude Code（Desktop）が使えます。非エンジニアの方はまずこれで OK です。</p>
 
           <h3>B. CLI 版（Claude Code をコマンドで）</h3>
-          <p><strong>前提</strong>：Git（Windows は Git for Windows）／Claude Pro・Max・Team・Enterprise アカウント（無料プランは対象外）。</p>
+          <p><strong>前提</strong>：Git（Windows は Git for Windows）。</p>
           <p>PowerShell で順に実行します（各コマンドはコピーできます）：</p>
           <div class="toolkit-copy">
             <code>irm https://claude.ai/install.ps1 | iex</code>
