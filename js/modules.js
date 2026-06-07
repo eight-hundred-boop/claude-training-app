@@ -2360,7 +2360,8 @@ const MODULES = [
       { label: '第1回の復習', icon: '🔁', sections: [0], objectives: ['第1回の要点を振り返り、Claude Code へ橋渡しする'] },
       { label: 'Claude Codeを知る・始める', icon: '🚀', sections: [1, 2], objectives: ['Claude Codeで何が作れるかを理解する', 'Desktopで安全に始め、適切に指示できる'] },
       { label: '成果物を作る', icon: '🛠️', sections: [3, 4], objectives: ['データ処理・複数ファイル作業を任せる', 'ツール・プロトタイプ・アプリを作る'] },
-      { label: '質を上げ、使いこなす', icon: '✅', sections: [5, 6], objectives: ['CLAUDE.md／Skillsで質と再現性を固定する', 'Subagentsで分担・並列化し効率化する'] }
+      { label: '質を上げ、使いこなす', icon: '✅', sections: [5, 6], objectives: ['CLAUDE.md／Skillsで質と再現性を固定する', 'Subagentsで分担・並列化し効率化する'] },
+      { label: '付録：インストール', icon: '📦', sections: [8], objectives: ['Claude を Desktop / CLI でインストールできる'] }
     ],
     sections: [
 
@@ -3465,6 +3466,10 @@ const MODULES = [
           <h3>このセクションで学ぶこと</h3>
           <p>Claude を使い始めるためのインストール手順です。まずは<strong>デスクトップアプリ</strong>、コマンド操作をしたい方は <strong>CLI</strong> もどうぞ。</p>
 
+          <div class="info-box">
+            <p>💡 <strong>Windows で Claude Code を使うには <a href="https://git-scm.com/downloads/win" target="_blank">Git for Windows</a> が必要です</strong>（インストール時に案内が出ます）。Chat・Cowork だけなら不要。デスクトップ版・CLI版のどちらも同じです。</p>
+          </div>
+
           <h3>A. デスクトップアプリ版（Mac / Windows）</h3>
           <div class="visual-steps">
             <div class="visual-step-item">
@@ -3492,7 +3497,6 @@ const MODULES = [
           <p>これで Chat・Cowork・Claude Code（Desktop）が使えます。非エンジニアの方はまずこれで OK です。</p>
 
           <h3>B. CLI 版（Claude Code をコマンドで）</h3>
-          <p><strong>前提</strong>：Git（Windows は Git for Windows）。</p>
           <p>PowerShell で順に実行します（各コマンドはコピーできます）：</p>
           <div class="toolkit-copy">
             <code>irm https://claude.ai/install.ps1 | iex</code>
