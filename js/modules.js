@@ -3655,45 +3655,37 @@ const MODULES = [
           </table>
 
           <div class="info-box">
-            <p><strong>📚 TIPS はあとから参照できます</strong>：拡張機能・上級の小ワザを含む全 TIPS は、自習モードの「TIPS集」ページにカテゴリ別・レベル別でまとまっています。研修中に全部覚える必要はありません。</p>
+            <p><strong>📚 TIPS はあとから参照できます</strong>：拡張機能・上級の小ワザを含む全 TIPS は、自習モードの <a href="#" data-nav="tips">「TIPS集」ページ</a> にカテゴリ別・レベル別でまとまっています。研修中に全部覚える必要はありません。</p>
           </div>
 
           <h3>うまく動かない時の立て直し方</h3>
-          <p>Claude Code が意図と違う動きをする・出力品質が落ちる・修正を延々と続ける、といった場面では、<strong>「もっと強い指示を出す」より「準備に戻る」</strong>のが効きます。</p>
+          <p>Claude Code が意図と違う動きをする・出力品質が落ちる・修正を延々と続ける、といった場面では、<strong>「もっと強い指示を出す」より「準備に戻る」</strong>のが効きます。下の4つは順番にやる工程ではなく、<strong>状況に応じて選ぶ独立した打ち手</strong>です。効きそうなものを使ってください。</p>
 
-          <div class="visual-steps">
-            <div class="visual-step-item">
-              <div class="step-marker">1</div>
-              <div class="step-body">
-                <div class="step-title">文脈を整理する</div>
-                <div class="step-desc">会話が長くなると Claude も迷子になります。新しいスレッドで、目的・現状・残課題を1段落で再提示してから依頼し直す。</div>
-              </div>
+          <div class="visual-grid cols-2">
+            <div class="visual-grid-item">
+              <div class="grid-icon">🧵</div>
+              <div class="grid-title">新しいスレッドで仕切り直す</div>
+              <div class="grid-desc">会話が長くなると Claude も迷子になる。今のスレッドを閉じ、新しいスレッドの冒頭に「目的／いまの状況／残っている課題」を1段落で書いてから依頼し直す。<br>例：「目的は◯◯。△△まで完了。残りは□□。この前提で □□ だけ進めて」</div>
             </div>
-            <div class="visual-step-item">
-              <div class="step-marker">2</div>
-              <div class="step-body">
-                <div class="step-title">作業を分割する</div>
-                <div class="step-desc">「一気に全部直す」を諦め、「まず◯◯だけ」「次に△△」と段階に切る。各段階で人がレビューする。</div>
-              </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">✂️</div>
+              <div class="grid-title">作業を1ステップに切る</div>
+              <div class="grid-desc">「全部直して」をやめ、「まず◯◯だけ」と1つずつ頼み、結果を確認してから次へ進む。<br>例：「△△ファイルの ◯◯ だけ直して。終わったら報告して、次の指示を待って」</div>
             </div>
-            <div class="visual-step-item">
-              <div class="step-marker">3</div>
-              <div class="step-body">
-                <div class="step-title">対象ファイルを限定する</div>
-                <div class="step-desc">対象を絞り直し、「他のファイルは読まなくていい／触らないで」と明示する。情報過多のときほど効きます。</div>
-              </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">🎯</div>
+              <div class="grid-title">対象ファイル・範囲を限定する</div>
+              <div class="grid-desc">触ってよいファイルやフォルダを名指しし、「これ以外は読まない・変更しない」と禁止を明示する。渡す情報を絞るほど精度が上がる。<br>例：「対象は ◯◯フォルダの △△ だけ。ほかは読まず・変更しないで」</div>
             </div>
-            <div class="visual-step-item">
-              <div class="step-marker">4</div>
-              <div class="step-body">
-                <div class="step-title">現状調査に戻る</div>
-                <div class="step-desc">「いまファイルがどうなっているか／何が問題か」を Claude に説明させ、認識のズレを揃えてから次の手を決める。</div>
-              </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">🔎</div>
+              <div class="grid-title">現状を棚卸しさせる</div>
+              <div class="grid-desc">次の指示を出す前に「いまどうなっているか／何が問題か」を Claude に説明させ、自分の認識と合っているか確認する。ズレていたら正してから次の手へ。<br>例：「変更する前に、今このファイルがどうなっていて、何が問題か説明して」</div>
             </div>
           </div>
 
           <div class="info-box">
-            <p><strong>長時間うまくいかない時は、いったん手を止めて「準備の5点（フォルダ・目的・成果物・禁止事項・変更対象）」に戻る</strong>のが近道です。指示を強くするより、前提を整え直すほうが効きます。</p>
+            <p>それでも長引くときは、無理に指示を重ねず一度手を止め、<strong>2-2 の準備5点（作業フォルダ／目的と成果物／禁止事項／変更対象／完了条件）に立ち返る</strong>のが近道です。指示を強くするより、前提を整え直すほうが効きます。</p>
           </div>
         `
       },
