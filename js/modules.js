@@ -3436,11 +3436,16 @@ const MODULES = [
           </div>
 
           <h4>サブエージェントの動き方</h4>
-          <p>1つの大きな仕事を、親（あなた）が手分けして渡し、各担当が<strong>並列</strong>で動き、<strong>要約だけ</strong>を返す——という仕組みです。</p>
+          <p>1つの大きな仕事を、<strong>メインエージェント（親）</strong>が複数の<strong>サブエージェント（子）</strong>に手分けし、各担当が<strong>並列</strong>で動いて<strong>要約だけ</strong>をメインに返す——という仕組みです。あなたはゴールを渡すだけで、手分け〜統合はメインエージェントが自動で行います。</p>
           <div class="agent-team">
+            <div class="agent-team-lead result">
+              <span class="at-icon">🧑</span>
+              <div class="at-body"><strong>あなた（人間）</strong><span>ゴールを渡す。最後に成果を確認し、採否を判断する</span></div>
+            </div>
+            <div class="agent-team-down">↓ ゴールを渡す　　↑ 成果を受け取る</div>
             <div class="agent-team-lead">
-              <span class="at-icon">🧑‍💼</span>
-              <div class="at-body"><strong>あなた（親エージェント）</strong><span>ゴールと役割を決めて手分けし、戻ってきた要約を統合して最終判断する</span></div>
+              <span class="at-icon">🧠</span>
+              <div class="at-body"><strong>メインエージェント（親）</strong><span>あなたと話す AI 本体。自分でサブに手分けし、戻ってきた要約を統合する</span></div>
             </div>
             <div class="agent-team-down">↓ 手分けして指示　　↑ 要約が戻る</div>
             <div class="agent-team-row">
@@ -3448,9 +3453,9 @@ const MODULES = [
               <div class="agent-team-member"><span class="at-icon">🔧</span><strong>実装担当</strong><span>成果物を作る</span></div>
               <div class="agent-team-member"><span class="at-icon">✅</span><strong>レビュー担当</strong><span>品質を点検</span></div>
             </div>
-            <div class="agent-team-parallel">それぞれが並列で同時に作業し、要約だけを「あなた」に返す</div>
+            <div class="agent-team-parallel">サブエージェント（子）は並列で作業し、要約だけをメインエージェントに返す</div>
           </div>
-          <p>調査・実装・レビューの担当は、いわば<strong>あなたの“分身”</strong>。出ていって調べ・作り・点検し、要約を持って戻ってきます。上下関係ではなく、<strong>あなたを起点に「出て→戻る」往復</strong>のイメージで、最後に統合して仕上げるのは<strong>あなた一人</strong>です。</p>
+          <p>調査・実装・レビューの担当は、メインエージェントが必要に応じて生成する<strong>“子”のエージェント</strong>。出ていって調べ・作り・点検し、要約を持ってメインに戻ります。<strong>あなたが手分けや統合を指揮するのではなく、ゴールを渡せばメインエージェントが手分け〜統合まで自動で進め</strong>、あなたは出てきた成果を確認・判断します。</p>
 
           <h3>なぜ成果物づくりに効くのか</h3>
           <div class="visual-before-after">
