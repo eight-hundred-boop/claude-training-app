@@ -1240,6 +1240,17 @@
       });
     });
 
+    // スライド本文中のページ内リンク（例: TIPS集）。tips 等は自習モード専用ページなので、
+    // 研修モードからは自習モードに切り替えて開く（研修モードの navigateTo は home/module 以外を扱えないため）。
+    container.querySelectorAll('[data-nav]').forEach(el => {
+      el.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = el.dataset.nav;
+        setMode('self-study');
+        navigateTo(target);
+      });
+    });
+
     // スライドナビ
     container.querySelector('#slide-prev')?.addEventListener('click', () => {
       if (presentSectionIndex > 0) { presentSectionIndex--; renderPresentModule(container, moduleIndex); }
