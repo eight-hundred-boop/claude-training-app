@@ -4876,6 +4876,14 @@ body.landing-mode #global-footer {
   white-space: pre-wrap;
 }
 .prompt-copy .copy-btn { margin-left: 0; }
+/* 本文中のページ内リンク（例: TIPS集へ）をリンクらしく見せる */
+.topic-content a[data-nav], .slide-content a[data-nav] {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.topic-content a[data-nav]:hover, .slide-content a[data-nav]:hover { opacity: .8; }
 
 /* --- 横並びラベルカード --- */
 .visual-label-row {

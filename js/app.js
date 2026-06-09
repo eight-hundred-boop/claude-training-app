@@ -1240,6 +1240,11 @@
       });
     });
 
+    // スライド本文中のページ内リンク（例: TIPS集へ）
+    container.querySelectorAll('[data-nav]').forEach(el => {
+      el.addEventListener('click', (e) => { e.preventDefault(); navigateTo(el.dataset.nav); });
+    });
+
     // スライドナビ
     container.querySelector('#slide-prev')?.addEventListener('click', () => {
       if (presentSectionIndex > 0) { presentSectionIndex--; renderPresentModule(container, moduleIndex); }
