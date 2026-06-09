@@ -3530,7 +3530,7 @@ const MODULES = [
 
           <div class="column-box">
             <div class="column-eyebrow">📎 コラム：思考フレームワークを Subagents に載せる</div>
-            <p><strong>シックスハット（6つの帽子）</strong>は Claude Code の機能ではなく、物事を6つの視点で多角的に見る<strong>古典的な思考フレームワーク</strong>です。1体に丸ごと考えさせると賛成・反対の立場が混ざって判断が甘くなりますが、<strong>1つの視点＝1人の担当（サブエージェント）</strong>に分ければ、テーマを抜けなく検証できます。Subagents は、こうした「役割を分ける思考法」を自動で回す土台になります。</p>
+            <p><strong>シックスハット（6つの帽子）</strong>は、物事を6つの視点で多角的に見る<strong>古典的な思考フレームワーク</strong>です。1体に丸ごと考えさせると賛成・反対の立場が混ざって判断が甘くなりますが、<strong>1つの視点＝1人の担当（サブエージェント）</strong>に分ければ、テーマを抜けなく検証できます。Subagents は、こうした「役割を分ける思考法」を自動で回す土台になります。</p>
 
           <div class="visual-grid cols-3">
             <div class="visual-grid-item">
