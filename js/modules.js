@@ -2467,7 +2467,7 @@ const MODULES = [
               <li>複数ファイル／データ処理をまとめて任せる</li>
               <li>保存して再利用できるツール・プロトタイプを作る</li>
               <li>CLAUDE.md・Skills・MCP で品質を“自分仕様”に固定する</li>
-              <li>Subagents（エージェントチーム）でリサーチ・企画まで広げる</li>
+              <li>Subagents（分担・並列）でリサーチ・企画まで広げる</li>
             </ul>
           </div>
         `
@@ -3435,8 +3435,8 @@ const MODULES = [
             </div>
           </div>
 
-          <h4>エージェントチームの動き方</h4>
-          <p>1つの大きな仕事を、親（あなた）が手分けして渡し、各担当が<strong>並列</strong>で動き、<strong>要約だけ</strong>を返す——というチームのイメージです。</p>
+          <h4>サブエージェントの動き方</h4>
+          <p>1つの大きな仕事を、親（あなた）が手分けして渡し、各担当が<strong>並列</strong>で動き、<strong>要約だけ</strong>を返す——という仕組みです。</p>
           <div class="agent-team">
             <div class="agent-team-lead">
               <span class="at-icon">🧑‍💼</span>
@@ -3521,6 +3521,46 @@ const MODULES = [
 
           <div class="info-box">
             <p><strong>カギは「独立した目」と「広さ」</strong>：調べる役と検証する役、作る役と選ぶ役を分けるほど、思い込み・抜け・身内びいきが減ります。広げたら<strong>一度まとめ、別のエージェントで検証する</strong>ひと手間で、最終アウトプットの質がぐっと上がります（従来は複数のAIに投げてコピペで手作業統合していた工程が、一度の依頼で通せます）。</p>
+          </div>
+
+          <h3>多角的に検証する型 — 6つの視点で分担する</h3>
+          <p>「この企画は妥当か」を1体に丸ごと考えさせると、賛成と反対の立場が混ざって判断が甘くなりがちです。そこで使えるのが <strong>シックスハット（6つの視点で順に考える思考法）</strong>。<strong>1つの視点＝1人の担当</strong>に分けて手分けすれば、ひとつのテーマを抜けなく多角的に検証できます。</p>
+
+          <div class="visual-grid cols-3">
+            <div class="visual-grid-item">
+              <div class="grid-icon">⚪️</div>
+              <div class="grid-title">事実（白）</div>
+              <div class="grid-desc">データ・客観的な情報だけを集める。「分かっていること／いないこと」を仕分ける担当</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">🔴</div>
+              <div class="grid-title">感情（赤）</div>
+              <div class="grid-desc">使う人・受け手がどう感じるか。直感的な好き嫌いや期待・不安を言語化する担当</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">⚫️</div>
+              <div class="grid-title">リスク（黒）</div>
+              <div class="grid-desc">弱点・懸念・失敗しうる点を厳しく指摘する担当。批判専門なので遠慮なく突っ込める</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">🟡</div>
+              <div class="grid-title">メリット（黄）</div>
+              <div class="grid-desc">価値・うまくいく理由・得られる効果を前向きに洗い出す担当</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">🟢</div>
+              <div class="grid-title">新発想（緑）</div>
+              <div class="grid-desc">代替案・別の切り口・改善アイデアを自由に発想する担当</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">🔵</div>
+              <div class="grid-title">統括（青）</div>
+              <div class="grid-desc">他の5人の結果を受け取り、全体を整理して結論にまとめる担当（＝あなたの統合役）</div>
+            </div>
+          </div>
+
+          <div class="info-box">
+            <p><strong>なぜ役を分けると効くのか</strong>：同じ1体に「メリットも言って、でも厳しく批判して」と頼むと立場が混ざり、批判が甘くなります。視点ごとに担当を分けると、それぞれが本気で役目を果たすため、賛否・リスク・代替案がそろい、検証の精度が上がります。企画の評価・提案の事前レビュー・打ち手の比較などに向いています。</p>
           </div>
 
           <h3>使う／使わないの見極め</h3>
@@ -4874,7 +4914,7 @@ const TIPS = [
     "id": "tip-045",
     "category": "⚡ Claude Code 個別",
     "level": "intermediate",
-    "title": "エージェントチームを「いつ使う/使わないか」で見極める",
+    "title": "サブエージェントを「いつ使う/使わないか」で見極める",
     "summary": "情報量が多い・タスクを並列に分けられる・あえて異なる視点が欲しい、の3条件のどれかに当てはまるときだけサブエージェント並列を使う。簡単・短い・手順が一直線の作業には使わない。",
     "whenToUse": "Claude Code で「複数のエージェントに分担させようか、1つのClaudeに任せようか」迷ったとき。",
     "howToUse": [
@@ -4968,7 +5008,7 @@ const TIPS = [
     "level": "advanced",
     "title": "結論を出す前に「6つの帽子」で多角検証させる",
     "summary": "客観的事実・感情・リスク・利点・新発想・全体整理という役割の違うエージェントに同じテーマを並行で検討させ、最後に1本に統合する。1体に任せると揃いきらない視点を漏れなく網羅でき、賛否・リスク・機会を抜け落ちなく洗い出せる。",
-    "whenToUse": "重要な意思決定や、賛否・リスク・機会を漏れなく洗い出したいテーマを、複数のサブエージェント（エージェントチーム）で検討させるとき。",
+    "whenToUse": "重要な意思決定や、賛否・リスク・機会を漏れなく洗い出したいテーマを、複数のサブエージェントに役割分担させて検討させるとき。",
     "howToUse": [
       "テーマを決め、6つの役割（事実／感情／リスク／利点／新発想／全体整理）でそれぞれ並行して分析させる",
       "分析が出そろったら『結果を1本に統合して』と明示的に依頼し、機会・リスク・対応策・結論を整理させる（統合は自動では始まらないことがある）",

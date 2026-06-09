@@ -5541,7 +5541,7 @@ body.landing-mode #global-footer {
   15%, 45% { background-color: var(--primary-bg); }
 }
 
-/* エージェントチームの図解（Subagents） */
+/* 分担・委任フローの図解（あなた → 担当。1-13 と 2-6 で共用） */
 .agent-team {
   margin: 20px 0;
   display: flex;
