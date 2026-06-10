@@ -1172,8 +1172,8 @@ const MODULES = [
           <div class="visual-grid cols-2">
             <div class="visual-grid-item">
               <div class="grid-icon">✅</div>
-              <div class="grid-title">セッションをまたいで残る</div>
-              <div class="grid-desc">履歴はブラウザ内（IndexedDB）に保存され、アプリを閉じても次回そのまま続けられます。</div>
+              <div class="grid-title">アプリを閉じても履歴が残る</div>
+              <div class="grid-desc">履歴はブラウザ内（IndexedDB）に保存され、次回そのまま続きから使えます。</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">✅</div>
@@ -3054,23 +3054,23 @@ const MODULES = [
           <p>成果物を繰り返し作るようになると、<strong>毎回品質がブレない仕組み</strong>が欲しくなります。ここでは質と再現性を支える道具 — CLAUDE.md（ルール固定）、Skills（手順の型化）、MCP / Connectors（必要なデータの接続） — を押さえます。</p>
 
           <h3>まず全体像 — 3つの道具の役割分担</h3>
-          <p>3つの道具はどれも、汎用の AI に自分（自社）の文脈を渡して<strong>“自分仕様”</strong>にするための道具です。役割は違い、料理にたとえると関係がつかみやすくなります。</p>
+          <p>3つの道具はどれも、AI に自分（自社）の文脈を渡して<strong>“自分仕様”</strong>にするための道具です。役割の違いは、料理にたとえるとつかみやすくなります。</p>
 
           <div class="visual-grid cols-3">
             <div class="visual-grid-item">
               <div class="grid-icon">📏</div>
               <div class="grid-title">CLAUDE.md ＝ 守る作法</div>
-              <div class="grid-desc"><strong>常に</strong>効くルール（毎回自動で読み込む）。例：文体・体裁・禁止事項。料理でいう「店の決まり」。</div>
+              <div class="grid-desc"><strong>常に</strong>効くルール（毎回自動で読み込む）。<br>例：文体・体裁・禁止事項<br>🍳 料理でいう「店の決まり」</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">📖</div>
               <div class="grid-title">Skills ＝ レシピ＋道具箱</div>
-              <div class="grid-desc"><strong>呼んだとき</strong>に効く、手順とテンプレ・決まった処理。料理でいう「レシピ本と調理道具」。</div>
+              <div class="grid-desc">手順とテンプレ・決まった処理をまとめた型。名指しで呼べるほか、合う依頼なら自動で使われる。<br>例：議事録の型・週報づくり<br>🍳 料理でいう「レシピ本と調理道具」</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">🛒</div>
               <div class="grid-title">MCP ＝ 材料の取り寄せ</div>
-              <div class="grid-desc"><strong>必要なとき</strong>に、社内データなどを外から接続。料理でいう「材料の買い出し」。</div>
+              <div class="grid-desc"><strong>必要なとき</strong>に、社内データなどを外から接続。<br>例：Notion・Slack<br>🍳 料理でいう「材料の買い出し」</div>
             </div>
           </div>
 
@@ -3088,7 +3088,7 @@ const MODULES = [
             <div class="visual-grid-item">
               <div class="grid-icon">🌐</div>
               <div class="grid-title">自分用（グローバル）</div>
-              <div class="grid-desc">自分の PC に1つ置く。自分が関わる<strong>すべての作業</strong>に共通で効く。例：「結論から書く」「です・ます調」「専門用語には説明を添える」など“自分の仕事の流儀”。</div>
+              <div class="grid-desc">自分の PC に1つ置く（具体的な場所はこのあとの「どこに置く？」で）。自分が関わる<strong>すべての作業</strong>に共通で効く。例：「結論から書く」「です・ます調」「専門用語には説明を添える」など“自分の仕事の流儀”。</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">📁</div>
@@ -3099,30 +3099,6 @@ const MODULES = [
 
           <div class="info-box">
             <p><strong>両方とも効きます</strong>（重ねて読み込まれます）。内容がぶつかったときは、より具体的な<strong>案件用が優先</strong>と考えれば OK です。<br><strong>使い分けの目安</strong>：自分の流儀（結論先行・です・ます調など）は自分用、案件固有（クライアント名・体裁・レビュー観点）は案件用に。</p>
-          </div>
-
-          <p>この「自分用／案件用」は、claude.ai で学んだ仕組みと<strong>同じ2層</strong>です。</p>
-
-          <div class="visual-mapping">
-            <div class="mapping-header">
-              <span class="mapping-from">claude.ai（Chat）で学んだこと</span>
-              <span class="mapping-arrow"></span>
-              <span class="mapping-to">Claude Code では</span>
-            </div>
-            <div class="mapping-row">
-              <span class="mapping-from">「Claudeへの指示」（1-5）＝自分用</span>
-              <span class="mapping-arrow">≈</span>
-              <span class="mapping-to">グローバル CLAUDE.md（自分用）</span>
-            </div>
-            <div class="mapping-row">
-              <span class="mapping-from">Project の Instructions（1-7）＝案件用</span>
-              <span class="mapping-arrow">≈</span>
-              <span class="mapping-to">プロジェクト CLAUDE.md（案件用）</span>
-            </div>
-          </div>
-
-          <div class="info-box">
-            <p>⚠️ 同じ2層構造ですが、<strong>claude.ai と Claude Code は別システムで設定は同期しません</strong>（片方で書いても、もう片方には反映されません）。</p>
           </div>
 
           <div class="visual-grid cols-2">
@@ -3139,7 +3115,7 @@ const MODULES = [
           </div>
 
           <div class="example-box">
-            📄 <strong>案件用 CLAUDE.md の例（B社 中期計画支援）</strong> — ただの日本語の箇条書きでよく、専用の文法は要りません。<br>
+            📄 <strong>案件用 CLAUDE.md の例（B社 中期計画支援）</strong> — 箇条書きで書くだけでよく、特別な書き方は要りません。<br>
             ・概要：B社（食品メーカー）の中期経営計画策定支援。成果物は経営会議向け資料<br>
             ・フォルダの使い方：01_受領資料／は読むだけ（変更しない）、02_作業中／にドラフト、03_納品／は確定版のみ<br>
             ・守るルール：です・ます調、結論から書く。社名は「B社」と表記<br>
@@ -3231,48 +3207,18 @@ const MODULES = [
           <h3>Skills — よく使う手順を型にする</h3>
           <p>第1回 1-15 で学んだ Skills（よく使う手順の型）は、成果物づくりでも効きます。「議事録をこの体裁で」「この観点で集計して」といった<strong>手順・ルール・出力形式を型として保存</strong>し、呼び出すだけで同じ品質の成果物を作れます。</p>
 
-          <h4>Skill には「手順」だけでなく「道具」もまとめられる</h4>
-          <p>Skill は手順書（指示）が中心ですが、それに加えて作業に必要な<strong>道具</strong>も一緒に束ねておけます。だから、指示文をただ保存するより一段強力です。</p>
-
-          <div class="visual-grid cols-2">
-            <div class="visual-grid-item">
-              <div class="grid-icon">📋</div>
-              <div class="grid-title">指示書（中心）</div>
-              <div class="grid-desc">やり方・手順・「いつ使うか」。これだけでも Skill は作れる。</div>
-            </div>
-            <div class="visual-grid-item">
-              <div class="grid-icon">🧩</div>
-              <div class="grid-title">テンプレート・素材</div>
-              <div class="grid-desc">会社のスライドひな型・ロゴ・フォントなど。体裁やブランドを固定できる。</div>
-            </div>
-            <div class="visual-grid-item">
-              <div class="grid-icon">⚙️</div>
-              <div class="grid-title">決まった処理</div>
-              <div class="grid-desc">「表記ゆれを一括で統一」など、必ず同じ結果が要る作業を、ルールどおり正確に実行。</div>
-            </div>
-            <div class="visual-grid-item">
-              <div class="grid-icon">📚</div>
-              <div class="grid-title">参照資料</div>
-              <div class="grid-desc">必要なときだけ読み込む補足情報。中心の指示書を軽く保てる。</div>
-            </div>
-          </div>
-
-          <div class="visual-highlight-card">
-            <p><strong>「AI の柔軟さ」と「決まった処理の正確さ」を両立できる</strong>のが Skill の強みです。文章の整え方は AI が柔軟に、表記ゆれの統一のような“絶対に揺らしたくない部分”は決まった処理で正確に — だから成果物の品質が安定します。</p>
-          </div>
-
-          <h4>具体例 — 1つの Skill の中身を見てみる</h4>
-          <p>「手順＋道具の束」は、実例で見ると一気に腹落ちする。上の4要素が実際にどう束ねられるか、たとえば毎週つくる<strong>「競合ウォッチ週報」Skill</strong>を1つ用意した場合で見てみる。</p>
+          <h4>中身は4点セット — “手順”だけでなく“道具”も束ねられる</h4>
+          <p>Skill には手順の指示書だけでなく、テンプレートや決まった処理といった“道具”も一緒に入れられます。実例で見るのが早いでしょう。たとえば毎週つくる<strong>「競合ウォッチ週報」 Skill</strong> なら、中身はこの4つです。</p>
 
           <div class="example-box">
             📦 Skill「競合ウォッチ週報」<br>
-            &nbsp;&nbsp;├ 📋 指示書 … 「競合の動きを整理 → 自社への示唆 → 次アクションを提案」の手順と、いつ使うか<br>
-            &nbsp;&nbsp;├ 🧩 テンプレート … 週報のひな型（見出し・表の体裁・トンマナ）<br>
+            &nbsp;&nbsp;├ 📋 指示書（中心） … 「競合の動きを整理 → 自社への示唆 → 次アクションを提案」の手順と、いつ使うか<br>
+            &nbsp;&nbsp;├ 🧩 テンプレート・素材 … 週報のひな型（見出し・表の体裁・トンマナ）<br>
             &nbsp;&nbsp;├ ⚙️ 決まった処理 … 社名・製品名の表記ゆれを正式名称に一括統一<br>
-            &nbsp;&nbsp;└ 📚 参照資料 … 自社の競合定義・用語集（必要なときだけ読む）
+            &nbsp;&nbsp;└ 📚 参照資料 … 自社の競合定義・用語集（必要なときだけ読む補足）
           </div>
 
-          <p>呼び出すと、AI が柔軟に書く部分（示唆・提案）と、毎回ブレてはいけない部分（体裁・表記）が<strong>1回でまとめて</strong>仕上がる。指示文をコピペし直す手間も、体裁を整え直す手間も消える。</p>
+          <p>呼び出すと、AI が柔軟に書く部分（示唆・提案）と、毎回ブレてはいけない部分（体裁・表記）が<strong>1回でまとめて</strong>仕上がる。指示文をコピペし直す手間も、体裁を整え直す手間も消える。<strong>AIの柔軟さ＋決まった処理の正確さを両立</strong>できるので、品質が安定します。</p>
 
           <div class="visual-mapping">
             <div class="mapping-header">
@@ -3292,25 +3238,8 @@ const MODULES = [
             </div>
           </div>
 
-          <h4>どんな作業を型にする？ — 3つの条件</h4>
-
-          <div class="visual-grid cols-3">
-            <div class="visual-grid-item">
-              <div class="grid-icon">🔁</div>
-              <div class="grid-title">繰り返し発生する</div>
-              <div class="grid-desc">月次・週次・案件ごとなど、似た作業が何度も発生する</div>
-            </div>
-            <div class="visual-grid-item">
-              <div class="grid-icon">🪜</div>
-              <div class="grid-title">手順が明確化できる</div>
-              <div class="grid-desc">「まず○○、次に△△」と段取りで言語化できる</div>
-            </div>
-            <div class="visual-grid-item">
-              <div class="grid-icon">🎯</div>
-              <div class="grid-title">品質基準がある</div>
-              <div class="grid-desc">「このレベルなら OK」と言える基準がある</div>
-            </div>
-          </div>
+          <h4>いつ Skill にする？(3条件)</h4>
+          <p>繰り返し発生する／手順が明確／品質基準がある——この3つが揃う作業が Skill 向き。</p>
 
           <h4>どう作って育てる？ — まず指示文だけ、あとから道具を足す</h4>
           <p>最初から完成形を目指さなくてよい。<strong>まずは指示文（手順）だけ</strong>で作り、使いながら足りないものを足して育てる、の3ステップが現実的だ。プログラムを書く必要はない。</p>
@@ -3333,20 +3262,14 @@ const MODULES = [
               <div class="step-marker">3</div>
               <div class="step-body">
                 <div class="step-title">使って直す</div>
-                <div class="step-desc">実際に呼び出し、物足りない点を指示文に追記する。何度か回すうちに「自分（自社）仕様」に育っていく。</div>
+                <div class="step-desc">実際に呼び出し、物足りない点を指示文に追記する。発動するか・品質・手間の3点を見ながら、何度か回すうちに「自分（自社）仕様」に育っていく。</div>
               </div>
             </div>
           </div>
 
-          <div class="tip-box">
-            <strong>💡 作って終わりにしない</strong><br>
-            作った Skill は「発動（正しく呼ばれるか）・品質（期待した成果物か）・効率（手作業より速いか）」の3点で確認し、物足りない部分を追記して育てます。
-          </div>
-
           <div class="info-box">
-            <p><strong>🔔 Skill は「いつ呼ばれるか」が肝心 — 名前を出すのが確実</strong><br>
-            どの Skill を使うかは、AI が依頼内容と各 Skill の説明文を見て<strong>自分で判断</strong>します。だから「どんなときに使うか」を説明文に分かりやすく書いておくほど、狙ったときに発動しやすくなります。</p>
-            <p>確実に使わせたいときは、依頼文で<strong>Skill 名を名指し</strong>するのが手堅い方法です（例：「競合ウォッチ週報の Skill で今週分を作って」）。「作ったのに呼ばれない」ときは、まず説明文を具体的にし、それでも不安なら名指しします。</p>
+            <p><strong>🔔 いつ使われる？ — 名指しが確実、合う依頼には自動でも</strong><br>
+            どの Skill を使うかは、AI が依頼内容と各 Skill の説明文を見て<strong>自分で判断</strong>します。依頼文で<strong>Skill 名を名指し</strong>するのが確実（例：「競合ウォッチ週報の Skill で今週分を作って」）ですが、説明文に合う依頼なら名指ししなくても自動で使われることがあります。「作ったのに呼ばれない」ときは、まず説明文の「どんなときに使うか」を具体的にし、それでも不安なら名指ししてください。</p>
           </div>
 
           <h4>育てた Skill をチームに広げる</h4>
@@ -4711,7 +4634,7 @@ const TIPS = [
     "howToUse": [
       "Claude Code に「全体設定の CLAUDE.md はどこにある？」と聞いて場所を教えてもらう",
       "そこに『Python のツールをインストールするときは必ず UV を使い、フォルダの中だけに入れる。環境を汚す恐れのある操作は説明したうえで確認する』と書いてもらう",
-      "新しいセッションを開くと、このルールに自動で従ってくれる"
+      "新しい会話を開くと、このルールに自動で従ってくれる"
     ],
     "example": "Python のツールをインストールするときは必ず UV を使い、そのフォルダの中だけに入れて。環境を汚す恐れのある操作は、わかりやすい説明とともに確認して。これを全体設定の CLAUDE.md に書いておいて。",
     "caution": "これは Python を使う作業向けの仕組み。フォルダ内だけに入れておけば、うまくいかなくてもそのフォルダを消せば他に影響しないので、詳しくない人ほど安心。なお書いたあとも、初めての操作では確認ダイアログが出ることがあるので、内容を見て進める。",
@@ -4728,16 +4651,16 @@ const TIPS = [
     "id": "tip-034",
     "category": "🌐 共通",
     "level": "intermediate",
-    "title": "CLAUDE.md は「セッション開始時」にしか読まれないと知っておく",
-    "summary": "全体設定の CLAUDE.md も、フォルダ内の CLAUDE.md も、新しいセッション（チャット／タスク）を立ち上げたときに最初にまとめて読まれる。作業の途中で書き換えても、いま動いている会話には反映されない。",
+    "title": "CLAUDE.md は「新しい会話を始めたとき」にしか読まれないと知っておく",
+    "summary": "全体設定の CLAUDE.md も、フォルダ内の CLAUDE.md も、新しい会話（チャット／タスク）を始めたときに最初にまとめて読まれる。作業の途中で書き換えても、いま動いている会話には反映されない。",
     "whenToUse": "CLAUDE.md を作ったり書き換えたのに、いま動いている会話に反映されている様子がないとき。",
     "howToUse": [
       "CLAUDE.md を新しく作る・書き換えたら、その会話のまま続けない",
-      "新しいセッション（新しいタスク／チャット）を開き直す",
+      "新しい会話（新しいタスク／チャット）を開き直す",
       "Claude Code や Cowork では同じフォルダを選び直してから依頼すると、最新の設定が読み込まれた状態で始まる"
     ],
     "example": "（CLAUDE.md を直したあと）新しいチャットを開いて「このフォルダの CLAUDE.md を読んだうえで、画像をモノクロにする処理を作って」と頼むと、更新後のルールが効いた状態で始まる。",
-    "caution": "「途中で設定したから読まれていないかも」と思ったら、迷わず新しいセッションに切り替えるのが確実。細かいが、つまずきやすいポイント。",
+    "caution": "「途中で設定したから読まれていないかも」と思ったら、迷わず新しい会話に切り替えるのが確実。細かいが、つまずきやすいポイント。",
     "relatedSession": "第2回",
     "relatedSections": [
       {
@@ -4756,12 +4679,12 @@ const TIPS = [
     "whenToUse": "調査やレポートで「このまとめ方が理想」という形に仕上がり、次も同じ形で繰り返したいと思ったとき。",
     "howToUse": [
       "望ましい出力が出たら、その会話のまま「このフォーマット／手順をこのフォルダの CLAUDE.md に書いておいて」と頼む（自分でファイルを書く必要はない）",
-      "CLAUDE.md は次のセッション開始時に読み込まれるので、反映させたいときは新しいセッションを始める",
+      "CLAUDE.md は次の新しい会話の開始時に読み込まれるので、反映させたいときは新しい会話を始める",
       "次回は同じフォルダを選んで「まとめて」とだけ依頼し、同じ形で出てくるか確認する",
       "ズレたら、また「ここをこう直して CLAUDE.md に書いておいて」と頼んで少しずつ育てる"
     ],
     "example": "今回のまとめ方が理想なので、このフォーマットと手順をこのフォルダの CLAUDE.md に書いておいて。次回からは同じ形で作業して",
-    "caution": "CLAUDE.md は新しいセッションの開始時に読み込まれる。書いた直後の同じ会話では反映されないので、効かせたいときは一度セッションを始め直す。一度に完璧を目指さず、使いながら追記して育てるとよい。",
+    "caution": "CLAUDE.md は新しい会話の開始時に読み込まれる。書いた直後の同じ会話では反映されないので、効かせたいときは一度会話を始め直す。一度に完璧を目指さず、使いながら追記して育てるとよい。",
     "relatedSession": "第2回",
     "relatedSections": [
       {
