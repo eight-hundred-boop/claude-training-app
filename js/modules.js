@@ -3645,7 +3645,7 @@ const MODULES = [
               </tr>
               <tr>
                 <td><strong>右クリック →「パスのコピー」（Windows / エクスプローラー）</strong></td>
-                <td>選択ファイルの絶対パスをコピー。チャット欄に貼ればフォルダ外のファイルも渡せる（Mac の Opt + ⌘ + C と同じ役割）</td>
+                <td>選択ファイルの絶対パスをコピー。チャット欄に貼ればフォルダ外のファイルも渡せる（Mac の Opt + ⌘ + C と同じ役割。Windows 11 では右クリックの標準メニューに「パスのコピー」が出る。古い Windows では Shift を押しながら右クリック）</td>
               </tr>
               <tr>
                 <td><strong>Effort 設定（思考の深さを調整）</strong></td>
