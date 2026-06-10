@@ -3079,27 +3079,9 @@ const MODULES = [
           </div>
 
           <h3>CLAUDE.md — 作業ルールを書いておく</h3>
-          <p>CLAUDE.md は、Claude Code が自動で読み込む<strong>ルールファイル</strong>です。毎回同じ注意を書かなくても、品質を一定に保てます。</p>
+          <p>CLAUDE.md は、Claude Code が自動で読み込む<strong>ルールファイル</strong>です。役割はシンプルで、「<strong>毎回説明し直していることを、書いておく場所</strong>」。会話のたびに同じ注意を繰り返さなくても、品質を一定に保てます。</p>
 
-          <h4>ルールには「置き場所」が2段ある — 自分用と案件用</h4>
-          <p>CLAUDE.md は1か所だけでなく、効かせたい範囲に応じて置き場所を選べます。大きく「自分用（グローバル）」と「案件用（プロジェクト）」の2段です。</p>
-
-          <div class="visual-grid cols-2">
-            <div class="visual-grid-item">
-              <div class="grid-icon">🌐</div>
-              <div class="grid-title">自分用（グローバル）</div>
-              <div class="grid-desc">自分の PC に1つ置く（具体的な場所はこのあとの「どこに置く？」で）。自分が関わる<strong>すべての作業</strong>に共通で効く。例：「結論から書く」「です・ます調」「専門用語には説明を添える」など“自分の仕事の流儀”。</div>
-            </div>
-            <div class="visual-grid-item">
-              <div class="grid-icon">📁</div>
-              <div class="grid-title">案件用（プロジェクト）</div>
-              <div class="grid-desc">その<strong>案件フォルダ</strong>に置く。その案件だけに効く。<strong>チームで共有</strong>でき、メンバー全員が同じ前提で動ける。例：「クライアントは B社」「成果物はこの体裁」「この観点でレビュー」。</div>
-            </div>
-          </div>
-
-          <div class="info-box">
-            <p><strong>両方とも効きます</strong>（重ねて読み込まれます）。内容がぶつかったときは、より具体的な<strong>案件用が優先</strong>と考えれば OK です。<br><strong>使い分けの目安</strong>：自分の流儀（結論先行・です・ます調など）は自分用、案件固有（クライアント名・体裁・レビュー観点）は案件用に。</p>
-          </div>
+          <h4>何を書く？</h4>
 
           <div class="visual-grid cols-2">
             <div class="visual-grid-item">
@@ -3114,6 +3096,8 @@ const MODULES = [
             </div>
           </div>
 
+          <p>迷ったら「次の会話でも説明し直すか？」——し直すことなら書いておきましょう。</p>
+
           <div class="example-box">
             📄 <strong>案件用 CLAUDE.md の例（B社 中期計画支援）</strong> — 箇条書きで書くだけでよく、特別な書き方は要りません。<br>
             ・概要：B社（食品メーカー）の中期経営計画策定支援。成果物は経営会議向け資料<br>
@@ -3124,11 +3108,21 @@ const MODULES = [
           </div>
           <p>こう書いておくと、2-2 の「準備5点」がファイルに固定され、毎回口頭で伝えずに済みます。</p>
 
-          <h4>どこに置く？ — フォルダと置き場所</h4>
-          <ul>
-            <li><strong>案件用</strong>：Claude Code で作業フォルダとして開くフォルダの直下に置きます。作業フォルダは<strong>必ず自分の PC 上（ローカル）に作ります</strong>。</li>
-            <li><strong>自分用</strong>：自分の PC の設定フォルダ（<code>.claude</code>）の中にあります。場所は覚えなくて大丈夫です。<code>/memory</code> で開けますし、「全体の CLAUDE.md はどこ？」と Claude に聞けば教えてくれます。</li>
-          </ul>
+          <h4>どこに置く？ — 置き場所は2段（自分用と案件用）</h4>
+          <p>CLAUDE.md は1か所だけでなく、効かせたい範囲に応じて置き場所を選べます。大きく「自分用（グローバル）」と「案件用（プロジェクト）」の2段です。</p>
+
+          <div class="visual-grid cols-2">
+            <div class="visual-grid-item">
+              <div class="grid-icon">🌐</div>
+              <div class="grid-title">自分用（グローバル）</div>
+              <div class="grid-desc">自分の PC の設定フォルダ（<code>.claude</code>）に1つ。自分が関わる<strong>すべての作業</strong>に共通で効く。<br>例：結論から書く／です・ます調＝“自分の仕事の流儀”<br>場所は覚えなくてよい——<code>/memory</code> で開ける・「全体の CLAUDE.md はどこ？」と聞けば教えてくれる。</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">📁</div>
+              <div class="grid-title">案件用（プロジェクト）</div>
+              <div class="grid-desc">Claude Code で<strong>作業フォルダとして開くフォルダの直下</strong>に置く。その案件だけに効く。<strong>チーム共有</strong>でき、全員が同じ前提で動ける。<br>例：クライアントは B社／成果物の体裁／レビュー観点</div>
+            </div>
+          </div>
 
           <div class="example-box">
             📁 Claude作業（親フォルダ）<br>
@@ -3139,14 +3133,14 @@ const MODULES = [
           </div>
 
           <div class="info-box">
-            <p>📌 <strong>CLAUDE.md が効くのは「新しい会話」を始めたとき</strong>（会話＝Claude Code とのひと続きのやり取り。“セッション”とも呼びます）。途中で書き換えても、いま進行中の会話には反映されません。変えたら新しい会話で始めましょう。</p>
+            <p><strong>両方とも効きます</strong>（重ねて読み込まれます）。内容がぶつかったときは、より具体的な<strong>案件用が優先</strong>と考えれば OK です。<br><strong>使い分けの目安</strong>：自分の流儀（結論先行・です・ます調など）は自分用、案件固有（クライアント名・体裁・レビュー観点）は案件用に。</p>
           </div>
 
           <div class="warning-box">
-            <p>⚠️ <strong>社内ルール：作業は必ずローカルフォルダで</strong>。Google ドライブ・BOX などのクラウド共有には直接つながないでください（現状、これらは Claude から接続できないようになっています）。クラウド上のファイルは、いったんローカルの作業用フォルダにコピーして使います。</p>
+            <p>⚠️ <strong>社内ルール：作業フォルダは必ず自分の PC 上（ローカル）に作る</strong>（例：デスクトップに「Claude作業」親フォルダ → 案件ごとのサブフォルダ）。Google ドライブ・BOX などのクラウド共有には直接つながないでください（現状、これらは Claude から接続できないようになっています）。クラウド上のファイルは、いったんローカルの作業用フォルダにコピーして使います。</p>
           </div>
 
-          <h4>準備の仕方 — まず /init、確認は /memory</h4>
+          <h4>どう作る？ — まず /init、確認は /memory</h4>
           <p><code>/init</code> も <code>/memory</code> も、いつもの依頼文と同じ<strong>チャット入力欄に打って送信するだけ</strong>です（デスクトップアプリでも使えます）。この <code>/</code> で始まる短い命令を「スラッシュコマンド」と呼びます（一覧は 2-7 で）。</p>
 
           <div class="visual-grid cols-2">
@@ -3167,7 +3161,11 @@ const MODULES = [
             「CLAUDE.md にまとめて」と頼めば、Claude がフォルダ内に作ってくれます。正確な置き場所は覚えなくて大丈夫です。
           </div>
 
-          <h4>ルールファイルは小さく分ける — 役割別に</h4>
+          <div class="info-box">
+            <p>📌 <strong>CLAUDE.md が効くのは「新しい会話」を始めたとき</strong>（会話＝Claude Code とのひと続きのやり取り。“セッション”とも呼びます）。途中で書き換えても、いま進行中の会話には反映されません。作ったら・変えたら、新しい会話で始めましょう。</p>
+          </div>
+
+          <h4>応用 — ルールファイルは小さく分ける（役割別に）</h4>
           <p>規模が大きくなると、CLAUDE.md にすべて書くと長くなりすぎます。<strong>役割別のファイルに分け、CLAUDE.md からは「詳しくは○○.md を参照」と参照する</strong>設計が便利です。</p>
 
           <div class="visual-grid cols-2">
