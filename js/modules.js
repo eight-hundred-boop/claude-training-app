@@ -3135,8 +3135,21 @@ const MODULES = [
             </div>
           </div>
 
+          <div class="example-box">
+            📄 <strong>案件用 CLAUDE.md の例（B社 中期計画支援）</strong> — ただの日本語の箇条書きでよく、専用の文法は要りません。<br>
+            ・概要：B社（食品メーカー）の中期経営計画策定支援。成果物は経営会議向け資料<br>
+            ・フォルダの使い方：01_受領資料／は読むだけ（変更しない）、02_作業中／にドラフト、03_納品／は確定版のみ<br>
+            ・守るルール：です・ます調、結論から書く。社名は「B社」と表記<br>
+            ・禁止事項：01_受領資料／の中のファイルは変更しない<br>
+            ・出力形式：報告資料は1スライド1メッセージ
+          </div>
+          <p>こう書いておくと、2-2 の「準備5点」がファイルに固定され、毎回口頭で伝えずに済みます。</p>
+
           <h4>どこに置く？ — フォルダと置き場所</h4>
-          <p>案件用の CLAUDE.md は、<strong>Claude Code（デスクトップ）で作業フォルダとして開くフォルダの直下</strong>に置かれます。作業フォルダは<strong>必ず自分の PC 上（ローカル）に作ります</strong>。</p>
+          <ul>
+            <li><strong>案件用</strong>：Claude Code で作業フォルダとして開くフォルダの直下に置きます。作業フォルダは<strong>必ず自分の PC 上（ローカル）に作ります</strong>。</li>
+            <li><strong>自分用</strong>：自分の PC の設定フォルダ（<code>.claude</code>）の中にあります。場所は覚えなくて大丈夫です。<code>/memory</code> で開けますし、「全体の CLAUDE.md はどこ？」と Claude に聞けば教えてくれます。</li>
+          </ul>
 
           <div class="example-box">
             📁 Claude作業（親フォルダ）<br>
@@ -3146,25 +3159,22 @@ const MODULES = [
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ 📄 CLAUDE.md
           </div>
 
+          <div class="info-box">
+            <p>📌 <strong>CLAUDE.md が効くのは「新しい会話」を始めたとき</strong>（会話＝Claude Code とのひと続きのやり取り。“セッション”とも呼びます）。途中で書き換えても、いま進行中の会話には反映されません。変えたら新しい会話で始めましょう。</p>
+          </div>
+
           <div class="warning-box">
             <p>⚠️ <strong>社内ルール：作業は必ずローカルフォルダで</strong>。Google ドライブ・BOX などのクラウド共有には直接つながないでください（現状、これらは Claude から接続できないようになっています）。クラウド上のファイルは、いったんローカルの作業用フォルダにコピーして使います。</p>
           </div>
 
-          <p>自分で手書きする必要はありません。<code>/init</code> が生成してくれるか、「CLAUDE.md にまとめて」と頼めば Claude がそのフォルダ内に作ってくれます。自分用（グローバル）の CLAUDE.md は、自分の PC の設定フォルダ（<code>.claude</code>）の中にあります。場所が分からなければ <code>/memory</code> で開けますし、「全体の CLAUDE.md はどこ？」と Claude に聞けば教えてくれます。</p>
-
-          <div class="tip-box">
-            <strong>💡 変更は新しいセッションで反映</strong><br>
-            CLAUDE.md は<strong>新しいセッションの開始時に読み込まれます</strong>。会話の途中で書き換えてもその場では反映されないので、変えたら新しいセッションで始めましょう。
-          </div>
-
           <h4>準備の仕方 — まず /init、確認は /memory</h4>
-          <p>ゼロから書く必要はありません。2つのコマンドで準備できます。</p>
+          <p><code>/init</code> も <code>/memory</code> も、いつもの依頼文と同じ<strong>チャット入力欄に打って送信するだけ</strong>です（デスクトップアプリでも使えます）。この <code>/</code> で始まる短い命令を「スラッシュコマンド」と呼びます（一覧は 2-7 で）。</p>
 
           <div class="visual-grid cols-2">
             <div class="visual-grid-item">
               <div class="grid-icon">⚡</div>
               <div class="grid-title">/init</div>
-              <div class="grid-desc">案件フォルダで実行すると、フォルダの中身を見て CLAUDE.md の<strong>たたき台を自動生成</strong>。ゼロから書かず、それを直すところから始められる。すでに CLAUDE.md がある場合は、上書きせず改善点を提案してくれる。</div>
+              <div class="grid-desc">案件フォルダを作業フォルダとして開いた状態で打つと、フォルダの中身から CLAUDE.md の<strong>たたき台を自動生成</strong>。ゼロから書かず、それを直すところから始められる。すでに CLAUDE.md がある場合は、上書きせずに改善点を提案してくれる。</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">🔍</div>
@@ -3174,8 +3184,8 @@ const MODULES = [
           </div>
 
           <div class="tip-box">
-            <strong>💡 置き場所は覚えなくて大丈夫</strong><br>
-            ファイルの正確な保存場所を覚える必要はありません。<code>/memory</code> が一覧で見せてくれるので、そこから開いて直すのが簡単です。
+            <strong>💡 コマンドを使わなくても OK</strong><br>
+            「CLAUDE.md にまとめて」と頼めば、Claude がフォルダ内に作ってくれます。正確な置き場所は覚えなくて大丈夫です。
           </div>
 
           <h4>ルールファイルは小さく分ける — 役割別に</h4>
@@ -3208,7 +3218,7 @@ const MODULES = [
 
           <div class="tip-box">
             <strong>📈 PROGRESS.md で進捗を引き継ぐ</strong><br>
-            作業の経過を PROGRESS.md に残し、CLAUDE.md に「<strong>作業開始時に PROGRESS.md も読んで</strong>」と書いておくと、日をまたいでも・新しいセッションでも、前回の続きから作業を引き継げます。
+            作業の経過を PROGRESS.md に残し、CLAUDE.md に「<strong>作業開始時に PROGRESS.md も読んで</strong>」と書いておくと、会話をまたいで、前回の続きから作業を引き継げます。
           </div>
 
           <div class="info-box">
@@ -3313,7 +3323,7 @@ const MODULES = [
               <div class="step-marker">2</div>
               <div class="step-body">
                 <div class="step-title">道具を足す</div>
-                <div class="step-desc">体裁がブレるならテンプレートを、絶対に揺らしたくない処理（表記統一など）があれば決まった処理を、説明が長いなら参照資料を後付けで束ねる。</div>
+                <div class="step-desc">体裁がブレるならテンプレートを、絶対に揺らしたくない処理（表記統一など）があれば決まった処理を、説明が長いなら参照資料を後付けで束ねる。束ねる作業も Claude に頼めばよい。ひな型ファイルを作業フォルダに置いて「この体裁をこの Skill のテンプレートとして組み込んで」「表記ゆれを直す処理を足して」と頼めば、中の仕組みは Claude が作ってくれる。</div>
               </div>
             </div>
             <div class="visual-step-item">
@@ -3336,9 +3346,12 @@ const MODULES = [
             <p>確実に使わせたいときは、依頼文で<strong>Skill 名を名指し</strong>するのが手堅い方法です（例：「競合ウォッチ週報の Skill で今週分を作って」）。「作ったのに呼ばれない」ときは、まず説明文を具体的にし、それでも不安なら名指しします。</p>
           </div>
 
+          <h4>育てた Skill をチームに広げる</h4>
+          <p>Skill の実体はファイル一式なので、<strong>そのまま人に配れます</strong>。渡す側はフォルダ一式を共有し、受け取る側は自分の環境に取り込むだけ——1-15 で触れた「属人化しがちな“うまいやり方”」が、チームの標準になります。次に紹介する当社のスキル集は、この共有を全社規模でやっている実例です。</p>
+
           <div class="toolkit-card">
-            <div class="toolkit-head">🧰 当社オリジナルのスキル集「consulting-toolkit-800」</div>
-            <p>コンサル業務のワークフロー（調査提案書・デスクリサーチ・インタビュー設計・議事録・報告書骨子・スライド構成 など）をまとめた<strong>当社製のスキル集（プラグイン）</strong>です。上で説明した「手順＋道具」を束ねたスキルの実例で、スライドのテンプレートや生成手順まで含まれています。一度インストールすれば、<strong>Chat・Cowork・Claude Code のどこからでも</strong>これらの型化済みスキルを呼び出せます。</p>
+            <div class="toolkit-head">🧰 Skills の実例 — 当社のスキル集「consulting-toolkit-800」</div>
+            <p>コンサル業務のワークフロー（調査提案書・デスクリサーチ・インタビュー設計・議事録・報告書骨子・スライド構成 など）をまとめた<strong>当社製のスキル集（プラグイン）</strong>です。上で説明した「手順＋道具」を束ねたスキルの実例で、スライドのテンプレートや生成手順まで含まれています。デスクトップアプリに1回インストールすれば、<strong>Chat・Cowork・Claude Code（デスクトップ）のどこからでも</strong>これらの型化済みスキルを呼び出せます（CLI・IDE で使う場合は別途インストールします）。</p>
             <a class="toolkit-link" href="https://github.com/eight-hundred-inc/consulting-toolkit-800" target="_blank">GitHub で見る ▸</a>
             <div class="toolkit-install">
               <h5>💻 デスクトップアプリ版（GUI で入れる）</h5>
@@ -3348,8 +3361,8 @@ const MODULES = [
               </div>
               <ol>
                 <li>左上の「Customize」を開きます。</li>
-                <li>左サイドバーの「個人用プラグイン」の横の「＋」→「プラグインを作成」→「マーケットプレイスを追加」を選びます。</li>
-                <li>「URL」欄にリポジトリパス <code>eight-hundred-inc/consulting-toolkit-800</code> を入力し、「同期」を押します。</li>
+                <li>左サイドバーの「個人用プラグイン」の横の「＋」→「プラグインを作成」→「マーケットプレイスを追加」（マーケットプレイス＝スキル集の配布元カタログ）を選びます。</li>
+                <li>「URL」欄に次の文字列をそのまま貼り付けて「同期」を押します：<code>eight-hundred-inc/consulting-toolkit-800</code>（スキル集の置き場所を示す“住所”で、URL の形でなくて OK です）。</li>
                 <li>一覧に出た <code>consulting-toolkit-800</code> を「インストール」します。</li>
                 <li>新しい会話を開始すれば使えます。</li>
               </ol>
@@ -3364,13 +3377,32 @@ const MODULES = [
             </div>
             <div class="info-box">
               <strong>💡 インストール後に反映するには</strong><br>
-              プラグインは<strong>起動時に読み込まれます</strong>。CLI / IDE では、いったん Claude Code を<strong>終了して再起動</strong>すれば <code>/pm</code> などのコマンドが使えるようになります（PC の再起動までは不要です）。終了・再起動せずに今すぐ反映したいときは <code>/reload-plugins</code> を実行します。デスクトップアプリ版は、新しい会話を始めれば反映されます。
+              プラグインは<strong>起動時に読み込まれます</strong>。デスクトップアプリ版は、新しい会話を始めれば反映されます。CLI / IDE では、いったん Claude Code を<strong>終了して再起動</strong>すれば <code>/pm</code> などのコマンドが使えるようになります（PC の再起動までは不要です。終了・再起動せずに今すぐ反映したいときは <code>/reload-plugins</code> を実行します）。
             </div>
-            <p class="toolkit-note">⚠️ スキルは<strong>使用する環境ごとに個別インストールが必要</strong>です。デスクトップアプリ・CLI・IDE は別々に管理されるため、使う環境それぞれでインストールしてください（一方で入れても他方には反映されません）。</p>
+            <p class="toolkit-note">⚠️ <strong>インストールの単位は「使う環境ごと」</strong>です。デスクトップアプリで1回入れれば Chat・Cowork・Claude Code（デスクトップ）で共通して使えますが、<strong>CLI・IDE は別の入れ物</strong>なので、使う場合はそれぞれで1回インストールします（一方で入れても他方には反映されません）。</p>
           </div>
 
           <h3>MCP / Connectors — 必要なデータを接続する</h3>
-          <p>成果物の質は「渡す情報の質」で決まります。MCP / Connectors を使うと、Notion・Slack などの<strong>社内情報を Claude に接続</strong>でき、自社の文脈を踏まえた成果物が作れます。たとえば過去の提案書フォルダを接続しておけば、「この案件、過去の似た提案を踏まえて構成して」が一度で通ります。</p>
+          <p>成果物の質は「渡す情報の質」で決まります。MCP / Connectors を使うと、Notion・Slack などの<strong>社内情報を Claude に接続</strong>でき、自社の文脈を踏まえた成果物が作れます。</p>
+
+          <div class="visual-grid cols-3">
+            <div class="visual-grid-item">
+              <div class="grid-icon">🔌</div>
+              <div class="grid-title">正体はシンプル</div>
+              <div class="grid-desc">claude.ai の設定にある「コネクタ」の正体が MCP。<strong>「Claude と外部サービスをつなぐ口」</strong>と理解すれば十分。</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">🔗</div>
+              <div class="grid-title">つなぎ方</div>
+              <div class="grid-desc">デスクトップアプリの設定（コネクタ）から使うサービスを追加し、画面の案内に沿ってログインして許可する。</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">✅</div>
+              <div class="grid-title">確認</div>
+              <div class="grid-desc">チャット入力欄で <code>/mcp</code> と打つと、いま接続済みのサービス一覧が見られる。</div>
+            </div>
+          </div>
+
           <div class="visual-mapping">
             <div class="mapping-header">
               <span class="mapping-from">接続の原則</span>
@@ -3394,9 +3426,16 @@ const MODULES = [
             </div>
           </div>
 
-          <div class="info-box">
-            <p><strong>🪝 もっと自動化したくなったら（上級・任意）</strong>：作業の前後にバックアップや品質チェックを自動で挟む「Hooks（フックス）」という補助の仕組みもあります。いまは「そういう道具もある」と知っておくだけで十分で、必要になったら TIPS集 や公式ドキュメントで調べれば OK です。</p>
+          <div class="example-box">
+            📌 例：社内の Notion を接続すれば、「先週の定例の議事メモを踏まえて論点を整理して」が、コピペなしの一度の依頼で通ります。<br>
+            PC 上のフォルダなら接続は不要です——作業フォルダに置けばそのまま読めます（2-2）。
           </div>
+
+          <h3>3つの道具が揃うと — ある月曜の朝</h3>
+          <div class="example-box">
+            🌅 「競合ウォッチ週報の Skill で今週分を作って」——依頼文はこの1行だけです。CLAUDE.md が黙って効いて文体・体裁が会社標準に揃い、Skill が手順とひな型を呼び出し、MCP でつながった Notion から先週の定例の議事メモを取り込みます。返ってくるのは、毎回同じ品質の週報ドラフトです。
+          </div>
+          <p>常に守るルール（CLAUDE.md）の上で、型化した手順と道具（Skills）を使い、足りないデータ（MCP）を取り寄せる——<strong>3つが揃うほど、依頼文は短くなり、品質は安定します</strong>。</p>
 
           <div class="visual-highlight-card">
             <p><strong>CLAUDE.md はチームの「品質基準書」にもなる</strong>：プロジェクトの CLAUDE.md を共有すれば、他のメンバーも同じルールで Claude Code を使え、成果物の品質が揃います。個人の工夫を、再現できる形に残していきましょう。</p>
@@ -3436,7 +3475,7 @@ const MODULES = [
           </div>
 
           <h4>サブエージェントの動き方</h4>
-          <p>1つの大きな仕事を、<strong>メインエージェント（親）</strong>が複数の<strong>サブエージェント（子）</strong>に手分けし、各担当が<strong>並列</strong>で動いて<strong>要約だけ</strong>をメインに返す——という仕組みです。あなたはゴールを渡すだけで、手分け〜統合はメインエージェントが自動で行います。</p>
+          <p>1つの大きな仕事を、<strong>メインエージェント（親）</strong>が複数の<strong>サブエージェント（子）</strong>に手分けし、各担当が<strong>並列</strong>で動いて<strong>要約だけ</strong>をメインに返す——という仕組みです。あなたはゴールを渡すだけで、手分け〜統合の段取りはメインエージェントが組み立てます。確実に分担させたいときは、下のように一言頼むのが確実です。</p>
           <div class="agent-team">
             <div class="agent-team-lead result">
               <span class="at-icon">🧑</span>
@@ -3455,7 +3494,12 @@ const MODULES = [
             </div>
             <div class="agent-team-parallel">サブエージェント（子）は並列で作業し、要約だけをメインエージェントに返す</div>
           </div>
-          <p>調査・実装・レビューの担当は、メインエージェントが必要に応じて生成する<strong>“子”のエージェント</strong>。出ていって調べ・作り・点検し、要約を持ってメインに戻ります。<strong>あなたが手分けや統合を指揮するのではなく、ゴールを渡せばメインエージェントが手分け〜統合まで自動で進め</strong>、あなたは出てきた成果を確認・判断します。</p>
+          <p>調査・実装・レビューの担当は、メインエージェントが必要に応じて生成する<strong>“子”のエージェント</strong>。出ていって調べ・作り・点検し、要約を持ってメインに戻ります（調査のような独立した作業は並列で進み、レビュー担当は成果物が揃ってから動きます——この段取りもメインが組みます）。<strong>あなたが手分けや統合を指揮するのではなく、ゴールを渡せばメインエージェントが手分け〜統合までの段取りを組み立て</strong>、あなたは出てきた成果を確認・判断します。</p>
+
+          <div class="info-box">
+            <p><strong>💬 どう頼む？ — 一言入れるのが確実</strong><br>
+            依頼文に「<strong>サブエージェントで手分けして</strong>」「<strong>並列で調べて</strong>」と一言入れます。大きな作業では Claude が自分で手分けすることもありますが、確実に使いたいときは言葉にして頼みます（2-5 の Skill の名指しと同じ発想です）。観点と役割を自分で指定するほど、狙いどおりに動きます。</p>
+          </div>
 
           <h3>なぜ成果物づくりに効くのか</h3>
           <div class="visual-before-after">
@@ -3515,12 +3559,12 @@ const MODULES = [
             <div class="visual-grid-item">
               <div class="grid-icon">🔍</div>
               <div class="grid-title">リサーチの型：観点を分担して並行調査</div>
-              <div class="grid-desc">観点ごとに別の担当が<strong>同時に</strong>調べる → 親が統合 → 別の担当が<strong>多角で検証</strong> → もう一度まとめる。各自が要約だけ返すので、広く深く、抜けも減ります。例：競合3社を「価格／提供価値／顧客層」で分担、市場規模・需要・参入障壁を手分けして調査。</div>
+              <div class="grid-desc">観点ごとに別の担当が<strong>同時に</strong>調べる → 親が統合 → 別の担当が<strong>多角で検証</strong> → もう一度まとめる。各自が要約だけ返すので、広く深く、抜けも減ります。<br>そのまま打てる例文：「競合3社を『価格・提供価値・顧客層』の3観点でサブエージェントに手分けして並列で調べて。統合したら、別の担当に抜けと根拠の弱い点をチェックさせ、最後に1枚の比較表にまとめて」</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">💡</div>
               <div class="grid-title">アイデアの型：発散役と評価役を分ける</div>
-              <div class="grid-desc">成功パターンを調べる → 案を一気に<strong>発散</strong> → 別の“<strong>評価役</strong>”が基準で採点して選別。作り手と評価役が分かれるので甘い自己評価にならず、検討に値する案が残ります。例：施策アイデア出し、サービス・コミュニティのネーミング。</div>
+              <div class="grid-desc">成功パターンを調べる → 案を一気に<strong>発散</strong> → 別の“<strong>評価役</strong>”が基準で採点して選別。作り手と評価役が分かれるので甘い自己評価にならず、検討に値する案が残ります。<br>そのまま打てる例文：「新サービスの名称を考えたい。まず命名の成功パターンを調べ、次に案を20個発散し、別の評価役に『覚えやすさ・独自性・既存名との重複』で採点させて上位5案に絞って」</div>
             </div>
           </div>
 
@@ -3609,63 +3653,68 @@ const MODULES = [
           <h3>実践 TIPS — 作業を速くする小ワザ</h3>
           <p>日々の Claude Code 作業で、覚えておくと効率が上がる小さな工夫です。<strong>すべてを覚える必要はありません</strong>。使えそうなものから取り入れてください。</p>
 
-          <h4>スラッシュコマンドでセッションを操作する（<code>/</code> コマンド）</h4>
-          <p>Claude Code では <code>/</code>（スラッシュ）始まりのコマンドでセッションを操作できます。<code>/</code> を打つと候補が出ます。Claude は会話・読んだファイルなどを「コンテキスト（作業中の記憶）」として持ち、これには上限があるため、下のコマンドで手当てします。</p>
-          <ul>
-            <li><code>/help</code> — 使えるコマンド一覧。まずこれで現物確認</li>
-            <li><code>/context</code> — いまの使用量を表示</li>
-            <li><code>/compact</code> — 会話を要約して圧縮。満杯前（6〜7割）に打つのがコツ</li>
-            <li><code>/clear</code> — 履歴を全消去して最初から。消す前に進捗を CLAUDE.md に書く</li>
-            <li><code>/memory</code> — CLAUDE.md（常時参照されるメモ）を編集</li>
-            <li><code>/init</code> — プロジェクトを分析して CLAUDE.md のたたき台を生成</li>
-            <li><code>/mcp</code> — Slack / Notion など外部ツール連携の接続確認</li>
-          </ul>
-          <p>※コマンドはバージョンで増減します。正確な最新一覧は <code>/help</code> で確認してください。</p>
+          <h4>スラッシュコマンドとは</h4>
+          <p>チャット入力欄に打ち込む <code>/</code>（スラッシュ）で始まる短い命令です。2-5 で使った <code>/init</code>・<code>/memory</code>・<code>/mcp</code> もこれで、<strong>デスクトップアプリでも使えます</strong>。コマンドはバージョンで増減するので、正確な最新一覧は <code>/help</code> で確認してください。</p>
 
-          <h4>キーボード／ファイル連携の小ワザ</h4>
-          <table class="info-table">
-            <thead>
-              <tr>
-                <th>操作</th>
-                <th>効果</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>ESC 2 回</strong></td>
-                <td>直前の指示を巻き戻して書き直せる。誤字や条件抜けに気づいた直後に有効</td>
-              </tr>
-              <tr>
-                <td><strong>↑ キー</strong></td>
-                <td>過去の指示を呼び出して再利用できる（連打でさらに遡る）</td>
-              </tr>
-              <tr>
-                <td><strong>Opt + ⌘ + C（Mac / Finder）</strong></td>
-                <td>選択ファイルの絶対パスをコピー。チャット欄に貼ればフォルダ外のファイルも渡せる</td>
-              </tr>
-              <tr>
-                <td><strong>右クリック →「パスのコピー」（Windows / エクスプローラー）</strong></td>
-                <td>選択ファイルの絶対パスをコピー。チャット欄に貼ればフォルダ外のファイルも渡せる（Mac の Opt + ⌘ + C と同じ役割。Windows 11 では右クリックの標準メニューに「パスのコピー」が出る。古い Windows では Shift を押しながら右クリック）</td>
-              </tr>
-              <tr>
-                <td><strong>Effort 設定（思考の深さを調整）</strong></td>
-                <td>戦略立案・複雑な作業では思考を深く、軽い作業ではデフォルト、とタスクの重さで使い分ける</td>
-              </tr>
-            </tbody>
-          </table>
+          <h4>会話が重くなったら — 2-6 の“作業机”を思い出す</h4>
+          <p>会話が長くなると、机が書類（履歴）で埋まって動きが鈍くなります。次の3つのコマンドで手当てします。</p>
+          <div class="visual-grid cols-3">
+            <div class="visual-grid-item">
+              <div class="grid-icon">👀</div>
+              <div class="grid-title">/context</div>
+              <div class="grid-desc">机の埋まり具合を見る</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">🧹</div>
+              <div class="grid-title">/compact</div>
+              <div class="grid-desc">要点だけ残して机を片付ける（同じ作業を続けるとき）</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">🆕</div>
+              <div class="grid-title">/clear</div>
+              <div class="grid-desc">全部下げてまっさらにする（別の作業に移るとき）</div>
+            </div>
+          </div>
+
+          <h4>待ち時間は別の会話で並行できる</h4>
+          <p>長い作業を待つ間、別の会話で他の仕事を進めてかまいません。ただし<strong>同じフォルダを2つの会話で同時に変更しない</strong>でください（互いに上書きし合います）。「案件＝フォルダ＝会話」を1対1にするのが安全です。</p>
+
+          <h4>小ワザ3選 — パスのコピー／Effort 設定／ESC 2回・↑キー</h4>
+          <div class="visual-grid cols-3">
+            <div class="visual-grid-item">
+              <div class="grid-icon">📋</div>
+              <div class="grid-title">パスのコピー（Windows / エクスプローラー）</div>
+              <div class="grid-desc">右クリック →「パスのコピー」で選択ファイルの絶対パスをコピーし、チャット欄に貼ればフォルダ外のファイルも渡せる。Windows 11 では右クリックの標準メニューに出る（古い Windows では Shift を押しながら右クリック）。Mac は Opt + ⌘ + C が同じ役割。</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">🎚️</div>
+              <div class="grid-title">Effort 設定（思考の深さを調整）</div>
+              <div class="grid-desc"><code>/effort</code> で切り替えられる。複雑な作業は深く、軽い作業はデフォルトで十分。</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">⌨️</div>
+              <div class="grid-title">ESC 2回・↑キー（CLI / IDE 向け）</div>
+              <div class="grid-desc">ESC 2回で直前の指示まで巻き戻して書き直す／↑キーで過去の指示を再利用。デスクトップ版にはない操作なので、入力欄で書き直せば OK。</div>
+            </div>
+          </div>
 
           <div class="info-box">
             <p><strong>📚 TIPS はあとから参照できます</strong>：拡張機能・上級の小ワザを含む全 TIPS は、自習モードの <a href="#" data-nav="tips">「TIPS集」ページ</a> にカテゴリ別・レベル別でまとまっています。研修中に全部覚える必要はありません。</p>
           </div>
 
           <h3>うまく動かない時の立て直し方</h3>
-          <p>Claude Code が意図と違う動きをする・出力品質が落ちる・修正を延々と続ける、といった場面では、<strong>「もっと強い指示を出す」より「準備に戻る」</strong>のが効きます。下の4つは順番にやる工程ではなく、<strong>状況に応じて選ぶ独立した打ち手</strong>です。効きそうなものを使ってください。</p>
+          <p>Claude Code が意図と違う動きをする・出力品質が落ちる・修正を延々と続ける、といった場面では、<strong>「もっと強い指示を出す」より「準備に戻る」</strong>のが効きます。まず <code>/context</code> で会話の埋まり具合を確認し、<code>/compact</code> で片付けてみてください。それでも改善しなければ、下の打ち手から<strong>状況に応じて選びます</strong>（順番にやる工程ではありません）。</p>
 
           <div class="visual-grid cols-2">
             <div class="visual-grid-item">
-              <div class="grid-icon">🧵</div>
-              <div class="grid-title">新しいスレッドで仕切り直す</div>
-              <div class="grid-desc">会話が長くなると Claude も迷子になる。今のスレッドを閉じ、新しいスレッドの冒頭に「目的／いまの状況／残っている課題」を1段落で書いてから依頼し直す。<br>例：「目的は◯◯。△△まで完了。残りは□□。この前提で □□ だけ進めて」</div>
+              <div class="grid-icon">🛑</div>
+              <div class="grid-title">まず、止めてよい</div>
+              <div class="grid-desc">実行中に方向違いに気づいたら、停止ボタン（または ESC）でいつでも止めてかまわない。止めたら「今どこまで進んだ？」と確認してから打ち手を選ぶ。</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">💬</div>
+              <div class="grid-title">新しい会話で仕切り直す</div>
+              <div class="grid-desc">会話が長くなると Claude も迷子になる。今の会話を閉じ、新しい会話の冒頭に「目的／いまの状況／残っている課題」を1段落で書いてから依頼し直す。<br>例：「目的は◯◯。△△まで完了。残りは□□。この前提で □□ だけ進めて」</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">✂️</div>
@@ -3962,15 +4011,15 @@ const MODULES = [
         explanation: 'Claude Code の出力は常に「初稿」です。CLAUDE.md・Skills・Subagents で品質を安定させても、最終的な確認と承認は人間が行います。'
       },
       {
-        question: 'Claude Code が指示どおりに動かず迷走してしまったとき、最も効果的な対処はどれですか？',
+        question: 'Claude Code がうまく動かないとき、まず立ち返るべき考え方はどれですか？',
         options: [
           'とにかく「ちゃんとやって」と強い言葉で何度も指示し直す',
-          '新しいスレッドで目的・現状・残課題を整理し直し、作業範囲を絞って準備（フォルダ・目的・成果物・禁止事項・変更対象）に戻る',
+          '「強い指示」より「準備に戻る」——止める／新しい会話で仕切り直す／1ステップに切る／範囲を限定する／棚卸しさせる、の打ち手から状況に応じて選ぶ',
           'すぐにあきらめて手作業に切り替える',
           'バックアップを取らずに、大きな変更をまとめて一気に依頼し直す'
         ],
         correct: 1,
-        explanation: '「もっと強い指示」より「準備に戻る」が近道です。文脈を整理する（新しいスレッドで目的・現状・残課題を再提示）／作業を分割する／対象ファイルを限定する／現状調査で認識のズレを揃える。長時間うまくいかない時は、準備5点を整え直すのが効果的です。'
+        explanation: '打ち手は順番ではなく、状況に応じて選びます。長引くときは 2-2 の準備5点を整え直すのが近道です。'
       }
     ],
 
@@ -4016,15 +4065,15 @@ const MODULES = [
       },
       {
         section: '2-6. 使いこなす：Subagents（分担・並列）',
-        title: 'Subagents の分担を設計する',
-        task: '大きめの成果物づくりを想定し、Subagents での役割分担を設計してみましょう。\n\n1. 大きいタスクを1つ選ぶ（例：複数資料を調査して提案ドラフトを作る）\n2. 「調査担当・実装担当・レビュー担当」に分けて、それぞれの役割を書き出す\n3. どこを並列で進められるか、どこは順番が必要かを整理する\n4. 1人（1エージェント）でやる場合と比べて、どこが速くなるかを考える',
-        hint: '最初は1つの Claude Code で十分です。「分担した方が速い」と感じる規模のタスクを選ぶと、Subagents の効果がイメージしやすくなります。'
+        title: 'Subagents の分担を設計し、実際に動かす',
+        task: 'Subagents での役割分担を設計し、実際に依頼して動かしてみましょう。\n\n【設計する】\n1. 大きいタスクを1つ選ぶ（例：複数資料を調査して提案ドラフトを作る）\n2. 「調査担当・実装担当・レビュー担当」に分けて、それぞれの役割を書き出す\n3. どこを並列で進められるか、どこは順番が必要かを整理する\n4. 1人（1エージェント）でやる場合と比べて、どこが速くなるかを考える\n\n【実際に動かす】\n5. 設計した分担を実際に依頼する（例：「この資料群を3つの観点でサブエージェントに手分けして並列で調べて、最後に1枚のまとめにして」）\n6. サブエージェントが立ち上がる様子と、統合された要約を確認する',
+        hint: '最初は1つの Claude Code で十分です。「分担した方が速い」と感じる規模のタスクを選ぶと、Subagents の効果がイメージしやすくなります。確実に分担させたいときは「サブエージェントで手分けして」と一言入れるのが確実です。'
       },
       {
         section: '2-7. 実践TIPS・立て直し方',
         title: '実践TIPSを実際に試す',
-        task: 'Claude Code の使いこなし TIPS を、実際に手を動かして試しましょう。\n\n1. /help でコマンド一覧を表示し、/context で使用量を確認する\n2. 会話が長くなったら /compact で圧縮してみる\n3. ESC 2回・↑キーで直前の指示を書き直す／再利用する\n4. ファイルのパスをコピーしてチャット欄に貼り、フォルダ外のファイルを渡してみる',
-        hint: 'すべてを一度に覚える必要はありません。まずは /help と /context、ESC 2回の3つから。詳しい一覧は自習モードの TIPS集 を参照してください。'
+        task: 'Claude Code の使いこなし TIPS を、実際に手を動かして試しましょう。\n\n1. /help でコマンド一覧を表示し、/context で会話の埋まり具合を確認する\n2. 会話が長くなったら /compact で圧縮してみる\n3. /mcp で外部サービスの接続状況を確認する\n4. ファイルのパスをコピーしてチャット欄に貼り、フォルダ外のファイルを渡してみる\n5. （CLI / IDE の人は）ESC 2回・↑キーも試してみる',
+        hint: 'すべてを一度に覚える必要はありません。まずは /help・/context・/compact の3つから。詳しい一覧は自習モードの TIPS集 を参照してください。'
       }
     ],
 
@@ -4048,14 +4097,14 @@ const MODULES = [
         { q: 'Claude Code は非エンジニアでも使うべきですか？', a: 'はい。Claude Code は日本語の指示でコードやツールを作れるため、エンジニアでなくても活用できます。ただし、Chat → Cowork → Claude Code の順で段階的に学ぶことをお勧めします。最初は「Artifact では作れないレベルの成果物が必要になったとき」に Claude Code を使い始めましょう。', category: '🔧 Claude Code' },
         { q: 'Claude Code に修正を依頼するときの注意点は？', a: '4点を意識してください。(1) 変更対象を具体的に指定する、(2) 触ってほしくない部分を禁止事項として明示する、(3) 一度に大きな変更をせず小さな単位で進める、(4) 実装後に必ず動作確認する。「全体を良くして」のような曖昧な指示は、意図しない変更を引き起こすリスクがあります。', category: '🔧 Claude Code' },
         { q: 'CLAUDE.md には何を書くべきですか？', a: 'プロジェクトの概要、ファイル構成、コーディング規約、禁止事項、出力形式のルール、レビュー基準など、プロジェクト固有の永続的なルールを書きます。一時的な作業指示はチャットで伝えます。CLAUDE.md はチームの「品質基準書」として機能し、新メンバーが読めばプロジェクトのルールがわかる状態を目指します。', category: '🔧 Claude Code' },
-        { q: 'Hooks や Subagents はいつ必要ですか？', a: 'Hooks は「毎回必ず実行したいチェック」がある場合に使います（例：作業後のテスト実行、バックアップ取得）。Subagents は「1つのタスクを専門化した役割に分担したい」場合に使います（例：調査→実装→レビューを別々のエージェントに任せる）。最初は CLAUDE.md だけで十分で、品質管理の精度を上げたい段階で導入します。', category: '🔧 Claude Code' },
+        { q: 'Hooks や Subagents はいつ必要ですか？', a: 'Subagents（分担・並列）は 2-6 で学ぶ仕組みで、「情報量が多い」「観点ごとに並列に分けられる」「違う視点で検証したい」ときに、依頼文で「サブエージェントで手分けして」と一言頼んで使います。簡単・短い・一直線の作業には使いません。Hooks は作業前後にチェックを自動で挟む上級者向けの仕組みで、本編では扱いません。最初は CLAUDE.md と Skills だけで十分です。', category: '🔧 Claude Code' },
         { q: 'Claude Code の快適化 TIPS は全員が覚える必要がありますか？', a: 'いいえ。まずは安全に作業を任せるための「指示の型」（現状調査・変更対象限定・計画提示・確認報告）を覚えれば十分です。ショートカットや拡張機能は慣れてから、権限モードや自動化設定はチームルールに従って必要な人だけ使ってください。', category: '🔧 Claude Code' },
         { q: '本編でまず覚えるべき Claude Code の使い方は何ですか？', a: '次の5つの基本の型を押さえてください。(1) 現状調査を依頼する、(2) 変更対象ファイルを限定する、(3) 実装前に計画を出させる、(4) 小さく実装させる、(5) 実装後に確認結果を報告させる。これだけで意図しない変更や手戻りを大きく減らせます。', category: '🔧 Claude Code' },
         { q: 'Bypass Permissions のような権限モードは使ってよいですか？', a: '便利ですが誤操作の影響も大きくなります。業務利用では「作業コピーで使う・低リスク作業に限定する・チームルールに従う・レビューを通す」を前提にしてください。機密情報や重要ファイルを扱う作業では特に慎重に運用します。', category: '🔧 Claude Code' },
         { q: 'Web 記事や外部ファイルを Claude Code に渡すにはどうすればよいですか？', a: 'PDF・Word・Markdown・画像などはファイルパスで渡すと扱いやすくなります。長文記事・ログイン要のページ・SNS 投稿などは、Web Clipper 系のツールで Markdown 化してから渡すと安定します。元ファイルを直接編集させず、作業コピーで作業させるのが安全です。', category: '🔧 Claude Code' },
         { q: '.claude フォルダは触ってよいですか？', a: '仕組みを理解する目的で確認するのは有用ですが、初心者が不用意に編集するのは避けてください。チームで使う場合は、共通ルールやレビューを前提に扱い、変更内容は記録・共有します。', category: '🔧 Claude Code' },
         { q: 'Cowork や Claude Code を始める前に何を準備すべきですか？', a: '次の5点を作業前に整えると成果が安定します。(1) 作業用フォルダ（元データを直接編集しないコピー）、(2) 目的と最終成果物を1行で言語化、(3) 触ってほしくない禁止事項を書き出す、(4) 変更対象の範囲を限定する、(5) 完了条件を明文化する。これらをそろえてから依頼すると、無駄な手戻りを大きく減らせます。', category: '🔧 Claude Code' },
-        { q: 'Claude Code がうまく動かない時はどうすればよいですか？', a: '「もっと強い指示を出す」より「準備に戻る」が近道です。(1) 文脈を整理する（新しいスレッドで目的・現状・残課題を再提示）、(2) 作業を分割する、(3) 対象ファイルを限定する、(4) 現状調査に戻り認識のズレを揃える。長時間うまくいかない時は、フォルダ・目的・成果物・禁止事項・変更対象の5点を整え直すのが効果的です。', category: '🔧 Claude Code' },
+        { q: 'Claude Code がうまく動かない時はどうすればよいですか？', a: '「もっと強い指示を出す」より「準備に戻る」が近道です。(1) 文脈を整理する（新しい会話で目的・現状・残課題を再提示）、(2) 作業を分割する、(3) 対象ファイルを限定する、(4) 現状調査に戻り認識のズレを揃える。長時間うまくいかない時は、フォルダ・目的・成果物・禁止事項・変更対象の5点を整え直すのが効果的です。', category: '🔧 Claude Code' },
         { q: 'Skills 化すべき業務はどう見極めればよいですか？', a: '次の3条件が揃ったときに Skills 化の効果が大きくなります。(1) 繰り返し発生する（月次・週次・案件ごと）、(2) 手順が明確化できる（段取りで言語化できる）、(3) 品質基準がある（チームで合意できる「OKレベル」がある）。具体例は議事録、提案書レビュー、調査レポート、Excel 分析の標準手順、PPT 構成生成、UI レビュー、プロトタイプ作成手順など。作った後は発動・品質・効率の3観点でテストしながら育てます。', category: '🔧 Claude Code' },
         { q: 'AI 情報を効率よく追うにはどうすればよいですか？', a: '全部を追うのは続きません。範囲を「自分の業務で使うもの」（Claude の主要アップデート、案件で必要なテーマ）に絞り、定期的にチェックするのが現実的です。「直近1週間の主要アップデートを5トピックに整理して」という調査手順を Skill 化しておくと、毎回同じ品質でキャッチアップできます。チームなら調査担当を持ち回って共有し、Notion など1箇所に集約すると負荷が下がります。', category: '💡 Claudeの基本' },
         { q: 'Claude を業務で使うとき、自分で決めておくとよいことは？', a: 'まず個人として、(1) 何を Claude に渡してよいか（公開情報やサマリーは比較的安全、個人情報・契約金額は慎重に）、(2) 成果物の保存先、(3) 自分でのレビュー（数字・固有名詞・出典の確認）を決めておきましょう。チームで使う場合は、これらに加えて「対象業務・共通化するもの（Project・Skills・CLAUDE.md）・レビュー体制」を共通ルールにすると展開しやすくなります。完璧を目指さず、運用しながら改善する前提で始めます。', category: '💡 Claudeの基本' },
@@ -4181,7 +4230,7 @@ const TIPS = [
     summary: '会話が長くなった・出力がズレた時は、強い指示より文脈整理・作業分割・対象限定・現状調査に戻る。',
     whenToUse: 'Claude Code が迷走している、期待と違う変更をしている、同じ失敗を繰り返すとき。',
     howToUse: [
-      '新しいスレッドで目的・現状・残課題を1段落で再提示する',
+      '新しい会話で目的・現状・残課題を1段落で再提示する',
       '作業を「まず◯◯」「次に△△」と分割する',
       '対象ファイルを絞り直す',
       '「いまどうなっているか」を Claude に説明させ認識のズレを揃える'
