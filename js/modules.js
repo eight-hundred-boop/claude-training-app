@@ -575,9 +575,11 @@ const MODULES = [
             </div>
           </div>
 
-          <div class="tip-box">
-            <strong>💡 最初から完璧でなくてよい</strong><br>
-            まず簡潔に指示を出して、返ってきた出力を見て「もっと詳しく」「形式を変えて」と追加指示するのも有効です。1回で完璧を目指すより、対話で磨く方が速いことも多い。
+          <div class="info-box">
+            <p><strong>💬 Claude との仕事は「1回で完成」より「往復して磨く」</strong></p>
+            <p>プロンプトは最初から完璧でなくてよい。簡潔な指示を出して、返ってきた出力を見ながら方向を調整する——この往復そのものが成果物を育てる工程。</p>
+            <p>例：「提案の切り口を5つ出して」→「2番をもっと具体的に」→「競合事例も加えて」→「これをArtifactの比較表にまとめて」</p>
+            <p>1回で完成させようとするより、対話で積み重ねた方が速く、質も上がることが多い。</p>
           </div>
 
           <div class="info-box">
@@ -1984,6 +1986,7 @@ const MODULES = [
                   <li><strong>プロンプト3要素</strong> — 前提・タスク・ルールで出力の質が決まる。</li>
                   <li><strong>出力は“初稿”</strong> — そのまま使わず確認・修正。最終責任は自分。</li>
                   <li><strong>Project / Artifact</strong> — 前提を保持し、成果物として残す。</li>
+                  <li><strong>対話で磨く</strong> — 1回で仕上げようとしない。往復しながら調整することで、成果物が育つ。</li>
                 </ul>
               </div>
             </div>
@@ -2018,7 +2021,7 @@ const MODULES = [
 
           <h3>次回（第2回）へ</h3>
           <div class="visual-highlight-card">
-            <p>第1回は「個人で速く・成果物を作る」。第2回は <strong>Claude Code</strong> で「<strong>一段上の成果物を自分で作る</strong>」段階に進みます。</p>
+            <p>第1回で「Chat の基本と成果物づくり」を押さえた。第2回はその先——Claude Code で成果物の幅を広げ、仕組み（CLAUDE.md・Skills・MCP）で品質を安定させ、チームに展開する段階へ。</p>
           </div>
         `
       }
@@ -2462,7 +2465,7 @@ const MODULES = [
 
           <h3>ここから第2回でやること</h3>
           <div class="visual-highlight-card">
-            <p>第1回は“個人で速く・成果物を作る”。第2回はそれを土台に、<strong>Claude Code</strong> で次のことを、コードもコマンドも書かずに進めます。</p>
+            <p>第1回で「Chat の基本と成果物づくり」を押さえた。第2回はその先——Claude Code で成果物の幅を広げ、仕組み（CLAUDE.md・Skills・MCP）で品質を安定させ、チームに展開する。</p>
             <ul>
               <li>複数ファイル／データ処理をまとめて任せる</li>
               <li>保存して再利用できるツール・プロトタイプを作る</li>
@@ -3810,7 +3813,7 @@ const MODULES = [
 
           <h3>全体のまとめ</h3>
           <div class="visual-highlight-card">
-            <p>第1回は「個人の初速と成果物」、第2回は「<strong>Claude Code で一段上の成果物を自分で作る</strong>」。“使ってみる” から “<strong>自分の業務の道具を作る</strong>” へ。困ったら <strong>TIPS集</strong> と <strong>FAQ</strong> を見直しながら、自分の業務で効くものから取り入れていきましょう。</p>
+            <p>第1回で「Chat の基本と成果物づくり」を押さえた。<br>第2回はその先——Claude Code で成果物の幅を広げ、仕組み（CLAUDE.md・Skills・MCP）で品質を安定させ、チームに展開する。困ったら <strong>TIPS集</strong> と <strong>FAQ</strong> を見直しながら、自分の業務で効くものから取り入れていきましょう。</p>
           </div>
         `
       },
