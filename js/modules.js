@@ -3275,10 +3275,11 @@ const MODULES = [
 
           <div class="toolkit-card">
             <div class="toolkit-head">🧰 Skills の実例 — 当社のスキル集「consulting-toolkit-800」</div>
-            <p>コンサル業務のワークフロー（調査提案書・デスクリサーチ・インタビュー設計・議事録・報告書骨子・スライド構成 など）をまとめた<strong>当社製のスキル集（プラグイン）</strong>です。上で説明した「手順＋道具」を束ねたスキルの実例で、スライドのテンプレートや生成手順まで含まれています。デスクトップアプリで一度インストールすれば、<strong>Chat・Cowork・Claude Code（デスクトップ／CLI）のどこからでも</strong>これらの型化済みスキルを呼び出せます。</p>
+            <p>コンサル業務のワークフロー（調査提案書・デスクリサーチ・インタビュー設計・議事録・報告書骨子・スライド構成 など）をまとめた<strong>当社製のスキル集（プラグイン）</strong>です。上で説明した「手順＋道具」を束ねたスキルの実例で、スライドのテンプレートや生成手順まで含まれています。</p>
             <a class="toolkit-link" href="https://github.com/eight-hundred-inc/consulting-toolkit-800" target="_blank">GitHub で見る ▸</a>
+            <p class="toolkit-note">💡 <strong>プラグインは「使う環境ごと」に入れます。</strong>一方の環境で入れても、他の環境には自動では反映されません。下の中から、自分が使う環境のものを実行してください。</p>
             <div class="toolkit-install">
-              <h5>💻 デスクトップアプリ版（GUI で入れる）</h5>
+              <h5>Ⓐ claude.ai / Chat タブ / Cowork（Customize から入れる）</h5>
               <div class="toolkit-copy">
                 <code>eight-hundred-inc/consulting-toolkit-800</code>
                 <button class="copy-btn" data-copy="eight-hundred-inc/consulting-toolkit-800">コピー</button>
@@ -3286,24 +3287,43 @@ const MODULES = [
               <ol>
                 <li>左上の「Customize」を開きます。</li>
                 <li>左サイドバーの「個人用プラグイン」の横の「＋」→「プラグインを作成」→「マーケットプレイスを追加」（マーケットプレイス＝スキル集の配布元カタログ）を選びます。</li>
-                <li>「URL」欄に次の文字列をそのまま貼り付けて「同期」を押します：<code>eight-hundred-inc/consulting-toolkit-800</code>（スキル集の置き場所を示す“住所”で、URL の形でなくて OK です）。</li>
+                <li>「URL」欄に上の文字列をそのまま貼り付けて「同期」を押します（スキル集の置き場所を示す“住所”で、URL の形でなくて OK です）。</li>
                 <li>一覧に出た <code>consulting-toolkit-800</code> を「インストール」します。</li>
-                <li>新しい会話を開始すれば使えます。</li>
+                <li>新しい会話を開始すれば、この3つ（Chat・Cowork とそのデスクトップアプリ）で共通して使えます。</li>
               </ol>
             </div>
             <div class="toolkit-install">
-              <h5>⌨️ CLI / IDE 版（コマンドで入れる）</h5>
-              <p>Claude Code（ターミナル）または IDE 拡張のチャットで、次のコマンドを実行します。</p>
+              <h5>Ⓑ Claude Code（デスクトップアプリの Code）— GUI で入れる</h5>
+              <p>ターミナルは使わず、画面の操作で入れます。</p>
+              <ol>
+                <li>プロンプト欄の横の「＋」ボタンをクリックします。</li>
+                <li>「Plugins」を選びます。</li>
+                <li>サブメニューから「Add plugin」を選びます。</li>
+                <li>プラグインブラウザから <code>consulting-toolkit</code> を選んでインストールします。</li>
+              </ol>
+              <p>※ 一覧に出ないときは、先に下の <strong>Ⓒ</strong> の CLI でマーケットプレイスを登録してから開くと表示されます。</p>
+            </div>
+            <div class="toolkit-install">
+              <h5>Ⓒ Claude Code（ターミナルの CLI）／ IDE 拡張 — コマンドで入れる</h5>
+              <p>チャット入力欄で、次の2つを順に実行します（VS Code / Cursor などの IDE 拡張も同じコマンドです）。</p>
               <div class="toolkit-copy">
                 <code>/plugin marketplace add eight-hundred-inc/consulting-toolkit-800</code>
                 <button class="copy-btn" data-copy="/plugin marketplace add eight-hundred-inc/consulting-toolkit-800">コピー</button>
               </div>
+              <div class="toolkit-copy">
+                <code>/plugin install consulting-toolkit@consulting-toolkit-800</code>
+                <button class="copy-btn" data-copy="/plugin install consulting-toolkit@consulting-toolkit-800">コピー</button>
+              </div>
+            </div>
+            <div class="toolkit-install">
+              <h5>📁 個人のスキルを Claude Code でも使うには</h5>
+              <p>Customize の「個人のスキル」（議事録レビューなどの単体スキル）は Chat・Cowork 専用で、Claude Code には出てきません。Claude Code でも使いたい場合は、スキルのフォルダ一式を自分の PC の設定フォルダ <code>~/.claude/skills/</code> にコピーします（Windows は <code>C:\\Users\\ユーザー名\\.claude\\skills\\</code>）。コピー後、Claude Code を再起動すれば <code>/スキル名</code> で呼び出せます。</p>
             </div>
             <div class="info-box">
               <strong>💡 インストール後に反映するには</strong><br>
-              プラグインは<strong>起動時に読み込まれます</strong>。デスクトップアプリ版は、新しい会話を始めれば反映されます。CLI / IDE では、いったん Claude Code を<strong>終了して再起動</strong>すれば <code>/pm</code> などのコマンドが使えるようになります（PC の再起動までは不要です。終了・再起動せずに今すぐ反映したいときは <code>/reload-plugins</code> を実行します）。
+              プラグインは<strong>起動時に読み込まれます</strong>。claude.ai / Chat / Cowork は、新しい会話を始めれば反映されます。Claude Code（デスクトップ／CLI）は、いったん<strong>終了して再起動</strong>すれば反映されます（PC の再起動までは不要です。CLI では終了せず今すぐ反映したいときは <code>/reload-plugins</code> を実行します）。
             </div>
-            <p class="toolkit-note">💡 <strong>スキルには2種類あります。</strong>Customize の「スキル」に登録する<strong>個人のスキル</strong>は Chat・Cowork 専用です（Claude Code には出てきません）。一方、consulting-toolkit-800 のような<strong>プラグインスキル</strong>は Chat・Cowork・Claude Code のどこからでも使えます。Claude Code のデスクトップ版と CLI は<strong>同じ設定を共有</strong>するので、どちらか一方で入れればもう一方でもそのまま使えます（入れ直し不要）。</p>
+            <p class="toolkit-note">💡 <strong>スキルには2種類あります。</strong>Customize の「スキル」に登録する<strong>個人のスキル</strong>は Chat・Cowork 専用です（Claude Code には上記のとおり手動コピーで使えます）。一方、consulting-toolkit-800 のような<strong>プラグインスキル</strong>は、上のとおり<strong>使う環境ごとに入れて</strong>使います。</p>
           </div>
 
           <h3>MCP / Connectors — 必要なデータを接続する</h3>
