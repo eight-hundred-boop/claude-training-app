@@ -3275,7 +3275,7 @@ const MODULES = [
 
           <div class="toolkit-card">
             <div class="toolkit-head">🧰 Skills の実例 — 当社のスキル集「consulting-toolkit-800」</div>
-            <p>コンサル業務のワークフロー（調査提案書・デスクリサーチ・インタビュー設計・議事録・報告書骨子・スライド構成 など）をまとめた<strong>当社製のスキル集（プラグイン）</strong>です。上で説明した「手順＋道具」を束ねたスキルの実例で、スライドのテンプレートや生成手順まで含まれています。デスクトップアプリに1回インストールすれば、<strong>Chat・Cowork・Claude Code（デスクトップ）のどこからでも</strong>これらの型化済みスキルを呼び出せます（CLI・IDE で使う場合は別途インストールします）。</p>
+            <p>コンサル業務のワークフロー（調査提案書・デスクリサーチ・インタビュー設計・議事録・報告書骨子・スライド構成 など）をまとめた<strong>当社製のスキル集（プラグイン）</strong>です。上で説明した「手順＋道具」を束ねたスキルの実例で、スライドのテンプレートや生成手順まで含まれています。デスクトップアプリで一度インストールすれば、<strong>Chat・Cowork・Claude Code（デスクトップ／CLI）のどこからでも</strong>これらの型化済みスキルを呼び出せます。</p>
             <a class="toolkit-link" href="https://github.com/eight-hundred-inc/consulting-toolkit-800" target="_blank">GitHub で見る ▸</a>
             <div class="toolkit-install">
               <h5>💻 デスクトップアプリ版（GUI で入れる）</h5>
@@ -3303,7 +3303,7 @@ const MODULES = [
               <strong>💡 インストール後に反映するには</strong><br>
               プラグインは<strong>起動時に読み込まれます</strong>。デスクトップアプリ版は、新しい会話を始めれば反映されます。CLI / IDE では、いったん Claude Code を<strong>終了して再起動</strong>すれば <code>/pm</code> などのコマンドが使えるようになります（PC の再起動までは不要です。終了・再起動せずに今すぐ反映したいときは <code>/reload-plugins</code> を実行します）。
             </div>
-            <p class="toolkit-note">⚠️ <strong>インストールの単位は「使う環境ごと」</strong>です。デスクトップアプリで1回入れれば Chat・Cowork・Claude Code（デスクトップ）で共通して使えますが、<strong>CLI・IDE は別の入れ物</strong>なので、使う場合はそれぞれで1回インストールします（一方で入れても他方には反映されません）。</p>
+            <p class="toolkit-note">💡 <strong>スキルには2種類あります。</strong>Customize の「スキル」に登録する<strong>個人のスキル</strong>は Chat・Cowork 専用です（Claude Code には出てきません）。一方、consulting-toolkit-800 のような<strong>プラグインスキル</strong>は Chat・Cowork・Claude Code のどこからでも使えます。Claude Code のデスクトップ版と CLI は<strong>同じ設定を共有</strong>するので、どちらか一方で入れればもう一方でもそのまま使えます（入れ直し不要）。</p>
           </div>
 
           <h3>MCP / Connectors — 必要なデータを接続する</h3>
@@ -4890,7 +4890,7 @@ const TIPS = [
       "取り込んだスキルを名前で名指しして、実行できるか確認する"
     ],
     "example": "「（取り込んだ）営業レポート作成スキルを使って、今月の数字でレポートを作って。」",
-    "caution": "スキルは使いたい環境ごとに取り込みが必要。スキルに付属するファイル（テンプレートや素材）も一緒に含まれているか確認する。取り込んだ直後はうまく動かないこともあるので、まず簡単な内容で試してから本番に使う。",
+    "caution": "この方法で取り込んだスキルは Chat・Cowork で使える（Claude Code とは別管理）。スキルに付属するファイル（テンプレートや素材）も一緒に含まれているか確認する。取り込んだ直後はうまく動かないこともあるので、まず簡単な内容で試してから本番に使う。",
     "relatedSession": "第2回",
     "relatedSections": [
       {
