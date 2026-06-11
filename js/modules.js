@@ -3294,11 +3294,15 @@ const MODULES = [
             </div>
             <div class="toolkit-install">
               <h5>Ⓑ Claude Code（デスクトップアプリの Code）— GUI で入れる</h5>
+              <div class="toolkit-copy">
+                <code>eight-hundred-inc/consulting-toolkit-800</code>
+                <button class="copy-btn" data-copy="eight-hundred-inc/consulting-toolkit-800">コピー</button>
+              </div>
               <ol>
-                <li>プロンプト欄の横の「＋」ボタンをクリックします。</li>
-                <li>「Plugins」を選びます。</li>
-                <li>サブメニューから「Add plugin」を選びます。</li>
-                <li>プラグインブラウザから <code>consulting-toolkit</code> を選んでインストールします。</li>
+                <li>左上の「Customize」を開きます。</li>
+                <li>左サイドバーの「個人用プラグイン」の横の「＋」→「プラグインを作成」→「マーケットプレイスを追加」（マーケットプレイス＝スキル集の配布元カタログ）を選びます。</li>
+                <li>「URL」欄に上の文字列をそのまま貼り付けて「同期」を押します。</li>
+                <li>一覧に出た <code>consulting-toolkit-800</code> を「インストール」します。</li>
               </ol>
             </div>
             <div class="toolkit-install">
