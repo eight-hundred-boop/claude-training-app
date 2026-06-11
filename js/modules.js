@@ -3300,7 +3300,6 @@ const MODULES = [
                 <li>サブメニューから「Add plugin」を選びます。</li>
                 <li>プラグインブラウザから <code>consulting-toolkit</code> を選んでインストールします。</li>
               </ol>
-              <p>※ 一覧に出ないときは、先に下の <strong>Ⓒ</strong> の CLI でマーケットプレイスを登録してから開くと表示されます。</p>
             </div>
             <div class="toolkit-install">
               <h5>Ⓒ Claude Code（ターミナルの CLI）／ IDE 拡張 — コマンドで入れる</h5>
