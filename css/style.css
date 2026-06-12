@@ -4750,8 +4750,8 @@ body.landing-mode #global-footer {
 }
 
 .visual-highlight-card p {
-  font-size: 14px;
-  color: var(--text-secondary);
+  font-size: 15px;
+  color: var(--text);
   margin: 0;
   line-height: 1.6;
 }
