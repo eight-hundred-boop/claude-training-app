@@ -208,27 +208,32 @@ const MODULES = [
           <h3>作業スタイル × 利用場所</h3>
           <p>「<strong>何を任せるか</strong>（作業スタイル）」と「<strong>どこで使うか</strong>（利用場所）」を分けて理解するのが整理のコツです。</p>
 
-          <div class="visual-mapping">
-            <div class="mapping-header">
-              <span class="mapping-from">作業スタイル</span>
-              <span class="mapping-to">主な利用場所 / 位置づけ</span>
-            </div>
-            <div class="mapping-row">
-              <span class="mapping-from">💬 <strong>Chat</strong> — 相談・整理・下書き</span>
-              <span class="mapping-arrow">→</span>
-              <span class="mapping-to">Web / Desktop / Mobile　初心者がまず使う基本</span>
-            </div>
-            <div class="mapping-row">
-              <span class="mapping-from">📂 <strong>Cowork</strong> — ファイル作業を任せる</span>
-              <span class="mapping-arrow">→</span>
-              <span class="mapping-to">Desktop　ファイル作業・資料作成で使う</span>
-            </div>
-            <div class="mapping-row">
-              <span class="mapping-from">⚡ <strong>Claude Code</strong> — プロトタイプ・複数ファイル・ツール作成</span>
-              <span class="mapping-arrow">→</span>
-              <span class="mapping-to"><strong>Desktop が基本</strong>（CLI / IDE は上級者向け）</span>
-            </div>
-          </div>
+          <table class="info-table">
+            <thead>
+              <tr>
+                <th>作業スタイル</th>
+                <th>主な利用場所</th>
+                <th>位置づけ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>💬 <strong>Chat</strong></td>
+                <td>Web / Desktop / Mobile</td>
+                <td>初心者がまず使う基本</td>
+              </tr>
+              <tr>
+                <td>📂 <strong>Cowork</strong></td>
+                <td>Desktop</td>
+                <td>ファイル作業・資料作成で使う</td>
+              </tr>
+              <tr>
+                <td>⚡ <strong>Claude Code</strong></td>
+                <td><strong>Desktop が基本</strong>（CLI / IDE は上級者向け）</td>
+                <td>まず Desktop で試し、より高度に使いたい人は CLI / IDE へ</td>
+              </tr>
+            </tbody>
+          </table>
 
           <div class="info-box">
             <strong>ℹ️ まずは Desktop から</strong><br>
