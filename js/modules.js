@@ -2618,28 +2618,28 @@ const MODULES = [
               <div class=”step-marker”>2-3</div>
               <div class=”step-body”>
                 <div class=”step-title”>データ処理を任せる</div>
-                <div class=”step-desc”>複数ファイル／データ処理をまとめて委任する</div>
+                <div class=”step-desc”>複数 Excel / CSV の集計・複数議事録の整理・フォルダ横断の分類など、手作業で時間がかかる「集める・整える・まとめる」を委任する。自分は分析・判断に集中できる。</div>
               </div>
             </div>
             <div class=”visual-step-item”>
               <div class=”step-marker”>2-4</div>
               <div class=”step-body”>
                 <div class=”step-title”>ツールを作る</div>
-                <div class=”step-desc”>保存して繰り返し使えるツール・プロトタイプを作る</div>
+                <div class=”step-desc”>第1回の Artifact（その場かぎり）を発展させて、保存・複数画面・データ読み書きに対応した繰り返し使えるツールを作る。診断ツール・ROI計算機・社内ミニアプリが対象。</div>
               </div>
             </div>
             <div class=”visual-step-item”>
               <div class=”step-marker”>2-5</div>
               <div class=”step-body”>
                 <div class=”step-title”>品質を固定する</div>
-                <div class=”step-desc”>CLAUDE.md・Skills・MCP で品質を”自分仕様”に固定する</div>
+                <div class=”step-desc”>CLAUDE.md でルールを常時読み込ませ、Skills で手順を型化し、MCP で社内データを接続する。3つが揃うと依頼文は短くなり、毎回同じ品質の成果物が返ってくる。</div>
               </div>
             </div>
             <div class=”visual-step-item”>
               <div class=”step-marker”>2-6</div>
               <div class=”step-body”>
                 <div class=”step-title”>リサーチ・企画に広げる</div>
-                <div class=”step-desc”>Subagents（分担・並列）でリサーチ・企画まで広げる</div>
+                <div class=”step-desc”>Subagents で調査・実装・レビューを分担・並列化する。競合3社を観点別に同時調査したり、発散役と評価役を分けてアイデアを選別したりと、リサーチや企画の幅も広がる。</div>
               </div>
             </div>
           </div>
