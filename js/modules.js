@@ -420,22 +420,22 @@ const MODULES = [
             <div class="visual-grid-item">
               <div class="grid-icon">⚡</div>
               <div class="grid-title">Haiku</div>
-              <div class="grid-desc">高速・軽量。短い定型処理向き。<br><strong style="color:var(--primary);font-size:12px;">トークン消費 少</strong></div>
+              <div class="grid-desc">素早い回答・要約・情報抽出など、シンプルな処理に特化。高速で軽量。<br><strong style="color:var(--primary);font-size:12px;">トークン消費 少</strong></div>
             </div>
             <div class="visual-grid-item" style="border:2px solid var(--primary);">
               <div class="grid-icon">⚖️</div>
               <div class="grid-title">Sonnet　<span style="font-size:11px;color:var(--primary);">★ 迷ったらここ</span></div>
-              <div class="grid-desc">バランス型。日常業務の多くに最適。<br><strong style="color:var(--primary);font-size:12px;">トークン消費 中</strong></div>
+              <div class="grid-desc">コーディング・分析・文書作成・複雑なワークフローまで幅広く対応。汎用性が最も高い。<br><strong style="color:var(--primary);font-size:12px;">トークン消費 中</strong></div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">🧠</div>
               <div class="grid-title">Opus</div>
-              <div class="grid-desc">高性能。複雑な分析・難しい長文向き。<br><strong style="color:var(--text-muted);font-size:12px;">トークン消費 大</strong></div>
+              <div class="grid-desc">深い調査・複雑な推論が必要な対話的セッションに。Sonnet では難しい問題向き。<br><strong style="color:var(--text-muted);font-size:12px;">トークン消費 大</strong></div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">✨</div>
               <div class="grid-title">Fable</div>
-              <div class="grid-desc">思考と創作の統合型。アイデア発想・深い分析に。<br><strong style="color:var(--text-muted);font-size:12px;">トークン消費 最大（Opus の約2倍）</strong></div>
+              <div class="grid-desc">精度が極めて重要な長い複雑なタスク・長文ドキュメントや図表からの出力生成に。<br><strong style="color:var(--text-muted);font-size:12px;">トークン消費 最大（Opus の約2倍）</strong></div>
             </div>
           </div>
           <div class="info-box">
