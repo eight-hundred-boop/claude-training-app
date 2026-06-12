@@ -147,9 +147,20 @@ const MODULES = [
                 </div>
               </div>
             </div>
-            <div class="product-map-row full">
+            <div class="product-map-row split">
               <div class="product-group" style="background:var(--bg);border:1px solid var(--border-light);">
-                <div class="product-group-header" style="color:var(--text-secondary);">🧩 Skills（手順の型化 — 1-15 / 第2回）　　🔗 MCP / Connectors（社内ツール接続 — 第2回）</div>
+                <div class="product-group-header" style="color:var(--text-secondary);">🧩 Skills</div>
+                <div class="product-features">
+                  <span class="product-feature">よく使う手順・テンプレート・ルールを型として保存</span>
+                  <span class="product-feature">名前を呼ぶだけで再利用できる（1-15 / 第2回 2-5）</span>
+                </div>
+              </div>
+              <div class="product-group" style="background:var(--bg);border:1px solid var(--border-light);">
+                <div class="product-group-header" style="color:var(--text-secondary);">🔗 MCP / Connectors</div>
+                <div class="product-features">
+                  <span class="product-feature">Slack・Notion など社内ツールと Claude を接続</span>
+                  <span class="product-feature">コピペなしで社内データを成果物に反映（第2回 2-5）</span>
+                </div>
               </div>
             </div>
           </div>

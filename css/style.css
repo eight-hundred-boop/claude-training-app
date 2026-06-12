@@ -5419,6 +5419,21 @@ body.landing-mode #global-footer {
 .product-group.chrome .product-group-body {
   grid-template-columns: 1fr;
 }
+/* product-map 内の features リスト（縦一列） */
+.product-features {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px 16px;
+}
+.product-feature {
+  font-size: 13px;
+  color: var(--text-secondary);
+  padding: 6px 10px;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  display: block;
+}
 .product-item {
   padding: 14px 10px;
   border-radius: var(--radius-sm);
