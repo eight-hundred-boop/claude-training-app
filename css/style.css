@@ -4827,12 +4827,13 @@ body.landing-mode #global-footer {
   margin: 0 0 16px;
   padding: 8px 18px;
   background: var(--primary);
-  color: #fff;
+  color: #fff !important;
   border-radius: 6px;
-  text-decoration: none;
+  text-decoration: none !important;
   font-weight: 600;
   font-size: 13px;
 }
+.toolkit-card .toolkit-link:visited { color: #fff !important; }
 .toolkit-card .toolkit-install {
   background: var(--surface);
   border-radius: 8px;

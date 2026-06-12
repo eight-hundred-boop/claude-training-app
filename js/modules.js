@@ -2757,23 +2757,23 @@ const MODULES = [
           <h3>成果物作成の3つのレベル</h3>
           <p>Claude で成果物を作る手段は、複雑さに応じて使い分けます。</p>
 
-          <div class="visual-mapping">
-            <div class="mapping-header">
+          <div class="visual-mapping" style="--mapping-cols: auto 32px 1fr;">
+            <div class="mapping-header" style="grid-template-columns: auto 32px 1fr;">
               <span class="mapping-from">レベル</span>
               <span class="mapping-arrow"></span>
               <span class="mapping-to">使うもの → 作れるもの</span>
             </div>
-            <div class="mapping-row">
+            <div class="mapping-row" style="grid-template-columns: auto 32px 1fr;">
               <span class="mapping-from">簡易</span>
               <span class="mapping-arrow">→</span>
               <span class="mapping-to">Artifact → 診断ツール、画面モック、シミュレーター（その場の試作）</span>
             </div>
-            <div class="mapping-row">
+            <div class="mapping-row" style="grid-template-columns: auto 32px 1fr;">
               <span class="mapping-from">中級</span>
               <span class="mapping-arrow">→</span>
               <span class="mapping-to">Cowork → 手元のファイルを使った成果物（レポート、集計表）</span>
             </div>
-            <div class="mapping-row">
+            <div class="mapping-row" style="grid-template-columns: auto 32px 1fr;">
               <span class="mapping-from">高度</span>
               <span class="mapping-arrow">→</span>
               <span class="mapping-to">Claude Code → データ処理、複数画面、保存・再利用できるツール</span>
@@ -3106,25 +3106,25 @@ const MODULES = [
             <div class="flow-step">
               <div class="flow-num">📁</div>
               <div class="flow-label">データを作業フォルダに置く</div>
-              <div class="flow-desc">複数の CSV / Excel を作業用フォルダへ</div>
+              <div class="flow-desc">元ファイルのコピーを作業用フォルダに入れる。元データを直接編集させないための準備。</div>
             </div>
             <div class="flow-arrow">→</div>
             <div class="flow-step">
               <div class="flow-num">💬</div>
               <div class="flow-label">統合・集計を依頼</div>
-              <div class="flow-desc">「設問ごと・セグメント別に集計し、比較表にして」</div>
+              <div class="flow-desc">「これらを統合して、設問ごと・セグメント別に集計し、比較表にして」。まず計画を出させてから実装させると安全。</div>
             </div>
             <div class="flow-arrow">→</div>
             <div class="flow-step">
               <div class="flow-num">💾</div>
               <div class="flow-label">新ファイルとして保存</div>
-              <div class="flow-desc">「集計表を新しいファイルとして保存して」</div>
+              <div class="flow-desc">「集計表を新しいファイルとして保存して」。元データのコピーは変更せず、成果物は別ファイルに出力させる。</div>
             </div>
             <div class="flow-arrow">→</div>
             <div class="flow-step">
               <div class="flow-num">✅</div>
               <div class="flow-label">元データと照合して報告書へ</div>
-              <div class="flow-desc">数値・金額は必ず自分で確認してから使う</div>
+              <div class="flow-desc">数値・金額・固有名詞は元データと必ず照合する。特に顧客データ・アンケート結果は慎重に確認してから使う。</div>
             </div>
           </div>
 
@@ -3600,31 +3600,31 @@ const MODULES = [
             <div class="flow-step">
               <div class="flow-num">🧑</div>
               <div class="flow-label">依頼は1行</div>
-              <div class="flow-desc">「競合ウォッチ週報の Skill で今週分を作って」</div>
+              <div class="flow-desc">「競合ウォッチ週報の Skill で今週分を作って」——長い指示を書かなくてよい</div>
             </div>
             <div class="flow-arrow">→</div>
             <div class="flow-step">
               <div class="flow-num">📏</div>
-              <div class="flow-label">CLAUDE.md</div>
-              <div class="flow-desc">文体・体裁が会社標準に</div>
+              <div class="flow-label">CLAUDE.md が黙って効く</div>
+              <div class="flow-desc">文体・体裁・禁止事項が自動で読み込まれ、会社標準に揃う</div>
             </div>
             <div class="flow-arrow">→</div>
             <div class="flow-step">
               <div class="flow-num">📖</div>
-              <div class="flow-label">Skills</div>
-              <div class="flow-desc">手順とひな型を呼び出す</div>
+              <div class="flow-label">Skills が手順とひな型を呼び出す</div>
+              <div class="flow-desc">競合の動きを整理→示唆→次アクションの手順と、週報のひな型が展開される</div>
             </div>
             <div class="flow-arrow">→</div>
             <div class="flow-step">
               <div class="flow-num">🛒</div>
-              <div class="flow-label">MCP</div>
-              <div class="flow-desc">Notion から議事メモを取得</div>
+              <div class="flow-label">MCP が社内データを取り寄せる</div>
+              <div class="flow-desc">Notion につながっていれば、先週の定例の議事メモをコピペなしで取り込む</div>
             </div>
             <div class="flow-arrow">→</div>
             <div class="flow-step">
               <div class="flow-num">📄</div>
-              <div class="flow-label">週報ドラフト</div>
-              <div class="flow-desc">毎回同じ品質で完成</div>
+              <div class="flow-label">毎回同じ品質の週報ドラフト</div>
+              <div class="flow-desc">3つが揃うほど、依頼文は短くなり、品質は安定する</div>
             </div>
           </div>
           <p>常に守るルール（CLAUDE.md）の上で、型化した手順と道具（Skills）を使い、足りないデータ（MCP）を取り寄せる——<strong>3つが揃うほど、依頼文は短くなり、品質は安定します</strong>。</p>
