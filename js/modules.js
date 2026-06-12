@@ -977,42 +977,36 @@ const MODULES = [
             <p>文章を書くだけのツールだと思われがちですが、表・チャート・インタラクティブなツールまで幅広い成果物を作れます。「これも Claude でできるかも？」と考える習慣が、活用の幅を広げる第一歩です。</p>
           </div>
 
-          <div class="visual-flow">
-            <div class="flow-step">
-              <div class="flow-num">1-9</div>
-              <div class="flow-label">Office アドイン</div>
-              <div class="flow-desc">Excel / PowerPoint / Word の中から Claude を呼び出す</div>
+          <div class="visual-grid cols-3">
+            <div class="visual-grid-item">
+              <div class="grid-icon" style="font-size:13px;font-weight:800;color:var(--primary);">1-9</div>
+              <div class="grid-title">Office アドイン</div>
+              <div class="grid-desc">Excel / PowerPoint / Word の中から Claude を呼び出す</div>
             </div>
-            <div class="flow-arrow">→</div>
-            <div class="flow-step">
-              <div class="flow-num">1-10</div>
-              <div class="flow-label">Research</div>
-              <div class="flow-desc">複数ソースを調査して根拠付きのレポートを生成する</div>
+            <div class="visual-grid-item">
+              <div class="grid-icon" style="font-size:13px;font-weight:800;color:var(--primary);">1-10</div>
+              <div class="grid-title">Research</div>
+              <div class="grid-desc">複数ソースを調査して根拠付きのレポートを生成する</div>
             </div>
-            <div class="flow-arrow">→</div>
-            <div class="flow-step">
-              <div class="flow-num">1-11</div>
-              <div class="flow-label">Artifact</div>
-              <div class="flow-desc">診断ツール・画面モックなどプロトタイプを作る</div>
+            <div class="visual-grid-item">
+              <div class="grid-icon" style="font-size:13px;font-weight:800;color:var(--primary);">1-11</div>
+              <div class="grid-title">Artifact</div>
+              <div class="grid-desc">診断ツール・画面モックなどプロトタイプを作る</div>
             </div>
-          </div>
-          <div class="visual-flow" style="margin-top:8px;">
-            <div class="flow-step">
-              <div class="flow-num">1-12</div>
-              <div class="flow-label">Chrome 拡張</div>
-              <div class="flow-desc">ブラウザで開いたページをその場で要約・分析する</div>
+            <div class="visual-grid-item">
+              <div class="grid-icon" style="font-size:13px;font-weight:800;color:var(--primary);">1-12</div>
+              <div class="grid-title">Chrome 拡張</div>
+              <div class="grid-desc">ブラウザで開いたページをその場で要約・分析する</div>
             </div>
-            <div class="flow-arrow">→</div>
-            <div class="flow-step">
-              <div class="flow-num">1-13</div>
-              <div class="flow-label">Cowork</div>
-              <div class="flow-desc">作業フォルダごと渡してファイル作業を委任する</div>
+            <div class="visual-grid-item">
+              <div class="grid-icon" style="font-size:13px;font-weight:800;color:var(--primary);">1-13</div>
+              <div class="grid-title">Cowork</div>
+              <div class="grid-desc">作業フォルダごと渡してファイル作業を委任する</div>
             </div>
-            <div class="flow-arrow">→</div>
-            <div class="flow-step">
-              <div class="flow-num">1-14</div>
-              <div class="flow-label">Scheduled tasks</div>
-              <div class="flow-desc">ニュース収集・定例チェックなど定型業務を自動化する</div>
+            <div class="visual-grid-item">
+              <div class="grid-icon" style="font-size:13px;font-weight:800;color:var(--primary);">1-14</div>
+              <div class="grid-title">Scheduled tasks</div>
+              <div class="grid-desc">ニュース収集・定例チェックなど定型業務を自動化する</div>
             </div>
           </div>
         `
