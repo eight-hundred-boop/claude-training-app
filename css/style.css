@@ -4458,12 +4458,12 @@ body.landing-mode #global-footer {
 .visual-flow-step .step-title {
   font-size: 15px;
   font-weight: 700;
-  color: var(--text);
+  color: var(--primary);
 }
 
 .visual-flow-step .step-desc {
   font-size: 14px;
-  color: var(--text-secondary);
+  color: var(--text);
   line-height: 1.5;
 }
 
@@ -4663,15 +4663,15 @@ body.landing-mode #global-footer {
 }
 
 .visual-step-item .step-body h4 {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
-  margin-bottom: 4px;
-  color: var(--text);
+  margin-bottom: 6px;
+  color: var(--primary);
 }
 
 .visual-step-item .step-body p {
-  font-size: 13px;
-  color: var(--text-secondary);
+  font-size: 14px;
+  color: var(--text);
   margin: 0;
   line-height: 1.6;
 }
@@ -4679,14 +4679,14 @@ body.landing-mode #global-footer {
 .visual-step-item .step-title {
   font-size: 16px;
   font-weight: 700;
-  margin-bottom: 4px;
-  color: var(--text);
+  margin-bottom: 6px;
+  color: var(--primary);
 }
 
 .visual-step-item .step-desc {
-  font-size: 13px;
-  color: var(--text-secondary);
-  line-height: 1.6;
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.65;
 }
 
 /* step-item / step-number / step-content aliases */
