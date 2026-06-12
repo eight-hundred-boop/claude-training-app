@@ -3608,40 +3608,6 @@ const MODULES = [
             PC 上のフォルダなら接続は不要です——作業フォルダに置けばそのまま読めます（2-2）。
           </div>
 
-          <h3>3つの道具が揃うと — ある月曜の朝</h3>
-          <div class="visual-flow">
-            <div class="flow-step">
-              <div class="flow-num">🧑</div>
-              <div class="flow-label">依頼は1行</div>
-              <div class="flow-desc">「競合ウォッチ週報の Skill で今週分を作って」——長い指示を書かなくてよい</div>
-            </div>
-            <div class="flow-arrow">→</div>
-            <div class="flow-step">
-              <div class="flow-num">📏</div>
-              <div class="flow-label">CLAUDE.md が黙って効く</div>
-              <div class="flow-desc">文体・体裁・禁止事項が自動で読み込まれ、会社標準に揃う</div>
-            </div>
-            <div class="flow-arrow">→</div>
-            <div class="flow-step">
-              <div class="flow-num">📖</div>
-              <div class="flow-label">Skills が手順とひな型を呼び出す</div>
-              <div class="flow-desc">競合の動きを整理→示唆→次アクションの手順と、週報のひな型が展開される</div>
-            </div>
-            <div class="flow-arrow">→</div>
-            <div class="flow-step">
-              <div class="flow-num">🛒</div>
-              <div class="flow-label">MCP が社内データを取り寄せる</div>
-              <div class="flow-desc">Notion につながっていれば、先週の定例の議事メモをコピペなしで取り込む</div>
-            </div>
-            <div class="flow-arrow">→</div>
-            <div class="flow-step">
-              <div class="flow-num">📄</div>
-              <div class="flow-label">毎回同じ品質の週報ドラフト</div>
-              <div class="flow-desc">3つが揃うほど、依頼文は短くなり、品質は安定する</div>
-            </div>
-          </div>
-          <p>常に守るルール（CLAUDE.md）の上で、型化した手順と道具（Skills）を使い、足りないデータ（MCP）を取り寄せる——<strong>3つが揃うほど、依頼文は短くなり、品質は安定します</strong>。</p>
-
           <div class="visual-highlight-card">
             <p><strong>CLAUDE.md はチームの「品質基準書」にもなる</strong>：プロジェクトの CLAUDE.md を共有すれば、他のメンバーも同じルールで Claude Code を使え、成果物の品質が揃います。個人の工夫を、再現できる形に残していきましょう。</p>
           </div>
