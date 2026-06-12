@@ -405,7 +405,7 @@ const MODULES = [
           </div>
 
           <h3>どのモデルを選ぶ？</h3>
-          <div class="visual-grid cols-3">
+          <div class="visual-grid cols-2">
             <div class="visual-grid-item">
               <div class="grid-icon">⚡</div>
               <div class="grid-title">Haiku</div>
@@ -413,13 +413,18 @@ const MODULES = [
             </div>
             <div class="visual-grid-item" style="border:2px solid var(--primary);">
               <div class="grid-icon">⚖️</div>
-              <div class="grid-title">Sonnet<br><span style="font-size:11px;color:var(--primary);">★ 迷ったらここ</span></div>
+              <div class="grid-title">Sonnet　<span style="font-size:11px;color:var(--primary);">★ 迷ったらここ</span></div>
               <div class="grid-desc">バランス型。日常業務の多くに最適。</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">🧠</div>
               <div class="grid-title">Opus</div>
               <div class="grid-desc">高性能。複雑な分析・難しい長文向き。</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">✨</div>
+              <div class="grid-title">Fable</div>
+              <div class="grid-desc">ハイブリッド推論。アイデア発想・創作・深い思考が必要な場面に。</div>
             </div>
           </div>
 
@@ -566,6 +571,7 @@ const MODULES = [
           <div class="visual-mapping">
             <div class="mapping-header">
               <span class="mapping-from">書きたい内容</span>
+              <span class="mapping-arrow"></span>
               <span class="mapping-to">置き場所</span>
             </div>
             <div class="mapping-row">
@@ -605,25 +611,25 @@ const MODULES = [
             <div class="flow-step">
               <div class="flow-num">1</div>
               <div class="flow-label">指示する</div>
-              <div class="flow-desc">Claude に依頼</div>
+              <div class="flow-desc">Claude に依頼。前提・タスク・ルールの3要素を揃えると出力が安定する。</div>
             </div>
             <div class="flow-arrow">→</div>
             <div class="flow-step">
               <div class="flow-num">2</div>
               <div class="flow-label">確認する</div>
-              <div class="flow-desc">事実・数字を裏取り</div>
+              <div class="flow-desc">事実・数字・固有名詞を裏取り。報告書やクライアント向け資料に使う情報は特に慎重に。</div>
             </div>
             <div class="flow-arrow">→</div>
             <div class="flow-step">
               <div class="flow-num">3</div>
               <div class="flow-label">直す</div>
-              <div class="flow-desc">追加指示で修正</div>
+              <div class="flow-desc">追加指示で修正・深掘り。「2番をもっと具体的に」「競合事例も加えて」と往復しながら磨く。</div>
             </div>
             <div class="flow-arrow">→</div>
             <div class="flow-step">
               <div class="flow-num">4</div>
               <div class="flow-label">仕上げる</div>
-              <div class="flow-desc">自分の責任で提出</div>
+              <div class="flow-desc">最終判断は自分が持つ。成果物の責任は常に自分にある。Claude は初稿を作る相棒。</div>
             </div>
           </div>
 
@@ -956,38 +962,38 @@ const MODULES = [
             <div class="flow-step">
               <div class="flow-num">1-9</div>
               <div class="flow-label">Office アドイン</div>
-              <div class="flow-desc">Office アプリで使う</div>
+              <div class="flow-desc">Excel / PowerPoint / Word の中から Claude を呼び出す</div>
             </div>
             <div class="flow-arrow">→</div>
             <div class="flow-step">
               <div class="flow-num">1-10</div>
               <div class="flow-label">Research</div>
-              <div class="flow-desc">深く調べる</div>
+              <div class="flow-desc">複数ソースを調査して根拠付きのレポートを生成する</div>
             </div>
             <div class="flow-arrow">→</div>
             <div class="flow-step">
               <div class="flow-num">1-11</div>
               <div class="flow-label">Artifact</div>
-              <div class="flow-desc">プロトタイプを作る</div>
+              <div class="flow-desc">診断ツール・画面モックなどプロトタイプを作る</div>
             </div>
           </div>
           <div class="visual-flow" style="margin-top:8px;">
             <div class="flow-step">
               <div class="flow-num">1-12</div>
               <div class="flow-label">Chrome 拡張</div>
-              <div class="flow-desc">ブラウザで使う</div>
+              <div class="flow-desc">ブラウザで開いたページをその場で要約・分析する</div>
             </div>
             <div class="flow-arrow">→</div>
             <div class="flow-step">
               <div class="flow-num">1-13</div>
               <div class="flow-label">Cowork</div>
-              <div class="flow-desc">ファイル作業を委任</div>
+              <div class="flow-desc">作業フォルダごと渡してファイル作業を委任する</div>
             </div>
             <div class="flow-arrow">→</div>
             <div class="flow-step">
               <div class="flow-num">1-14</div>
               <div class="flow-label">Scheduled tasks</div>
-              <div class="flow-desc">定型業務を自動化</div>
+              <div class="flow-desc">ニュース収集・定例チェックなど定型業務を自動化する</div>
             </div>
           </div>
         `
@@ -3025,6 +3031,7 @@ const MODULES = [
           <div class="visual-mapping">
             <div class="mapping-header">
               <span class="mapping-from">担当</span>
+              <span class="mapping-arrow"></span>
               <span class="mapping-to">役割</span>
             </div>
             <div class="mapping-row">
