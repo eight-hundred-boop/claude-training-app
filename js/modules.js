@@ -2399,7 +2399,7 @@ const MODULES = [
         type: 'lecture',
         content: `
           <h3>このセクションのゴール</h3>
-          <p>第1回で身につけた「初速の出し方」と「成果物の作り方」を1画面で振り返り、第2回（Claude Code で成果物を作る）へつなげます。</p>
+          <p>第1回で身につけた「初速の出し方」と「成果物の作り方」を振り返り、第2回（Claude Code で成果物を作る）へつなげます。</p>
 
           <h3>初速を出す基本</h3>
           <div class="visual-grid cols-3">
@@ -2459,16 +2459,18 @@ const MODULES = [
           </table>
 
           <div class="info-box">
-            <strong>💡 第1回の Artifact（触れる試作品）と Cowork（フォルダのファイル作業）を思い出す</strong><br>
-            Artifact で「触れる試作品」を、Cowork で「フォルダのファイル作業」を体験しました。第2回の Claude Code は、この2つをさらに広げて<strong>保存できる・複数ファイルを横断する・再利用できる成果物</strong>を作る段階です。
+            <strong>💡 第1回の Artifact（プロトタイプ）と Cowork（ローカルフォルダでのファイル作業）を思い出す</strong><br>
+            Artifact で「プロトタイプ」を、Cowork で「ローカルフォルダでのファイル作業」を体験しました。第2回の Claude Code は、この2つをさらに広げて<strong>保存できる・複数ファイルを横断する・繰り返し使える成果物</strong>を作る段階です。
           </div>
 
-          <h3>ここから第2回でやること</h3>
-          <div class="visual-highlight-card">
-            <p>第1回で「Chat の基本と成果物づくり」を押さえた。第2回はその先——Claude Code で成果物の幅を広げ、仕組み（CLAUDE.md・Skills・MCP）で品質を安定させ、チームに展開する。</p>
-            <ul>
+          <h3>第2回でやること</h3>
+          <div class="visual-big-message">
+            <div class="big-message-icon">🚀</div>
+            <div class="big-message-text">Claude Code で成果物の幅を広げ、仕組みで品質を固定する</div>
+            <div class="big-message-sub">第1回で「Chat の基本と成果物づくり」を押さえました。第2回はその先——成果物の幅を広げ、CLAUDE.md・Skills・MCP で品質を安定させ、チームに展開します。</div>
+            <ul style="text-align:left; display:inline-block; margin:20px auto 0; color:rgba(255,255,255,0.92); line-height:1.9;">
               <li>複数ファイル／データ処理をまとめて任せる</li>
-              <li>保存して再利用できるツール・プロトタイプを作る</li>
+              <li>保存して繰り返し使えるツール・プロトタイプを作る</li>
               <li>CLAUDE.md・Skills・MCP で品質を“自分仕様”に固定する</li>
               <li>Subagents（分担・並列）でリサーチ・企画まで広げる</li>
             </ul>
@@ -2581,7 +2583,7 @@ const MODULES = [
           <p>Claude Code は、<strong>ゴールを伝えるとファイルを直接読み書きして作業を進めてくれる</strong>環境です。コードやコマンドを自分で書く必要はありません。「このフォルダのデータを集計してレポートにして」「この試作ツールに保存機能を足して」のように、日本語で依頼するだけで、複数ファイルをまたいだ作業や成果物の作成まで進めてくれます。</p>
 
           <div class="visual-highlight-card">
-            <p><strong>位置づけ</strong>：Chat（対話）・Cowork（フォルダのファイル作業）の延長線上にあり、<strong>より大きく・繰り返し使える成果物</strong>を作るのが Claude Code です。第1回で触れた Artifact / Cowork が「入口」、Claude Code が「もう一歩先」と捉えてください。</p>
+            <p><strong>位置づけ</strong>：Chat（対話）・Cowork（ローカルフォルダでのファイル作業）の延長線上にあり、<strong>より大きく・繰り返し使える成果物</strong>を作るのが Claude Code です。第1回で触れた Artifact / Cowork が「入口」、Claude Code が「もう一歩先」と捉えてください。</p>
           </div>
 
           <h3>成果物作成の3つのレベル</h3>
