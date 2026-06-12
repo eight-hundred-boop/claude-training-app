@@ -416,27 +416,30 @@ const MODULES = [
           </div>
 
           <h3>どのモデルを選ぶ？</h3>
-          <div class="visual-grid cols-2">
+          <div class="visual-grid" style="grid-template-columns: repeat(4, 1fr);">
             <div class="visual-grid-item">
               <div class="grid-icon">⚡</div>
               <div class="grid-title">Haiku</div>
-              <div class="grid-desc">高速・軽量。短い定型処理向き。</div>
+              <div class="grid-desc">高速・軽量。短い定型処理向き。<br><strong style="color:var(--primary);font-size:12px;">トークン消費 少</strong></div>
             </div>
             <div class="visual-grid-item" style="border:2px solid var(--primary);">
               <div class="grid-icon">⚖️</div>
               <div class="grid-title">Sonnet　<span style="font-size:11px;color:var(--primary);">★ 迷ったらここ</span></div>
-              <div class="grid-desc">バランス型。日常業務の多くに最適。</div>
+              <div class="grid-desc">バランス型。日常業務の多くに最適。<br><strong style="color:var(--primary);font-size:12px;">トークン消費 中</strong></div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">🧠</div>
               <div class="grid-title">Opus</div>
-              <div class="grid-desc">高性能。複雑な分析・難しい長文向き。</div>
+              <div class="grid-desc">高性能。複雑な分析・難しい長文向き。<br><strong style="color:var(--text-muted);font-size:12px;">トークン消費 大</strong></div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">✨</div>
               <div class="grid-title">Fable</div>
-              <div class="grid-desc">ハイブリッド推論。アイデア発想・創作・深い思考が必要な場面に。</div>
+              <div class="grid-desc">思考と創作の統合型。アイデア発想・深い分析に。<br><strong style="color:var(--text-muted);font-size:12px;">トークン消費 大</strong></div>
             </div>
+          </div>
+          <div class="info-box">
+            <p>上位モデルほど性能が高い反面、<strong>1回の会話で消費するトークン（使用量）が多くなります</strong>。日常的な依頼（メール下書き・議事録整理・要約など）は Sonnet で十分。Opus・Fable は「どうしても高い精度が必要な場面」に絞ると、使用量の節約になります。</p>
           </div>
 
           <h3>どれだけ資料を渡せる？</h3>

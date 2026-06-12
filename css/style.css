@@ -2018,7 +2018,7 @@ body.present-mode .related-tips-box { display: none; }
   width: 100%;
   border-collapse: collapse;
   margin: 16px 0;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .comparison-table th, .product-table th, .mcp-table th, .info-table th {
@@ -2026,7 +2026,7 @@ body.present-mode .related-tips-box { display: none; }
   padding: 10px 14px;
   text-align: left;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 14px;
   color: var(--text-secondary);
   border-bottom: 2px solid var(--border);
 }
@@ -2034,7 +2034,7 @@ body.present-mode .related-tips-box { display: none; }
 .comparison-table td, .product-table td, .mcp-table td, .info-table td {
   padding: 10px 14px;
   border-bottom: 1px solid var(--border-light);
-  color: var(--text-secondary);
+  color: var(--text);
   vertical-align: top;
 }
 
@@ -2111,7 +2111,8 @@ body.present-mode .related-tips-box { display: none; }
 .flow-step {
   text-align: center;
   padding: 12px 16px;
-  min-width: 120px;
+  min-width: 140px;
+  flex: 1;
 }
 
 .flow-icon {
@@ -2138,7 +2139,7 @@ body.present-mode .related-tips-box { display: none; }
 
 .flow-label {
   display: block;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--text);
   margin-bottom: 4px;
@@ -4455,14 +4456,14 @@ body.landing-mode #global-footer {
 }
 
 .visual-flow-step .step-title {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--text);
 }
 
 .visual-flow-step .step-desc {
-  font-size: 12px;
-  color: var(--text-muted);
+  font-size: 14px;
+  color: var(--text-secondary);
   line-height: 1.5;
 }
 
@@ -4512,7 +4513,7 @@ body.landing-mode #global-footer {
 }
 
 .visual-grid-item .grid-desc {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--text-secondary);
   line-height: 1.6;
   word-break: keep-all;
@@ -5427,7 +5428,7 @@ body.landing-mode #global-footer {
   padding: 12px 16px;
 }
 .product-feature {
-  font-size: 13px;
+  font-size: 15px;
   color: var(--text-secondary);
   padding: 6px 10px;
   background: var(--bg);
@@ -5500,17 +5501,17 @@ body.landing-mode #global-footer {
   border-bottom: none;
 }
 .mapping-from {
-  font-size: 13px;
+  font-size: 15px;
   color: var(--text-secondary);
 }
 .mapping-arrow {
   text-align: center;
   color: var(--primary);
   font-weight: 700;
-  font-size: 14px;
+  font-size: 15px;
 }
 .mapping-to {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--text);
 }
