@@ -585,6 +585,13 @@ body.landing-mode .header-search-btn {
   margin-top: 0;
 }
 
+.topic-content > h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 24px 0 8px;
+}
+
 .topic-content p {
   font-size: 15px;
   color: var(--text-secondary);
@@ -1345,6 +1352,13 @@ body.present-mode .related-tips-box { display: none; }
   margin-top: 0;
 }
 
+.section-body > h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 24px 0 8px;
+}
+
 .section-body p {
   font-size: 14px;
   color: var(--text-secondary);
@@ -1383,13 +1397,13 @@ body.present-mode .related-tips-box { display: none; }
 }
 
 .info-box {
-  background: #eef6ff;
-  border-left: 3px solid #4a90d9;
+  background: var(--bg);
+  border-left: 3px solid var(--border);
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
   padding: 14px 18px;
   margin: 16px 0;
   font-size: 13px;
-  color: #2c5f99;
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 
@@ -3037,6 +3051,13 @@ body.present-mode #page-container:has(.slide-cover) {
   margin-top: 0;
 }
 
+.slide-section-body > h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 28px 0 10px;
+}
+
 .slide-section-body p,
 .slide-section-body li {
   font-size: 16px;
@@ -4431,8 +4452,7 @@ body.landing-mode #global-footer {
   transition: box-shadow 0.2s, transform 0.2s;
 }
 .visual-grid-item:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
 }
 
 .visual-grid-item .grid-icon {
@@ -4876,13 +4896,43 @@ body.landing-mode #global-footer {
 }
 .prompt-copy .copy-btn { margin-left: 0; }
 /* 本文中のページ内リンク（例: TIPS集へ）をリンクらしく見せる */
-.topic-content a[data-nav], .slide-content a[data-nav] {
+/* インラインコード（本文中の /init, ~/.claude/ 等） */
+.topic-content code,
+.section-body code,
+.slide-section-body code {
+  font-size: 0.9em;
+  background: var(--bg);
+  border: 1px solid var(--border-light);
+  border-radius: 4px;
+  padding: 1px 6px;
+}
+.topic-content pre code,
+.section-body pre code,
+.slide-section-body pre code,
+.example-box code,
+.toolkit-card code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+/* コンテンツ本文内のリンク（外部・内部とも統一） */
+.topic-content a,
+.section-body a,
+.slide-section-body a {
   color: var(--primary);
   font-weight: 600;
   text-decoration: underline;
+  text-underline-offset: 2px;
   cursor: pointer;
 }
-.topic-content a[data-nav]:hover, .slide-content a[data-nav]:hover { opacity: .8; }
+.topic-content a:visited,
+.section-body a:visited,
+.slide-section-body a:visited { color: var(--primary); }
+.topic-content a:hover,
+.section-body a:hover,
+.slide-section-body a:hover { opacity: .8; }
 
 /* --- 横並びラベルカード --- */
 .visual-label-row {
@@ -5151,7 +5201,7 @@ body.landing-mode #global-footer {
 .visual-big-message {
   margin: 28px 0;
   padding: 36px 28px;
-  background: linear-gradient(135deg, #0d6b60 0%, #1a9e8e 50%, #127D70 100%);
+  background: linear-gradient(135deg, #0d6b60 0%, #127D70 100%);
   border: none;
   border-radius: var(--radius);
   text-align: center;
@@ -5171,7 +5221,7 @@ body.landing-mode #global-footer {
 }
 .big-message-sub {
   font-size: 15px;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255,255,255,0.95);
   line-height: 1.7;
   max-width: 80%;
   margin: 0 auto;
