@@ -269,6 +269,27 @@
   // ランディングページ
   // ========================================
   function renderLanding(container) {
+    // 再開カード: localStorage に最後に見たトピックがあれば表示
+    let resumeCardHTML = '';
+    try {
+      const last = JSON.parse(localStorage.getItem('claude-training-last-topic'));
+      if (last && last.mi != null && last.si != null) {
+        const mod = MODULES[last.mi];
+        const sec = mod && mod.sections[last.si];
+        if (sec) {
+          resumeCardHTML = `
+            <div class="landing-resume-card" id="landing-resume">
+              <div class="landing-resume-icon">▶</div>
+              <div class="landing-resume-body">
+                <div class="landing-resume-label">前回の続きから再開</div>
+                <div class="landing-resume-title">${mod.shortTitle} — ${sec.title}</div>
+              </div>
+              <span class="landing-btn" style="flex-shrink:0;">再開する</span>
+            </div>`;
+        }
+      }
+    } catch { /* localStorage 未対応環境では無視 */ }
+
     container.innerHTML = `
       <div class="landing-page fade-in">
         <div class="landing-logo">
@@ -276,6 +297,7 @@
         </div>
         <h1 class="landing-title">Claude スキルアップ講座</h1>
         <p class="landing-subtitle">利用目的に合わせてモードを選んでください</p>
+        ${resumeCardHTML}
         <div class="landing-cards">
           <div class="landing-card" data-mode="present">
             <div class="landing-card-icon present">
@@ -299,6 +321,15 @@
 
     container.querySelectorAll('.landing-card').forEach(card => {
       card.addEventListener('click', () => setMode(card.dataset.mode));
+    });
+    container.querySelector('#landing-resume')?.addEventListener('click', () => {
+      try {
+        const last = JSON.parse(localStorage.getItem('claude-training-last-topic'));
+        if (last && last.mi != null && last.si != null) {
+          setMode('self-study');
+          navigateTo('topic-detail', last.mi, last.si);
+        }
+      } catch { setMode('self-study'); }
     });
   }
 
@@ -695,15 +726,29 @@
   }
 
   // --- 練習問題 ---
+  function isPracticeComplete(mi, pi) { return !!loadProgress()[`m${mi}_p${pi}`]; }
+  function markPracticeComplete(mi, pi) { const p = loadProgress(); p[`m${mi}_p${pi}`] = true; saveProgress(p); }
+  function markPracticeIncomplete(mi, pi) { const p = loadProgress(); delete p[`m${mi}_p${pi}`]; saveProgress(p); }
+  function getPracticeProgress(mi) {
+    const total = (MODULES[mi].practices || []).length;
+    if (!total) return { done: 0, total: 0 };
+    const done = (MODULES[mi].practices || []).filter((_, pi) => isPracticeComplete(mi, pi)).length;
+    return { done, total };
+  }
+
   function renderPractices(container) {
-    container.innerHTML = `
+    function buildHTML() {
+      return `
       <div class="practices-page">
         <h1>練習問題</h1>
         <p class="practices-subtitle">学習コンテンツで学んだ内容を、実際に手を動かして確認しましょう。</p>
         <div class="practices-tabs">
-          ${MODULES.map((mod, mi) => `
-            <button class="practices-tab ${mi === 0 ? 'active' : ''}" data-practices-tab="${mi}">${mod.shortTitle}</button>
-          `).join('')}
+          ${MODULES.map((mod, mi) => {
+            const { done, total } = getPracticeProgress(mi);
+            return `<button class="practices-tab ${mi === 0 ? 'active' : ''}" data-practices-tab="${mi}">
+              ${mod.shortTitle}${total ? `<span class="practices-tab-count"> ${done}/${total}</span>` : ''}
+            </button>`;
+          }).join('')}
         </div>
         ${MODULES.map((mod, mi) => {
           const practices = mod.practices || [];
@@ -712,26 +757,35 @@
           <div class="practices-panel" data-practices-panel="${mi}" style="${mi !== 0 ? 'display:none' : ''}">
             ${sections.length === 0 ? '<p style="color:var(--text-muted);padding:24px 0;">この回の練習問題は準備中です。</p>' : ''}
             ${sections.map(sec => {
-              const items = practices.filter(p => p.section === sec);
+              const items = practices.reduce((acc, p, pi) => { if (p.section === sec) acc.push({ p, pi }); return acc; }, []);
+              let secIdx = 0;
               return `
               <div class="practices-section">
                 <h3 class="practices-section-title">${sec}</h3>
-                ${items.map((p, idx) => `
-                  <div class="practices-card">
-                    <div class="practices-card-num">${idx + 1}</div>
+                ${items.map(({ p, pi }) => {
+                  const done = isPracticeComplete(mi, pi);
+                  secIdx++;
+                  return `
+                  <div class="practices-card ${done ? 'completed' : ''}" data-mi="${mi}" data-pi="${pi}">
+                    <div class="practices-card-num">${done ? '✓' : secIdx}</div>
                     <div class="practices-card-body">
                       <h4>${p.title}</h4>
                       <p>${p.task}</p>
                       ${p.hint ? `<div class="practices-hint">💡 ヒント：${p.hint}</div>` : ''}
                     </div>
-                  </div>
-                `).join('')}
+                    <button type="button" class="practices-toggle-btn" data-mi="${mi}" data-pi="${pi}" aria-label="${done ? '未完了に戻す' : '完了にする'}" title="${done ? '未完了に戻す' : '完了にする'}">
+                      ${done ? '✓' : '○'}
+                    </button>
+                  </div>`;
+                }).join('')}
               </div>`;
             }).join('')}
           </div>`;
         }).join('')}
-      </div>
-    `;
+      </div>`;
+    }
+
+    container.innerHTML = buildHTML();
 
     // タブ切り替え
     container.querySelectorAll('.practices-tab').forEach(tab => {
@@ -741,6 +795,51 @@
         container.querySelectorAll('[data-practices-panel]').forEach(p => p.style.display = parseInt(p.dataset.practicesPanel) === mi ? '' : 'none');
       });
     });
+
+    // 完了トグル
+    container.querySelectorAll('.practices-toggle-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const mi = parseInt(btn.dataset.mi);
+        const pi = parseInt(btn.dataset.pi);
+        if (isPracticeComplete(mi, pi)) {
+          markPracticeIncomplete(mi, pi);
+        } else {
+          markPracticeComplete(mi, pi);
+        }
+        // アクティブなタブを記憶して再描画
+        const activeMi = parseInt(container.querySelector('.practices-tab.active')?.dataset.practicesTab ?? '0');
+        container.innerHTML = buildHTML();
+        // 再描画後にタブを復元・イベント再設定
+        renderPractices._bindEvents(container, activeMi);
+      });
+    });
+
+    renderPractices._bindEvents = (c, activeMi) => {
+      c.querySelectorAll('.practices-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+          const mi = parseInt(tab.dataset.practicesTab);
+          c.querySelectorAll('.practices-tab').forEach(t => t.classList.toggle('active', parseInt(t.dataset.practicesTab) === mi));
+          c.querySelectorAll('[data-practices-panel]').forEach(p => p.style.display = parseInt(p.dataset.practicesPanel) === mi ? '' : 'none');
+        });
+      });
+      // 指定タブをアクティブに
+      if (activeMi != null) {
+        c.querySelectorAll('.practices-tab').forEach(t => t.classList.toggle('active', parseInt(t.dataset.practicesTab) === activeMi));
+        c.querySelectorAll('[data-practices-panel]').forEach(p => p.style.display = parseInt(p.dataset.practicesPanel) === activeMi ? '' : 'none');
+      }
+      c.querySelectorAll('.practices-toggle-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const mi = parseInt(btn.dataset.mi);
+          const pi = parseInt(btn.dataset.pi);
+          if (isPracticeComplete(mi, pi)) { markPracticeIncomplete(mi, pi); } else { markPracticeComplete(mi, pi); }
+          const currentActiveMi = parseInt(c.querySelector('.practices-tab.active')?.dataset.practicesTab ?? '0');
+          c.innerHTML = buildHTML();
+          renderPractices._bindEvents(c, currentActiveMi);
+        });
+      });
+    };
   }
 
   // --- リンク集 ---

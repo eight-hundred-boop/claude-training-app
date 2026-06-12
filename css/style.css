@@ -1169,12 +1169,24 @@ body.present-mode .related-tips-box { display: none; }
   transition: box-shadow 0.2s;
 }
 .practices-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.practices-card.completed { background: var(--bg); border-color: var(--border-light); opacity: 0.75; }
+.practices-card.completed .practices-card-num { background: var(--primary); color: #fff; }
 .practices-card-num {
   flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%;
   background: var(--primary-faint); color: var(--primary);
   font-size: 13px; font-weight: 800;
   display: flex; align-items: center; justify-content: center; margin-top: 2px;
 }
+.practices-toggle-btn {
+  flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%;
+  border: 2px solid var(--border); background: none;
+  font-size: 14px; font-weight: 700; color: var(--text-muted);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: all 0.15s; margin-top: 0; align-self: flex-start;
+}
+.practices-toggle-btn:hover { border-color: var(--primary); color: var(--primary); }
+.practices-card.completed .practices-toggle-btn { border-color: var(--primary); background: var(--primary); color: #fff; }
+.practices-tab-count { font-size: 11px; font-weight: 600; color: var(--primary); margin-left: 2px; }
 .practices-card-body h4 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
 .practices-card-body p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin: 0; }
 .practices-hint {
@@ -3481,6 +3493,27 @@ body.landing-mode #global-footer {
   text-align: center;
   margin-bottom: 48px;
 }
+
+/* ランディング再開カード */
+.landing-resume-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 720px;
+  width: 100%;
+  background: var(--primary-bg);
+  border: 2px solid var(--primary);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+.landing-resume-card:hover { box-shadow: 0 4px 16px rgba(18,125,112,0.15); }
+.landing-resume-icon { font-size: 20px; color: var(--primary); flex-shrink: 0; }
+.landing-resume-body { flex: 1; min-width: 0; }
+.landing-resume-label { font-size: 12px; color: var(--primary); font-weight: 700; margin-bottom: 2px; }
+.landing-resume-title { font-size: 14px; color: var(--text); font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 .landing-cards {
   display: grid;
