@@ -3268,7 +3268,7 @@ const MODULES = [
           <p>成果物を繰り返し作るようになると、<strong>毎回品質がブレない仕組み</strong>が欲しくなります。ここでは質と再現性を支える道具 — CLAUDE.md（ルール固定）、Skills（手順の型化）、MCP / Connectors（必要なデータの接続） — を押さえます。</p>
 
           <h3>まず全体像 — 3つの道具の役割分担</h3>
-          <p>3つの道具はどれも、自社の情報・ルール・データを AI に渡して<strong>”自分仕様”</strong>にするための道具です。役割の違いは、料理にたとえるとつかみやすくなります。</p>
+          <p>3つの道具はどれも、AI に情報・ルール・データを渡して<strong>”自分仕様”</strong>にするための道具です。役割の違いは、料理にたとえるとつかみやすくなります。</p>
 
           <div class="visual-grid cols-3">
             <div class="visual-grid-item">
@@ -3311,6 +3311,31 @@ const MODULES = [
           </div>
 
           <p>迷ったら「次の会話でも説明し直すか？」——し直すことなら書いておきましょう。</p>
+
+          <h4>指示は "具体的" に書く</h4>
+          <p>ルールは <strong>後から自分で確認できるくらい具体的</strong> に書くほど効きやすくなります。曖昧な表現は Claude が独自解釈し、毎回ブレる原因になります。</p>
+          <div class="visual-mapping" style="grid-template-columns: auto 32px 1fr">
+            <div class="mapping-header">
+              <span class="mapping-from">曖昧な書き方</span>
+              <span class="mapping-arrow"></span>
+              <span class="mapping-to">具体的な書き方（推奨）</span>
+            </div>
+            <div class="mapping-row">
+              <span class="mapping-from">結論から書く</span>
+              <span class="mapping-arrow">→</span>
+              <span class="mapping-to">冒頭1段落に"結論・根拠・アクション"の3点を入れる</span>
+            </div>
+            <div class="mapping-row">
+              <span class="mapping-from">要約をつける</span>
+              <span class="mapping-arrow">→</span>
+              <span class="mapping-to">先頭に3行以内のエグゼクティブサマリーを入れる</span>
+            </div>
+            <div class="mapping-row">
+              <span class="mapping-from">社名をきちんと書く</span>
+              <span class="mapping-arrow">→</span>
+              <span class="mapping-to">先方は常に「株式会社〇〇」と正式表記する</span>
+            </div>
+          </div>
 
           <div class="example-box">
             📄 <strong>案件用 CLAUDE.md の例（B社 中期計画支援）</strong> — 箇条書きで書くだけでよく、特別な書き方は要りません。<br>
@@ -3366,7 +3391,7 @@ const MODULES = [
             <div class="visual-grid-item">
               <div class="grid-icon">🔍</div>
               <div class="grid-title">/memory</div>
-              <div class="grid-desc">現在読み込まれている CLAUDE.md を<strong>一覧表示・編集</strong>。自分用／案件用のどちらに何が書いてあるか、ここで確認・追記できる。</div>
+              <div class="grid-desc">現在読み込まれている CLAUDE.md を<strong>一覧表示・編集</strong>。自分用／案件用のどちらに何が書いてあるか確認・追記できる。<strong>自動メモリの中身もここで確認・編集</strong>できる（Claude が保存したメモを読んだり、不要なものを削除したりできる）。</div>
             </div>
           </div>
 
@@ -3375,9 +3400,25 @@ const MODULES = [
             「CLAUDE.md にまとめて」と頼めば、Claude がフォルダ内に作ってくれます。正確な置き場所は覚えなくて大丈夫です。
           </div>
 
-          <div class="info-box">
-            <p>📌 <strong>CLAUDE.md が効くのは「新しい会話」を始めたとき</strong>（会話＝Claude Code とのひと続きのやり取り。“セッション”とも呼びます）。途中で書き換えても、いま進行中の会話には反映されません。作ったら・変えたら、新しい会話で始めましょう。</p>
+          <div class=”info-box”>
+            <p>📌 <strong>CLAUDE.md が効くのは「新しい会話」を始めたとき</strong>（会話＝Claude Code とのひと続きのやり取り。”セッション”とも呼びます）。途中で書き換えても、いま進行中の会話には反映されません。作ったら・変えたら、新しい会話で始めましょう。</p>
           </div>
+
+          <h4>自動メモリ — Claude が自分でメモを取る</h4>
+          <p>あなたが書く CLAUDE.md に加え、<strong>Claude 自身が作業中に学んだことをメモとして保存</strong>する仕組みが <strong>自動メモリ</strong> です。あなたの修正パターン・好み・作業ログを次のセッションに引き継ぎます。</p>
+
+          <div class=”visual-comparison”>
+            <div class=”comparison-card”>
+              <div class=”comparison-label”>CLAUDE.md</div>
+              <div class=”comparison-content”>あなたが書くルール<br>守るべき方針・禁止事項・体裁</div>
+            </div>
+            <div class=”comparison-card”>
+              <div class=”comparison-label”>自動メモリ</div>
+              <div class=”comparison-content”>Claude が自ら書くメモ<br>あなたの修正パターン・好み・気づき</div>
+            </div>
+          </div>
+
+          <p>「毎回同じ修正をしている」と感じたら <strong>「これを覚えておいて」</strong> と伝えるだけで自動メモリに保存されます。<code>/memory</code> コマンドで中身をいつでも確認・編集できます。</p>
 
           <h4>応用 — ルールファイルは小さく分ける（役割別に）</h4>
           <p>規模が大きくなると、CLAUDE.md にすべて書くと長くなりすぎます。<strong>役割別のファイルに分け、CLAUDE.md からは「詳しくは○○.md を参照」と参照する</strong>設計が便利です。</p>
