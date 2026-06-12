@@ -2427,36 +2427,33 @@ const MODULES = [
           </div>
 
           <h3>成果物につなげる</h3>
-          <table class="info-table">
-            <thead>
-              <tr>
-                <th>機能</th>
-                <th>できること</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Office アドイン</td>
-                <td>Word / Excel / PowerPoint 上で直接 Claude を呼ぶ</td>
-              </tr>
-              <tr>
-                <td>Research</td>
-                <td>複数ソースを調べて根拠付きでまとめる</td>
-              </tr>
-              <tr>
-                <td>Artifact</td>
-                <td>診断ツールや画面モックなどの試作品を作る</td>
-              </tr>
-              <tr>
-                <td>Cowork</td>
-                <td>作業フォルダごと渡し、ファイルを直接読み書き</td>
-              </tr>
-              <tr>
-                <td>Scheduled tasks</td>
-                <td>定型作業を時間で自動実行</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="visual-grid cols-3">
+            <div class="visual-grid-item">
+              <div class="grid-icon">📊</div>
+              <div class="grid-title">Office アドイン</div>
+              <div class="grid-desc">Word / Excel / PowerPoint 上で直接 Claude を呼ぶ</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">🔍</div>
+              <div class="grid-title">Research</div>
+              <div class="grid-desc">複数ソースを調べて根拠付きでまとめる</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">🎨</div>
+              <div class="grid-title">Artifact</div>
+              <div class="grid-desc">診断ツールや画面モックなどのプロトタイプを作る</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">📂</div>
+              <div class="grid-title">Cowork</div>
+              <div class="grid-desc">作業フォルダごと渡し、ファイルを直接読み書き</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">⏰</div>
+              <div class="grid-title">Scheduled tasks</div>
+              <div class="grid-desc">定型作業を時間で自動実行</div>
+            </div>
+          </div>
 
           <div class="info-box">
             <strong>💡 第1回の Artifact（プロトタイプ）と Cowork（ローカルフォルダでのファイル作業）を思い出す</strong><br>
@@ -3647,7 +3644,31 @@ const MODULES = [
           </div>
 
           <h3>うまく動かない時の立て直し方</h3>
-          <p>Claude Code が意図と違う動きをする・出力品質が落ちる・修正を延々と続ける、といった場面では、<strong>「もっと強い指示を出す」より「準備に戻る」</strong>のが効きます。まず <code>/context</code> で会話の埋まり具合を確認し、<code>/compact</code> で片付けてみてください。それでも改善しなければ、下の打ち手から<strong>状況に応じて選びます</strong>（順番にやる工程ではありません）。</p>
+          <p>「もっと強い指示を出す」より「準備に戻る」のが効きます。</p>
+
+          <div class="visual-steps">
+            <div class="visual-step-item">
+              <div class="step-marker">1</div>
+              <div class="step-body">
+                <div class="step-title">会話を片付ける</div>
+                <div class="step-desc"><code>/context</code> で埋まり具合を確認 → <code>/compact</code> で要点だけ残して整理。これだけで改善することが多い。</div>
+              </div>
+            </div>
+            <div class="visual-step-item">
+              <div class="step-marker">2</div>
+              <div class="step-body">
+                <div class="step-title">状況に応じた打ち手を選ぶ</div>
+                <div class="step-desc">下の5枚から「今の状況に合うもの」を選ぶ。順番ではなく、状況次第で選びます。</div>
+              </div>
+            </div>
+            <div class="visual-step-item">
+              <div class="step-marker">3</div>
+              <div class="step-body">
+                <div class="step-title">準備5点に立ち返る</div>
+                <div class="step-desc">それでも長引くときは、<strong>2-2 の準備5点（作業フォルダ／目的と成果物／禁止事項／変更対象／完了条件）</strong>を整え直すのが近道。指示を強くするより前提を整え直す。</div>
+              </div>
+            </div>
+          </div>
 
           <div class="visual-grid cols-2">
             <div class="visual-grid-item">
@@ -3677,9 +3698,6 @@ const MODULES = [
             </div>
           </div>
 
-          <div class="info-box">
-            <p>それでも長引くときは、無理に指示を重ねず一度手を止め、<strong>2-2 の準備5点（作業フォルダ／目的と成果物／禁止事項／変更対象／完了条件）に立ち返る</strong>のが近道です。指示を強くするより、前提を整え直すほうが効きます。</p>
-          </div>
         `
       },
 
