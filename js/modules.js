@@ -4153,20 +4153,47 @@ const MODULES = [
           </div>
 
           <h3>B. CLI 版（Claude Code をコマンドで）</h3>
-          <p>PowerShell で順に実行します（各コマンドはコピーできます）：</p>
-          <div class="toolkit-copy">
-            <code>irm https://claude.ai/install.ps1 | iex</code>
-            <button class="copy-btn" data-copy="irm https://claude.ai/install.ps1 | iex">コピー</button>
+          <p>PowerShell を開き、次の3つを順に実行します。</p>
+          <div class="visual-steps">
+            <div class="visual-step-item">
+              <div class="step-marker">1</div>
+              <div class="step-body">
+                <div class="step-title">インストール</div>
+                <div class="step-desc">
+                  <div class="toolkit-copy" style="margin:8px 0 0;">
+                    <code>irm https://claude.ai/install.ps1 | iex</code>
+                    <button class="copy-btn" data-copy="irm https://claude.ai/install.ps1 | iex">コピー</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="visual-step-item">
+              <div class="step-marker">2</div>
+              <div class="step-body">
+                <div class="step-title">インストール確認</div>
+                <div class="step-desc">
+                  バージョン番号が表示されれば成功。
+                  <div class="toolkit-copy" style="margin:8px 0 0;">
+                    <code>claude --version</code>
+                    <button class="copy-btn" data-copy="claude --version">コピー</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="visual-step-item">
+              <div class="step-marker">3</div>
+              <div class="step-body">
+                <div class="step-title">初回起動・ログイン</div>
+                <div class="step-desc">
+                  ブラウザが開くので Anthropic アカウントでログインする。
+                  <div class="toolkit-copy" style="margin:8px 0 0;">
+                    <code>claude</code>
+                    <button class="copy-btn" data-copy="claude">コピー</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="toolkit-copy">
-            <code>claude --version</code>
-            <button class="copy-btn" data-copy="claude --version">コピー</button>
-          </div>
-          <div class="toolkit-copy">
-            <code>claude</code>
-            <button class="copy-btn" data-copy="claude">コピー</button>
-          </div>
-          <p>（install.ps1＝導入、--version＝確認、claude＝初回起動。ブラウザが開くので Anthropic アカウントでログイン）</p>
 
           <h3>C. IDE 版（VS Code / Cursor / JetBrains などで使う）</h3>
           <p>普段使っているエディタ（IDE）の中から Claude Code を呼び出す方法です。コードや成果物を<strong>画面で見ながら作業でき、変更箇所（差分）も確認しやすい</strong>のが利点です。エディタに拡張機能として追加して使います。</p>
