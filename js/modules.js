@@ -2063,54 +2063,54 @@ const MODULES = [
 
           <h3>今回の要点</h3>
           <h4>🚀 仕事の初速を上げる</h4>
-          <div class=”visual-grid cols-3”>
-            <div class=”visual-grid-item”>
-              <div class=”grid-icon”>💬</div>
-              <div class=”grid-title”>基盤は Chat</div>
-              <div class=”grid-desc”>まず Chat。壁打ち・下書き・要約・翻訳はすべて Chat から始まる。難しい設定は不要で、今日から使える。</div>
+          <div class="visual-grid cols-3">
+            <div class="visual-grid-item">
+              <div class="grid-icon">💬</div>
+              <div class="grid-title">基盤は Chat</div>
+              <div class="grid-desc">まず Chat。壁打ち・下書き・要約・翻訳はすべて Chat から始まる。難しい設定は不要で、今日から使える。</div>
             </div>
-            <div class=”visual-grid-item”>
-              <div class=”grid-icon”>📐</div>
-              <div class=”grid-title”>プロンプト3要素</div>
-              <div class=”grid-desc”><strong>前提（背景・制約）・タスク（何をしてほしいか）・ルール（形式・禁止事項）</strong>の3つを揃えると出力が安定する。</div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">📐</div>
+              <div class="grid-title">プロンプト3要素</div>
+              <div class="grid-desc"><strong>前提（背景・制約）・タスク（何をしてほしいか）・ルール（形式・禁止事項）</strong>の3つを揃えると出力が安定する。</div>
             </div>
-            <div class=”visual-grid-item”>
-              <div class=”grid-icon”>✅</div>
-              <div class=”grid-title”>出力は”初稿”</div>
-              <div class=”grid-desc”>事実・数字・固有名詞は必ず裏取り。最終判断と責任は自分が持つ。鵜呑みにしないことが安全な使い方の基本。</div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">✅</div>
+              <div class="grid-title">出力は”初稿”</div>
+              <div class="grid-desc">事実・数字・固有名詞は必ず裏取り。最終判断と責任は自分が持つ。鵜呑みにしないことが安全な使い方の基本。</div>
             </div>
-            <div class=”visual-grid-item”>
-              <div class=”grid-icon”>📋</div>
-              <div class=”grid-title”>Project / Artifact</div>
-              <div class=”grid-desc”>Project で案件の前提を保持し毎回説明し直す手間を省く。Artifact で成果物を会話と切り離して残し、再利用する。</div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">📋</div>
+              <div class="grid-title">Project / Artifact</div>
+              <div class="grid-desc">Project で案件の前提を保持し毎回説明し直す手間を省く。Artifact で成果物を会話と切り離して残し、再利用する。</div>
             </div>
-            <div class=”visual-grid-item”>
-              <div class=”grid-icon”>🔄</div>
-              <div class=”grid-title”>対話で磨く</div>
-              <div class=”grid-desc”>1回で完成させようとしない。「2番をもっと具体的に」「競合事例を追加して」と往復するほど成果物の質が上がる。</div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">🔄</div>
+              <div class="grid-title">対話で磨く</div>
+              <div class="grid-desc">1回で完成させようとしない。「2番をもっと具体的に」「競合事例を追加して」と往復するほど成果物の質が上がる。</div>
             </div>
           </div>
           <h4>🏗️ 成果物を作る</h4>
-          <div class=”visual-grid cols-2”>
-            <div class=”visual-grid-item”>
-              <div class=”grid-icon”>📊</div>
-              <div class=”grid-title”>機能の使い分け</div>
-              <div class=”grid-desc”>Office アドイン（Office 内で直接）／Research（根拠付き調査）／Artifact（プロトタイプ）／Cowork（ファイル作業の委任）を成果物に応じて選ぶ。</div>
+          <div class="visual-grid cols-2">
+            <div class="visual-grid-item">
+              <div class="grid-icon">📊</div>
+              <div class="grid-title">機能の使い分け</div>
+              <div class="grid-desc">Office アドイン（Office 内で直接）／Research（根拠付き調査）／Artifact（プロトタイプ）／Cowork（ファイル作業の委任）を成果物に応じて選ぶ。</div>
             </div>
-            <div class=”visual-grid-item”>
-              <div class=”grid-icon”>📂</div>
-              <div class=”grid-title”>Cowork</div>
-              <div class=”grid-desc”>作業フォルダごと渡してファイル作業を委任する。PPTX・Excel・Word の作成や複数ファイルの整理がアップロード不要で依頼できる。</div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">📂</div>
+              <div class="grid-title">Cowork</div>
+              <div class="grid-desc">作業フォルダごと渡してファイル作業を委任する。PPTX・Excel・Word の作成や複数ファイルの整理がアップロード不要で依頼できる。</div>
             </div>
-            <div class=”visual-grid-item”>
-              <div class=”grid-icon”>⏰</div>
-              <div class=”grid-title”>Chrome / Scheduled tasks</div>
-              <div class=”grid-desc”>Chrome 拡張でブラウザ上の調査をその場でサポート。Scheduled tasks で競合チェック・ニュース収集などの定型業務を自動化する。</div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">⏰</div>
+              <div class="grid-title">Chrome / Scheduled tasks</div>
+              <div class="grid-desc">Chrome 拡張でブラウザ上の調査をその場でサポート。Scheduled tasks で競合チェック・ニュース収集などの定型業務を自動化する。</div>
             </div>
-            <div class=”visual-grid-item”>
-              <div class=”grid-icon”>🧩</div>
-              <div class=”grid-title”>Skill</div>
-              <div class=”grid-desc”>繰り返す手順・指示・出力形式を「型」として保存し、名前を呼ぶだけで再利用できる。属人化しがちな”うまいやり方”をチームで共有できる形に。</div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">🧩</div>
+              <div class="grid-title">Skill</div>
+              <div class="grid-desc">繰り返す手順・指示・出力形式を「型」として保存し、名前を呼ぶだけで再利用できる。属人化しがちな”うまいやり方”をチームで共有できる形に。</div>
             </div>
           </div>
 
@@ -2621,38 +2621,38 @@ const MODULES = [
           </div>
 
           <h3>第2回でやること</h3>
-          <div class=”visual-big-message”>
-            <div class=”big-message-icon”>🚀</div>
-            <div class=”big-message-text”>Claude Code で成果物の幅を広げ、仕組みで品質を固定する</div>
-            <div class=”big-message-sub”>第1回で「Chat の基本と成果物づくり」を押さえました。第2回はその先へ。</div>
+          <div class="visual-big-message">
+            <div class="big-message-icon">🚀</div>
+            <div class="big-message-text">Claude Code で成果物の幅を広げ、仕組みで品質を固定する</div>
+            <div class="big-message-sub">第1回で「Chat の基本と成果物づくり」を押さえました。第2回はその先へ。</div>
           </div>
-          <div class=”visual-steps” style=”margin-top:16px;”>
-            <div class=”visual-step-item”>
-              <div class=”step-marker”>2-3</div>
-              <div class=”step-body”>
-                <div class=”step-title”>データ処理を任せる</div>
-                <div class=”step-desc”>複数 Excel / CSV の集計・複数議事録の整理・フォルダ横断の分類など、手作業で時間がかかる「集める・整える・まとめる」を委任する。自分は分析・判断に集中できる。</div>
+          <div class="visual-steps" style="margin-top:16px;">
+            <div class="visual-step-item">
+              <div class="step-marker">2-3</div>
+              <div class="step-body">
+                <div class="step-title">データ処理を任せる</div>
+                <div class="step-desc">複数 Excel / CSV の集計・複数議事録の整理・フォルダ横断の分類など、手作業で時間がかかる「集める・整える・まとめる」を委任する。自分は分析・判断に集中できる。</div>
               </div>
             </div>
-            <div class=”visual-step-item”>
-              <div class=”step-marker”>2-4</div>
-              <div class=”step-body”>
-                <div class=”step-title”>ツールを作る</div>
-                <div class=”step-desc”>第1回の Artifact（その場かぎり）を発展させて、保存・複数画面・データ読み書きに対応した繰り返し使えるツールを作る。診断ツール・ROI計算機・社内ミニアプリが対象。</div>
+            <div class="visual-step-item">
+              <div class="step-marker">2-4</div>
+              <div class="step-body">
+                <div class="step-title">ツールを作る</div>
+                <div class="step-desc">第1回の Artifact（その場かぎり）を発展させて、保存・複数画面・データ読み書きに対応した繰り返し使えるツールを作る。診断ツール・ROI計算機・社内ミニアプリが対象。</div>
               </div>
             </div>
-            <div class=”visual-step-item”>
-              <div class=”step-marker”>2-5</div>
-              <div class=”step-body”>
-                <div class=”step-title”>品質を固定する</div>
-                <div class=”step-desc”>CLAUDE.md でルールを常時読み込ませ、Skills で手順を型化し、MCP で社内データを接続する。3つが揃うと依頼文は短くなり、毎回同じ品質の成果物が返ってくる。</div>
+            <div class="visual-step-item">
+              <div class="step-marker">2-5</div>
+              <div class="step-body">
+                <div class="step-title">品質を固定する</div>
+                <div class="step-desc">CLAUDE.md でルールを常時読み込ませ、Skills で手順を型化し、MCP で社内データを接続する。3つが揃うと依頼文は短くなり、毎回同じ品質の成果物が返ってくる。</div>
               </div>
             </div>
-            <div class=”visual-step-item”>
-              <div class=”step-marker”>2-6</div>
-              <div class=”step-body”>
-                <div class=”step-title”>リサーチ・企画に広げる</div>
-                <div class=”step-desc”>Subagents で調査・実装・レビューを分担・並列化する。競合3社を観点別に同時調査したり、発散役と評価役を分けてアイデアを選別したりと、リサーチや企画の幅も広がる。</div>
+            <div class="visual-step-item">
+              <div class="step-marker">2-6</div>
+              <div class="step-body">
+                <div class="step-title">リサーチ・企画に広げる</div>
+                <div class="step-desc">Subagents で調査・実装・レビューを分担・並列化する。競合3社を観点別に同時調査したり、発散役と評価役を分けてアイデアを選別したりと、リサーチや企画の幅も広がる。</div>
               </div>
             </div>
           </div>
@@ -3400,21 +3400,23 @@ const MODULES = [
             「CLAUDE.md にまとめて」と頼めば、Claude がフォルダ内に作ってくれます。正確な置き場所は覚えなくて大丈夫です。
           </div>
 
-          <div class=”info-box”>
+          <div class="info-box">
             <p>📌 <strong>CLAUDE.md が効くのは「新しい会話」を始めたとき</strong>（会話＝Claude Code とのひと続きのやり取り。”セッション”とも呼びます）。途中で書き換えても、いま進行中の会話には反映されません。作ったら・変えたら、新しい会話で始めましょう。</p>
           </div>
 
           <h4>自動メモリ — Claude が自分でメモを取る</h4>
           <p>あなたが書く CLAUDE.md に加え、<strong>Claude 自身が作業中に学んだことをメモとして保存</strong>する仕組みが <strong>自動メモリ</strong> です。あなたの修正パターン・好み・作業ログを次のセッションに引き継ぎます。</p>
 
-          <div class=”visual-comparison”>
-            <div class=”comparison-card”>
-              <div class=”comparison-label”>CLAUDE.md</div>
-              <div class=”comparison-content”>あなたが書くルール<br>守るべき方針・禁止事項・体裁</div>
+          <div class="visual-comparison">
+            <div class="visual-comparison-card before">
+              <div class="comp-label">CLAUDE.md</div>
+              <h4>あなたが書くルール</h4>
+              <p>守るべき方針・禁止事項・体裁。「毎回守ってほしいこと」を自分で明文化しておく。</p>
             </div>
-            <div class=”comparison-card”>
-              <div class=”comparison-label”>自動メモリ</div>
-              <div class=”comparison-content”>Claude が自ら書くメモ<br>あなたの修正パターン・好み・気づき</div>
+            <div class="visual-comparison-card after">
+              <div class="comp-label">自動メモリ</div>
+              <h4>Claude が自ら書くメモ</h4>
+              <p>あなたの修正パターン・好み・気づき。会話の中で学んだことを Claude が自動で蓄積していく。</p>
             </div>
           </div>
 
@@ -3768,77 +3770,77 @@ const MODULES = [
           <p>Subagents（複数のエージェント）は“作る”だけでなく、<strong>“調べる・考える”でこそ威力を発揮します</strong>。1体では「1つの視点」「1つの机（一度に扱える情報量）」に限られますが、手分けすれば<strong>広さ</strong>と<strong>客観性</strong>を同時に手に入れられます。</p>
 
           <h4>🔍 リサーチの型：観点を分担して並行調査</h4>
-          <div class=”visual-steps”>
-            <div class=”visual-step-item”>
-              <div class=”step-marker”>🔍</div>
-              <div class=”step-body”>
-                <div class=”step-title”>観点別に並列調査</div>
-                <div class=”step-desc”>複数の担当が同時に異なる観点を調べる。1体では「1つの机」の情報量に限られるが、手分けすれば広く深く調査できる。</div>
+          <div class="visual-steps">
+            <div class="visual-step-item">
+              <div class="step-marker">🔍</div>
+              <div class="step-body">
+                <div class="step-title">観点別に並列調査</div>
+                <div class="step-desc">複数の担当が同時に異なる観点を調べる。1体では「1つの机」の情報量に限られるが、手分けすれば広く深く調査できる。</div>
               </div>
             </div>
-            <div class=”visual-step-item”>
-              <div class=”step-marker”>🧠</div>
-              <div class=”step-body”>
-                <div class=”step-title”>親が統合</div>
-                <div class=”step-desc”>各担当から要約だけを受け取り、メインエージェントが全体をまとめる。</div>
+            <div class="visual-step-item">
+              <div class="step-marker">🧠</div>
+              <div class="step-body">
+                <div class="step-title">親が統合</div>
+                <div class="step-desc">各担当から要約だけを受け取り、メインエージェントが全体をまとめる。</div>
               </div>
             </div>
-            <div class=”visual-step-item”>
-              <div class=”step-marker”>✅</div>
-              <div class=”step-body”>
-                <div class=”step-title”>別担当が検証</div>
-                <div class=”step-desc”>抜けと根拠の弱い点をチェックする専任を立てる。調べた担当とは独立しているので批判が甘くならない。</div>
+            <div class="visual-step-item">
+              <div class="step-marker">✅</div>
+              <div class="step-body">
+                <div class="step-title">別担当が検証</div>
+                <div class="step-desc">抜けと根拠の弱い点をチェックする専任を立てる。調べた担当とは独立しているので批判が甘くならない。</div>
               </div>
             </div>
-            <div class=”visual-step-item”>
-              <div class=”step-marker”>📄</div>
-              <div class=”step-body”>
-                <div class=”step-title”>1枚にまとめる</div>
-                <div class=”step-desc”>広く深く、抜けの少ない成果物として完成する。</div>
+            <div class="visual-step-item">
+              <div class="step-marker">📄</div>
+              <div class="step-body">
+                <div class="step-title">1枚にまとめる</div>
+                <div class="step-desc">広く深く、抜けの少ない成果物として完成する。</div>
               </div>
             </div>
           </div>
-          <div class=”prompt-copy”>
-            <span class=”prompt-copy-label”>そのまま使える例文</span>
+          <div class="prompt-copy">
+            <span class="prompt-copy-label">そのまま使える例文</span>
             <p>競合3社を『価格・提供価値・顧客層』の3観点でサブエージェントに手分けして並列で調べて。統合したら、別の担当に抜けと根拠の弱い点をチェックさせ、最後に1枚の比較表にまとめて</p>
-            <button class=”copy-btn” data-copy=”競合3社を『価格・提供価値・顧客層』の3観点でサブエージェントに手分けして並列で調べて。統合したら、別の担当に抜けと根拠の弱い点をチェックさせ、最後に1枚の比較表にまとめて”>コピー</button>
+            <button class="copy-btn" data-copy="競合3社を『価格・提供価値・顧客層』の3観点でサブエージェントに手分けして並列で調べて。統合したら、別の担当に抜けと根拠の弱い点をチェックさせ、最後に1枚の比較表にまとめて">コピー</button>
           </div>
 
           <h4>💡 アイデアの型：発散役と評価役を分ける</h4>
-          <div class=”visual-steps”>
-            <div class=”visual-step-item”>
-              <div class=”step-marker”>📚</div>
-              <div class=”step-body”>
-                <div class=”step-title”>成功パターンを調べる</div>
-                <div class=”step-desc”>前例・成功事例を収集する。ゼロから発想するより、良い型を知ってから発散した方が質が上がる。</div>
+          <div class="visual-steps">
+            <div class="visual-step-item">
+              <div class="step-marker">📚</div>
+              <div class="step-body">
+                <div class="step-title">成功パターンを調べる</div>
+                <div class="step-desc">前例・成功事例を収集する。ゼロから発想するより、良い型を知ってから発散した方が質が上がる。</div>
               </div>
             </div>
-            <div class=”visual-step-item”>
-              <div class=”step-marker”>💡</div>
-              <div class=”step-body”>
-                <div class=”step-title”>案を発散</div>
-                <div class=”step-desc”>数を出すことに徹する。まず量。評価は次の担当に任せるので、この段階では絞らない。</div>
+            <div class="visual-step-item">
+              <div class="step-marker">💡</div>
+              <div class="step-body">
+                <div class="step-title">案を発散</div>
+                <div class="step-desc">数を出すことに徹する。まず量。評価は次の担当に任せるので、この段階では絞らない。</div>
               </div>
             </div>
-            <div class=”visual-step-item”>
-              <div class=”step-marker”>🎚️</div>
-              <div class=”step-body”>
-                <div class=”step-title”>評価役が採点</div>
-                <div class=”step-desc”>発散とは別の担当が基準で採点・選別する。作り手と評価役を分けることで甘い自己評価を排除できる。</div>
+            <div class="visual-step-item">
+              <div class="step-marker">🎚️</div>
+              <div class="step-body">
+                <div class="step-title">評価役が採点</div>
+                <div class="step-desc">発散とは別の担当が基準で採点・選別する。作り手と評価役を分けることで甘い自己評価を排除できる。</div>
               </div>
             </div>
-            <div class=”visual-step-item”>
-              <div class=”step-marker”>🏆</div>
-              <div class=”step-body”>
-                <div class=”step-title”>上位案に絞る</div>
-                <div class=”step-desc”>検討に値する案だけが残る。従来は複数AIに投げてコピペ統合していた工程が一度の依頼で通せる。</div>
+            <div class="visual-step-item">
+              <div class="step-marker">🏆</div>
+              <div class="step-body">
+                <div class="step-title">上位案に絞る</div>
+                <div class="step-desc">検討に値する案だけが残る。従来は複数AIに投げてコピペ統合していた工程が一度の依頼で通せる。</div>
               </div>
             </div>
           </div>
-          <div class=”prompt-copy”>
-            <span class=”prompt-copy-label”>そのまま使える例文</span>
+          <div class="prompt-copy">
+            <span class="prompt-copy-label">そのまま使える例文</span>
             <p>新サービスの名称を考えたい。まず命名の成功パターンを調べ、次に案を20個発散し、別の評価役に『覚えやすさ・独自性・既存名との重複』で採点させて上位5案に絞って</p>
-            <button class=”copy-btn” data-copy=”新サービスの名称を考えたい。まず命名の成功パターンを調べ、次に案を20個発散し、別の評価役に『覚えやすさ・独自性・既存名との重複』で採点させて上位5案に絞って”>コピー</button>
+            <button class="copy-btn" data-copy="新サービスの名称を考えたい。まず命名の成功パターンを調べ、次に案を20個発散し、別の評価役に『覚えやすさ・独自性・既存名との重複』で採点させて上位5案に絞って">コピー</button>
           </div>
 
           <div class="info-box">
