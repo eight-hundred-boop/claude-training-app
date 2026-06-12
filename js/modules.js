@@ -610,9 +610,26 @@ const MODULES = [
             </div>
           </div>
 
-          <div class="visual-highlight-card">
-            <p><strong>「任せる」と「丸投げ」は違う</strong>：Claude に任せるのは「初稿の作成」。判断・確認・最終仕上げは自分の仕事です。このバランスが、AI を安全かつ効果的に使うコツです。</p>
+          <div class="visual-comparison">
+            <div class="visual-comparison-card before">
+              <div class="comp-label">🤝 Claudeに任せる</div>
+              <ul>
+                <li>初稿・たたき台の作成</li>
+                <li>情報整理・要約の下ごしらえ</li>
+                <li>複数の選択肢の列挙</li>
+              </ul>
+            </div>
+            <div class="ba-arrow">→</div>
+            <div class="visual-comparison-card after">
+              <div class="comp-label">🙋 自分が持つ</div>
+              <ul>
+                <li>事実・数字の裏取り</li>
+                <li>判断・意思決定</li>
+                <li>最終仕上げと提出</li>
+              </ul>
+            </div>
           </div>
+          <p style="font-size:13px;color:var(--text-secondary);text-align:center;">「任せる」のは初稿まで。<strong>判断・確認・最終仕上げは自分の仕事</strong>です。</p>
 
           <div class="tip-box">
             <strong>💡 これは生成AI共通の習慣</strong><br>
@@ -703,10 +720,28 @@ const MODULES = [
             </div>
           </div>
 
-          <div class="info-box">
-            <strong>🎨 Artifactギャラリーに「貯まるもの」と「貯まらないもの」</strong><br>
-            Artifactとして生成され、サイドバーの「Artifact」一覧に貯まるのは、画面の中で開いて見られるもの——Markdown文書・図（Mermaid）・HTML／インタラクティブUI・コードなど。チャットで作るとそのまま一覧に登録され、あとから検索・再利用できる。<br><br>
-            一方、PowerPoint・Word・Excel・PDF はダウンロードして開くファイルで、Artifact一覧には登録されない。これらは Office アドイン（1-9）や Cowork（1-13）で作る成果物。「ギャラリーに残るのは Markdown／図／HTML 系、Office ファイルはダウンロード」と覚えておけばOK。
+          <div class="visual-comparison">
+            <div class="visual-comparison-card before">
+              <div class="comp-label">🎨 ギャラリーに貯まる</div>
+              <ul>
+                <li>Markdown 文書</li>
+                <li>図（Mermaid）</li>
+                <li>HTML / インタラクティブUI</li>
+                <li>コード</li>
+              </ul>
+              <p style="font-size:12px;color:var(--text-secondary);margin-top:8px;">画面内で開いて検索・再利用できる</p>
+            </div>
+            <div class="ba-arrow">vs</div>
+            <div class="visual-comparison-card after">
+              <div class="comp-label">📥 ダウンロードして使う</div>
+              <ul>
+                <li>PowerPoint（→ Office アドイン 1-9）</li>
+                <li>Word（→ Office アドイン 1-9）</li>
+                <li>Excel（→ Office アドイン 1-9）</li>
+                <li>PDF / その他ファイル（→ Cowork 1-13）</li>
+              </ul>
+              <p style="font-size:12px;color:var(--text-secondary);margin-top:8px;">Artifact一覧には登録されない</p>
+            </div>
           </div>
 
           <h3>Artifact の活用シーン</h3>
@@ -1935,13 +1970,27 @@ const MODULES = [
           </div>
 
           <h3>今日からやること（まず1つでOK）</h3>
-          <div class="info-box">
-            <ul>
-              <li><strong>「Claudeへの指示」に前提を登録</strong> — 役職・業界・トーンを1回だけ。</li>
-              <li><strong>担当案件で Project を1つ作る</strong> — Instructions に概要を書く。</li>
-              <li><strong>成果物を1つ作る</strong> — Artifact か Cowork で。</li>
-              <li><strong>Office アドインを1回使う</strong> — PowerPoint などを入れて試す。</li>
-            </ul>
+          <div class="visual-grid cols-2">
+            <div class="visual-grid-item">
+              <div class="grid-icon">⚙️</div>
+              <div class="grid-title">「Claudeへの指示」に前提を登録</div>
+              <div class="grid-desc">役職・業界・トーンを1回だけ入力。毎回説明し直す手間がなくなる。</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">📁</div>
+              <div class="grid-title">担当案件で Project を1つ作る</div>
+              <div class="grid-desc">Instructions に案件の概要を書き込む。</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">🏗️</div>
+              <div class="grid-title">成果物を1つ作る</div>
+              <div class="grid-desc">Artifact か Cowork で実際の業務に当てはめてみる。</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">📊</div>
+              <div class="grid-title">Office アドインを1回使う</div>
+              <div class="grid-desc">PowerPoint などを入れて手元のファイルで試してみる。</div>
+            </div>
           </div>
 
           <div class="tip-box">
@@ -1950,8 +1999,24 @@ const MODULES = [
           </div>
 
           <h3>次回（第2回）へ</h3>
-          <div class="visual-highlight-card">
-            <p>第1回で「Chat の基本と成果物づくり」を押さえた。第2回はその先——Claude Code で成果物の幅を広げ、仕組み（CLAUDE.md・Skills・MCP）で品質を安定させ、チームに展開する段階へ。</p>
+          <div class="visual-before-after">
+            <div class="ba-item before">
+              <div class="ba-label">第1回：Chat の基本と成果物づくり</div>
+              <ul>
+                <li>Chat・Project・Artifact で初速を上げる</li>
+                <li>Office / Research / Cowork で成果物にする</li>
+                <li>Skill で手順を型化する</li>
+              </ul>
+            </div>
+            <div class="ba-arrow">→</div>
+            <div class="ba-item after">
+              <div class="ba-label">第2回：Claude Code で幅を広げ、品質を安定させる</div>
+              <ul>
+                <li>Claude Code で高度な成果物を作る</li>
+                <li>CLAUDE.md・Skills・MCP で品質を固定する</li>
+                <li>Subagents でリサーチ・企画にも展開する</li>
+              </ul>
+            </div>
           </div>
         `
       }
@@ -2350,10 +2415,17 @@ const MODULES = [
             </div>
           </div>
 
-          <div class="tip-box">
-            <strong>💡 Project で前提を保持し、Artifact で独立した成果物を切り出す</strong><br>
-            ・<strong>Project</strong> — 前提・資料を入れておけば毎回説明し直さなくてよい<br>
-            ・<strong>Artifact</strong> — 文書やコード・ツールを本文と切り離し、単独で編集・再利用できる
+          <div class="visual-grid cols-2">
+            <div class="visual-grid-item">
+              <div class="grid-icon">📋</div>
+              <div class="grid-title">Project</div>
+              <div class="grid-desc">前提・資料を入れておけば毎回説明し直さなくてよい</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">🎨</div>
+              <div class="grid-title">Artifact</div>
+              <div class="grid-desc">文書やコード・ツールを本文と切り離し、単独で編集・再利用できる</div>
+            </div>
           </div>
 
           <h3>成果物につなげる</h3>
@@ -2385,9 +2457,22 @@ const MODULES = [
             </div>
           </div>
 
-          <div class="info-box">
-            <strong>💡 第1回の Artifact（プロトタイプ）と Cowork（ローカルフォルダでのファイル作業）を思い出す</strong><br>
-            Artifact で「プロトタイプ」を、Cowork で「ローカルフォルダでのファイル作業」を体験しました。第2回の Claude Code は、この2つをさらに広げて<strong>保存できる・複数ファイルを横断する・繰り返し使える成果物</strong>を作る段階です。
+          <div class="visual-before-after">
+            <div class="ba-item before">
+              <div class="ba-label">第1回で体験したこと</div>
+              <ul>
+                <li>🎨 <strong>Artifact</strong> — その場のプロトタイプ</li>
+                <li>📂 <strong>Cowork</strong> — ローカルフォルダでのファイル作業</li>
+              </ul>
+            </div>
+            <div class="ba-arrow">→</div>
+            <div class="ba-item after">
+              <div class="ba-label">第2回：Claude Code でさらに広げる</div>
+              <ul>
+                <li>保存できる・複数ファイルを横断する</li>
+                <li>繰り返し使える成果物を作る段階へ</li>
+              </ul>
+            </div>
           </div>
 
           <h3>第2回でやること</h3>
@@ -2783,7 +2868,23 @@ const MODULES = [
         type: 'lecture',
         content: `
           <h3>このセクションで学ぶこと</h3>
-          <p>準備が整ったら、実際に成果物を作ります。まずは Claude Code が特に得意な<strong>データ処理と複数ファイルの横断作業</strong>から。手作業だと時間がかかる「集める・整える・まとめる」を任せます。ねらいは作業の置き換えではなく、<strong>下ごしらえを任せて、自分は分析・判断に時間を使う</strong>ことです。</p>
+          <p>まずは Claude Code が特に得意な<strong>データ処理と複数ファイルの横断作業</strong>から。</p>
+          <div class="visual-mapping">
+            <div class="mapping-header">
+              <span class="mapping-from">担当</span>
+              <span class="mapping-to">役割</span>
+            </div>
+            <div class="mapping-row">
+              <span class="mapping-from">🤖 Claude Code</span>
+              <span class="mapping-arrow">→</span>
+              <span class="mapping-to">集める・整える・まとめる（下ごしらえ）</span>
+            </div>
+            <div class="mapping-row">
+              <span class="mapping-from">🧑 自分</span>
+              <span class="mapping-arrow">→</span>
+              <span class="mapping-to">分析・判断（価値を出す仕事）</span>
+            </div>
+          </div>
 
           <h3>どんな成果物が作れるか</h3>
           <div class="visual-grid cols-2">
@@ -2843,13 +2944,31 @@ const MODULES = [
             </div>
           </div>
 
-          <h3>活用例：アンケート・調査データを3分で集計する</h3>
-          <div class="example-box">
-            <strong>📌 手元のファイルを渡して結果を即受け取る流れ</strong><br><br>
-            1. 複数のアンケート結果・調査データ（CSV / Excel）を作業用フォルダに置く（または Finder で選択してパスをコピー）<br>
-            2. Claude Code に「これらを統合して、設問ごと・セグメント別に集計し、比較表にして」<br>
-            3. 結果を確認後「集計表を新しいファイルとして保存して」<br>
-            4. 出力ファイルを開いて数値を元データと照合し、報告書に反映
+          <h3>活用例：アンケート・調査データを集計する</h3>
+          <div class="visual-flow">
+            <div class="flow-step">
+              <div class="flow-num">📁</div>
+              <div class="flow-label">データを作業フォルダに置く</div>
+              <div class="flow-desc">複数の CSV / Excel を作業用フォルダへ</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-num">💬</div>
+              <div class="flow-label">統合・集計を依頼</div>
+              <div class="flow-desc">「設問ごと・セグメント別に集計し、比較表にして」</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-num">💾</div>
+              <div class="flow-label">新ファイルとして保存</div>
+              <div class="flow-desc">「集計表を新しいファイルとして保存して」</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-num">✅</div>
+              <div class="flow-label">元データと照合して報告書へ</div>
+              <div class="flow-desc">数値・金額は必ず自分で確認してから使う</div>
+            </div>
           </div>
 
           <div class="warning-box">
@@ -2985,22 +3104,22 @@ const MODULES = [
             <div class="visual-grid-item">
               <div class="grid-icon">📏</div>
               <div class="grid-title">CLAUDE.md ＝ 守る作法</div>
-              <div class="grid-desc"><strong>常に</strong>効くルール（毎回自動で読み込む）。<br>例：文体・体裁・禁止事項<br>🍳 料理でいう「店の決まり」</div>
+              <div class="grid-desc"><span class="grid-badge" style="background:var(--primary);color:#fff;font-size:10px;padding:2px 8px;border-radius:99px;display:inline-block;margin-bottom:6px;">常時効く</span><br>例：文体・体裁・禁止事項<br>🍳 店の決まり</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">📖</div>
               <div class="grid-title">Skills ＝ レシピ＋道具箱</div>
-              <div class="grid-desc">手順とテンプレ・決まった処理をまとめた型。名指しで呼べるほか、合う依頼なら自動で使われる。<br>例：議事録の型・週報づくり<br>🍳 料理でいう「レシピ本と調理道具」</div>
+              <div class="grid-desc"><span class="grid-badge" style="border:1px solid var(--primary);color:var(--primary);font-size:10px;padding:2px 8px;border-radius:99px;display:inline-block;margin-bottom:6px;">必要なときに効く</span><br>例：議事録の型・週報づくり<br>🍳 レシピ本と調理道具</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">🛒</div>
               <div class="grid-title">MCP ＝ 材料の取り寄せ</div>
-              <div class="grid-desc"><strong>必要なとき</strong>に、社内データなどを外から接続。<br>例：Notion・Slack<br>🍳 料理でいう「材料の買い出し」</div>
+              <div class="grid-desc"><span class="grid-badge" style="border:1px solid var(--primary);color:var(--primary);font-size:10px;padding:2px 8px;border-radius:99px;display:inline-block;margin-bottom:6px;">必要なときに効く</span><br>例：Notion・Slack<br>🍳 材料の買い出し</div>
             </div>
           </div>
 
-          <div class="visual-highlight-card">
-            <p><strong>常に守るルール（CLAUDE.md）の上で、型化した手順と道具（Skills）を使い、足りないデータ（MCP）を取り寄せる</strong> — この役割分担で、成果物の質と再現性が固定されます。<br>※ CLAUDE.md は<strong>常時</strong>、Skills と MCP は<strong>必要なとき</strong>に効く、という「いつ効くか」の違いも押さえておきましょう。</p>
+          <div class="info-box">
+            <p>常に守るルール（CLAUDE.md）の上で、型化した手順と道具（Skills）を使い、足りないデータ（MCP）を取り寄せる — この役割分担で質と再現性が固定されます。</p>
           </div>
 
           <h3>CLAUDE.md — 作業ルールを書いておく</h3>
@@ -3162,7 +3281,24 @@ const MODULES = [
           </div>
 
           <h4>いつ Skill にする？(3条件)</h4>
-          <p>繰り返し発生する／手順が明確／品質基準がある——この3つが揃う作業が Skill 向き。</p>
+          <div class="visual-grid cols-3">
+            <div class="visual-grid-item">
+              <div class="grid-icon">🔁</div>
+              <div class="grid-title">繰り返し発生する</div>
+              <div class="grid-desc">週次・案件ごとに同じ作業が発生する</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">📋</div>
+              <div class="grid-title">手順が明確</div>
+              <div class="grid-desc">「毎回このステップでやる」が言語化できる</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">🎚️</div>
+              <div class="grid-title">品質基準がある</div>
+              <div class="grid-desc">「これを満たせばOK」という判断軸がある</div>
+            </div>
+          </div>
+          <p style="font-size:13px;color:var(--text-secondary);">この3つが揃う作業が Skill 向き。</p>
 
           <h4>どう作って育てる？ — まず指示文だけ、あとから道具を足す</h4>
           <p>最初から完成形を目指さなくてよい。<strong>まずは指示文（手順）だけ</strong>で作り、使いながら足りないものを足して育てる、の3ステップが現実的だ。プログラムを書く必要はない。</p>
@@ -3627,7 +3763,26 @@ const MODULES = [
           </div>
 
           <h4>待ち時間は別の会話で並行できる</h4>
-          <p>長い作業を待つ間、別の会話で他の仕事を進めてかまいません。ただし<strong>同じフォルダを2つの会話で同時に変更しない</strong>でください（互いに上書きし合います）。「案件＝フォルダ＝会話」を1対1にするのが安全です。</p>
+          <div class="visual-comparison">
+            <div class="visual-comparison-card after">
+              <div class="comp-label">✅ 安全な形</div>
+              <ul>
+                <li>📁 A社フォルダ ↔ 💬 会話A</li>
+                <li>📁 B社フォルダ ↔ 💬 会話B</li>
+              </ul>
+              <p style="font-size:12px;color:var(--text-secondary);margin-top:6px;">案件＝フォルダ＝会話を 1対1に</p>
+            </div>
+            <div class="ba-arrow">vs</div>
+            <div class="visual-comparison-card before">
+              <div class="comp-label">⚠️ 避ける形</div>
+              <ul>
+                <li>💬 会話1 ＋ 💬 会話2</li>
+                <li>↓</li>
+                <li>📁 同じフォルダを同時変更</li>
+              </ul>
+              <p style="font-size:12px;color:var(--text-secondary);margin-top:6px;">互いに上書きし合う原因になる</p>
+            </div>
+          </div>
 
           <h4>小ワザ3選 — パスのコピー／Effort 設定／ESC 2回・↑キー</h4>
           <div class="visual-grid cols-3">
