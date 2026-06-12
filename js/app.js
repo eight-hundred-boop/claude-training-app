@@ -196,6 +196,13 @@
     cards.forEach(el => { if (!target && el.textContent && el.textContent.indexOf(title) !== -1) target = el; });
     if (!target) return;
     if (target.tagName === 'DETAILS') target.open = true;
+    // 非表示の練習問題タブ内にある場合はタブを切り替える
+    const panel = target.closest('[data-practices-panel]');
+    if (panel && panel.style.display === 'none') {
+      const panelId = panel.getAttribute('data-practices-panel');
+      const tab = container.querySelector(`[data-practices-tab="${panelId}"]`);
+      if (tab) tab.click();
+    }
     target.scrollIntoView({ block: 'center' });
     target.classList.add('search-flash');
     setTimeout(() => target.classList.remove('search-flash'), 1600);
@@ -962,7 +969,7 @@
           <div class="section-list">
             ${mod.sections.map((sec, i) => {
               const c = isSectionComplete(moduleIndex, i);
-              const tl = sec.type==='handson'?'ハンズオン':'講義';
+              const tl = sec.type==='hands-on'?'ハンズオン':'講義';
               const tc = sec.type||'lecture';
               return `<div class="section-item ${c?'completed':''}" data-section="${i}">
                 <div class="section-header">
@@ -1072,7 +1079,9 @@
       container.querySelector('#back-quiz-hub')?.addEventListener('click', () => navigateTo('quiz-hub'));
       return;
     }
-    if (progress.finalTest) { renderCertificate(container, progress.finalTest); return; }
+    const isRetake = sessionStorage.getItem('finalTestRetake') === '1';
+    sessionStorage.removeItem('finalTestRetake');
+    if (progress.finalTest && !isRetake) { renderCertificate(container, progress.finalTest); return; }
     container.innerHTML = `<div class="fade-in"><div class="final-test-intro">
       <h1>修了テスト</h1><p>全${MODULES.length}回の研修から合計${MODULES.reduce((s, m) => s + m.quiz.length, 0)}問。80%以上で修了証発行。</p>
       <div style="margin-top:24px"><button class="btn btn-primary" id="start-final-test">テストを開始する</button></div>
@@ -1080,7 +1089,9 @@
     container.querySelector('#start-final-test')?.addEventListener('click', () => {
       container.querySelector('.final-test-intro').style.display='none';
       new QuizEngine(generateFinalTestQuestions(), 'final-quiz-area', (score, total) => {
-        if (Math.round((score/total)*100) >= 80) { markFinalTestComplete(score,total); renderCertificate(container, {score,total,date:new Date().toISOString()}); }
+        if (Math.round((score/total)*100) >= 80) { markFinalTestComplete(score,total); }
+      }, (score, total) => {
+        renderCertificate(container, {score,total,date:new Date().toISOString()});
       }).render();
     });
   }
@@ -1090,7 +1101,7 @@
     container.innerHTML = `<div class="fade-in">
       <div class="final-test-intro"><h1>修了テスト結果</h1><p>${result.total}問中 ${result.score}問正解（${Math.round((result.score/result.total)*100)}%）</p></div>
       <div class="certificate slide-up">
-        <h2>修了証</h2><p class="cert-subtitle">Claude 研修コース - 基礎編（全${MODULES.length}回）</p>
+        <h2>修了証</h2><p class="cert-subtitle">Claude スキルアップ講座（全${MODULES.length}回）</p>
         <p style="font-size:14px;color:var(--text-secondary);margin-bottom:24px">以下の研修プログラムを修了し、修了テストに合格したことを証明します。</p>
         <div style="margin:20px 0;padding:16px;border-top:1px solid var(--border-light);border-bottom:1px solid var(--border-light)">
           ${MODULES.map(m=>`<p style="font-size:14px;margin:4px 0">${m.title}</p>`).join('')}
@@ -1100,7 +1111,8 @@
       <div style="text-align:center;margin-top:24px"><button class="btn btn-secondary" id="retake-final">もう一度受験する</button></div>
     </div>`;
     container.querySelector('#retake-final')?.addEventListener('click', () => {
-      const p=loadProgress(); delete p.finalTest; saveProgress(p); navigateTo('final-test');
+      sessionStorage.setItem('finalTestRetake', '1');
+      navigateTo('final-test');
     });
   }
 
@@ -1112,7 +1124,7 @@
     container.innerHTML = `
       <div class="fade-in present-home">
         <img src="assets/ehi-logo.png" alt="Eight Hundred" class="present-home-logo">
-        <h1 class="present-home-title">Claude 研修コース - 基礎編</h1>
+        <h1 class="present-home-title">Claude スキルアップ講座</h1>
         <div class="present-session-list">
           ${MODULES.map((mod, i) => `
             <div class="present-session-card" data-module="${i}">
@@ -1169,7 +1181,7 @@
         </div>`;
     } else {
       const sec = mod.sections[slideIdx - 1];
-      const tl = sec.type==='handson'?'ハンズオン':'講義';
+      const tl = sec.type==='hands-on'?'ハンズオン':'講義';
       const tc = sec.type||'lecture';
       const sectionIdx = slideIdx - 1;
       const groupForSection = (mod.coverGroups || []).find(g => g.sections.includes(sectionIdx));
@@ -1202,10 +1214,10 @@
               <div class="sidebar-group">
                 <div class="sidebar-group-label">${g.icon || ''} ${g.label}</div>
                 ${g.sections.map(si => {
-                  const num = mod.sections[si].title.match(/^[A-D]-(\d+)/);
-                  const label = mod.sections[si].title.replace(/^[A-D]-\d+\.\s*/, '');
+                  const num = mod.sections[si].title.match(/^\d+-\d+/);
+                  const label = mod.sections[si].title.replace(/^\d+-\d+\.\s*/, '');
                   return `<div class="sidebar-item ${slideIdx === si + 1 ? 'active' : ''}" data-goto-slide="${si + 1}">
-                    <span class="sidebar-num">${num ? num[0] : si + 1}</span> ${label}
+                    <span class="sidebar-num">${num ? num[0] : ''}</span> ${label}
                   </div>`;
                 }).join('')}
               </div>
@@ -1342,8 +1354,8 @@
     document.addEventListener('keydown', (e) => {
       if (currentMode !== 'present') return;
       if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
-      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') { e.preventDefault(); presentNext(); }
-      else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') { e.preventDefault(); presentPrev(); }
+      if (e.key === 'ArrowRight' || e.key === 'PageDown') { e.preventDefault(); presentNext(); }
+      else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); presentPrev(); }
       else if (e.key === 'Escape') { setMode('self-study'); }
     });
 

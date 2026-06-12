@@ -3229,11 +3229,15 @@ body.present-mode #page-container:has(.slide-cover) {
   gap: 20px;
   margin: 28px 0;
 }
-.slide-section-body .comp-item h4 {
+.slide-section-body .visual-comparison-card h4 {
   font-size: 18px;
 }
-.slide-section-body .comp-item li {
-  font-size: 16px;
+.slide-section-body .visual-comparison-card p,
+.slide-section-body .visual-comparison-card li {
+  font-size: 15px;
+}
+.slide-section-body .visual-comparison-card .comp-label {
+  font-size: 12px;
 }
 .slide-section-body .visual-funnel {
   margin: 32px 0;
@@ -3324,10 +3328,6 @@ body.present-mode .quiz-explanation {
     gap: 12px;
   }
 
-  .header-nav {
-    display: none;
-  }
-
   .header-logo span {
     display: none;
   }
@@ -3361,10 +3361,9 @@ body.present-mode .quiz-explanation {
   }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
-  .header-nav-link {
-    padding: 6px 10px;
-    font-size: 12px;
+@media (max-width: 1024px) {
+  .header-nav {
+    display: none;
   }
 }
 
@@ -5536,7 +5535,7 @@ body.landing-mode #global-footer {
 }
 .nav-toggle:hover { background: var(--surface-hover); }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .nav-toggle { display: inline-flex; }
   #global-header.nav-open .header-nav {
     display: flex;
