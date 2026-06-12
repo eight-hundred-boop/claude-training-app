@@ -4676,17 +4676,21 @@ body.landing-mode #global-footer {
   line-height: 1.6;
 }
 
-.visual-step-item .step-title {
+.visual-step-item .step-title,
+.visual-step-item .step-body .step-title {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 6px;
   color: var(--primary);
+  display: block;
 }
 
-.visual-step-item .step-desc {
+.visual-step-item .step-desc,
+.visual-step-item .step-body .step-desc {
   font-size: 14px;
-  color: var(--text);
+  color: var(--text-secondary);
   line-height: 1.65;
+  display: block;
 }
 
 /* step-item / step-number / step-content aliases */
