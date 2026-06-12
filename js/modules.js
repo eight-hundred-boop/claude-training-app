@@ -1688,25 +1688,22 @@ const MODULES = [
             <div class="visual-comparison-card before">
               <span class="comp-label">クラウド型</span>
               <h4>💬 Chat</h4>
-              <p style="text-align:center;line-height:2;margin:0;">
-                📄 ファイル<br>
-                ↓ <strong>⬆️ アップロード</strong><br>
-                ☁️ クラウド<br>
-                ↓<br>
-                🤖 Claude が読む
-              </p>
-              <p style="margin-top:10px;"><strong>※「アップロード」のワンクッションが要る</strong></p>
+              <ul>
+                <li>📄 ファイルを <strong>アップロード</strong></li>
+                <li>☁️ クラウド経由で Claude が読む</li>
+                <li>1ファイルずつ添付が必要</li>
+              </ul>
+              <p style="margin-top:8px;font-size:12px;color:var(--text-secondary);">※ 毎回アップロードし直すワンクッションが要る</p>
             </div>
             <div class="visual-comparison-card after">
               <span class="comp-label">ローカル型</span>
               <h4>📂 Cowork</h4>
-              <p style="text-align:center;line-height:2;margin:0;">
-                📁 PC のフォルダ<br>
-                ↕ <strong>直接アクセス</strong><br>
-                🤖 Claude<br>
-                <span style="color:var(--text-muted)">（往復なし）</span>
-              </p>
-              <p style="margin-top:10px;"><strong>※常に最新・フォルダごと一括で扱える</strong></p>
+              <ul>
+                <li>📁 PC のフォルダを <strong>直接アクセス許可</strong></li>
+                <li>Claude がフォルダ内を直接読む</li>
+                <li>フォルダごと一括で扱える</li>
+              </ul>
+              <p style="margin-top:8px;font-size:12px;color:var(--text-secondary);">※ アップロード不要・常に最新</p>
             </div>
           </div>
 
