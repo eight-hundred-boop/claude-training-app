@@ -118,71 +118,39 @@ const MODULES = [
           <h3>Chat を中心とした機能の広がり</h3>
           <p>Claude の機能は <strong>Chat（対話）を中心に広がっています</strong>。Chat の中で使える機能と、Chat の外に広がる機能を分けて理解しましょう。</p>
 
-          <div class="visual-big-message">
-            <div class="big-message-icon">💬</div>
-            <div class="big-message-text">Chat がすべての基盤</div>
-            <div class="big-message-sub">Project・Artifact・Research・Web検索・ファイル添付は、すべて Chat の中で使える機能です</div>
-          </div>
-
-          <h3>Chat の中で使える機能</h3>
-          <div class="visual-grid cols-2">
-            <div class="visual-grid-item">
-              <div class="grid-icon">📋</div>
-              <div class="grid-title">Project</div>
-              <div class="grid-desc">案件ごとに背景情報・ルール・参照資料を保持。毎回説明し直す手間がなくなる。<strong>1-7 で学習</strong></div>
+          <div class="visual-product-map">
+            <div class="product-map-row full">
+              <div class="product-group browser">
+                <div class="product-group-header">💬 Chat — すべての基盤</div>
+                <div class="product-features">
+                  <span class="product-feature">📋 Project（前提・資料を保持 — 1-7）</span>
+                  <span class="product-feature">🎨 Artifact（成果物を切り出す — 1-7）</span>
+                  <span class="product-feature">🔍 Research（複数ソースを調査 — 1-10）</span>
+                  <span class="product-feature">🌐 Web検索 / ファイル添付（1-4）</span>
+                </div>
+              </div>
             </div>
-            <div class="visual-grid-item">
-              <div class="grid-icon">🎨</div>
-              <div class="grid-title">Artifact</div>
-              <div class="grid-desc">会話とは独立した成果物を生成。文書・図表・Webページ・ダッシュボードなど。<strong>1-7 で学習</strong></div>
+            <div class="product-map-row split">
+              <div class="product-group desktop">
+                <div class="product-group-header">🖥️ Desktop アプリ追加モード</div>
+                <div class="product-features">
+                  <span class="product-feature">📂 Cowork（ファイル作業を委任 — 1-13）</span>
+                  <span class="product-feature">⚡ Claude Code（高度な作業 — 第2回）</span>
+                </div>
+              </div>
+              <div class="product-group office">
+                <div class="product-group-header">📊 Office / 🌐 Chrome</div>
+                <div class="product-features">
+                  <span class="product-feature">📊 Office アドイン（1-9）</span>
+                  <span class="product-feature">🌐 Chrome 拡張（1-12）</span>
+                  <span class="product-feature">⏰ Scheduled tasks（1-14）</span>
+                </div>
+              </div>
             </div>
-            <div class="visual-grid-item">
-              <div class="grid-icon">🔍</div>
-              <div class="grid-title">Research</div>
-              <div class="grid-desc">複数ソースを統合した包括的調査レポート。深く調べたいときに使う。<strong>1-10 で学習</strong></div>
-            </div>
-            <div class="visual-grid-item">
-              <div class="grid-icon">🌐</div>
-              <div class="grid-title">Web検索 / ファイル添付</div>
-              <div class="grid-desc">最新情報の検索、PDF・Excel・画像の添付と処理。Chat の基本機能。<strong>1-4 で学習</strong></div>
-            </div>
-          </div>
-
-          <h3>Chat の外に広がる機能</h3>
-          <div class="visual-grid cols-2">
-            <div class="visual-grid-item">
-              <div class="grid-icon">📂</div>
-              <div class="grid-title">Cowork</div>
-              <div class="grid-desc">ゴールを伝えてファイル作業を任せる。PPTX / XLSX / DOCX をフォルダに直接出力。<strong>1-13 で学習</strong></div>
-            </div>
-            <div class="visual-grid-item">
-              <div class="grid-icon">⚡</div>
-              <div class="grid-title">Claude Code</div>
-              <div class="grid-desc">複数ファイル編集・データ処理・ツール作成など、高度な作業を任せる。Desktop を基本に CLI / IDE でも使える。<strong>第2回（2-3）で学習</strong></div>
-            </div>
-            <div class="visual-grid-item">
-              <div class="grid-icon">📊</div>
-              <div class="grid-title">Office アドイン</div>
-              <div class="grid-desc">Excel / PowerPoint / Word の中から Claude を呼び出す。<strong>1-9 で学習</strong></div>
-            </div>
-            <div class="visual-grid-item">
-              <div class="grid-icon">🌐</div>
-              <div class="grid-title">Chrome 拡張</div>
-              <div class="grid-desc">ブラウザで開いたページを Claude に読ませて要約・分析。<strong>1-12 で学習</strong></div>
-            </div>
-          </div>
-
-          <h3>品質・連携を支える機能</h3>
-          <div class="visual-grid cols-2">
-            <div class="visual-grid-item">
-              <div class="grid-icon">🧩</div>
-              <div class="grid-title">Skills</div>
-              <div class="grid-desc">繰り返すタスクの手順を標準化。チームの作法を Claude に覚えさせる。<strong>1-15（基礎）／第2回 2-1（発展）で学習</strong></div>
-            </div>
-            <div class="visual-grid-item">
-              <div class="grid-icon">🔗</div>
-              <div class="grid-title">MCP / Connectors</div>
-              <div class="grid-desc">Slack・Notion 等の社内ツールと Claude を接続。<strong>第2回（2-2）で学習</strong></div>
+            <div class="product-map-row full">
+              <div class="product-group" style="background:var(--bg);border:1px solid var(--border-light);">
+                <div class="product-group-header" style="color:var(--text-secondary);">🧩 Skills（手順の型化 — 1-15 / 第2回）　　🔗 MCP / Connectors（社内ツール接続 — 第2回）</div>
+              </div>
             </div>
           </div>
 
@@ -238,90 +206,36 @@ const MODULES = [
           </div>
 
           <h3>作業スタイル × 利用場所</h3>
-          <p>同じ作業スタイルでも、利用場所は1つではありません。場面に合わせて選べます。</p>
+          <p>「<strong>何を任せるか</strong>（作業スタイル）」と「<strong>どこで使うか</strong>（利用場所）」を分けて理解するのが整理のコツです。</p>
 
-          <table class="info-table">
-            <thead>
-              <tr>
-                <th>作業スタイル</th>
-                <th>何をするものか</th>
-                <th>主な利用場所</th>
-                <th>位置づけ</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Chat</strong></td>
-                <td>会話しながら相談・整理・下書きする</td>
-                <td>Web / Desktop / Mobile</td>
-                <td>初心者がまず使う基本</td>
-              </tr>
-              <tr>
-                <td><strong>Cowork</strong></td>
-                <td>ファイル作業を任せる</td>
-                <td>Desktop</td>
-                <td>ファイル作業・資料作成で使う</td>
-              </tr>
-              <tr>
-                <td><strong>Claude Code</strong></td>
-                <td>プロトタイプ、コード・アプリ・複数ファイル作業を任せる</td>
-                <td><strong>Desktop が基本</strong>、CLI / IDE は上級者向け</td>
-                <td>まず Desktop で試し、より高度に使いたい人は CLI / IDE を選ぶ</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <h3>利用場所の整理</h3>
-          <p>逆に「どこで使うか」から見ると、それぞれの場所で使える作業スタイルがイメージしやすくなります。</p>
-
-          <table class="info-table">
-            <thead>
-              <tr>
-                <th>利用場所</th>
-                <th>主に使うもの</th>
-                <th>説明</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Web 版 Claude</strong>（claude.ai）</td>
-                <td>Chat / Project / Artifact / Research</td>
-                <td>基本入口。まず触る場所</td>
-              </tr>
-              <tr>
-                <td><strong>Claude Desktop</strong></td>
-                <td>Chat / Cowork / <strong>Claude Code</strong></td>
-                <td>初心者にも使いやすい。<strong>Claude Code もここから始めるのが基本</strong></td>
-              </tr>
-              <tr>
-                <td><strong>Mobile アプリ</strong></td>
-                <td>Chat 中心</td>
-                <td>外出先の確認・メモ・軽い相談</td>
-              </tr>
-              <tr>
-                <td><strong>IDE</strong>（VS Code / Cursor / JetBrains 拡張など）</td>
-                <td>Claude Code（より高度）</td>
-                <td>コードや複数のファイルを見ながら作業したい人向け。社内には Cursor 活用のノウハウもある</td>
-              </tr>
-              <tr>
-                <td>CLI（ターミナル）</td>
-                <td>Claude Code（より高度）</td>
-                <td>並列作業や自動化を求めるようになってからで OK</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <p><strong>つまり、「何を任せるか」（作業スタイル）と「どこで使うか」（利用場所）を分けて理解する</strong>のが、Claude を整理するコツです。</p>
-
-          <div class="info-box">
-            <strong>ℹ️ Claude Code は Claude Desktop から始めるのが基本</strong><br>
-            Chat / Cowork と同じデスクトップアプリの中で、特別な準備なしに使えます。CLI や IDE は、より細かく使いたくなったときに検討すれば十分です。
+          <div class="visual-mapping">
+            <div class="mapping-header">
+              <span class="mapping-from">作業スタイル</span>
+              <span class="mapping-to">主な利用場所 / 位置づけ</span>
+            </div>
+            <div class="mapping-row">
+              <span class="mapping-from">💬 <strong>Chat</strong> — 相談・整理・下書き</span>
+              <span class="mapping-arrow">→</span>
+              <span class="mapping-to">Web / Desktop / Mobile　初心者がまず使う基本</span>
+            </div>
+            <div class="mapping-row">
+              <span class="mapping-from">📂 <strong>Cowork</strong> — ファイル作業を任せる</span>
+              <span class="mapping-arrow">→</span>
+              <span class="mapping-to">Desktop　ファイル作業・資料作成で使う</span>
+            </div>
+            <div class="mapping-row">
+              <span class="mapping-from">⚡ <strong>Claude Code</strong> — プロトタイプ・複数ファイル・ツール作成</span>
+              <span class="mapping-arrow">→</span>
+              <span class="mapping-to"><strong>Desktop が基本</strong>（CLI / IDE は上級者向け）</span>
+            </div>
           </div>
 
           <div class="info-box">
-            <strong>📖 CLI と IDE とは？</strong><br>
-            <strong>CLI（コマンドラインインターフェース）</strong>：ターミナルやコマンドプロンプトと呼ばれる、文字でコンピューターに指示を出す画面です。並列作業や自動化を求めるようになってから使い始めれば十分です。<br>
-            <strong>IDE（統合開発環境）</strong>：VS Code / Cursor / JetBrains 拡張などのコードエディタ。ファイルを横に並べて見ながら編集できるツールです。コードや複数のファイルを編集する人向けです。
+            <strong>ℹ️ まずは Desktop から</strong><br>
+            Chat・Cowork・Claude Code はいずれも Claude Desktop から使えます。Web 版で Chat を試してみて、次のステップとして Desktop を開いてみましょう。CLI / IDE（VS Code / Cursor など）は、より高度に使いたくなってから検討すれば十分です。
+          </div>
+
+          <p style="display:none"></p><!-- 旧info-box 統合済み -->
           </div>
 
           <h3>判断フロー — いつ、どれを使う？</h3>
@@ -1669,37 +1583,29 @@ const MODULES = [
           </div>
 
           <h3>Chat と Cowork の使い分け</h3>
-          <table class="info-table">
-            <thead>
-              <tr>
-                <th>観点</th>
-                <th>💬 Chat</th>
-                <th>📂 Cowork</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>ファイルの渡し方</td>
-                <td>添付</td>
-                <td>フォルダごと接続</td>
-              </tr>
-              <tr>
-                <td>ファイル操作</td>
-                <td>添付したものを読む</td>
-                <td>フォルダ内を直接 読む・作る・書き換える</td>
-              </tr>
-              <tr>
-                <td>成果物</td>
-                <td>テキスト／Artifact 格納ファイル／ダウンロードファイル</td>
-                <td>フォルダにファイルとして出力</td>
-              </tr>
-              <tr>
-                <td>向く場面</td>
-                <td>壁打ち・下書き・要約</td>
-                <td>複数ファイルの整理・加工・一括処理</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="visual-comparison">
+            <div class="visual-comparison-card before">
+              <div class="comp-label">💬 Chat</div>
+              <h4>添付して会話する</h4>
+              <ul>
+                <li><strong>渡し方</strong>：ファイルを1つずつ添付</li>
+                <li><strong>操作</strong>：添付したものを読む</li>
+                <li><strong>成果物</strong>：テキスト / Artifact / ダウンロードファイル</li>
+                <li><strong>向く場面</strong>：壁打ち・下書き・要約</li>
+              </ul>
+            </div>
+            <div class="ba-arrow">→</div>
+            <div class="visual-comparison-card after">
+              <div class="comp-label">📂 Cowork</div>
+              <h4>フォルダごと任せる</h4>
+              <ul>
+                <li><strong>渡し方</strong>：フォルダごと接続</li>
+                <li><strong>操作</strong>：フォルダ内を直接 読む・作る・書き換える</li>
+                <li><strong>成果物</strong>：フォルダにファイルとして出力</li>
+                <li><strong>向く場面</strong>：複数ファイルの整理・加工・一括処理</li>
+              </ul>
+            </div>
+          </div>
 
           <h3>Cowork が力を発揮する場面</h3>
           <div class="visual-grid cols-2">
@@ -1976,31 +1882,55 @@ const MODULES = [
           <p>第1回は「<strong>個人で仕事の初速を上げ、成果物を作る</strong>」がテーマでした。要点を振り返ります。</p>
 
           <h3>今回の要点</h3>
-          <div class="visual-grid cols-2">
-            <div class="visual-grid-item">
-              <div class="grid-icon">🚀</div>
-              <div class="grid-title">仕事の初速を上げる</div>
-              <div class="grid-desc">
-                <ul>
-                  <li><strong>基盤は Chat</strong> — まず Chat。壁打ち・下書き・要約から。</li>
-                  <li><strong>プロンプト3要素</strong> — 前提・タスク・ルールで出力の質が決まる。</li>
-                  <li><strong>出力は“初稿”</strong> — そのまま使わず確認・修正。最終責任は自分。</li>
-                  <li><strong>Project / Artifact</strong> — 前提を保持し、成果物として残す。</li>
-                  <li><strong>対話で磨く</strong> — 1回で仕上げようとしない。往復しながら調整することで、成果物が育つ。</li>
-                </ul>
-              </div>
+          <h4>🚀 仕事の初速を上げる</h4>
+          <div class=”visual-grid cols-3”>
+            <div class=”visual-grid-item”>
+              <div class=”grid-icon”>💬</div>
+              <div class=”grid-title”>基盤は Chat</div>
+              <div class=”grid-desc”>まず Chat。壁打ち・下書き・要約から始める。</div>
             </div>
-            <div class="visual-grid-item">
-              <div class="grid-icon">🏗️</div>
-              <div class="grid-title">成果物を作る</div>
-              <div class="grid-desc">
-                <ul>
-                  <li><strong>使い分け</strong> — Office／Research／Artifact／Cowork を成果物に応じて選ぶ。</li>
-                  <li><strong>Cowork</strong> — フォルダごと渡してファイル作業を委任する。</li>
-                  <li><strong>Chrome / Scheduled tasks</strong> — ブラウザ作業を支援、定型業務を自動化。</li>
-                  <li><strong>Skill</strong> — よく使う手順を型にして再利用（Chat・Cowork でも）。</li>
-                </ul>
-              </div>
+            <div class=”visual-grid-item”>
+              <div class=”grid-icon”>📐</div>
+              <div class=”grid-title”>プロンプト3要素</div>
+              <div class=”grid-desc”>前提・タスク・ルールを揃えると出力の質が決まる。</div>
+            </div>
+            <div class=”visual-grid-item”>
+              <div class=”grid-icon”>✅</div>
+              <div class=”grid-title”>出力は”初稿”</div>
+              <div class=”grid-desc”>そのまま使わず確認・修正。最終責任は自分。</div>
+            </div>
+            <div class=”visual-grid-item”>
+              <div class=”grid-icon”>📋</div>
+              <div class=”grid-title”>Project / Artifact</div>
+              <div class=”grid-desc”>前提を保持し、成果物として切り出して残す。</div>
+            </div>
+            <div class=”visual-grid-item”>
+              <div class=”grid-icon”>🔄</div>
+              <div class=”grid-title”>対話で磨く</div>
+              <div class=”grid-desc”>1回で仕上げない。往復するほど成果物が育つ。</div>
+            </div>
+          </div>
+          <h4>🏗️ 成果物を作る</h4>
+          <div class=”visual-grid cols-2”>
+            <div class=”visual-grid-item”>
+              <div class=”grid-icon”>📊</div>
+              <div class=”grid-title”>使い分け</div>
+              <div class=”grid-desc”>Office／Research／Artifact／Cowork を成果物に応じて選ぶ。</div>
+            </div>
+            <div class=”visual-grid-item”>
+              <div class=”grid-icon”>📂</div>
+              <div class=”grid-title”>Cowork</div>
+              <div class=”grid-desc”>フォルダごと渡してファイル作業を委任する。</div>
+            </div>
+            <div class=”visual-grid-item”>
+              <div class=”grid-icon”>⏰</div>
+              <div class=”grid-title”>Chrome / Scheduled tasks</div>
+              <div class=”grid-desc”>ブラウザ作業を支援、定型業務を自動化。</div>
+            </div>
+            <div class=”visual-grid-item”>
+              <div class=”grid-icon”>🧩</div>
+              <div class=”grid-title”>Skill</div>
+              <div class=”grid-desc”>よく使う手順を型にして再利用（Chat・Cowork でも）。</div>
             </div>
           </div>
 
@@ -3373,8 +3303,36 @@ const MODULES = [
           </div>
 
           <h3>3つの道具が揃うと — ある月曜の朝</h3>
-          <div class="example-box">
-            🌅 「競合ウォッチ週報の Skill で今週分を作って」——依頼文はこの1行だけです。CLAUDE.md が黙って効いて文体・体裁が会社標準に揃い、Skill が手順とひな型を呼び出し、MCP でつながった Notion から先週の定例の議事メモを取り込みます。返ってくるのは、毎回同じ品質の週報ドラフトです。
+          <div class="visual-flow">
+            <div class="flow-step">
+              <div class="flow-num">🧑</div>
+              <div class="flow-label">依頼は1行</div>
+              <div class="flow-desc">「競合ウォッチ週報の Skill で今週分を作って」</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-num">📏</div>
+              <div class="flow-label">CLAUDE.md</div>
+              <div class="flow-desc">文体・体裁が会社標準に</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-num">📖</div>
+              <div class="flow-label">Skills</div>
+              <div class="flow-desc">手順とひな型を呼び出す</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-num">🛒</div>
+              <div class="flow-label">MCP</div>
+              <div class="flow-desc">Notion から議事メモを取得</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-num">📄</div>
+              <div class="flow-label">週報ドラフト</div>
+              <div class="flow-desc">毎回同じ品質で完成</div>
+            </div>
           </div>
           <p>常に守るルール（CLAUDE.md）の上で、型化した手順と道具（Skills）を使い、足りないデータ（MCP）を取り寄せる——<strong>3つが揃うほど、依頼文は短くなり、品質は安定します</strong>。</p>
 
@@ -3496,17 +3454,68 @@ const MODULES = [
           <h3>成果物づくりだけじゃない — リサーチ・企画にも効く</h3>
           <p>Subagents（複数のエージェント）は“作る”だけでなく、<strong>“調べる・考える”でこそ威力を発揮します</strong>。1体では「1つの視点」「1つの机（一度に扱える情報量）」に限られますが、手分けすれば<strong>広さ</strong>と<strong>客観性</strong>を同時に手に入れられます。</p>
 
-          <div class="visual-grid cols-2">
-            <div class="visual-grid-item">
-              <div class="grid-icon">🔍</div>
-              <div class="grid-title">リサーチの型：観点を分担して並行調査</div>
-              <div class="grid-desc">観点ごとに別の担当が<strong>同時に</strong>調べる → 親が統合 → 別の担当が<strong>多角で検証</strong> → もう一度まとめる。各自が要約だけ返すので、広く深く、抜けも減ります。<br>そのまま打てる例文：「競合3社を『価格・提供価値・顧客層』の3観点でサブエージェントに手分けして並列で調べて。統合したら、別の担当に抜けと根拠の弱い点をチェックさせ、最後に1枚の比較表にまとめて」</div>
+          <h4>🔍 リサーチの型：観点を分担して並行調査</h4>
+          <div class=”visual-flow”>
+            <div class=”flow-step”>
+              <div class=”flow-num”>🔍</div>
+              <div class=”flow-label”>観点別に並列調査</div>
+              <div class=”flow-desc”>複数の担当が同時に異なる観点を調べる</div>
             </div>
-            <div class="visual-grid-item">
-              <div class="grid-icon">💡</div>
-              <div class="grid-title">アイデアの型：発散役と評価役を分ける</div>
-              <div class="grid-desc">成功パターンを調べる → 案を一気に<strong>発散</strong> → 別の“<strong>評価役</strong>”が基準で採点して選別。作り手と評価役が分かれるので甘い自己評価にならず、検討に値する案が残ります。<br>そのまま打てる例文：「新サービスの名称を考えたい。まず命名の成功パターンを調べ、次に案を20個発散し、別の評価役に『覚えやすさ・独自性・既存名との重複』で採点させて上位5案に絞って」</div>
+            <div class=”flow-arrow”>→</div>
+            <div class=”flow-step”>
+              <div class=”flow-num”>🧠</div>
+              <div class=”flow-label”>親が統合</div>
+              <div class=”flow-desc”>各担当の要約をまとめる</div>
             </div>
+            <div class=”flow-arrow”>→</div>
+            <div class=”flow-step”>
+              <div class=”flow-num”>✅</div>
+              <div class=”flow-label”>別担当が検証</div>
+              <div class=”flow-desc”>抜けと根拠の弱い点をチェック</div>
+            </div>
+            <div class=”flow-arrow”>→</div>
+            <div class=”flow-step”>
+              <div class=”flow-num”>📄</div>
+              <div class=”flow-label”>1枚にまとめる</div>
+              <div class=”flow-desc”>広く深く、抜けの少ない成果物</div>
+            </div>
+          </div>
+          <div class=”prompt-copy”>
+            <span class=”prompt-copy-label”>そのまま使える例文</span>
+            <p>競合3社を『価格・提供価値・顧客層』の3観点でサブエージェントに手分けして並列で調べて。統合したら、別の担当に抜けと根拠の弱い点をチェックさせ、最後に1枚の比較表にまとめて</p>
+            <button class=”copy-btn” data-copy=”競合3社を『価格・提供価値・顧客層』の3観点でサブエージェントに手分けして並列で調べて。統合したら、別の担当に抜けと根拠の弱い点をチェックさせ、最後に1枚の比較表にまとめて”>コピー</button>
+          </div>
+
+          <h4>💡 アイデアの型：発散役と評価役を分ける</h4>
+          <div class=”visual-flow”>
+            <div class=”flow-step”>
+              <div class=”flow-num”>📚</div>
+              <div class=”flow-label”>成功パターンを調べる</div>
+              <div class=”flow-desc”>前例・成功事例を収集</div>
+            </div>
+            <div class=”flow-arrow”>→</div>
+            <div class=”flow-step”>
+              <div class=”flow-num”>💡</div>
+              <div class=”flow-label”>案を発散</div>
+              <div class=”flow-desc”>数を出す。まず量</div>
+            </div>
+            <div class=”flow-arrow”>→</div>
+            <div class=”flow-step”>
+              <div class=”flow-num”>🎚️</div>
+              <div class=”flow-label”>評価役が採点</div>
+              <div class=”flow-desc”>別の担当が基準で選別（甘い自己評価を排除）</div>
+            </div>
+            <div class=”flow-arrow”>→</div>
+            <div class=”flow-step”>
+              <div class=”flow-num”>🏆</div>
+              <div class=”flow-label”>上位案に絞る</div>
+              <div class=”flow-desc”>検討に値する案だけ残る</div>
+            </div>
+          </div>
+          <div class=”prompt-copy”>
+            <span class=”prompt-copy-label”>そのまま使える例文</span>
+            <p>新サービスの名称を考えたい。まず命名の成功パターンを調べ、次に案を20個発散し、別の評価役に『覚えやすさ・独自性・既存名との重複』で採点させて上位5案に絞って</p>
+            <button class=”copy-btn” data-copy=”新サービスの名称を考えたい。まず命名の成功パターンを調べ、次に案を20個発散し、別の評価役に『覚えやすさ・独自性・既存名との重複』で採点させて上位5案に絞って”>コピー</button>
           </div>
 
           <div class="info-box">
