@@ -676,7 +676,6 @@ const MODULES = [
                 <li>複数の選択肢の列挙</li>
               </ul>
             </div>
-            <div class="ba-arrow">→</div>
             <div class="visual-comparison-card after">
               <div class="comp-label">🙋 自分が持つ</div>
               <ul>
@@ -788,7 +787,6 @@ const MODULES = [
               </ul>
               <p style="font-size:12px;color:var(--text-secondary);margin-top:8px;">画面内で開いて検索・再利用できる</p>
             </div>
-            <div class="ba-arrow">vs</div>
             <div class="visual-comparison-card after">
               <div class="comp-label">📥 ダウンロードして使う</div>
               <ul>
@@ -1721,7 +1719,6 @@ const MODULES = [
                 <li><strong>向く場面</strong>：壁打ち・下書き・要約</li>
               </ul>
             </div>
-            <div class="ba-arrow">→</div>
             <div class="visual-comparison-card after">
               <div class="comp-label">📂 Cowork</div>
               <h4>フォルダごと任せる</h4>
@@ -1898,7 +1895,6 @@ const MODULES = [
               </ul>
               <p style="font-size:12px;margin-top:6px;">→ 予定どおり実行</p>
             </div>
-            <div class="ba-arrow">vs</div>
             <div class="visual-comparison-card before">
               <div class="comp-label">⏸️ いったんスキップ</div>
               <ul>
@@ -3924,7 +3920,6 @@ const MODULES = [
               </ul>
               <p style="font-size:12px;color:var(--text-secondary);margin-top:6px;">案件＝フォルダ＝会話を 1対1に</p>
             </div>
-            <div class="ba-arrow">vs</div>
             <div class="visual-comparison-card before">
               <div class="comp-label">⚠️ 避ける形</div>
               <ul>
