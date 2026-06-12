@@ -399,15 +399,37 @@ const MODULES = [
             </div>
           </div>
 
-          <h3>どのモデルを選ぶ？／どれだけ資料を渡せる？</h3>
-          <div class="info-box">
-            <strong>🧠 どのモデルを選ぶ？</strong><br>
-            Claude には用途別に複数のモデルがあり、Chat 画面のメニューで切り替えられます。<strong>高性能（複雑な分析・難しい長文）＝Opus</strong> ／ <strong>バランス型（日常業務の多くに最適）＝Sonnet</strong> ／ <strong>高速・軽量（短い定型処理）＝Haiku</strong>。迷ったらまず標準（バランス型）で、難所だけ高性能に切り替えれば OK です。
+          <h3>どのモデルを選ぶ？</h3>
+          <div class="visual-grid cols-3">
+            <div class="visual-grid-item">
+              <div class="grid-icon">⚡</div>
+              <div class="grid-title">Haiku</div>
+              <div class="grid-desc">高速・軽量。短い定型処理向き。</div>
+            </div>
+            <div class="visual-grid-item" style="border:2px solid var(--primary);">
+              <div class="grid-icon">⚖️</div>
+              <div class="grid-title">Sonnet<br><span style="font-size:11px;color:var(--primary);">★ 迷ったらここ</span></div>
+              <div class="grid-desc">バランス型。日常業務の多くに最適。</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">🧠</div>
+              <div class="grid-title">Opus</div>
+              <div class="grid-desc">高性能。複雑な分析・難しい長文向き。</div>
+            </div>
           </div>
-          <div class="info-box">
-            <strong>📚 どれだけ資料を渡せる？（トークン）</strong><br>
-            Claude は一度に<strong>約75万字（最大100万トークン）</strong>まで読み込めます。これは文庫本にして数冊分の分量で、長い議事録や報告書、複数資料もまるごと貼って質問できます。ただし一度に詰め込みすぎると要点がぼけることもあるので、必要な資料に絞る・分割するのもコツです。
+
+          <h3>どれだけ資料を渡せる？</h3>
+          <div class="visual-stats">
+            <div class="visual-stat">
+              <div class="stat-value">約75万字</div>
+              <div class="stat-label">一度に読み込める量</div>
+            </div>
+            <div class="visual-stat">
+              <div class="stat-value">文庫本で数冊分</div>
+              <div class="stat-label">長い議事録・報告書・複数資料もOK</div>
+            </div>
           </div>
+          <p style="font-size:13px;color:var(--text-secondary);">ただし一度に詰め込みすぎると要点がぼけることもあるので、必要な資料に絞る・分割するのもコツです。</p>
 
           <div class="try-box">
             <strong>✅ やってみよう</strong><br>
@@ -489,12 +511,32 @@ const MODULES = [
             </div>
           </div>
 
-          <div class="info-box">
-            <p><strong>💬 Claude との仕事は「1回で完成」より「往復して磨く」</strong></p>
-            <p>プロンプトは最初から完璧でなくてよい。簡潔な指示を出して、返ってきた出力を見ながら方向を調整する——この往復そのものが成果物を育てる工程。</p>
-            <p>例：「提案の切り口を5つ出して」→「2番をもっと具体的に」→「競合事例も加えて」→「これをArtifactの比較表にまとめて」</p>
-            <p>1回で完成させようとするより、対話で積み重ねた方が速く、質も上がることが多い。</p>
+          <div class="visual-flow">
+            <div class="flow-step">
+              <div class="flow-num">1</div>
+              <div class="flow-label">「切り口を5つ出して」</div>
+              <div class="flow-desc">まず簡潔に投げる</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-num">2</div>
+              <div class="flow-label">「2番をもっと具体的に」</div>
+              <div class="flow-desc">返ってきた出力を見て調整</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-num">3</div>
+              <div class="flow-label">「競合事例も加えて」</div>
+              <div class="flow-desc">方向を絞り込む</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-num">4</div>
+              <div class="flow-label">「Artifactの比較表に」</div>
+              <div class="flow-desc">成果物として完成</div>
+            </div>
           </div>
+          <p style="font-size:13px;color:var(--text-secondary);">1回で完成させようとするより、<strong>往復して積み重ねる</strong>ほうが速く、質も上がることが多い。</p>
 
           <div class="info-box">
             <strong>📄 会社の「生成AIプロンプト集」を活用する</strong><br>
@@ -516,7 +558,22 @@ const MODULES = [
             出力は結論先行・です・ます調、要点は箇条書きで簡潔に。<br>
             根拠のない数字・固有名詞は使わず、不確かな点は「要確認」と明記してください。
           </div>
-          <p style="color:var(--text-secondary);font-size:14px;">案件ごとの前提（クライアント名・フェーズ等）は Project の Instructions（1-7）に、全業務に共通する自分の作法はこの「Claudeへの指示」に分けると管理しやすい。</p>
+          <div class="visual-mapping">
+            <div class="mapping-header">
+              <span class="mapping-from">書きたい内容</span>
+              <span class="mapping-to">置き場所</span>
+            </div>
+            <div class="mapping-row">
+              <span class="mapping-from">全業務に共通する自分の作法（役職・トーン・出力ルール）</span>
+              <span class="mapping-arrow">→</span>
+              <span class="mapping-to">Claudeへの指示（設定）</span>
+            </div>
+            <div class="mapping-row">
+              <span class="mapping-from">案件固有の前提（クライアント名・フェーズ・案件ルール）</span>
+              <span class="mapping-arrow">→</span>
+              <span class="mapping-to">Project の Instructions（1-7 で学習）</span>
+            </div>
+          </div>
 
           <div class="try-box">
             <strong>✅ やってみよう</strong><br>
@@ -892,8 +949,43 @@ const MODULES = [
             <p>文章を書くだけのツールだと思われがちですが、表・チャート・インタラクティブなツールまで幅広い成果物を作れます。「これも Claude でできるかも？」と考える習慣が、活用の幅を広げる第一歩です。</p>
           </div>
 
-          <div class="info-box">
-            <p><strong>このあと学ぶ流れ</strong>：Office → Research → Artifact → Chrome → Cowork → Scheduled tasks の順に、それぞれの機能で何が作れるかを実践します。</p>
+          <div class="visual-flow">
+            <div class="flow-step">
+              <div class="flow-num">1-9</div>
+              <div class="flow-label">Office アドイン</div>
+              <div class="flow-desc">Office アプリで使う</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-num">1-10</div>
+              <div class="flow-label">Research</div>
+              <div class="flow-desc">深く調べる</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-num">1-11</div>
+              <div class="flow-label">Artifact</div>
+              <div class="flow-desc">プロトタイプを作る</div>
+            </div>
+          </div>
+          <div class="visual-flow" style="margin-top:8px;">
+            <div class="flow-step">
+              <div class="flow-num">1-12</div>
+              <div class="flow-label">Chrome 拡張</div>
+              <div class="flow-desc">ブラウザで使う</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-num">1-13</div>
+              <div class="flow-label">Cowork</div>
+              <div class="flow-desc">ファイル作業を委任</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-num">1-14</div>
+              <div class="flow-label">Scheduled tasks</div>
+              <div class="flow-desc">定型業務を自動化</div>
+            </div>
           </div>
         `
       },
@@ -1797,9 +1889,26 @@ const MODULES = [
             <p>Scheduled tasks の出力も、Chat や Cowork と同様に「初稿」です。特にニュース収集や競合チェックの結果は、自分の目で確認してから利用してください。自動だからといって品質チェックを省略しないことが重要です。</p>
           </div>
 
-          <div class="info-box">
-            <p>Scheduled tasks は Cowork（Claude Desktop）の機能です。実行されるのは <strong>PC が起動していて Claude Desktop が開いている間だけ</strong>で、PC がスリープ／アプリを閉じている間はスキップされ、次に PC を起動してアプリを開いたときに自動実行されます（クラウドで常時動くわけではありません）。</p>
+          <div class="visual-comparison">
+            <div class="visual-comparison-card after">
+              <div class="comp-label">▶️ 実行される</div>
+              <ul>
+                <li>PC 起動中</li>
+                <li>Claude Desktop を開いている</li>
+              </ul>
+              <p style="font-size:12px;margin-top:6px;">→ 予定どおり実行</p>
+            </div>
+            <div class="ba-arrow">vs</div>
+            <div class="visual-comparison-card before">
+              <div class="comp-label">⏸️ いったんスキップ</div>
+              <ul>
+                <li>PC がスリープ中</li>
+                <li>Claude Desktop を閉じている</li>
+              </ul>
+              <p style="font-size:12px;margin-top:6px;">→ 次に PC を開いたとき自動実行</p>
+            </div>
           </div>
+          <p style="font-size:13px;color:var(--text-secondary);">クラウドで常時動くわけではありません。</p>
         `
       },
 
@@ -1814,8 +1923,27 @@ const MODULES = [
           <p>Skill とは何かを理解し、資料作成やリサーチでの活用イメージを持ち、自分の繰り返し作業を1つ「型」にできるようになります。</p>
 
           <h3>Skill とは</h3>
-          <p>毎回ほぼ同じ指示を打ち込んでいる作業はありませんか。「議事録をこの体裁で整えて」「この観点で競合を調べて」——こうした<strong>よく使う手順・指示・出力形式を「型」として保存し、いつでも呼び出して再利用できる機能</strong>が Skill です。手順だけでなく、決まったテンプレートやルールも一緒にまとめておけるのが特長です（くわしくは 2-5）。一度作れば、次からは長いプロンプトを書き直さずに、その型を呼ぶだけで同じ品質のアウトプットが返ってきます。</p>
-          <p>属人化しがちな「うまいやり方」を、誰でも同じ品質で再現できる形にできるのが Skill の価値です。</p>
+          <p>よく使う手順・指示・出力形式を「型」として保存し、呼び出すだけで同じ品質を再現できる機能です。</p>
+          <div class="visual-flow">
+            <div class="flow-step">
+              <div class="flow-num">📝</div>
+              <div class="flow-label">手順・指示・テンプレートを型として保存</div>
+              <div class="flow-desc">毎回書いていた指示を一度だけ書く</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-num">📞</div>
+              <div class="flow-label">名前で呼び出す</div>
+              <div class="flow-desc">「議事録フォーマットで整理して」と言うだけ</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-num">✅</div>
+              <div class="flow-label">毎回同じ品質で完成</div>
+              <div class="flow-desc">長いプロンプトを書き直す手間がなくなる</div>
+            </div>
+          </div>
+          <p style="font-size:13px;color:var(--text-secondary);">属人化しがちな「うまいやり方」を、誰でも同じ品質で再現できる形にできます（くわしくは 2-5）。</p>
 
           <h3>同じ Skill を Chat でも Cowork でも呼べる</h3>
           <p>つくった Skill は特定の場所に縛られず、同じ型をそのまま呼び出せます。たとえば「議事録フォーマット」Skill なら、次のように使えます。</p>
@@ -2476,16 +2604,40 @@ const MODULES = [
           </div>
 
           <h3>第2回でやること</h3>
-          <div class="visual-big-message">
-            <div class="big-message-icon">🚀</div>
-            <div class="big-message-text">Claude Code で成果物の幅を広げ、仕組みで品質を固定する</div>
-            <div class="big-message-sub">第1回で「Chat の基本と成果物づくり」を押さえました。第2回はその先——成果物の幅を広げ、CLAUDE.md・Skills・MCP で品質を安定させ、チームに展開します。</div>
-            <ul style="text-align:left; display:inline-block; margin:20px auto 0; color:rgba(255,255,255,0.92); line-height:1.9;">
-              <li>複数ファイル／データ処理をまとめて任せる</li>
-              <li>保存して繰り返し使えるツール・プロトタイプを作る</li>
-              <li>CLAUDE.md・Skills・MCP で品質を“自分仕様”に固定する</li>
-              <li>Subagents（分担・並列）でリサーチ・企画まで広げる</li>
-            </ul>
+          <div class=”visual-big-message”>
+            <div class=”big-message-icon”>🚀</div>
+            <div class=”big-message-text”>Claude Code で成果物の幅を広げ、仕組みで品質を固定する</div>
+            <div class=”big-message-sub”>第1回で「Chat の基本と成果物づくり」を押さえました。第2回はその先へ。</div>
+          </div>
+          <div class=”visual-steps” style=”margin-top:16px;”>
+            <div class=”visual-step-item”>
+              <div class=”step-marker”>2-3</div>
+              <div class=”step-body”>
+                <div class=”step-title”>データ処理を任せる</div>
+                <div class=”step-desc”>複数ファイル／データ処理をまとめて委任する</div>
+              </div>
+            </div>
+            <div class=”visual-step-item”>
+              <div class=”step-marker”>2-4</div>
+              <div class=”step-body”>
+                <div class=”step-title”>ツールを作る</div>
+                <div class=”step-desc”>保存して繰り返し使えるツール・プロトタイプを作る</div>
+              </div>
+            </div>
+            <div class=”visual-step-item”>
+              <div class=”step-marker”>2-5</div>
+              <div class=”step-body”>
+                <div class=”step-title”>品質を固定する</div>
+                <div class=”step-desc”>CLAUDE.md・Skills・MCP で品質を”自分仕様”に固定する</div>
+              </div>
+            </div>
+            <div class=”visual-step-item”>
+              <div class=”step-marker”>2-6</div>
+              <div class=”step-body”>
+                <div class=”step-title”>リサーチ・企画に広げる</div>
+                <div class=”step-desc”>Subagents（分担・並列）でリサーチ・企画まで広げる</div>
+              </div>
+            </div>
           </div>
         `
       },
@@ -2804,7 +2956,7 @@ const MODULES = [
               <div class="grid-desc">触ってほしくないファイル・データ、変更してほしくない部分を最初に明示する。</div>
             </div>
             <div class="visual-grid-item">
-              <div class="grid-icon">🎯</div>
+              <div class="grid-icon">✂️</div>
               <div class="grid-title">変更対象の範囲を限定</div>
               <div class="grid-desc">「今回は◯◯ファイルの△△部分だけ」のように、作業範囲を最初に絞る。</div>
             </div>
@@ -3920,13 +4072,27 @@ const MODULES = [
           </div>
 
           <h3>今日からやること（まず1つでOK）</h3>
-          <div class="info-box">
-            <ul>
-              <li><strong>Claude Code を Desktop で1回試す</strong> — 作業用フォルダ＋小さなタスク。</li>
-              <li><strong>手元のデータ・複数ファイルで成果物を1つ作る</strong> — 集計やレポートの下書き。</li>
-              <li><strong>第1回の Artifact を「保存できるツール」に発展させる</strong>。</li>
-              <li><strong>CLAUDE.md にプロジェクトのルールを1つ書く</strong>。</li>
-            </ul>
+          <div class="visual-grid cols-2">
+            <div class="visual-grid-item">
+              <div class="grid-icon">🚀</div>
+              <div class="grid-title">Claude Code を Desktop で1回試す</div>
+              <div class="grid-desc">作業用フォルダ＋小さなタスクから始める。</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">📊</div>
+              <div class="grid-title">複数ファイルで成果物を1つ作る</div>
+              <div class="grid-desc">手元のデータで集計やレポートの下書きを試す。</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">🛠️</div>
+              <div class="grid-title">Artifact をツールに発展させる</div>
+              <div class="grid-desc">第1回の試作品を「保存できる形にして」と頼む。</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">📏</div>
+              <div class="grid-title">CLAUDE.md にルールを1つ書く</div>
+              <div class="grid-desc">プロジェクトの前提・禁止事項を1行でも書いてみる。</div>
+            </div>
           </div>
 
           <div class="tip-box">
