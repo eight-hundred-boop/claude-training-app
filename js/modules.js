@@ -2486,7 +2486,7 @@ const MODULES = [
         type: 'lecture',
         content: `
           <h3>このセクションで学ぶこと</h3>
-          <p>第1回では Artifact（簡易な試作品）と Cowork（ファイル作業の委任）を学びました。Claude Code は、これらをさらに広げて<strong>データ処理・複数ファイル編集・再利用できるツール作成</strong>まで任せられる作業環境です。まずは「何ができるのか」を地図として押さえます。</p>
+          <p>第1回では Artifact（プロトタイプ）と Cowork（ローカルフォルダでのファイル作業）を学びました。Claude Code は、これらをさらに広げて<strong>データ処理・複数ファイル編集・再利用できるツール作成</strong>まで任せられる作業環境です。まずは「何ができるのか」を地図として押さえます。</p>
 
           <h3>そもそも「AIエージェント」とは</h3>
           <p>これまでの Chat は「相談役」（聞けば答えてくれる）でした。<strong>エージェントは、仕事を任せられる「相棒」</strong>です——ゴールを伝えると、自分で段取りを考え、必要な道具を使い、最後の成果物まで仕上げてくれます。</p>
@@ -2684,7 +2684,7 @@ const MODULES = [
         type: 'lecture',
         content: `
           <h3>このセクションで学ぶこと</h3>
-          <p>Claude Code の成果は<strong>最初の準備で8割が決まります</strong>。「どこで動かすか」を選び、作業前の準備5点と安全な指示の型を押さえて、安心して任せられる状態を作ります。</p>
+          <p>Claude Code の成果は<strong>最初の準備で大きく変わります</strong>。「どこで動かすか」を選び、作業前の準備5点と安全な指示の型を押さえて、安心して任せられる状態を作ります。</p>
 
           <h3>1. どこで動かすか — Desktop / CLI / IDE</h3>
           <p>Claude Code はいろんなタッチポイントから使えます。<strong>自分の作業スタイルに合わせて選びましょう</strong>。</p>
@@ -2744,12 +2744,8 @@ const MODULES = [
               </div>
             </div>
           </div>
-          <div class="info-box">
-            <p>💡 画面の表記やボタン位置はバージョンで変わることがあります。社内の<a href="https://app.notion.com/p/7a274acba8f4447e9b9b972e8b04839c" target="_blank">インストール手順（社内ガイド）</a>もあわせて参照してください。</p>
-          </div>
-
           <div class="example-box">
-            <strong>📌 最初の1回はこう打つ（コピーして使える例）</strong><br><br>
+            <strong>📌 最初の1回はこう打つ</strong><br><br>
             上のステップ4「最初の指示」は、いきなり作業を頼むのではなく<strong>「まず中身を見てもらう」</strong>1文から始めると安全です。つながりの確認と、Claude が何を読めるかの把握を同時にできます。<br><br>
             <strong>例：</strong>「このフォルダに何のファイルがあるか、一覧と内容の概要を教えて。まだ何も変更しないで。」<br><br>
             これは新しいメンバーに仕事を頼むとき、いきなり成果物ではなく、まず「手元の資料に何があるか、ざっと見て教えて」と状況把握から入るのと同じです。実際の作り方（計画の出させ方や範囲の絞り方）は、このあとの「3. 安全な指示の出し方」と 2-3 で扱います。
@@ -2871,7 +2867,7 @@ const MODULES = [
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">📝</div>
-              <div class="grid-title">複数議事録の一括整形</div>
+              <div class="grid-title">複数議事録の整理</div>
               <div class="grid-desc">フォルダ内の議事録を読み、案件ごとに決定事項・宿題を整理して表に出力</div>
             </div>
             <div class="visual-grid-item">
@@ -2944,7 +2940,7 @@ const MODULES = [
         type: 'lecture',
         content: `
           <h3>このセクションで学ぶこと</h3>
-          <p>データ処理の次は「動くもの」を作ります。第1回の Artifact（その場の試作）の延長で、Claude Code なら<strong>保存できて・複数画面があって・繰り返し使えるツール</strong>に発展させられます。ツールにすると、<strong>クライアントとの認識合わせが速くなり、同じ仕組みを案件をまたいで使い回せます</strong>。</p>
+          <p>データ処理の次は「動くもの」を作ります。第1回の Artifact（プロトタイプ）の延長で、Claude Code なら<strong>保存できて・複数画面があって・繰り返し使えるツール</strong>に発展させられます。ツールにすると、<strong>クライアントとの認識合わせが速くなり、同じ仕組みを案件をまたいで使い回せます</strong>。</p>
 
           <h3>Artifact と Claude Code の違い</h3>
           <div class="visual-before-after">
@@ -3852,12 +3848,12 @@ const MODULES = [
         question: 'Artifact / Cowork / Claude Code の使い分けとして正しいのはどれですか？',
         options: [
           'Artifact は最も高度で、Claude Code は簡易的なツール',
-          'Artifact は簡易な試作品、Cowork はファイル作業、Claude Code は高度な処理・再利用できるツールに使う',
+          'Artifact はプロトタイプ、Cowork はローカルフォルダでのファイル作業、Claude Code は高度な処理・再利用できるツールに使う',
           '3つとも同じことができるが、インターフェースが違うだけ',
           'Claude Code は非エンジニア向け、Artifact はエンジニア向け'
         ],
         correct: 1,
-        explanation: '簡易な試作品（診断ツール、モック等）→ Artifact、手元のファイルを使った成果物 → Cowork、データ処理や保存できるツール → Claude Code と、複雑さに応じて使い分けます。'
+        explanation: 'プロトタイプ（診断ツール、モック等）→ Artifact、ローカルフォルダでのファイル作業 → Cowork、データ処理や保存できるツール → Claude Code と、複雑さに応じて使い分けます。'
       },
       {
         question: 'Claude Code を初めて使うとき、まず選ぶ場所として推奨されるのはどれですか？',
