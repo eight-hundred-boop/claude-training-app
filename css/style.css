@@ -2152,9 +2152,14 @@ body.present-mode .related-tips-box { display: none; }
 }
 
 .flow-arrow {
-  font-size: 20px;
-  color: var(--text-muted);
-  font-weight: 300;
+  font-size: 14px;
+  color: var(--primary);
+  font-weight: 700;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  white-space: nowrap;
 }
 
 /* セクションタイプバッジ */
