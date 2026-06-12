@@ -369,12 +369,19 @@
           <div class="overview-sessions">
             ${MODULES.map((mod, i) => {
               const groups = mod.coverGroups || [];
+              const pct = getModuleProgress(i);
               return `<div class="overview-session" data-go-module="${i}">
                 <div class="overview-session-header">
                   <span class="overview-session-num">${mod.shortTitle}</span>
                   <strong>${mod.title.replace(/^第\d+回[：:]\s*/, '')}</strong>
                 </div>
                 <ul>${groups.map(g => `<li>${g.label}</li>`).join('')}</ul>
+                <div class="session-progress" style="margin-top:8px;">
+                  <div class="home-resume-bar" style="height:4px;margin:0 0 4px;">
+                    <div class="home-resume-bar-fill" style="width:${pct}%"></div>
+                  </div>
+                  <span style="font-size:11px;color:var(--text-muted);">完了 ${pct}%</span>
+                </div>
               </div>`;
             }).join('')}
           </div>
@@ -438,7 +445,13 @@
     });
     container.querySelectorAll('[data-go-module]').forEach(el => {
       el.addEventListener('click', () => {
-        navigateTo('topic-detail', parseInt(el.dataset.goModule), 0);
+        const mi = parseInt(el.dataset.goModule);
+        const mod = MODULES[mi];
+        let si = 0;
+        for (let s = 0; s < mod.sections.length; s++) {
+          if (!isSectionComplete(mi, s)) { si = s; break; }
+        }
+        navigateTo('topic-detail', mi, si);
       });
     });
     container.querySelectorAll('[data-resume]').forEach(el => {
@@ -451,9 +464,22 @@
 
   // --- 学習コンテンツ（サイドバー目次付き） ---
   function renderLearn(container) {
-    // 最初のトピック詳細を表示
-    const mi = currentModule !== null ? currentModule : 0;
-    const si = currentSection !== null ? currentSection : 0;
+    // 優先順: (1) 最後に見たトピック (2) 現在地 (3) 最初の未完了 (4) 先頭
+    let mi = 0, si = 0;
+    try {
+      const last = JSON.parse(localStorage.getItem('claude-training-last-topic'));
+      if (last && last.mi != null && last.si != null) {
+        mi = last.mi; si = last.si;
+      } else if (currentModule !== null) {
+        mi = currentModule; si = currentSection !== null ? currentSection : 0;
+      } else {
+        outer: for (let m = 0; m < MODULES.length; m++) {
+          for (let s = 0; s < MODULES[m].sections.length; s++) {
+            if (!isSectionComplete(m, s)) { mi = m; si = s; break outer; }
+          }
+        }
+      }
+    } catch { mi = 0; si = 0; }
     renderTopicDetail(container, mi, si);
   }
 
@@ -512,6 +538,8 @@
     currentModule = moduleIndex;
     currentSection = sectionIndex;
     currentPage = 'topic-detail';
+    // 最後に見たトピックを保存（NAV-02: 「学習コンテンツ」から再開するため）
+    localStorage.setItem('claude-training-last-topic', JSON.stringify({ mi: moduleIndex, si: sectionIndex }));
 
     // ヘッダーナビのアクティブ状態
     document.querySelectorAll('.header-nav-link').forEach(el => {
@@ -567,11 +595,31 @@
 
               <div style="margin-bottom:24px;">
                 ${!completed ? `
-                  <button class="btn btn-primary" id="btn-mark-complete">このトピックを完了にする</button>
+                  ${nextTopic
+                    ? `<button class="btn btn-primary" id="btn-mark-complete">✓ 完了して次のトピックへ</button>`
+                    : `<button class="btn btn-primary" id="btn-mark-complete">このトピックを完了にする</button>`
+                  }
                 ` : `
                   <button class="btn btn-primary" style="background:var(--success);cursor:default">完了済み</button>
                 `}
               </div>
+
+              ${sectionIndex === mod.sections.length - 1 ? `
+                <div class="quiz-cta-box" style="margin-bottom:24px;padding:18px 20px;border:2px solid var(--primary);border-radius:var(--radius);background:var(--primary-bg);display:flex;align-items:center;justify-content:space-between;gap:16px;">
+                  <div>
+                    <div style="font-weight:700;color:var(--text);margin-bottom:4px;">
+                      ${isQuizComplete(moduleIndex) ? '✅ 確認クイズ — 合格済み' : `${mod.shortTitle} 確認クイズ`}
+                    </div>
+                    <div style="font-size:13px;color:var(--text-secondary);">
+                      ${mod.quiz.length}問・80%以上で合格
+                    </div>
+                  </div>
+                  ${isQuizComplete(moduleIndex)
+                    ? `<button class="btn btn-secondary" id="btn-go-quiz-complete">もう一度挑戦</button>`
+                    : `<button class="btn btn-primary" id="btn-go-quiz">クイズに挑戦</button>`
+                  }
+                </div>
+              ` : ''}
 
               <div class="topic-nav-buttons">
                 ${prevTopic ? `
@@ -600,7 +648,19 @@
     });
     container.querySelector('#btn-mark-complete')?.addEventListener('click', () => {
       markSectionComplete(moduleIndex, sectionIndex);
-      renderTopicDetail(container, moduleIndex, sectionIndex);
+      if (nextTopic) {
+        // 完了して次のトピックへ（NAV-05）
+        renderTopicDetail(container, nextTopic.mi, nextTopic.si);
+        scrollToTop();
+      } else {
+        renderTopicDetail(container, moduleIndex, sectionIndex);
+      }
+    });
+    container.querySelector('#btn-go-quiz')?.addEventListener('click', () => {
+      navigateTo('quiz', moduleIndex);
+    });
+    container.querySelector('#btn-go-quiz-complete')?.addEventListener('click', () => {
+      navigateTo('quiz', moduleIndex);
     });
     container.querySelectorAll('[data-nav-topic]').forEach(el => {
       el.addEventListener('click', (e) => {
@@ -1060,7 +1120,9 @@
       (score, total) => {
         if (Math.round((score / total) * 100) >= 80) markQuizComplete(moduleIndex);
         navigateTo('quiz-hub');
-      }
+      },
+      // onReview: 不合格時「学習コンテンツを見直す」→その回の先頭へ
+      () => { navigateTo('topic-detail', moduleIndex, 0); }
     ).render();
   }
 
@@ -1437,6 +1499,13 @@
           items.push({ type: 'link', title: l.title, url: l.url, subtitle: l.category, text });
         });
       });
+      // TIPS
+      if (typeof TIPS !== 'undefined') {
+        TIPS.forEach(tip => {
+          const text = ((tip.title || '') + ' ' + (tip.summary || '') + ' ' + (tip.whenToUse || '') + ' ' + (tip.howToUse || '')).replace(/<[^>]+>/g, ' ').toLowerCase();
+          items.push({ type: 'tip', title: tip.title, subtitle: tip.category, tipId: tip.id, text });
+        });
+      }
       return items;
     }
 
@@ -1455,8 +1524,8 @@
         searchResults.innerHTML = '<div class="search-hint">該当する結果がありません</div>';
         return;
       }
-      const icons = { section: '📄', practice: '✏️', faq: '❓', link: '🔗' };
-      const labels = { section: 'セクション', practice: '練習問題', faq: 'FAQ', link: 'リンク' };
+      const icons = { section: '📄', practice: '✏️', faq: '❓', link: '🔗', tip: '💡' };
+      const labels = { section: 'セクション', practice: '練習問題', faq: 'FAQ', link: 'リンク', tip: 'TIPS' };
       searchResults.innerHTML = matches.slice(0, 20).map((m, i) => `
         <button type="button" class="search-result-item" data-search-idx="${i}">
           <span class="search-result-icon" aria-hidden="true">${icons[m.type] || '🔍'}</span>
@@ -1484,6 +1553,7 @@
       else if (m.type === 'practice') { pendingScroll = { title: m.title }; navigateTo('practices'); }
       else if (m.type === 'faq') { pendingScroll = { title: m.title }; navigateTo('faq'); }
       else if (m.type === 'link') { pendingScroll = { title: m.title }; navigateTo('links'); }
+      else if (m.type === 'tip') { navigateTo('tips', null, null, { tipId: m.tipId }); }
     });
 
     // Ctrl+K / Escape

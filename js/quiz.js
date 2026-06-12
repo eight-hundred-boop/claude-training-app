@@ -3,11 +3,12 @@
 // ========================================
 
 class QuizEngine {
-  constructor(questions, containerId, onComplete, onFinish) {
+  constructor(questions, containerId, onComplete, onFinish, onReview) {
     this.questions = questions;
     this.containerId = containerId;
     this.onComplete = onComplete;   // 合格を状態として記録（結果表示時に自動実行）
     this.onFinish = onFinish;       // 「完了する」ボタン押下時の遷移（任意）
+    this.onReview = onReview;       // 不合格時「学習コンテンツを見直す」ボタン（任意）
     this.currentIndex = 0;
     this.answers = new Array(questions.length).fill(null);
     this.answered = new Array(questions.length).fill(false);
@@ -227,14 +228,26 @@ class QuizEngine {
       `;
     }
 
-    // 間違えた問題の一覧（B）
+    // 間違えた問題の一覧（B）— details/summary で解説をその場で展開可能
     let wrongList = '';
     if (wrongIndices.length > 0) {
       wrongList = `
         <div class="wrong-summary">
           <h4>間違えた問題</h4>
           <ul>
-            ${wrongIndices.map(i => `<li><span class="wrong-q-num">問${i + 1}</span> ${this.questions[i].question}</li>`).join('')}
+            ${wrongIndices.map(i => {
+              const q = this.questions[i];
+              const correctText = q.options && q.correct != null ? q.options[q.correct] : '';
+              return `<li>
+                <details class="wrong-detail">
+                  <summary><span class="wrong-q-num">問${i + 1}</span> ${q.question}</summary>
+                  <div class="wrong-detail-body">
+                    ${correctText ? `<p class="wrong-answer">正解: ${correctText}</p>` : ''}
+                    ${q.explanation ? `<p class="wrong-explanation">${q.explanation}</p>` : ''}
+                  </div>
+                </details>
+              </li>`;
+            }).join('')}
           </ul>
         </div>
       `;
@@ -258,6 +271,7 @@ class QuizEngine {
           <div class="result-actions">
             ${wrongIndices.length > 0 ? '<button class="btn btn-primary" id="quiz-retry-wrong">間違えた問題だけやり直す</button>' : ''}
             <button class="btn btn-secondary" id="quiz-retry">最初からやり直す</button>
+            ${!passed && this.onReview ? '<button class="btn btn-secondary" id="quiz-review">この回の学習コンテンツを見直す</button>' : ''}
             ${passed && this.onComplete ? '<button class="btn btn-primary" id="quiz-complete">完了する</button>' : ''}
           </div>
         </div>
@@ -289,6 +303,9 @@ class QuizEngine {
     container.querySelector('#quiz-complete')?.addEventListener('click', () => {
       if (this.onFinish) this.onFinish(score, total);
       else if (this.onComplete) this.onComplete(score, total);
+    });
+    container.querySelector('#quiz-review')?.addEventListener('click', () => {
+      if (this.onReview) this.onReview();
     });
 
     // 80%以上なら自動でコールバック（修了テスト用）
