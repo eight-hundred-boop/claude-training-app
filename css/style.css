@@ -4506,16 +4506,16 @@ body.landing-mode #global-footer {
 .visual-grid-item .grid-title {
   font-size: 15px;
   font-weight: 700;
-  margin-bottom: 6px;
-  color: var(--text);
+  margin-bottom: 8px;
+  color: var(--primary);
   word-break: keep-all;
   overflow-wrap: anywhere;
 }
 
 .visual-grid-item .grid-desc {
   font-size: 14px;
-  color: var(--text-secondary);
-  line-height: 1.6;
+  color: var(--text);
+  line-height: 1.65;
   word-break: keep-all;
   overflow-wrap: anywhere;
 }
