@@ -1984,8 +1984,8 @@ const MODULES = [
           <p>特に効くのは「毎回フォーマットや観点が決まっている作業」です。</p>
 
           <div class="visual-grid cols-2">
-            <div class="visual-grid-item">
-              <div class="grid-icon">📝</div>
+            <div class="visual-grid-item" style="text-align:left;">
+              <div class="grid-icon" style="margin:0 0 10px;">📝</div>
               <div class="grid-title">資料作成</div>
               <div class="grid-desc">
                 ・議事録フォーマット（日付・参加者・決定事項・宿題・次回アジェンダの順、です・ます調で整える）<br>
@@ -1993,8 +1993,8 @@ const MODULES = [
                 ・提案書のレビュー観点チェック（決まった5観点で叩く）
               </div>
             </div>
-            <div class="visual-grid-item">
-              <div class="grid-icon">🔍</div>
+            <div class="visual-grid-item" style="text-align:left;">
+              <div class="grid-icon" style="margin:0 0 10px;">🔍</div>
               <div class="grid-title">リサーチ</div>
               <div class="grid-desc">
                 ・競合・市場調査の型（「機能・価格・実績の観点で比較表に」「出典URL付きで」など枠組みを固定）<br>
