@@ -3727,29 +3727,34 @@ const MODULES = [
           <p>Subagents（複数のエージェント）は“作る”だけでなく、<strong>“調べる・考える”でこそ威力を発揮します</strong>。1体では「1つの視点」「1つの机（一度に扱える情報量）」に限られますが、手分けすれば<strong>広さ</strong>と<strong>客観性</strong>を同時に手に入れられます。</p>
 
           <h4>🔍 リサーチの型：観点を分担して並行調査</h4>
-          <div class=”visual-flow”>
-            <div class=”flow-step”>
-              <div class=”flow-num”>🔍</div>
-              <div class=”flow-label”>観点別に並列調査</div>
-              <div class=”flow-desc”>複数の担当が同時に異なる観点を調べる</div>
+          <div class=”visual-steps”>
+            <div class=”visual-step-item”>
+              <div class=”step-marker”>🔍</div>
+              <div class=”step-body”>
+                <div class=”step-title”>観点別に並列調査</div>
+                <div class=”step-desc”>複数の担当が同時に異なる観点を調べる。1体では「1つの机」の情報量に限られるが、手分けすれば広く深く調査できる。</div>
+              </div>
             </div>
-            <div class=”flow-arrow”>→</div>
-            <div class=”flow-step”>
-              <div class=”flow-num”>🧠</div>
-              <div class=”flow-label”>親が統合</div>
-              <div class=”flow-desc”>各担当の要約をまとめる</div>
+            <div class=”visual-step-item”>
+              <div class=”step-marker”>🧠</div>
+              <div class=”step-body”>
+                <div class=”step-title”>親が統合</div>
+                <div class=”step-desc”>各担当から要約だけを受け取り、メインエージェントが全体をまとめる。</div>
+              </div>
             </div>
-            <div class=”flow-arrow”>→</div>
-            <div class=”flow-step”>
-              <div class=”flow-num”>✅</div>
-              <div class=”flow-label”>別担当が検証</div>
-              <div class=”flow-desc”>抜けと根拠の弱い点をチェック</div>
+            <div class=”visual-step-item”>
+              <div class=”step-marker”>✅</div>
+              <div class=”step-body”>
+                <div class=”step-title”>別担当が検証</div>
+                <div class=”step-desc”>抜けと根拠の弱い点をチェックする専任を立てる。調べた担当とは独立しているので批判が甘くならない。</div>
+              </div>
             </div>
-            <div class=”flow-arrow”>→</div>
-            <div class=”flow-step”>
-              <div class=”flow-num”>📄</div>
-              <div class=”flow-label”>1枚にまとめる</div>
-              <div class=”flow-desc”>広く深く、抜けの少ない成果物</div>
+            <div class=”visual-step-item”>
+              <div class=”step-marker”>📄</div>
+              <div class=”step-body”>
+                <div class=”step-title”>1枚にまとめる</div>
+                <div class=”step-desc”>広く深く、抜けの少ない成果物として完成する。</div>
+              </div>
             </div>
           </div>
           <div class=”prompt-copy”>
@@ -3759,29 +3764,34 @@ const MODULES = [
           </div>
 
           <h4>💡 アイデアの型：発散役と評価役を分ける</h4>
-          <div class=”visual-flow”>
-            <div class=”flow-step”>
-              <div class=”flow-num”>📚</div>
-              <div class=”flow-label”>成功パターンを調べる</div>
-              <div class=”flow-desc”>前例・成功事例を収集</div>
+          <div class=”visual-steps”>
+            <div class=”visual-step-item”>
+              <div class=”step-marker”>📚</div>
+              <div class=”step-body”>
+                <div class=”step-title”>成功パターンを調べる</div>
+                <div class=”step-desc”>前例・成功事例を収集する。ゼロから発想するより、良い型を知ってから発散した方が質が上がる。</div>
+              </div>
             </div>
-            <div class=”flow-arrow”>→</div>
-            <div class=”flow-step”>
-              <div class=”flow-num”>💡</div>
-              <div class=”flow-label”>案を発散</div>
-              <div class=”flow-desc”>数を出す。まず量</div>
+            <div class=”visual-step-item”>
+              <div class=”step-marker”>💡</div>
+              <div class=”step-body”>
+                <div class=”step-title”>案を発散</div>
+                <div class=”step-desc”>数を出すことに徹する。まず量。評価は次の担当に任せるので、この段階では絞らない。</div>
+              </div>
             </div>
-            <div class=”flow-arrow”>→</div>
-            <div class=”flow-step”>
-              <div class=”flow-num”>🎚️</div>
-              <div class=”flow-label”>評価役が採点</div>
-              <div class=”flow-desc”>別の担当が基準で選別（甘い自己評価を排除）</div>
+            <div class=”visual-step-item”>
+              <div class=”step-marker”>🎚️</div>
+              <div class=”step-body”>
+                <div class=”step-title”>評価役が採点</div>
+                <div class=”step-desc”>発散とは別の担当が基準で採点・選別する。作り手と評価役を分けることで甘い自己評価を排除できる。</div>
+              </div>
             </div>
-            <div class=”flow-arrow”>→</div>
-            <div class=”flow-step”>
-              <div class=”flow-num”>🏆</div>
-              <div class=”flow-label”>上位案に絞る</div>
-              <div class=”flow-desc”>検討に値する案だけ残る</div>
+            <div class=”visual-step-item”>
+              <div class=”step-marker”>🏆</div>
+              <div class=”step-body”>
+                <div class=”step-title”>上位案に絞る</div>
+                <div class=”step-desc”>検討に値する案だけが残る。従来は複数AIに投げてコピペ統合していた工程が一度の依頼で通せる。</div>
+              </div>
             </div>
           </div>
           <div class=”prompt-copy”>
