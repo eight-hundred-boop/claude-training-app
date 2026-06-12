@@ -435,22 +435,29 @@ const MODULES = [
             <div class="visual-grid-item">
               <div class="grid-icon">✨</div>
               <div class="grid-title">Fable</div>
-              <div class="grid-desc">思考と創作の統合型。アイデア発想・深い分析に。<br><strong style="color:var(--text-muted);font-size:12px;">トークン消費 大</strong></div>
+              <div class="grid-desc">思考と創作の統合型。アイデア発想・深い分析に。<br><strong style="color:var(--text-muted);font-size:12px;">トークン消費 最大（Opus の約2倍）</strong></div>
             </div>
           </div>
           <div class="info-box">
             <p>上位モデルほど性能が高い反面、<strong>1回の会話で消費するトークン（使用量）が多くなります</strong>。日常的な依頼（メール下書き・議事録整理・要約など）は Sonnet で十分。Opus・Fable は「どうしても高い精度が必要な場面」に絞ると、使用量の節約になります。</p>
           </div>
 
+          <div class="column-box">
+            <div class="column-eyebrow">📎 コラム：トークンとは？</div>
+            <p>Claude が文章を処理するときの<strong>最小単位</strong>が「トークン」です。日本語では1文字がほぼ1トークン（英語は単語の一部）と考えるとイメージしやすいです。</p>
+            <p>トークンには<strong>「読み込み」と「書き出し」の2方向</strong>があります。あなたが送った文章（資料・指示）が読み込みトークン、Claude が返した回答が書き出しトークンです。両方の合計が使用量にカウントされます。</p>
+            <p><strong>上位モデルは同じ質問でも消費トークンが増える</strong>傾向があります。特に Fable は Opus の約2倍の消費量になります。利用プランごとに1日・1か月の上限があるので、定型的な作業は Haiku・Sonnet、ここぞという場面だけ Opus・Fable と使い分けると上限に余裕ができます。</p>
+          </div>
+
           <h3>どれだけ資料を渡せる？</h3>
           <div class="visual-stats">
             <div class="visual-stat">
-              <div class="stat-value">約75万字</div>
-              <div class="stat-label">一度に読み込める量</div>
+              <div class="stat-value">最大 100万トークン</div>
+              <div class="stat-label">コンテキストウィンドウ（一度に扱える上限）</div>
             </div>
             <div class="visual-stat">
-              <div class="stat-value">文庫本で数冊分</div>
-              <div class="stat-label">長い議事録・報告書・複数資料もOK</div>
+              <div class="stat-value">約75万字 = 文庫本で数冊分</div>
+              <div class="stat-label">長い議事録・報告書・複数資料もまるごとOK</div>
             </div>
           </div>
           <p style="font-size:13px;color:var(--text-secondary);">ただし一度に詰め込みすぎると要点がぼけることもあるので、必要な資料に絞る・分割するのもコツです。</p>
