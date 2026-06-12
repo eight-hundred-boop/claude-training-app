@@ -3366,7 +3366,7 @@ const MODULES = [
             <div class="visual-grid-item">
               <div class="grid-icon">🔍</div>
               <div class="grid-title">/memory</div>
-              <div class="grid-desc">いま効いている CLAUDE.md を<strong>一覧表示・編集</strong>。自分用／案件用のどちらに何が書いてあるか、ここで確認・追記できる。</div>
+              <div class="grid-desc">現在読み込まれている CLAUDE.md を<strong>一覧表示・編集</strong>。自分用／案件用のどちらに何が書いてあるか、ここで確認・追記できる。</div>
             </div>
           </div>
 
@@ -3576,7 +3576,7 @@ const MODULES = [
             <div class="visual-grid-item">
               <div class="grid-icon">✅</div>
               <div class="grid-title">確認</div>
-              <div class="grid-desc">チャット入力欄で <code>/mcp</code> と打つと、いま接続済みのサービス一覧が見られる。</div>
+              <div class="grid-desc">チャット入力欄で <code>/mcp</code> と打つと、現在接続中のサービス一覧が見られる。</div>
             </div>
           </div>
 
