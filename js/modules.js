@@ -251,9 +251,6 @@ const MODULES = [
             Chat・Cowork・Claude Code はいずれも Claude Desktop から使えます。Web 版で Chat を試してみて、次のステップとして Desktop を開いてみましょう。CLI / IDE（VS Code / Cursor など）は、より高度に使いたくなってから検討すれば十分です。
           </div>
 
-          <p style="display:none"></p><!-- 旧info-box 統合済み -->
-          </div>
-
           <h3>判断フロー — いつ、どれを使う？</h3>
           <div class="visual-flow">
             <div class="flow-step">
@@ -542,29 +539,34 @@ const MODULES = [
             </div>
           </div>
 
-          <div class="visual-flow">
-            <div class="flow-step">
-              <div class="flow-num">1</div>
-              <div class="flow-label">「切り口を5つ出して」</div>
-              <div class="flow-desc">まず簡潔に投げる</div>
+          <div class="visual-steps">
+            <div class="visual-step-item">
+              <div class="step-marker">1</div>
+              <div class="step-body">
+                <div class="step-title">「切り口を5つ出して」</div>
+                <div class="step-desc">まず簡潔に投げる。最初から完璧を狙わず、たたき台を引き出す。</div>
+              </div>
             </div>
-            <div class="flow-arrow">→</div>
-            <div class="flow-step">
-              <div class="flow-num">2</div>
-              <div class="flow-label">「2番をもっと具体的に」</div>
-              <div class="flow-desc">返ってきた出力を見て調整</div>
+            <div class="visual-step-item">
+              <div class="step-marker">2</div>
+              <div class="step-body">
+                <div class="step-title">「2番をもっと具体的に」</div>
+                <div class="step-desc">返ってきた出力を見て調整。良かった部分を指定して深掘りさせる。</div>
+              </div>
             </div>
-            <div class="flow-arrow">→</div>
-            <div class="flow-step">
-              <div class="flow-num">3</div>
-              <div class="flow-label">「競合事例も加えて」</div>
-              <div class="flow-desc">方向を絞り込む</div>
+            <div class="visual-step-item">
+              <div class="step-marker">3</div>
+              <div class="step-body">
+                <div class="step-title">「競合事例も加えて」</div>
+                <div class="step-desc">方向を絞り込む。足りない観点を足して、内容を厚くしていく。</div>
+              </div>
             </div>
-            <div class="flow-arrow">→</div>
-            <div class="flow-step">
-              <div class="flow-num">4</div>
-              <div class="flow-label">「Artifactの比較表に」</div>
-              <div class="flow-desc">成果物として完成</div>
+            <div class="visual-step-item">
+              <div class="step-marker">4</div>
+              <div class="step-body">
+                <div class="step-title">「Artifactの比較表に」</div>
+                <div class="step-desc">成果物として完成。最後に体裁を整え、再利用できる形にする。</div>
+              </div>
             </div>
           </div>
           <p style="font-size:13px;color:var(--text-secondary);">1回で完成させようとするより、<strong>往復して積み重ねる</strong>ほうが速く、質も上がることが多い。</p>
@@ -626,29 +628,34 @@ const MODULES = [
           <h3>AIの出力は「たたき台」</h3>
           <p>Claude の出力は「たたき台」だと考えてください。そのまま提出するのではなく、<strong>確認して、直して、自分の責任で仕上げる</strong>。このプロセスが重要です。</p>
 
-          <div class="visual-flow">
-            <div class="flow-step">
-              <div class="flow-num">1</div>
-              <div class="flow-label">指示する</div>
-              <div class="flow-desc">Claude に依頼。前提・タスク・ルールの3要素を揃えると出力が安定する。</div>
+          <div class="visual-steps">
+            <div class="visual-step-item">
+              <div class="step-marker">1</div>
+              <div class="step-body">
+                <div class="step-title">指示する</div>
+                <div class="step-desc">Claude に依頼。前提・タスク・ルールの3要素を揃えると出力が安定する。</div>
+              </div>
             </div>
-            <div class="flow-arrow">→</div>
-            <div class="flow-step">
-              <div class="flow-num">2</div>
-              <div class="flow-label">確認する</div>
-              <div class="flow-desc">事実・数字・固有名詞を裏取り。報告書やクライアント向け資料に使う情報は特に慎重に。</div>
+            <div class="visual-step-item">
+              <div class="step-marker">2</div>
+              <div class="step-body">
+                <div class="step-title">確認する</div>
+                <div class="step-desc">事実・数字・固有名詞を裏取り。報告書やクライアント向け資料に使う情報は特に慎重に。</div>
+              </div>
             </div>
-            <div class="flow-arrow">→</div>
-            <div class="flow-step">
-              <div class="flow-num">3</div>
-              <div class="flow-label">直す</div>
-              <div class="flow-desc">追加指示で修正・深掘り。「2番をもっと具体的に」「競合事例も加えて」と往復しながら磨く。</div>
+            <div class="visual-step-item">
+              <div class="step-marker">3</div>
+              <div class="step-body">
+                <div class="step-title">直す</div>
+                <div class="step-desc">追加指示で修正・深掘り。「2番をもっと具体的に」「競合事例も加えて」と往復しながら磨く。</div>
+              </div>
             </div>
-            <div class="flow-arrow">→</div>
-            <div class="flow-step">
-              <div class="flow-num">4</div>
-              <div class="flow-label">仕上げる</div>
-              <div class="flow-desc">最終判断は自分が持つ。成果物の責任は常に自分にある。Claude は初稿を作る相棒。</div>
+            <div class="visual-step-item">
+              <div class="step-marker">4</div>
+              <div class="step-body">
+                <div class="step-title">仕上げる</div>
+                <div class="step-desc">最終判断は自分が持つ。成果物の責任は常に自分にある。Claude は初稿を作る相棒。</div>
+              </div>
             </div>
           </div>
 
@@ -2146,7 +2153,8 @@ const MODULES = [
           <h3>次回（第2回）へ</h3>
           <div class="visual-before-after">
             <div class="ba-item before">
-              <div class="ba-label">第1回：Chat の基本と成果物づくり</div>
+              <div class="ba-label">第1回</div>
+              <h4>Chat の基本と成果物づくり</h4>
               <ul>
                 <li>Chat・Project・Artifact で初速を上げる</li>
                 <li>Office / Research / Cowork で成果物にする</li>
@@ -2155,7 +2163,8 @@ const MODULES = [
             </div>
             <div class="ba-arrow">→</div>
             <div class="ba-item after">
-              <div class="ba-label">第2回：Claude Code で幅を広げ、品質を安定させる</div>
+              <div class="ba-label">第2回</div>
+              <h4>Claude Code で幅を広げ、品質を安定させる</h4>
               <ul>
                 <li>Claude Code で高度な成果物を作る</li>
                 <li>CLAUDE.md・Skills・MCP で品質を固定する</li>
@@ -3115,29 +3124,34 @@ const MODULES = [
           </div>
 
           <h3>活用例：アンケート・調査データを集計する</h3>
-          <div class="visual-flow">
-            <div class="flow-step">
-              <div class="flow-num">📁</div>
-              <div class="flow-label">データを作業フォルダに置く</div>
-              <div class="flow-desc">元ファイルのコピーを作業用フォルダに入れる。元データを直接編集させないための準備。</div>
+          <div class="visual-steps">
+            <div class="visual-step-item">
+              <div class="step-marker">📁</div>
+              <div class="step-body">
+                <div class="step-title">データを作業フォルダに置く</div>
+                <div class="step-desc">元ファイルのコピーを作業用フォルダに入れる。元データを直接編集させないための準備。</div>
+              </div>
             </div>
-            <div class="flow-arrow">→</div>
-            <div class="flow-step">
-              <div class="flow-num">💬</div>
-              <div class="flow-label">統合・集計を依頼</div>
-              <div class="flow-desc">「これらを統合して、設問ごと・セグメント別に集計し、比較表にして」。まず計画を出させてから実装させると安全。</div>
+            <div class="visual-step-item">
+              <div class="step-marker">💬</div>
+              <div class="step-body">
+                <div class="step-title">統合・集計を依頼</div>
+                <div class="step-desc">「これらを統合して、設問ごと・セグメント別に集計し、比較表にして」。まず計画を出させてから実装させると安全。</div>
+              </div>
             </div>
-            <div class="flow-arrow">→</div>
-            <div class="flow-step">
-              <div class="flow-num">💾</div>
-              <div class="flow-label">新ファイルとして保存</div>
-              <div class="flow-desc">「集計表を新しいファイルとして保存して」。元データのコピーは変更せず、成果物は別ファイルに出力させる。</div>
+            <div class="visual-step-item">
+              <div class="step-marker">💾</div>
+              <div class="step-body">
+                <div class="step-title">新ファイルとして保存</div>
+                <div class="step-desc">「集計表を新しいファイルとして保存して」。元データのコピーは変更せず、成果物は別ファイルに出力させる。</div>
+              </div>
             </div>
-            <div class="flow-arrow">→</div>
-            <div class="flow-step">
-              <div class="flow-num">✅</div>
-              <div class="flow-label">元データと照合して報告書へ</div>
-              <div class="flow-desc">数値・金額・固有名詞は元データと必ず照合する。特に顧客データ・アンケート結果は慎重に確認してから使う。</div>
+            <div class="visual-step-item">
+              <div class="step-marker">✅</div>
+              <div class="step-body">
+                <div class="step-title">元データと照合して報告書へ</div>
+                <div class="step-desc">数値・金額・固有名詞は元データと必ず照合する。特に顧客データ・アンケート結果は慎重に確認してから使う。</div>
+              </div>
             </div>
           </div>
 

@@ -2162,6 +2162,28 @@ body.present-mode .related-tips-box { display: none; }
   white-space: nowrap;
 }
 
+/* visual-flow 内の flow-step で使う番号/絵文字バッジと説明文 */
+.flow-num {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--primary-bg);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 8px;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.flow-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 4px;
+  line-height: 1.45;
+}
+
 /* セクションタイプバッジ */
 .section-type-badge {
   font-size: 10px;
@@ -4939,6 +4961,14 @@ body.landing-mode #global-footer {
   white-space: pre-wrap;
 }
 .prompt-copy .copy-btn { margin-left: 0; }
+.prompt-copy .prompt-copy-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
 /* 本文中のページ内リンク（例: TIPS集へ）をリンクらしく見せる */
 /* インラインコード（本文中の /init, ~/.claude/ 等） */
 .topic-content code,
