@@ -2054,50 +2054,50 @@ const MODULES = [
             <div class=”visual-grid-item”>
               <div class=”grid-icon”>💬</div>
               <div class=”grid-title”>基盤は Chat</div>
-              <div class=”grid-desc”>まず Chat。壁打ち・下書き・要約から始める。</div>
+              <div class=”grid-desc”>まず Chat。壁打ち・下書き・要約・翻訳はすべて Chat から始まる。難しい設定は不要で、今日から使える。</div>
             </div>
             <div class=”visual-grid-item”>
               <div class=”grid-icon”>📐</div>
               <div class=”grid-title”>プロンプト3要素</div>
-              <div class=”grid-desc”>前提・タスク・ルールを揃えると出力の質が決まる。</div>
+              <div class=”grid-desc”><strong>前提（背景・制約）・タスク（何をしてほしいか）・ルール（形式・禁止事項）</strong>の3つを揃えると出力が安定する。</div>
             </div>
             <div class=”visual-grid-item”>
               <div class=”grid-icon”>✅</div>
               <div class=”grid-title”>出力は”初稿”</div>
-              <div class=”grid-desc”>そのまま使わず確認・修正。最終責任は自分。</div>
+              <div class=”grid-desc”>事実・数字・固有名詞は必ず裏取り。最終判断と責任は自分が持つ。鵜呑みにしないことが安全な使い方の基本。</div>
             </div>
             <div class=”visual-grid-item”>
               <div class=”grid-icon”>📋</div>
               <div class=”grid-title”>Project / Artifact</div>
-              <div class=”grid-desc”>前提を保持し、成果物として切り出して残す。</div>
+              <div class=”grid-desc”>Project で案件の前提を保持し毎回説明し直す手間を省く。Artifact で成果物を会話と切り離して残し、再利用する。</div>
             </div>
             <div class=”visual-grid-item”>
               <div class=”grid-icon”>🔄</div>
               <div class=”grid-title”>対話で磨く</div>
-              <div class=”grid-desc”>1回で仕上げない。往復するほど成果物が育つ。</div>
+              <div class=”grid-desc”>1回で完成させようとしない。「2番をもっと具体的に」「競合事例を追加して」と往復するほど成果物の質が上がる。</div>
             </div>
           </div>
           <h4>🏗️ 成果物を作る</h4>
           <div class=”visual-grid cols-2”>
             <div class=”visual-grid-item”>
               <div class=”grid-icon”>📊</div>
-              <div class=”grid-title”>使い分け</div>
-              <div class=”grid-desc”>Office／Research／Artifact／Cowork を成果物に応じて選ぶ。</div>
+              <div class=”grid-title”>機能の使い分け</div>
+              <div class=”grid-desc”>Office アドイン（Office 内で直接）／Research（根拠付き調査）／Artifact（プロトタイプ）／Cowork（ファイル作業の委任）を成果物に応じて選ぶ。</div>
             </div>
             <div class=”visual-grid-item”>
               <div class=”grid-icon”>📂</div>
               <div class=”grid-title”>Cowork</div>
-              <div class=”grid-desc”>フォルダごと渡してファイル作業を委任する。</div>
+              <div class=”grid-desc”>作業フォルダごと渡してファイル作業を委任する。PPTX・Excel・Word の作成や複数ファイルの整理がアップロード不要で依頼できる。</div>
             </div>
             <div class=”visual-grid-item”>
               <div class=”grid-icon”>⏰</div>
               <div class=”grid-title”>Chrome / Scheduled tasks</div>
-              <div class=”grid-desc”>ブラウザ作業を支援、定型業務を自動化。</div>
+              <div class=”grid-desc”>Chrome 拡張でブラウザ上の調査をその場でサポート。Scheduled tasks で競合チェック・ニュース収集などの定型業務を自動化する。</div>
             </div>
             <div class=”visual-grid-item”>
               <div class=”grid-icon”>🧩</div>
               <div class=”grid-title”>Skill</div>
-              <div class=”grid-desc”>よく使う手順を型にして再利用（Chat・Cowork でも）。</div>
+              <div class=”grid-desc”>繰り返す手順・指示・出力形式を「型」として保存し、名前を呼ぶだけで再利用できる。属人化しがちな”うまいやり方”をチームで共有できる形に。</div>
             </div>
           </div>
 
