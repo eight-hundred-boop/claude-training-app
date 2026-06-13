@@ -39,7 +39,7 @@ const MODULES = [
         type: 'lecture',
         content: `
           <h3>このセクションで学ぶこと</h3>
-          <p>Claude がどんなAIで、業務のどこに効くかを押さえます。本講座を進めるうえでの出発点です。</p>
+          <p>Claude がどんなAIで、業務のどこで活かせるかを押さえます。本講座を進めるうえでの出発点です。</p>
 
           <h3>Claudeとは</h3>
           <p>Claude は Anthropic が開発した生成AIアシスタントです。「大規模言語モデル（LLM）」を基盤にしており、<strong>長文処理・指示への忠実さ・考えるパートナーとしての設計</strong>に強みがあります。</p>
@@ -63,7 +63,7 @@ const MODULES = [
           </div>
 
           <h3>業務での使いどころ</h3>
-          <p>Claude が効くのは、次のような場面。</p>
+          <p>Claude が役立つのは、次のような場面。</p>
 
           <div class="visual-grid cols-2">
             <div class="visual-grid-item">
@@ -1532,7 +1532,7 @@ const MODULES = [
             </div>
           </div>
 
-          <h3>なぜ「プロトタイプ」が提案に効くのか</h3>
+          <h3>なぜ「プロトタイプ」が提案に使えるのか</h3>
           <div class="visual-before-after">
             <div class="ba-item before">
               <div class="ba-label">スライドだけの提案</div>
@@ -1988,7 +1988,7 @@ const MODULES = [
           <p>どちらでも同じ型・同じ品質で仕上がります。一度つくれば、その都度作り直す必要がありません。</p>
 
           <h3>実務での活用例</h3>
-          <p>特に効くのは「毎回フォーマットや観点が決まっている作業」です。</p>
+          <p>特に向いているのは「毎回フォーマットや観点が決まっている作業」です。</p>
 
           <div class="visual-grid cols-2">
             <div class="visual-grid-item" style="text-align:left;">
@@ -3288,17 +3288,17 @@ const MODULES = [
             <div class="visual-grid-item">
               <div class="grid-icon">📏</div>
               <div class="grid-title">CLAUDE.md ＝ 守る作法</div>
-              <div class="grid-desc"><span class="grid-badge" style="background:var(--primary);color:#fff;font-size:10px;padding:2px 8px;border-radius:99px;display:inline-block;margin-bottom:6px;">常時効く</span><br>例：文体・体裁・禁止事項<br>🍳 店の決まり</div>
+              <div class="grid-desc"><span class="grid-badge" style="background:var(--primary);color:#fff;font-size:10px;padding:2px 8px;border-radius:99px;display:inline-block;margin-bottom:6px;">常に読み込まれる</span><br>例：文体・体裁・禁止事項<br>🍳 店の決まり</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">📖</div>
               <div class="grid-title">Skills ＝ レシピ＋道具箱</div>
-              <div class="grid-desc"><span class="grid-badge" style="border:1px solid var(--primary);color:var(--primary);font-size:10px;padding:2px 8px;border-radius:99px;display:inline-block;margin-bottom:6px;">必要なときに効く</span><br>例：議事録の型・週報づくり<br>🍳 レシピ本と調理道具</div>
+              <div class="grid-desc"><span class="grid-badge" style="border:1px solid var(--primary);color:var(--primary);font-size:10px;padding:2px 8px;border-radius:99px;display:inline-block;margin-bottom:6px;">呼ばれたときに動く</span><br>例：議事録の型・週報づくり<br>🍳 レシピ本と調理道具</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">🛒</div>
               <div class="grid-title">MCP ＝ 材料の取り寄せ</div>
-              <div class="grid-desc"><span class="grid-badge" style="border:1px solid var(--primary);color:var(--primary);font-size:10px;padding:2px 8px;border-radius:99px;display:inline-block;margin-bottom:6px;">必要なときに効く</span><br>例：Notion・Slack<br>🍳 材料の買い出し</div>
+              <div class="grid-desc"><span class="grid-badge" style="border:1px solid var(--primary);color:var(--primary);font-size:10px;padding:2px 8px;border-radius:99px;display:inline-block;margin-bottom:6px;">呼ばれたときに動く</span><br>例：Notion・Slack<br>🍳 材料の買い出し</div>
             </div>
           </div>
 
@@ -3368,12 +3368,12 @@ const MODULES = [
             <div class="visual-grid-item">
               <div class="grid-icon">🌐</div>
               <div class="grid-title">自分用（グローバル）</div>
-              <div class="grid-desc">自分の PC の設定フォルダ（<code>.claude</code>）に1つ。自分が関わる<strong>すべての作業</strong>に共通で効く。<br>例：結論から書く／です・ます調＝“自分の仕事の流儀”<br>場所は覚えなくてよい——<code>/memory</code> で開ける・「全体の CLAUDE.md はどこ？」と聞けば教えてくれる。</div>
+              <div class="grid-desc">自分の PC の設定フォルダ（<code>.claude</code>）に1つ。自分が関わる<strong>すべての作業</strong>に共通で適用される。<br>例：結論から書く／です・ます調＝“自分の仕事の流儀”<br>場所は覚えなくてよい——<code>/memory</code> で開ける・「全体の CLAUDE.md はどこ？」と聞けば教えてくれる。</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">📁</div>
               <div class="grid-title">案件用（プロジェクト）</div>
-              <div class="grid-desc">Claude Code で<strong>作業フォルダとして開くフォルダの直下</strong>に置く。その案件だけに効く。<strong>チーム共有</strong>でき、全員が同じ前提で動ける。<br>例：クライアントは B社／成果物の体裁／レビュー観点</div>
+              <div class="grid-desc">Claude Code で<strong>作業フォルダとして開くフォルダの直下</strong>に置く。その案件だけに適用される。<strong>チーム共有</strong>でき、全員が同じ前提で動ける。<br>例：クライアントは B社／成果物の体裁／レビュー観点</div>
             </div>
           </div>
 
@@ -3415,7 +3415,7 @@ const MODULES = [
           </div>
 
           <div class="info-box">
-            <p>📌 <strong>CLAUDE.md が効くのは「新しい会話」を始めたとき</strong>（会話＝Claude Code とのひと続きのやり取り。”セッション”とも呼びます）。途中で書き換えても、いま進行中の会話には反映されません。作ったら・変えたら、新しい会話で始めましょう。</p>
+            <p>📌 <strong>CLAUDE.md が反映されるのは「新しい会話」を始めたとき</strong>（会話＝Claude Code とのひと続きのやり取り。”セッション”とも呼びます）。途中で書き換えても、いま進行中の会話には反映されません。作ったら・変えたら、新しい会話で始めましょう。</p>
           </div>
 
           <h4>自動メモリ — Claude が自分でメモを取る</h4>
@@ -3729,7 +3729,7 @@ const MODULES = [
             依頼文に「<strong>サブエージェントで手分けして</strong>」「<strong>並列で調べて</strong>」と一言入れます。大きな作業では Claude が自分で手分けすることもありますが、確実に使いたいときは言葉にして頼みます（2-5 の Skill の名指しと同じ発想です）。観点と役割を自分で指定するほど、狙いどおりに動きます。</p>
           </div>
 
-          <h3>なぜ成果物づくりに効くのか</h3>
+          <h3>なぜ成果物づくりに強いのか</h3>
           <div class="visual-before-after">
             <div class="ba-item before">
               <div class="ba-label">1人（1エージェント）で抱える</div>
@@ -3751,7 +3751,7 @@ const MODULES = [
           </div>
 
           <div class="info-box">
-            <p><strong>なぜ効くのか（机の上の書類のたとえ）</strong>：1体の AI は“作業机”に限りがあり、調べた情報（書類）で机がいっぱいになると判断が鈍ります。サブエージェントに手分けさせ、各自が<strong>要約レポートだけを親エージェントに返す</strong>ようにすると、親の机が空いたままになり、広く・深く・抜け漏れ少なく仕上げられます。</p>
+            <p><strong>なぜ有効なのか（机の上の書類のたとえ）</strong>：1体の AI は“作業机”に限りがあり、調べた情報（書類）で机がいっぱいになると判断が鈍ります。サブエージェントに手分けさせ、各自が<strong>要約レポートだけを親エージェントに返す</strong>ようにすると、親の机が空いたままになり、広く・深く・抜け漏れ少なく仕上げられます。</p>
           </div>
           <div class="info-box">
             <p><strong>役割を分けると精度が上がる</strong>：同じ AI に「作って」と「批判して」を同時に頼むと、立場が混ざって批判が甘くなりがちです。役割を物理的に分けると、それぞれが本気で役目を果たします。</p>
@@ -3780,7 +3780,7 @@ const MODULES = [
             <p><strong>💡 最初は1つの Claude Code で十分</strong>です。「分担した方が速い」と感じるほど作業が大きくなってきたら、Subagents を取り入れましょう。小さなタスクで無理に分ける必要はありません。</p>
           </div>
 
-          <h3>成果物づくりだけじゃない — リサーチ・企画にも効く</h3>
+          <h3>成果物づくりだけじゃない — リサーチ・企画にも使える</h3>
           <p>Subagents（複数のエージェント）は“作る”だけでなく、<strong>“調べる・考える”でこそ威力を発揮します</strong>。1体では「1つの視点」「1つの机（一度に扱える情報量）」に限られますが、手分けすれば<strong>広さ</strong>と<strong>客観性</strong>を同時に手に入れられます。</p>
 
           <h4>🔍 リサーチの型：観点を分担して並行調査</h4>
@@ -3905,7 +3905,7 @@ const MODULES = [
           </div>
 
           <div class="info-box">
-            <p><strong>なぜ役を分けると効くのか</strong>：同じ1体に「メリットも言って、でも厳しく批判して」と頼むと立場が混ざり、批判が甘くなります。視点ごとに担当を分けると、それぞれが本気で役目を果たすため、賛否・リスク・代替案がそろい、検証の精度が上がります。企画の評価・提案の事前レビュー・打ち手の比較などに向いています。</p>
+            <p><strong>なぜ役を分けると精度が上がるのか</strong>：同じ1体に「メリットも言って、でも厳しく批判して」と頼むと立場が混ざり、批判が甘くなります。視点ごとに担当を分けると、それぞれが本気で役目を果たすため、賛否・リスク・代替案がそろい、検証の精度が上がります。企画の評価・提案の事前レビュー・打ち手の比較などに向いています。</p>
           </div>
           </div>
 
@@ -4152,7 +4152,7 @@ const MODULES = [
 
           <h3>全体のまとめ</h3>
           <div class="visual-highlight-card">
-            <p>第1回で「Chat の基本と成果物づくり」を押さえた。<br>第2回はその先——Claude Code で成果物の幅を広げ、仕組み（CLAUDE.md・Skills・MCP）で品質を安定させ、チームに展開する。困ったら <strong>TIPS集</strong> と <strong>FAQ</strong> を見直しながら、自分の業務で効くものから取り入れていきましょう。</p>
+            <p>第1回で「Chat の基本と成果物づくり」を押さえた。<br>第2回はその先——Claude Code で成果物の幅を広げ、仕組み（CLAUDE.md・Skills・MCP）で品質を安定させ、チームに展開する。困ったら <strong>TIPS集</strong> と <strong>FAQ</strong> を見直しながら、自分の業務で使えるものから取り入れていきましょう。</p>
           </div>
         `
       },
@@ -4900,7 +4900,7 @@ const TIPS = [
     relatedSections: [{ m: 1, s: 5, label: '第2回 2-5. AIを“自分仕様”にする道具 — CLAUDE.md・Skills・MCP' }]
   },
 
-  // ---- 知っておくと効く小ワザ系（追加） ----
+  // ---- 知っておくと役立つ小ワザ系（追加） ----
   {
     id: 'tip-024',
     category: '⚡ Claude Code 個別',
@@ -5073,7 +5073,7 @@ const TIPS = [
     "level": "intermediate",
     "title": "Python を使う作業は「UV でフォルダ内に入れて」と全体設定に書く",
     "summary": "Claude Code にプログラムやデータ処理を任せると、パソコン全体に部品（ツール）が次々入って環境が散らかることがある。全体設定（グローバルの CLAUDE.md）に「Python のツールは UV を使ってそのフォルダの中だけに入れる」と一度書いておくと、以後は自動で安全な入れ方をしてくれる。",
-    "whenToUse": "プログラムやデータ処理の仕組みを作ってもらう前。最初のセットアップ時に一度だけ設定しておけば、以後ずっと効く。",
+    "whenToUse": "プログラムやデータ処理の仕組みを作ってもらう前。最初のセットアップ時に一度だけ設定しておけば、以後ずっと反映される。",
     "howToUse": [
       "Claude Code に「全体設定の CLAUDE.md はどこにある？」と聞いて場所を教えてもらう",
       "そこに『Python のツールをインストールするときは必ず UV を使い、フォルダの中だけに入れる。環境を汚す恐れのある操作は説明したうえで確認する』と書いてもらう",
@@ -5474,7 +5474,7 @@ const TIPS = [
       "親はその要約を受け取って統合するだけにし、情報量が膨らみすぎないようにする"
     ],
     "example": "各サブエージェントはしっかり調査しつつ、私に返す最終結果は2000文字以内にまとめてください。詳細は各自で持っておき、要点だけ親に渡してください。",
-    "caution": "子の出力が多すぎると、それを全部受け取る親が情報過多でパンクする。字数上限で渡す量を絞るのが効く。モデルの割り当ては環境によってできない場合もあるので、まず字数上限から試す。本文に出てくる具体的なモデル名・プラン名は変わりやすいので鵜呑みにしない。",
+    "caution": "子の出力が多すぎると、それを全部受け取る親が情報過多でパンクする。字数上限で渡す量を絞るのが有効。モデルの割り当ては環境によってできない場合もあるので、まず字数上限から試す。本文に出てくる具体的なモデル名・プラン名は変わりやすいので鵜呑みにしない。",
     "relatedSession": "第2回",
     "relatedSections": [
       {
