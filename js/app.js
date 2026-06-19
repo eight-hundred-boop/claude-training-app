@@ -269,27 +269,6 @@
   // ランディングページ
   // ========================================
   function renderLanding(container) {
-    // 再開カード: localStorage に最後に見たトピックがあれば表示
-    let resumeCardHTML = '';
-    try {
-      const last = JSON.parse(localStorage.getItem('claude-training-last-topic'));
-      if (last && last.mi != null && last.si != null) {
-        const mod = MODULES[last.mi];
-        const sec = mod && mod.sections[last.si];
-        if (sec) {
-          resumeCardHTML = `
-            <div class="landing-resume-card" id="landing-resume">
-              <div class="landing-resume-icon">▶</div>
-              <div class="landing-resume-body">
-                <div class="landing-resume-label">前回の続きから再開</div>
-                <div class="landing-resume-title">${mod.shortTitle} — ${sec.title}</div>
-              </div>
-              <span class="landing-btn" style="flex-shrink:0;">再開する</span>
-            </div>`;
-        }
-      }
-    } catch { /* localStorage 未対応環境では無視 */ }
-
     container.innerHTML = `
       <div class="landing-page fade-in">
         <div class="landing-logo">
@@ -297,7 +276,6 @@
         </div>
         <h1 class="landing-title">Claude スキルアップ講座</h1>
         <p class="landing-subtitle">利用目的に合わせてモードを選んでください</p>
-        ${resumeCardHTML}
         <div class="landing-cards">
           <div class="landing-card" data-mode="present">
             <div class="landing-card-icon present">
@@ -321,15 +299,6 @@
 
     container.querySelectorAll('.landing-card').forEach(card => {
       card.addEventListener('click', () => setMode(card.dataset.mode));
-    });
-    container.querySelector('#landing-resume')?.addEventListener('click', () => {
-      try {
-        const last = JSON.parse(localStorage.getItem('claude-training-last-topic'));
-        if (last && last.mi != null && last.si != null) {
-          setMode('self-study');
-          navigateTo('topic-detail', last.mi, last.si);
-        }
-      } catch { setMode('self-study'); }
     });
   }
 
