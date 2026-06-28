@@ -5832,12 +5832,16 @@ button.search-result-item {
 .proj-chart-conn::after { bottom: 0; height: 36%; }
 .proj-chart-conn-label { font-size: 10px; color: #bbb; background: #fafafa; padding: 0 6px; }
 .proj-lower { display: flex; flex-direction: column; }
-.proj-branch { height: 20px; position: relative; }
+/* 中心縦線のみ（水平バーはproj-agentsに移動） */
+.proj-branch { height: 16px; position: relative; }
 .proj-branch::before { content: ''; position: absolute; left: 50%; transform: translateX(-50%); top: 0; width: 1px; height: 100%; background: #d0d0d0; }
-.proj-branch::after { content: ''; position: absolute; left: calc(100% / 6); right: calc(100% / 6); bottom: 0; height: 1px; background: #d0d0d0; }
-.proj-agents { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+/* agents直上に水平バーを配置、padding-topで縦ドロップ線のスペースを確保 */
+.proj-agents { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; position: relative; padding-top: 16px; }
+/* 水平バー: gap(8px×2=16px)を引いて列中心を正確に計算 */
+.proj-agents::before { content: ''; position: absolute; left: calc((100% - 16px) / 6); right: calc((100% - 16px) / 6); top: 0; height: 1px; background: #d0d0d0; }
 .proj-agent { border: 1px solid #e8e8e8; border-radius: 6px; padding: 9px 11px; background: white; display: flex; flex-direction: column; gap: 3px; position: relative; }
-.proj-agent:nth-child(-n+3)::before { content: ''; position: absolute; left: calc(50% - 0.5px); bottom: 100%; width: 1px; height: 20px; background: #d0d0d0; }
+/* 上段3枚への縦ドロップ線: 水平バーからカード上端まで16px */
+.proj-agent:nth-child(-n+3)::before { content: ''; position: absolute; left: calc(50% - 0.5px); top: -16px; width: 1px; height: 16px; background: #d0d0d0; }
 .proj-agent-role { font-size: 10px; color: #aaa; }
 .proj-agent-skill { font-size: 11px; font-weight: 700; color: var(--text); font-family: 'SFMono-Regular', Consolas, monospace; }
 .proj-agent-desc { font-size: 11px; color: var(--text-secondary); }
