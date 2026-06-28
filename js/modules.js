@@ -3641,7 +3641,6 @@ const MODULES = [
               <strong>💡 インストール後に反映するには</strong><br>
               プラグインは<strong>起動時に読み込まれます</strong>。claude.ai / Chat / Cowork は、新しい会話を始めれば反映されます。Claude Code（デスクトップ／CLI）は、いったん<strong>終了して再起動</strong>すれば反映されます（PC の再起動までは不要です。CLI では終了せず今すぐ反映したいときは <code>/reload-plugins</code> を実行します）。
             </div>
-            <p class="toolkit-note">💡 <strong>スキルには2種類あります。</strong>Customize の「スキル」に登録する<strong>個人のスキル</strong>は Chat・Cowork 専用です（Claude Code には上記のとおり手動コピーで使えます）。一方、consulting-toolkit-800 のような<strong>プラグインスキル</strong>は、上の方法でインストールして使います。</p>
           </div>
 
           <h3>MCP / Connectors — 必要なデータを接続する</h3>
