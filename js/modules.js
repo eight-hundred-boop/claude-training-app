@@ -2623,7 +2623,7 @@ const MODULES = [
               <div class="step-marker">2-2</div>
               <div class="step-body">
                 <div class="step-title">準備する</div>
-                <div class="step-desc">Desktop（基本）で安全に始める準備5点（作業用フォルダ・目的と成果物・禁止事項・変更対象の限定・完了条件）を押さえ、適切に指示を出せるようにする。</div>
+                <div class="step-desc">Desktop（基本）で作業用フォルダを切り、目的・変更対象・禁止事項・完了条件を含めた安全な指示の出し方を押さえる。</div>
               </div>
             </div>
           </div>
@@ -2888,7 +2888,7 @@ const MODULES = [
         type: 'lecture',
         content: `
           <h3>このセクションで学ぶこと</h3>
-          <p>Claude Code の成果は<strong>最初の準備で大きく変わります</strong>。「どこで動かすか」を選び、作業前の準備5点と安全な指示の型を押さえて、安心して任せられる状態を作ります。</p>
+          <p>Claude Code の成果は<strong>最初の準備で大きく変わります</strong>。「どこで動かすか」を選び、作業用フォルダを切ることと安全な指示の型を押さえて、安心して任せられる状態を作ります。</p>
 
           <h3>1. どこで動かすか — Desktop / CLI / IDE</h3>
           <p>Claude Code はいろんなタッチポイントから使えます。<strong>自分の作業スタイルに合わせて選びましょう</strong>。</p>
@@ -2920,7 +2920,7 @@ const MODULES = [
           <p><strong>最初は Desktop から始めると迷いません</strong>。CLI や IDE は、並列作業や自動化を求めるようになってから検討すれば十分です。</p>
 
           <h4>最初の一歩 — Desktop で起動して作業フォルダを開く</h4>
-          <p>「準備5点」を整えても、最初の起動で迷う方が多いポイントです。流れはシンプルで、次の4ステップです。</p>
+          <p>作業用フォルダを切っても、最初の起動で迷う方が多いポイントです。流れはシンプルで、次の4ステップです。</p>
           <div class="visual-steps">
             <div class="visual-step-item">
               <div class="step-marker">1</div>
@@ -2979,64 +2979,50 @@ const MODULES = [
           </div>
           <p>最初は確認が何度も出て戸惑いますが、「常に許可」を押した操作はその作業フォルダ内では次から省かれ、だんだんスムーズになります。<strong>迷ったら「1回だけ許可」を選べば安全です</strong>。作業フォルダの外を触ろうとしたときほど、中身を確かめてから答えましょう。</p>
 
-          <h3>2. 始める前の準備 — 5点を整える</h3>
-          <p>軽い依頼（読むだけ・要約する）なら気にしなくてよい。大きめ・複雑な依頼（複数ファイルの処理・ツール作成など）をするときに、この5点が効く。</p>
-
-          <div class="visual-grid cols-2">
-            <div class="visual-grid-item">
-              <div class="grid-icon">📁</div>
-              <div class="grid-title">作業用フォルダを切る</div>
-              <div class="grid-desc">元データの直接編集を避けるため、作業コピーをまとめたフォルダを用意する。Claude Code に渡すのはこのプロジェクトフォルダ。</div>
-            </div>
-            <div class="visual-grid-item">
-              <div class="grid-icon">🎯</div>
-              <div class="grid-title">目的と成果物を1行で定義</div>
-              <div class="grid-desc">「何のために」「最終的に何を出すか」をこちら側で言語化しておく。曖昧なまま依頼すると Claude も迷走する。</div>
-            </div>
-            <div class="visual-grid-item">
-              <div class="grid-icon">🚫</div>
-              <div class="grid-title">禁止事項を先に書く</div>
-              <div class="grid-desc">触ってほしくないファイル・データ、変更してほしくない部分を最初に明示する。</div>
-            </div>
-            <div class="visual-grid-item">
-              <div class="grid-icon">✂️</div>
-              <div class="grid-title">変更対象の範囲を限定</div>
-              <div class="grid-desc">「今回は◯◯ファイルの△△部分だけ」のように、作業範囲を最初に絞る。</div>
-            </div>
-            <div class="visual-grid-item">
-              <div class="grid-icon">✅</div>
-              <div class="grid-title">完了条件を決める</div>
-              <div class="grid-desc">「これが満たされたら完了」とする条件を、作業前に書き出しておく。レビュー基準にもなる。</div>
-            </div>
-          </div>
+          <h3>2. 始める前の準備 — 作業用フォルダを切る</h3>
+          <p>軽い依頼（読むだけ・要約する）なら気にしなくてよい。大きめ・複雑な依頼（複数ファイルの処理・ツール作成など）をするときは、まず作業用フォルダを切る——元データを直接編集させないよう作業コピーをまとめておき、Claude Code に渡すのはこのプロジェクトフォルダにする。</p>
 
           <h3>3. 安全な指示の出し方</h3>
-          <p>Claude Code は強力ですが、指示が曖昧だと意図しない変更を行うことがあります。以下の4点を意識して指示を出しましょう。</p>
+          <p>Claude Code は強力ですが、指示が曖昧だと意図しない変更を行うことがあります。以下の6点を意識して指示を出しましょう。</p>
 
           <div class="visual-steps">
             <div class="visual-step-item">
               <div class="step-marker">1</div>
+              <div class="step-body">
+                <div class="step-title">目的と成果物を最初に伝える</div>
+                <div class="step-desc">「何のために」「最終的に何を出すか」を最初の指示で言語化します。曖昧なまま依頼すると Claude も迷走します。</div>
+              </div>
+            </div>
+            <div class="visual-step-item">
+              <div class="step-marker">2</div>
               <div class="step-body">
                 <div class="step-title">変更対象を明確にする</div>
                 <div class="step-desc">「○○ファイルの△△の部分を修正して」のように、作業範囲を具体的に伝えます。「全体を良くして」のような曖昧な指示は避けてください。</div>
               </div>
             </div>
             <div class="visual-step-item">
-              <div class="step-marker">2</div>
+              <div class="step-marker">3</div>
               <div class="step-body">
                 <div class="step-title">禁止事項を明示する</div>
                 <div class="step-desc">「○○は変更しないで」「既存のデータは消さないで」のように、触ってほしくない部分を先に伝えます。</div>
               </div>
             </div>
             <div class="visual-step-item">
-              <div class="step-marker">3</div>
+              <div class="step-marker">4</div>
+              <div class="step-body">
+                <div class="step-title">完了条件を決めておく</div>
+                <div class="step-desc">「これが満たされたら完了」とする条件を最初の指示に含めます。レビュー基準にもなります。</div>
+              </div>
+            </div>
+            <div class="visual-step-item">
+              <div class="step-marker">5</div>
               <div class="step-body">
                 <div class="step-title">小さな単位で進める</div>
                 <div class="step-desc">一度に大きな変更を依頼せず、「まず○○を作って → 確認 → 次に△△を追加して」と段階的に進めます。</div>
               </div>
             </div>
             <div class="visual-step-item">
-              <div class="step-marker">4</div>
+              <div class="step-marker">6</div>
               <div class="step-body">
                 <div class="step-title">実装後に必ず動作確認する</div>
                 <div class="step-desc">Claude Code が作ったものは、自分で実際に動かして確認します。特にデータの正確性と、既存部分が壊れていないかを重点的にチェックします。</div>
@@ -3376,7 +3362,7 @@ const MODULES = [
             ・禁止事項：01_受領資料／の中のファイルは変更しない<br>
             ・出力形式：報告資料は1スライド1メッセージ
           </div>
-          <p>こう書いておくと、2-2 の「準備5点」がファイルに固定され、毎回口頭で伝えずに済みます。</p>
+          <p>こう書いておくと、2-2 の準備・指示の基本がファイルに固定され、毎回口頭で伝えずに済みます。</p>
 
           <h4>どこに置く？ — 置き場所は2段（自分用と案件用）</h4>
           <p>CLAUDE.md は1か所だけでなく、効かせたい範囲に応じて置き場所を選べます。大きく「自分用（グローバル）」と「案件用（プロジェクト）」の2段です。</p>
@@ -4122,8 +4108,8 @@ const MODULES = [
             <div class="visual-step-item">
               <div class="step-marker">3</div>
               <div class="step-body">
-                <div class="step-title">準備5点に立ち返る</div>
-                <div class="step-desc">それでも長引くときは、<strong>2-2 の準備5点（作業フォルダ／目的と成果物／禁止事項／変更対象／完了条件）</strong>を整え直すのが近道。指示を強くするより前提を整え直す。</div>
+                <div class="step-title">準備・指示の基本に立ち返る</div>
+                <div class="step-desc">それでも長引くときは、<strong>2-2 の準備・指示の基本（作業フォルダ／目的と成果物／変更対象／禁止事項／完了条件）</strong>を整え直すのが近道。指示を強くするより前提を整え直す。</div>
               </div>
             </div>
           </div>
@@ -4177,7 +4163,7 @@ const MODULES = [
               <div class="grid-desc">
                 <ul>
                   <li><strong>何が作れるか</strong> — データ処理・複数ファイル・ツール・自動化。</li>
-                  <li><strong>まず Desktop で</strong> — 準備5点（フォルダ／目的／禁止／範囲／完了条件）と安全な指示の型。</li>
+                  <li><strong>まず Desktop で</strong> — 作業用フォルダを切り、安全な指示の型（目的／変更対象／禁止事項／完了条件など）を押さえる。</li>
                 </ul>
               </div>
             </div>
@@ -4384,7 +4370,7 @@ const MODULES = [
         explanation: 'まずは Desktop から始めると迷いません。CLI や IDE は、並列作業や自動化を求めるようになってから検討すれば十分です。'
       },
       {
-        question: 'Claude Code に作業を任せる前の「準備」として適切でないのはどれですか？',
+        question: 'Claude Code に安全に作業を任せるための準備・指示として適切でないのはどれですか？',
         options: [
           '作業用フォルダを切り、元データの直接編集を避ける',
           '目的と成果物・禁止事項・変更対象・完了条件を整える',
@@ -4392,7 +4378,7 @@ const MODULES = [
           '「これが満たされたら完了」という条件を先に書き出す'
         ],
         correct: 2,
-        explanation: '準備の基本は「作業用フォルダ・目的と成果物・禁止事項・変更対象の限定・完了条件」の5点です。範囲を絞らず全体を丸投げするのは、意図しない変更や迷走の原因になります。'
+        explanation: '基本は作業用フォルダを切り、目的と成果物・変更対象・禁止事項・完了条件を最初の指示に明示することです。範囲を絞らず全体を丸投げするのは、意図しない変更や迷走の原因になります。'
       },
       {
         question: 'Claude Code に修正を依頼する際、最も重要な安全策はどれですか？',
@@ -4480,7 +4466,7 @@ const MODULES = [
           'バックアップを取らずに、大きな変更をまとめて一気に依頼し直す'
         ],
         correct: 1,
-        explanation: '打ち手は順番ではなく、状況に応じて選びます。長引くときは 2-2 の準備5点を整え直すのが近道です。'
+        explanation: '打ち手は順番ではなく、状況に応じて選びます。長引くときは 2-2 の準備・指示の基本を整え直すのが近道です。'
       }
     ],
 
@@ -4696,7 +4682,7 @@ const TIPS = [
       '対象ファイルを絞り直す',
       '「いまどうなっているか」を Claude に説明させ認識のズレを揃える'
     ],
-    caution: '無理に続けるより、フォルダ・目的・成果物・禁止事項・変更対象の準備5点に戻るほうが早い。',
+    caution: '無理に続けるより、作業フォルダを切り直し、目的・変更対象・禁止事項・完了条件を指示し直すほうが早い。',
     relatedSession: '第2回',
     relatedSections: [{ m: 1, s: 7, label: '第2回 2-7. 実践TIPS・立て直し方' }]
   },
