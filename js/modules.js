@@ -2561,7 +2561,7 @@ const MODULES = [
             <div class="agent-team-down">↓ ここから3つの実践が広がる</div>
             <div class="agent-team-row">
               <div class="agent-team-member"><span class="at-icon">🧠</span><strong>モデル選択</strong><span>Opus／Sonnet／Haikuでトークン量を調整</span></div>
-              <div class="agent-team-member"><span class="at-icon">📐</span><strong>プロンプト3要素</strong><span>出力を安定させる</span></div>
+              <div class="agent-team-member"><span class="at-icon">📐</span><strong>プロンプト3要素</strong><span>前提・タスク・ルールで出力を安定させる</span></div>
               <div class="agent-team-member"><span class="at-icon">✅</span><strong>出力はたたき台</strong><span>確認・修正が必須</span></div>
             </div>
           </div>
@@ -2612,6 +2612,20 @@ const MODULES = [
           </div>
           <div class="visual-steps" style="margin-top:16px;">
             <div class="visual-step-item">
+              <div class="step-marker">2-1</div>
+              <div class="step-body">
+                <div class="step-title">地図を掴む</div>
+                <div class="step-desc">AIエージェントとは何かを理解し、Claude Code で何が作れるか（ツール／自動化／データ処理／複数ファイル編集）を地図として押さえる。</div>
+              </div>
+            </div>
+            <div class="visual-step-item">
+              <div class="step-marker">2-2</div>
+              <div class="step-body">
+                <div class="step-title">準備する</div>
+                <div class="step-desc">Desktop（基本）で安全に始める準備5点（作業用フォルダ・目的と成果物・禁止事項・変更対象の限定・完了条件）を押さえ、適切に指示を出せるようにする。</div>
+              </div>
+            </div>
+            <div class="visual-step-item">
               <div class="step-marker">2-3</div>
               <div class="step-body">
                 <div class="step-title">データ処理を任せる</div>
@@ -2637,6 +2651,13 @@ const MODULES = [
               <div class="step-body">
                 <div class="step-title">リサーチ・企画に広げる</div>
                 <div class="step-desc">Subagents で調査・実装・レビューを分担・並列化する。競合3社を観点別に同時調査したり、発散役と評価役を分けてアイデアを選別したりと、リサーチや企画の幅も広がる。</div>
+              </div>
+            </div>
+            <div class="visual-step-item">
+              <div class="step-marker">2-7</div>
+              <div class="step-body">
+                <div class="step-title">使いこなす</div>
+                <div class="step-desc">スラッシュコマンドや小ワザで作業を速くし、うまく動かないときは「強い指示」より「準備に戻る」——立て直し方を身につける。</div>
               </div>
             </div>
           </div>
