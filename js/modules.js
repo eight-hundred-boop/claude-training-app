@@ -2610,12 +2610,13 @@ const MODULES = [
             <div class="big-message-text">Claude Code で成果物の幅を広げ、仕組みで品質を固定する</div>
             <div class="big-message-sub">第1回で「Chat の基本と成果物づくり」を押さえました。第2回はその先へ。</div>
           </div>
+          <h4>🧭 知る・始める</h4>
           <div class="visual-steps" style="margin-top:16px;">
             <div class="visual-step-item">
               <div class="step-marker">2-1</div>
               <div class="step-body">
-                <div class="step-title">地図を掴む</div>
-                <div class="step-desc">AIエージェントとは何かを理解し、Claude Code で何が作れるか（ツール／自動化／データ処理／複数ファイル編集）を地図として押さえる。</div>
+                <div class="step-title">何ができるか知る</div>
+                <div class="step-desc">AIエージェントとは何かを理解し、Claude Code で何が作れるか（ツール／自動化／データ処理／複数ファイル編集）を押さえる。</div>
               </div>
             </div>
             <div class="visual-step-item">
@@ -2625,6 +2626,10 @@ const MODULES = [
                 <div class="step-desc">Desktop（基本）で安全に始める準備5点（作業用フォルダ・目的と成果物・禁止事項・変更対象の限定・完了条件）を押さえ、適切に指示を出せるようにする。</div>
               </div>
             </div>
+          </div>
+
+          <h4>🏗️ 作る</h4>
+          <div class="visual-steps">
             <div class="visual-step-item">
               <div class="step-marker">2-3</div>
               <div class="step-body">
@@ -2639,13 +2644,21 @@ const MODULES = [
                 <div class="step-desc">第1回の Artifact（その場かぎり）を発展させて、保存・複数画面・データ読み書きに対応した繰り返し使えるツールを作る。診断ツール・市場規模シミュレーター・社内ミニツールが対象。</div>
               </div>
             </div>
+          </div>
+
+          <h4>🔒 質を固定する</h4>
+          <div class="visual-steps">
             <div class="visual-step-item">
               <div class="step-marker">2-5</div>
               <div class="step-body">
-                <div class="step-title">品質を固定する</div>
+                <div class="step-title">CLAUDE.md・Skills・MCPを揃える</div>
                 <div class="step-desc">CLAUDE.md でルールを常時読み込ませ、Skills で手順を型化し、MCP で社内データを接続する。3つが揃うと依頼文は短くなり、毎回同じ品質の成果物が返ってくる。</div>
               </div>
             </div>
+          </div>
+
+          <h4>🚀 使いこなす</h4>
+          <div class="visual-steps">
             <div class="visual-step-item">
               <div class="step-marker">2-6</div>
               <div class="step-body">
@@ -2656,7 +2669,7 @@ const MODULES = [
             <div class="visual-step-item">
               <div class="step-marker">2-7</div>
               <div class="step-body">
-                <div class="step-title">使いこなす</div>
+                <div class="step-title">小ワザ・立て直し方を覚える</div>
                 <div class="step-desc">スラッシュコマンドや小ワザで作業を速くし、うまく動かないときは「強い指示」より「準備に戻る」——立て直し方を身につける。</div>
               </div>
             </div>
