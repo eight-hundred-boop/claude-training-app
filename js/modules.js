@@ -3708,54 +3708,6 @@ const MODULES = [
           <h3>このセクションで学ぶこと</h3>
           <p>大きめ・複雑な成果物を効率よく作るための使いこなしを押さえます。中心は <strong>Subagents（作業の分担・並列化）</strong>。成果物づくりだけでなく、リサーチ・企画にも効きます。</p>
 
-          <h3>Skills（2-5）との違いは？</h3>
-          <p>Skills は「どうやるか」（手順の型）、Subagents は「誰が（何人で）やるか」（作業の分担）です。役割が違うので、組み合わせて使うこともできます。</p>
-
-          <div class="visual-comparison">
-            <div class="visual-comparison-card before">
-              <div class="comp-label">Skills（2-5）</div>
-              <h4>どうやるか — 手順の型</h4>
-              <ul>
-                <li>毎回同じ作業を型にしたいときに効く</li>
-                <li>手順書・マニュアルを1人で見ながら作業するイメージ</li>
-              </ul>
-            </div>
-            <div class="visual-comparison-card after">
-              <div class="comp-label">Subagents（このセクション）</div>
-              <h4>誰が（何人で）やるか — 作業の分担</h4>
-              <ul>
-                <li>大きい・複雑な作業を手分けしたいときに効く</li>
-                <li>仕事を何人かに振って並行して進めてもらうイメージ</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="visual-flow">
-            <div class="flow-step">
-              <div class="flow-num">🧍</div>
-              <div class="flow-label">ゴールを1つ渡す</div>
-            </div>
-            <div class="flow-arrow">→</div>
-            <div class="flow-step">
-              <div class="flow-num">🧠</div>
-              <div class="flow-label">メインエージェント（親）が手分け</div>
-            </div>
-            <div class="flow-arrow">→</div>
-            <div class="flow-step">
-              <div class="flow-num">🔍🔧✅</div>
-              <div class="flow-label">調査・実装・レビューが並列で動く</div>
-            </div>
-            <div class="flow-arrow">→</div>
-            <div class="flow-step">
-              <div class="flow-num">📥</div>
-              <div class="flow-label">要約を統合して報告</div>
-            </div>
-          </div>
-
-          <div class="tip-box">
-            <p>💡 組み合わせも可能です——Subagents の各担当が、自分の Skill を使って作業することもできます。</p>
-          </div>
-
           <h3>Subagents — 作業を分担・並列化する</h3>
           <p>Subagents は、1つの大きなタスクを<strong>役割を分けた複数のエージェントに任せる</strong>仕組みです。「調べる人・作る人・チェックする人」を分けるイメージです。</p>
 
@@ -4000,6 +3952,54 @@ const MODULES = [
 
           <div class="warning-box">
             <p>⚠️ 背景（前提）を渡さないと、たくさん動く分だけ的外れになりやすいです。目的・前提・判断基準を先に共有しましょう。</p>
+          </div>
+
+          <h3>Skills（2-5）との違いは？</h3>
+          <p>Skills は「どうやるか」（手順の型）、Subagents は「誰が（何人で）やるか」（作業の分担）です。役割が違うので、組み合わせて使うこともできます。</p>
+
+          <div class="visual-comparison">
+            <div class="visual-comparison-card before">
+              <div class="comp-label">Skills（2-5）</div>
+              <h4>どうやるか — 手順の型</h4>
+              <ul>
+                <li>毎回同じ作業を型にしたいときに効く</li>
+                <li>手順書・マニュアルを1人で見ながら作業するイメージ</li>
+              </ul>
+            </div>
+            <div class="visual-comparison-card after">
+              <div class="comp-label">Subagents（このセクション）</div>
+              <h4>誰が（何人で）やるか — 作業の分担</h4>
+              <ul>
+                <li>大きい・複雑な作業を手分けしたいときに効く</li>
+                <li>仕事を何人かに振って並行して進めてもらうイメージ</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="visual-flow">
+            <div class="flow-step">
+              <div class="flow-num">🧍</div>
+              <div class="flow-label">ゴールを1つ渡す</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-num">🧠</div>
+              <div class="flow-label">メインエージェント（親）が手分け</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-num">👥</div>
+              <div class="flow-label">調査・実装・レビューが並列で動く</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-num">📥</div>
+              <div class="flow-label">要約を統合して報告</div>
+            </div>
+          </div>
+
+          <div class="tip-box">
+            <p>💡 組み合わせも可能です——Subagents の各担当が、自分の Skill を使って作業することもできます。</p>
           </div>
         `
       },
