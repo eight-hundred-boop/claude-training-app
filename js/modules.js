@@ -2602,7 +2602,7 @@ const MODULES = [
             <div class="visual-grid-item">
               <div class="grid-icon">🎨</div>
               <div class="grid-title">Artifact</div>
-              <div class="grid-desc">診断ツールや画面モックなどのプロトタイプを作る</div>
+              <div class="grid-desc">診断ツールやポジショニングマップなどのプロトタイプを作る</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">📂</div>
