@@ -2551,7 +2551,7 @@ const MODULES = [
           <p>第1回で身につけた「初速の出し方」と「成果物の作り方」を振り返り、第2回（Claude Code で成果物を作る）へつなげます。</p>
 
           <h3>初速を出す基本</h3>
-          <div class="visual-grid cols-3">
+          <div class="visual-grid cols-4">
             <div class="visual-grid-item">
               <div class="grid-icon">💬</div>
               <div class="grid-title">基盤は Chat</div>
@@ -2566,6 +2566,11 @@ const MODULES = [
               <div class="grid-icon">✅</div>
               <div class="grid-title">出力は“たたき台”</div>
               <div class="grid-desc">鵜呑みにせず確認・修正。最終責任は自分が持つ。</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">🧠</div>
+              <div class="grid-title">モデルとトークン量</div>
+              <div class="grid-desc">用途に応じて Opus／Sonnet／Haiku を選ぶ。資料は詰め込みすぎない（最大100万トークン）。</div>
             </div>
           </div>
 
