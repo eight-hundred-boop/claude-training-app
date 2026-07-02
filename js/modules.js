@@ -1503,32 +1503,32 @@ const MODULES = [
             <div class="visual-grid-item">
               <div class="grid-icon">🩺</div>
               <div class="grid-title">診断ツール</div>
-              <div class="grid-desc">質問に回答すると結果が表示される。例：IT成熟度診断、業務改善優先度診断</div>
+              <div class="grid-desc">質問に回答すると結果が表示される。例：セグメンテーション診断、ブランド適合度診断</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">🧮</div>
               <div class="grid-title">シミュレーター</div>
-              <div class="grid-desc">数値を変えると結果が連動する。例：コスト試算、ROI計算、料金プラン比較</div>
+              <div class="grid-desc">数値を変えると結果が連動する。例：市場規模（TAM/SAM/SOM）算出、価格弾力性シミュレーション</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">📊</div>
               <div class="grid-title">ダッシュボード</div>
-              <div class="grid-desc">データを視覚的に一覧表示。例：KPIモニター、プロジェクト進捗一覧</div>
+              <div class="grid-desc">データを視覚的に一覧表示。例：競合比較ダッシュボード、KPIモニター</div>
             </div>
             <div class="visual-grid-item">
-              <div class="grid-icon">🖼️</div>
-              <div class="grid-title">画面モック</div>
-              <div class="grid-desc">システムの画面イメージを実物に近い形で表示。認識合わせに使う</div>
+              <div class="grid-icon">🗺️</div>
+              <div class="grid-title">ポジショニングマップ・ペルソナカード</div>
+              <div class="grid-desc">2軸マップや想定顧客像を可視化。認識合わせに使う</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">🔀</div>
-              <div class="grid-title">業務フロー可視化</div>
-              <div class="grid-desc">業務プロセスをインタラクティブに表示。ボトルネック箇所をハイライト</div>
+              <div class="grid-title">カスタマージャーニー可視化</div>
+              <div class="grid-desc">顧客の行動・感情の流れをインタラクティブに表示。離脱ポイントをハイライト</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">📋</div>
-              <div class="grid-title">入力フォーム型ツール</div>
-              <div class="grid-desc">入力欄に情報を入れると整形された出力が得られる。例：見積書ジェネレーター</div>
+              <div class="grid-title">ペルソナカードジェネレーター</div>
+              <div class="grid-desc">属性を入力すると、想定顧客像のペルソナカードが生成される</div>
             </div>
           </div>
 
@@ -2337,7 +2337,7 @@ const MODULES = [
         question: '次のうち、Artifact の「プロトタイプ」として作るのに最も適しているのはどれですか？',
         options: [
           '社内の人事管理システム',
-          'クライアントとの認識合わせ用の IT 成熟度診断ツール',
+          'クライアントとの認識合わせ用のセグメンテーション診断ツール',
           '本番運用する在庫管理データベース',
           '個人情報を扱う顧客登録フォーム'
         ],
@@ -2437,14 +2437,14 @@ const MODULES = [
       },
       {
         section: '1-11. Artifact で「プロトタイプ」を作る',
-        title: 'IT 成熟度診断ツールを作る',
-        task: 'Artifact を使って、クライアント向けの簡易診断ツールを作ってみましょう。\n\n1. 「クライアント企業のIT活用成熟度を5段階で診断するツールを作ってください。質問は5問で、回答に応じて総合スコアとアドバイスを表示してください」と依頼\n2. 生成された Artifact を実際に操作して回答してみる\n3. 「質問を1つ追加して」「結果にレーダーチャートを追加して」と修正指示を出す\n4. 完成したら HTML をダウンロードして、ブラウザで開けることを確認',
+        title: 'セグメンテーション診断ツールを作る',
+        task: 'Artifact を使って、クライアント向けの簡易診断ツールを作ってみましょう。\n\n1. 「クライアントの新規事業について、ターゲットセグメントの適合度を5段階で診断するツールを作ってください。質問は5問で、回答に応じて総合スコアとアドバイスを表示してください」と依頼\n2. 生成された Artifact を実際に操作して回答してみる\n3. 「質問を1つ追加して」「結果にレーダーチャートを追加して」と修正指示を出す\n4. 完成したら HTML をダウンロードして、ブラウザで開けることを確認',
         hint: '「これは認識合わせのための試作品です」と伝えた上で、クライアントに見せることを想像して作りましょう。'
       },
       {
         section: '1-11. Artifact で「プロトタイプ」を作る',
-        title: 'ROI シミュレーターを作る',
-        task: 'Artifact を使って、提案の効果を試算するシミュレーターを作ってみましょう。\n\n1. 「DX推進による業務効率化のROIシミュレーターを作ってください。入力項目は、現在の作業時間、削減率、人件費単価の3つ。年間のコスト削減額とROIを自動計算して表示してください」と依頼\n2. 数値を変えて結果が連動することを確認\n3. 「入力値の妥当性チェック（マイナス値の排除等）を追加して」と品質を上げる\n4. 「結果をグラフでも表示して」とビジュアルを強化',
+        title: '市場規模シミュレーターを作る',
+        task: 'Artifact を使って、提案の裏付けとなる試算ツールを作ってみましょう。\n\n1. 「新規事業の市場規模（TAM/SAM/SOM）を試算するシミュレーターを作ってください。入力項目は、対象人口、購入率、平均単価の3つ。市場規模を自動計算して表示してください」と依頼\n2. 数値を変えて結果が連動することを確認\n3. 「入力値の妥当性チェック（マイナス値の排除等）を追加して」と品質を上げる\n4. 「結果をグラフでも表示して」とビジュアルを強化',
         hint: 'シミュレーターの計算ロジックが正しいか、自分で計算して照合してみましょう。'
       },
       {
@@ -2498,7 +2498,7 @@ const MODULES = [
         { q: 'プロンプトの3要素は必ず全部入れるべきですか？', a: '必ずしも全部必要ではありません。簡単な質問なら不要ですが、業務で精度の高い出力が欲しいときは3要素（前提の共有・タスク定義・ルール指定）を意識すると品質が上がります。まず簡潔に指示して、返ってきた出力を見て追加指示するやり方も有効です。', category: '✍️ プロンプト・品質' },
         { q: 'Claude in Office では具体的に何ができますか？', a: 'Excel ではデータの傾向分析・集計観点の提案・グラフ化方針の相談・異常値の洗い出し、PowerPoint では構成案の作成・タイトル改善・ストーリーライン整理、Word では要約・文体統一・章立て見直し・クライアント向け表現変換ができます。Office 内で直接 Claude と対話する形で利用します。', category: '💼 Office・Chrome' },
         { q: 'Research と通常の Web 検索の違いは何ですか？', a: 'Research は複数の情報源を自動で横断調査し、要点を構造化して出典付きで報告してくれます。通常の Web 検索は自分でキーワードを考え、各サイトを読み、情報を取捨選択・整理する必要があります。ただし Research の結果も「初稿」なので、重要な数値や事実は必ず一次情報に当たって確認してください。', category: '💡 Claudeの基本' },
-        { q: 'Artifact で作る「プロトタイプ」とは何ですか？', a: '診断ツール、シミュレーター、ダッシュボード、画面モック、業務フロー可視化など、ユーザーが実際に操作できる成果物のことです。Artifact が HTML/CSS/JavaScript を生成し、ブラウザ上でそのまま動作します。提案やプロジェクトの論点を具体化する「たたき台」として活用します。', category: '💡 Claudeの基本' },
+        { q: 'Artifact で作る「プロトタイプ」とは何ですか？', a: '診断ツール、シミュレーター、ダッシュボード、ポジショニングマップ、カスタマージャーニー可視化など、ユーザーが実際に操作できる成果物のことです。Artifact が HTML/CSS/JavaScript を生成し、ブラウザ上でそのまま動作します。提案やプロジェクトの論点を具体化する「たたき台」として活用します。', category: '💡 Claudeの基本' },
         { q: 'プロトタイプをクライアントに見せる際の注意点は？', a: '必ず「これは認識合わせのための試作品です」と伝えてください。Artifact で作るものは本番システムではなく、論点を具体化するためのたたき台です。データの保存機能がないこと、セキュリティ対策が施されていないことなどを説明し、本番開発は別途必要であることを明確にしましょう。', category: '✍️ プロンプト・品質' },
         { q: 'Chrome 拡張を使う際の注意点は？', a: 'Chrome 拡張を使うと、表示中のページ内容が Claude に送信されます。クライアントの機密情報や個人情報が含まれるページ（社内システム、顧客管理画面等）では、送信してよい情報かどうかを判断してから使ってください。また、Project の自動参照やファイルアップロードは Chrome 拡張では使えません。', category: '💼 Office・Chrome' },
         { q: 'Cowork はどのような作業に向いていますか？', a: '複数資料の整理、Excel の加工、Word・PowerPoint の下書き、ファイル構成の確認、レポートの初稿作成など、ファイルを直接扱う作業に向いています。Chat が「対話で相談する」のに対し、Cowork は「作業を委任する」イメージです。作業用コピーを作ってから渡すことをお勧めします。', category: '📂 Cowork' },
@@ -3074,23 +3074,23 @@ const MODULES = [
           <div class="visual-grid cols-2">
             <div class="visual-grid-item">
               <div class="grid-icon">📊</div>
-              <div class="grid-title">複数 Excel / CSV の集計</div>
-              <div class="grid-desc">月別・拠点別に分かれたファイルを読み込み、統合・集計して1枚のレポートにまとめる</div>
+              <div class="grid-title">複数アンケート・調査データのクロス集計</div>
+              <div class="grid-desc">設問ごと・セグメント別に集計し、自由回答はカテゴリに分類して比較表にまとめる</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">📝</div>
-              <div class="grid-title">複数議事録の整理</div>
-              <div class="grid-desc">フォルダ内の議事録を読み、案件ごとに決定事項・宿題を整理して表に出力</div>
+              <div class="grid-title">インタビュー逐語録の整理</div>
+              <div class="grid-desc">複数の逐語録を読み、論点・発言を抽出して一覧に整理</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">📁</div>
-              <div class="grid-title">フォルダ横断の分類・統合</div>
-              <div class="grid-desc">散在する資料を内容で分類し、目次や一覧を自動生成</div>
+              <div class="grid-title">競合IR・財務データの横断比較</div>
+              <div class="grid-desc">複数社の開示情報を統合し、比較表を自動生成</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">📄</div>
-              <div class="grid-title">定型レポートの生成</div>
-              <div class="grid-desc">テンプレートとデータを渡し、毎月の報告書ドラフトを生成</div>
+              <div class="grid-title">定型調査レポートの生成</div>
+              <div class="grid-desc">テンプレートとデータを渡し、定例の調査レポートドラフトを生成</div>
             </div>
           </div>
 
@@ -3141,7 +3141,7 @@ const MODULES = [
               <div class="step-marker">💬</div>
               <div class="step-body">
                 <div class="step-title">統合・集計を依頼</div>
-                <div class="step-desc">「これらを統合して、設問ごと・セグメント別に集計し、比較表にして」。まず計画を出させてから実装させると安全。</div>
+                <div class="step-desc">「これらを統合して、設問ごと・セグメント別にクロス集計し、自由回答は主要カテゴリに分類して比較表にして」。まず計画を出させてから実装させると安全。</div>
               </div>
             </div>
             <div class="visual-step-item">
@@ -3202,33 +3202,33 @@ const MODULES = [
           <div class="visual-grid cols-3">
             <div class="visual-grid-item">
               <div class="grid-icon">🩺</div>
-              <div class="grid-title">診断ツール</div>
-              <div class="grid-desc">IT成熟度診断、業務改善優先度診断。回答すると結果とアドバイスが出る</div>
+              <div class="grid-title">セグメンテーション診断ツール</div>
+              <div class="grid-desc">回答すると顧客セグメントやブランド適合度のスコアとアドバイスが出る</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">🧮</div>
-              <div class="grid-title">見積・ROI 計算機</div>
-              <div class="grid-desc">数値を入れると試算結果が連動。料金プラン比較にも</div>
+              <div class="grid-title">市場規模・価格シミュレーター</div>
+              <div class="grid-desc">TAM/SAM/SOM を算出。価格弾力性シミュレーションにも</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">📊</div>
-              <div class="grid-title">集計ダッシュボード</div>
-              <div class="grid-desc">データを読み込み、KPI や進捗をグラフで一覧表示</div>
+              <div class="grid-title">競合比較ダッシュボード</div>
+              <div class="grid-desc">複数社の価格・機能・シェアをグラフで一覧表示</div>
             </div>
             <div class="visual-grid-item">
-              <div class="grid-icon">✍️</div>
-              <div class="grid-title">定型文ジェネレーター</div>
-              <div class="grid-desc">項目を入力すると、メール・報告書の定型文を整形して出力</div>
+              <div class="grid-icon">🗺️</div>
+              <div class="grid-title">ポジショニングマップ生成ツール</div>
+              <div class="grid-desc">2軸を入力すると、競合・自社の位置づけを可視化</div>
             </div>
             <div class="visual-grid-item">
-              <div class="grid-icon">📋</div>
-              <div class="grid-title">チェックリスト／申請フォーム</div>
-              <div class="grid-desc">入力・チェックして結果を保存できる業務支援ツール</div>
+              <div class="grid-icon">📈</div>
+              <div class="grid-title">NPS・認知度トラッカー</div>
+              <div class="grid-desc">定点調査の結果を時系列で入力し、推移をグラフ化</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">🔍</div>
-              <div class="grid-title">簡易検索ツール</div>
-              <div class="grid-desc">手元の資料一覧をキーワードで絞り込む、社内向けの小さな検索</div>
+              <div class="grid-title">競合・市場情報の検索ツール</div>
+              <div class="grid-desc">手元の調査資料一覧をキーワードで絞り込む検索</div>
             </div>
           </div>
 
@@ -3238,7 +3238,7 @@ const MODULES = [
               <div class="step-marker">1</div>
               <div class="step-body">
                 <div class="step-title">目的と使う人を伝える</div>
-                <div class="step-desc">「誰が・何のために使うツールか」を伝えます。例：「営業が客先で使う、簡単なROI試算ツール」。</div>
+                <div class="step-desc">「誰が・何のために使うツールか」を伝えます。例：「営業が提案時に使う、簡単な市場規模算出ツール」。</div>
               </div>
             </div>
             <div class="visual-step-item">
@@ -4491,7 +4491,7 @@ const MODULES = [
       {
         section: '2-4. 成果物を作る②：ツール・プロトタイプ・アプリ',
         title: '簡単なツールを1つ作る',
-        task: '業務で使えそうな小さなツールを、Claude Code で1つ作ってみましょう。\n\n1. 「誰が・何のために使うか」を1行で決める（例：営業が客先で使う簡単なROI試算ツール）\n2. まず動く最小版を作らせ、すぐ操作して確認する\n3. 「項目を増やして」「結果をグラフにして」と段階的に育てる\n4. ファイルとして保存し、ブラウザで開いて動作を確認する',
+        task: '業務で使えそうな小さなツールを、Claude Code で1つ作ってみましょう。\n\n1. 「誰が・何のために使うか」を1行で決める（例：営業が提案時に使う簡単な市場規模算出ツール）\n2. まず動く最小版を作らせ、すぐ操作して確認する\n3. 「項目を増やして」「結果をグラフにして」と段階的に育てる\n4. ファイルとして保存し、ブラウザで開いて動作を確認する',
         hint: '第1回で作った Artifact の試作品を「保存できる形にして」と頼むのが、いちばん入りやすい第一歩です。本番システムではなく試作・社内ツールとして扱いましょう。'
       },
       {
