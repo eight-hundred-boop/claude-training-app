@@ -2552,44 +2552,22 @@ const MODULES = [
 
           <h3>Chatが全ての土台</h3>
           <p>Cowork・Claude Code も土台は Chat。まず Chat を使いこなすことがすべての基本です。</p>
-          <div class="visual-grid cols-4">
-            <div class="visual-grid-item">
-              <div class="grid-icon">💬</div>
-              <div class="grid-title">基盤は Chat</div>
-              <div class="grid-desc">まず Chat で対話。Cowork・Claude Code も根っこはここ。</div>
+
+          <div class="agent-team">
+            <div class="agent-team-lead">
+              <span class="at-icon">💬</span>
+              <div class="at-body"><strong>基盤は Chat</strong><span>まず Chat で対話。Cowork・Claude Code も根っこはここ</span></div>
             </div>
-            <div class="visual-grid-item">
-              <div class="grid-icon">🧠</div>
-              <div class="grid-title">モデル選択でトークン量をコントロール</div>
-              <div class="grid-desc">用途に応じて Opus／Sonnet／Haiku を選び、応答の深さと消費するトークン量を調整する。</div>
-            </div>
-            <div class="visual-grid-item">
-              <div class="grid-icon">📐</div>
-              <div class="grid-title">プロンプト3要素</div>
-              <div class="grid-desc">「前提・タスク・ルール」をそろえると出力が安定する。</div>
-            </div>
-            <div class="visual-grid-item">
-              <div class="grid-icon">✅</div>
-              <div class="grid-title">出力は“たたき台”</div>
-              <div class="grid-desc">鵜呑みにせず確認・修正。最終責任は自分が持つ。</div>
+            <div class="agent-team-down">↓ ここから3つの実践が広がる</div>
+            <div class="agent-team-row">
+              <div class="agent-team-member"><span class="at-icon">🧠</span><strong>モデル選択</strong><span>トークン量をコントロール</span></div>
+              <div class="agent-team-member"><span class="at-icon">📐</span><strong>プロンプト3要素</strong><span>出力を安定させる</span></div>
+              <div class="agent-team-member"><span class="at-icon">✅</span><strong>出力はたたき台</strong><span>確認・修正が必須</span></div>
             </div>
           </div>
 
           <div class="tip-box">
             <p>💡 <strong>困ったらAIに聞く</strong> — 使い方に迷ったら、その使い方自体を Claude に聞けばよい。</p>
-          </div>
-
-          <div class="visual-grid cols-2">
-            <div class="visual-grid-item">
-              <div class="grid-icon">📋</div>
-              <div class="grid-title">Project</div>
-              <div class="grid-desc">前提・資料を入れておけば毎回説明し直さなくてよい</div>
-            </div>
-            <div class="visual-grid-item">
-              <div class="grid-icon">🎨</div>
-              <div class="grid-title">Artifact</div>
-              <div class="grid-desc">文書やコード・ツールを本文と切り離し、単独で編集・再利用できる</div>
-            </div>
           </div>
 
           <h3>成果物につなげる</h3>
@@ -2603,6 +2581,11 @@ const MODULES = [
               <div class="grid-icon">🔍</div>
               <div class="grid-title">Research</div>
               <div class="grid-desc">複数ソースを調べて根拠付きでまとめる</div>
+            </div>
+            <div class="visual-grid-item">
+              <div class="grid-icon">📋</div>
+              <div class="grid-title">Project</div>
+              <div class="grid-desc">前提・資料を入れておけば毎回説明し直さなくてよい</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">🎨</div>
