@@ -2640,7 +2640,7 @@ const MODULES = [
               <div class="step-marker">2-4</div>
               <div class="step-body">
                 <div class="step-title">ツールを作る</div>
-                <div class="step-desc">第1回の Artifact（その場かぎり）を発展させて、保存・複数画面・データ読み書きに対応した繰り返し使えるツールを作る。診断ツール・ROI計算機・社内ミニアプリが対象。</div>
+                <div class="step-desc">第1回の Artifact（その場かぎり）を発展させて、保存・複数画面・データ読み書きに対応した繰り返し使えるツールを作る。診断ツール・市場規模シミュレーター・社内ミニツールが対象。</div>
               </div>
             </div>
             <div class="visual-step-item">
