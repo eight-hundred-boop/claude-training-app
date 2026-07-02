@@ -2560,7 +2560,7 @@ const MODULES = [
             </div>
             <div class="agent-team-down">↓ ここから3つの実践が広がる</div>
             <div class="agent-team-row">
-              <div class="agent-team-member"><span class="at-icon">🧠</span><strong>モデル選択</strong><span>トークン量をコントロール</span></div>
+              <div class="agent-team-member"><span class="at-icon">🧠</span><strong>モデル選択</strong><span>Opus／Sonnet／Haikuでトークン量を調整</span></div>
               <div class="agent-team-member"><span class="at-icon">📐</span><strong>プロンプト3要素</strong><span>出力を安定させる</span></div>
               <div class="agent-team-member"><span class="at-icon">✅</span><strong>出力はたたき台</strong><span>確認・修正が必須</span></div>
             </div>
@@ -2601,24 +2601,6 @@ const MODULES = [
               <div class="grid-icon">⏰</div>
               <div class="grid-title">Scheduled tasks</div>
               <div class="grid-desc">定型作業を時間で自動実行</div>
-            </div>
-          </div>
-
-          <div class="visual-before-after">
-            <div class="ba-item before">
-              <div class="ba-label">第1回で体験したこと</div>
-              <ul>
-                <li>🎨 <strong>Artifact</strong> — その場のプロトタイプ</li>
-                <li>📂 <strong>Cowork</strong> — ローカルフォルダでのファイル作業</li>
-              </ul>
-            </div>
-            <div class="ba-arrow">→</div>
-            <div class="ba-item after">
-              <div class="ba-label">第2回：Claude Code でさらに広げる</div>
-              <ul>
-                <li>保存できる・複数ファイルを横断する</li>
-                <li>繰り返し使える成果物を作る段階へ</li>
-              </ul>
             </div>
           </div>
 
