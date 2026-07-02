@@ -2984,7 +2984,7 @@ const MODULES = [
           <p>最初は確認が何度も出て戸惑いますが、「常に許可」を押した操作はその作業フォルダ内では次から省かれ、だんだんスムーズになります。<strong>迷ったら「1回だけ許可」を選べば安全です</strong>。作業フォルダの外を触ろうとしたときほど、中身を確かめてから答えましょう。</p>
 
           <h3>4. 安全な指示の出し方</h3>
-          <p>Claude Code は強力ですが、指示が曖昧だと意図しない変更を行うことがあります。以下の6点を意識して指示を出しましょう。</p>
+          <p>Claude Code は強力ですが、指示が曖昧だと意図しない変更を行うことがあります。以下の5点を意識して指示を出しましょう。</p>
 
           <div class="visual-steps">
             <div class="visual-step-item">
@@ -3022,18 +3022,11 @@ const MODULES = [
                 <div class="step-desc">一度に大きな変更を依頼せず、「まず○○を作って → 確認 → 次に△△を追加して」と段階的に進めます。</div>
               </div>
             </div>
-            <div class="visual-step-item">
-              <div class="step-marker">6</div>
-              <div class="step-body">
-                <div class="step-title">実装後に必ず動作確認する</div>
-                <div class="step-desc">Claude Code が作ったものは、自分で実際に動かして確認します。特にデータの正確性と、既存部分が壊れていないかを重点的にチェックします。</div>
-              </div>
-            </div>
           </div>
 
           <div class="warning-box">
             <p><strong>Claude Code は「手を動かすアシスタント」であり「責任者」ではない</strong></p>
-            <p>Claude Code が生成・修正したファイルの最終責任は自分にあります。「Claude Code がやったから大丈夫」ではなく、結果を確認して責任を持つ姿勢は他の機能と同じです。</p>
+            <p>Claude Code が生成・修正したファイルの最終責任は自分にあります。「Claude Code がやったから大丈夫」ではなく、実際に動かして結果を確認し、責任を持つ姿勢は他の機能と同じです。特にデータの正確性と、既存部分が壊れていないかは重点的にチェックしてください。</p>
           </div>
 
           <div class="info-box">
