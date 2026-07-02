@@ -3690,7 +3690,7 @@ const MODULES = [
           </div>
 
           <div class="visual-highlight-card">
-            <p><strong>CLAUDE.md はチームの「品質基準書」にもなる</strong>：プロジェクトの CLAUDE.md を共有すれば、他のメンバーも同じルールで Claude Code を使え、成果物の品質が揃います。個人の工夫を、再現できる形に残していきましょう。</p>
+            <p><strong>CLAUDE.md も Skill も、チームの「品質基準書」になる</strong>：どちらも共有すれば、他のメンバーも同じルール・同じ手順で Claude Code を使え、成果物の品質が揃います。個人の工夫を、再現できる形に残していきましょう。</p>
           </div>
         `
       },
