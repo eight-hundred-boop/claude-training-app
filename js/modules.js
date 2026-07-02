@@ -2850,12 +2850,17 @@ const MODULES = [
             <p>🔍 Claude Code は“作る”だけでなく<strong>“調べる・考える”にも使えます</strong>。複数のエージェントで手分けして、<strong>リサーチや企画・アイデア出し</strong>を広く深く進められます（くわしくは 2-6）。</p>
           </div>
 
-          <h3>Cowork と Claude Code の使い分け</h3>
+          <h3>Chat・Cowork・Claude Code の使い分け</h3>
           <div class="visual-mapping">
             <div class="mapping-header">
               <span class="mapping-from">使い分け</span>
               <span class="mapping-arrow"></span>
               <span class="mapping-to">向いている場面</span>
+            </div>
+            <div class="mapping-row">
+              <span class="mapping-from">Chat</span>
+              <span class="mapping-arrow">→</span>
+              <span class="mapping-to">ファイルを貼って直してもらう。都度自分で貼り直し・受け取って配置する一回性のやりとり（1-4）</span>
             </div>
             <div class="mapping-row">
               <span class="mapping-from">Cowork</span>
