@@ -4226,6 +4226,9 @@ const MODULES = [
           </div>
 
           <h3>A. デスクトップアプリ版（Mac / Windows）</h3>
+          <div class="warning-box">
+            <p>⚠️ <strong>インストール前に「PCソフトウェア利用申請」が必要</strong><br>社内規則により、インストール前に PC ソフトウェア利用申請（ServiceNow）の手続きが必須です。手順の詳細は社内ガイド「<a href="https://app.notion.com/p/384b14ae3bcd81ec90efc46a2d84e604" target="_blank">Claude 導入ガイド（申請〜インストール〜利用開始）</a>」を参照してください。</p>
+          </div>
           <div class="visual-steps">
             <div class="visual-step-item">
               <div class="step-marker">1</div>
