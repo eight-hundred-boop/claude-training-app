@@ -3275,8 +3275,8 @@ const MODULES = [
           <div class="visual-grid cols-3">
             <div class="visual-grid-item">
               <div class="grid-icon">📏</div>
-              <div class="grid-title">CLAUDE.md ＝ 守る作法</div>
-              <div class="grid-desc"><span class="grid-badge" style="background:var(--primary);color:#fff;font-size:10px;padding:2px 8px;border-radius:99px;display:inline-block;margin-bottom:6px;">常に読み込まれる</span><br>例：文体・体裁・禁止事項<br>🍳 店の決まり</div>
+              <div class="grid-title">CLAUDE.md ＝ 常に守るルール</div>
+              <div class="grid-desc"><span class="grid-badge" style="background:var(--primary);color:#fff;font-size:10px;padding:2px 8px;border-radius:99px;display:inline-block;margin-bottom:6px;">毎回自動で読み込まれる</span><br>例：文体・体裁・禁止事項<br>🍳 店の決まり</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">📖</div>
