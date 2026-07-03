@@ -3275,17 +3275,17 @@ const MODULES = [
           <div class="visual-grid cols-3">
             <div class="visual-grid-item">
               <div class="grid-icon">📏</div>
-              <div class="grid-title">CLAUDE.md ＝ 常に守るルール</div>
+              <div class="grid-title">CLAUDE.md ＝<br>常に守るルール</div>
               <div class="grid-desc"><span class="grid-badge" style="background:var(--primary);color:#fff;font-size:10px;padding:2px 8px;border-radius:99px;display:inline-block;margin-bottom:6px;">毎回自動で読み込まれる</span><br>例：文体・体裁・禁止事項<br>🍳 店の決まり</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">📖</div>
-              <div class="grid-title">Skills ＝ レシピ＋道具箱</div>
+              <div class="grid-title">Skills ＝<br>レシピ＋道具箱</div>
               <div class="grid-desc"><span class="grid-badge" style="border:1px solid var(--primary);color:var(--primary);font-size:10px;padding:2px 8px;border-radius:99px;display:inline-block;margin-bottom:6px;">呼ばれたときに動く</span><br>例：議事録の型・週報づくり<br>🍳 レシピ本と調理道具</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">🛒</div>
-              <div class="grid-title">MCP ＝ 材料の取り寄せ</div>
+              <div class="grid-title">MCP ＝<br>材料の取り寄せ</div>
               <div class="grid-desc"><span class="grid-badge" style="border:1px solid var(--primary);color:var(--primary);font-size:10px;padding:2px 8px;border-radius:99px;display:inline-block;margin-bottom:6px;">呼ばれたときに動く</span><br>例：Notion・Slack<br>🍳 材料の買い出し</div>
             </div>
           </div>
