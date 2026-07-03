@@ -2873,10 +2873,6 @@ const MODULES = [
               <span class="mapping-to">プロジェクトフォルダ単位で、複数ファイルを横断した分析・ツール構築・自動化を行う</span>
             </div>
           </div>
-
-          <div class="info-box">
-            <p><strong>📦 まずは小さく</strong>：いきなり大きなツールを目指さず、第1回で作った Artifact を「保存できる形にする」など、小さな一歩から始めるのがコツです。次の 2-2 で、安全に始める準備を整えます。</p>
-          </div>
         `
       },
 
@@ -3260,11 +3256,6 @@ const MODULES = [
             <p><strong>「試作品・社内ツール」であり本番システムではない</strong></p>
             <p>Claude Code で作るのは、認識合わせや社内業務を支える<strong>試作品・ミニツール</strong>です。多人数で使う本番システムや、個人情報・機密データを扱う仕組みは、セキュリティ・運用の設計が別途必要です。クライアントに見せる際は「試作品です」と明記しましょう。</p>
           </div>
-
-          <div class="tip-box">
-            <strong>💡 まずは Artifact の発展から</strong><br>
-            第1回で作った Artifact の試作品を「保存できる形にして」と Claude Code に頼むのが、いちばん入りやすい第一歩です。
-          </div>
         `
       },
 
@@ -3646,8 +3637,8 @@ const MODULES = [
           <div class="visual-grid cols-3">
             <div class="visual-grid-item">
               <div class="grid-icon">🔌</div>
-              <div class="grid-title">正体はシンプル</div>
-              <div class="grid-desc">claude.ai の設定にある「コネクタ」の正体が MCP。<strong>「Claude と外部サービスをつなぐ口」</strong>と理解すれば十分。</div>
+              <div class="grid-title">仕組みはシンプル</div>
+              <div class="grid-desc">claude.ai の設定にある「コネクタ」、この仕組みが MCP。<strong>「Claude と外部サービスをつなぐ口」</strong>と理解すれば十分。</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">🔗</div>
@@ -4206,14 +4197,9 @@ const MODULES = [
               <div class="grid-desc">手元のデータで集計やレポートの下書きを試す。</div>
             </div>
             <div class="visual-grid-item">
-              <div class="grid-icon">🛠️</div>
-              <div class="grid-title">Artifact をツールに発展させる</div>
-              <div class="grid-desc">第1回の試作品を「保存できる形にして」と頼む。</div>
-            </div>
-            <div class="visual-grid-item">
-              <div class="grid-icon">📏</div>
-              <div class="grid-title">CLAUDE.md にルールを1つ書く</div>
-              <div class="grid-desc">プロジェクトの前提・禁止事項を1行でも書いてみる。</div>
+              <div class="grid-icon">🧰</div>
+              <div class="grid-title">Skill を1つ呼んでみる</div>
+              <div class="grid-desc">consulting-toolkit-800 など、既存の Skill を実際に使ってみる。</div>
             </div>
           </div>
 
@@ -4224,7 +4210,7 @@ const MODULES = [
 
           <h3>全体のまとめ</h3>
           <div class="visual-highlight-card">
-            <p>第1回で「Chat の基本と成果物づくり」を押さえた。<br>第2回はその先——Claude Code で成果物の幅を広げ、仕組み（CLAUDE.md・Skills・MCP）で品質を安定させ、チームに展開する。困ったら <strong>TIPS集</strong> と <strong>FAQ</strong> を見直しながら、自分の業務で使えるものから取り入れていきましょう。</p>
+            <p>第1回で「Chat の基本と成果物づくり」を押さえました。<br>第2回はその先——Claude Code で成果物の幅を広げ、仕組み（CLAUDE.md・Skills・MCP）で品質を安定させ、チームに展開します。困ったら <strong>TIPS集</strong> と <strong>FAQ</strong> を見直しながら、自分の業務で使えるものから取り入れていきましょう。</p>
           </div>
         `
       },
@@ -4484,7 +4470,7 @@ const MODULES = [
         section: '2-4. 成果物を作る②：ツール・プロトタイプ・アプリ',
         title: '簡単なツールを1つ作る',
         task: '業務で使えそうな小さなツールを、Claude Code で1つ作ってみましょう。\n\n1. 「誰が・何のために使うか」を1行で決める（例：営業が提案時に使う簡単な市場規模算出ツール）\n2. まず動く最小版を作らせ、すぐ操作して確認する\n3. 「項目を増やして」「結果をグラフにして」と段階的に育てる\n4. ファイルとして保存し、ブラウザで開いて動作を確認する',
-        hint: '第1回で作った Artifact の試作品を「保存できる形にして」と頼むのが、いちばん入りやすい第一歩です。本番システムではなく試作・社内ツールとして扱いましょう。'
+        hint: 'まず動く最小版を作らせ、操作しながら少しずつ育てるのがいちばん入りやすい進め方です。本番システムではなく試作・社内ツールとして扱いましょう。'
       },
       {
         section: '2-5. AIを“自分仕様”にする道具 — CLAUDE.md・Skills・MCP',
