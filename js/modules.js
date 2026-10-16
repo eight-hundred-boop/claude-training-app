@@ -432,18 +432,18 @@ const MODULES = [
             <div class="visual-grid-item">
               <div class="grid-icon">✨</div>
               <div class="grid-title">Fable</div>
-              <div class="grid-desc">精度が極めて重要な長い複雑なタスク・長文ドキュメントや図表からの出力生成に。<br><strong style="color:var(--text-muted);font-size:12px;">トークン消費 最大（Opus の約2倍）</strong></div>
+              <div class="grid-desc">精度が極めて重要な長い複雑なタスク・長文ドキュメントや図表からの出力生成に。<br><strong style="color:var(--text-muted);font-size:12px;">トークン消費 最大</strong></div>
             </div>
           </div>
           <div class="info-box">
-            <p>上位モデルほど性能が高い反面、<strong>1回の会話で消費するトークン（使用量）が多くなります</strong>。日常的な依頼（メール下書き・議事録整理・要約など）は Sonnet で十分。Opus・Fable は「どうしても高い精度が必要な場面」に絞ると、使用量の節約になります。</p>
+            <p>上位モデルほど性能が高い反面、<strong>1回の会話で消費するトークン（使用量）が多くなります</strong>。日常的な依頼（メール下書き・議事録整理・要約など）は Sonnet で十分。Opus・Fable は「どうしても高い精度が必要な場面」に絞ると、使用量の節約になります。なお Fable は、<strong>プランによっては通常の利用枠に含まれず追加料金がかかります</strong>。使う前に、自分のプランでの扱いを確認しておきましょう。</p>
           </div>
 
           <div class="column-box">
             <div class="column-eyebrow">📎 コラム：トークンとは？</div>
             <p>Claude が文章を処理するときの<strong>最小単位</strong>が「トークン」です。日本語では1文字がほぼ1トークン（英語は単語の一部）と考えるとイメージしやすいです。</p>
             <p>トークンには<strong>「読み込み」と「書き出し」の2方向</strong>があります。あなたが送った文章（資料・指示）が読み込みトークン、Claude が返した回答が書き出しトークンです。両方の合計が使用量にカウントされます。</p>
-            <p><strong>上位モデルは同じ質問でも消費トークンが増える</strong>傾向があります。特に Fable は Opus の約2倍の消費量になります。利用プランごとに1日・1か月の上限があるので、定型的な作業は Haiku・Sonnet、ここぞという場面だけ Opus・Fable と使い分けると上限に余裕ができます。</p>
+            <p><strong>上位モデルは同じ質問でも消費トークンが増える</strong>傾向があります。特に Fable は他のモデルより早く上限に近づきます。利用プランごとに使用量の上限があるので、定型的な作業は Haiku・Sonnet、ここぞという場面だけ Opus・Fable と使い分けると上限に余裕ができます。</p>
           </div>
 
           <h3>どれだけ資料を渡せる？</h3>
@@ -606,6 +606,7 @@ const MODULES = [
               <span class="mapping-to">Project の Instructions（1-7 で学習）</span>
             </div>
           </div>
+          <p>これとは別に、Claude には過去の会話から自動で覚える<strong>「メモリ」</strong>もあります。「Claudeへの指示」が自分で書く前提なのに対し、メモリは Claude が会話の中で覚えていくものです。覚えた内容は設定のメモリ画面で確認・編集・一時停止でき、Project の中の会話ではその Project 専用の記憶が使われます（組織の設定によっては使えない場合があります）。</p>
 
           <div class="try-box">
             <strong>✅ やってみよう</strong><br>
@@ -952,6 +953,11 @@ const MODULES = [
               <span class="mapping-to">Claude in Word</span>
             </div>
             <div class="mapping-row">
+              <span class="mapping-from">文書・スライドを Word / PowerPoint 形式で</span>
+              <span class="mapping-arrow">→</span>
+              <span class="mapping-to">Artifact（Docs / Slides）</span>
+            </div>
+            <div class="mapping-row">
               <span class="mapping-from">Web 調査・論点整理</span>
               <span class="mapping-arrow">→</span>
               <span class="mapping-to">Research</span>
@@ -1049,17 +1055,17 @@ const MODULES = [
               <tr>
                 <td><strong>Claude for PowerPoint</strong></td>
                 <td>スライド構成・改善</td>
-                <td><a href="https://support.claude.com/en/articles/13521390-use-claude-for-powerpoint" target="_blank" rel="noopener">公式ガイドを開く（手順・使い方）</a></td>
+                <td><a href="https://claude.com/docs/office-agents/powerpoint" target="_blank" rel="noopener">公式ガイドを開く（手順・使い方）</a></td>
               </tr>
               <tr>
                 <td><strong>Claude for Word</strong></td>
                 <td>文書要約・校正・Tracked Changes</td>
-                <td><a href="https://support.claude.com/en/articles/14465370-use-claude-for-word" target="_blank" rel="noopener">公式ガイドを開く（手順・使い方）</a></td>
+                <td><a href="https://claude.com/docs/office-agents/word" target="_blank" rel="noopener">公式ガイドを開く（手順・使い方）</a></td>
               </tr>
               <tr>
                 <td><strong>Claude for Excel</strong></td>
                 <td>データ分析・集計</td>
-                <td><a href="https://support.claude.com/en/articles/12650343-use-claude-for-excel" target="_blank" rel="noopener">公式ガイドを開く（手順・使い方）</a></td>
+                <td><a href="https://claude.com/docs/office-agents/excel" target="_blank" rel="noopener">公式ガイドを開く（手順・使い方）</a></td>
               </tr>
             </tbody>
           </table>
@@ -1149,7 +1155,7 @@ const MODULES = [
 
           <div class="info-box">
             <strong>💡 Tips</strong><br>
-            Claude は Excel / PowerPoint / Word をまたいで <strong>1つの会話で複数アプリを編集できます</strong>。たとえば PowerPoint で構成を作り → そのまま Word で配布資料化、といった流れがアプリ切り替えなしで進められます。
+            Claude は Excel / PowerPoint / Word をまたいで <strong>1つの会話で複数アプリを編集できます</strong>。たとえば PowerPoint で構成を作り → そのまま Word で配布資料化、といった流れがアプリ切り替えなしで進められます。使うには、アドインの設定でファイルをまたいだ作業を許可しておきます（プランによっては初期状態でオフです）。
           </div>
 
           <h3>Claude in Excel — データを読み解く</h3>
@@ -1258,7 +1264,7 @@ const MODULES = [
             <div class="visual-grid-item">
               <div class="grid-icon">🗑️</div>
               <div class="grid-title">消したいときは設定から</div>
-              <div class="grid-desc">設定画面で履歴を手動で全消去できます（ブラウザのデータ消去でも消えます）。</div>
+              <div class="grid-desc">設定画面で履歴を手動で全消去できます（ブラウザのデータ消去でも消えます）。アドインを入れ直しても履歴は消えません。</div>
             </div>
           </div>
 
@@ -1592,7 +1598,7 @@ const MODULES = [
           </div>
 
           <div class="info-box">
-            <p><strong>Artifact にはデータを保存する仕組みがない</strong>ため、入力したデータはページを閉じると消えます。実データを扱う場合はこの点をクライアントに伝えておきましょう。</p>
+            <p>Artifact は、依頼すれば<strong>入力したデータを保存できる形</strong>でも作れます（有料プラン）。ただし本番システムではないので、継続して使う仕組みが必要になったら、第2回の Claude Code で作ります。</p>
           </div>
         `
       },
@@ -1605,7 +1611,7 @@ const MODULES = [
         type: 'lecture',
         content: `
           <h3>このセクションで学ぶこと</h3>
-          <p>Claude in Chrome は、ブラウザ上で Claude を呼び出せる拡張機能です。Web ページを見ながら、その場で要約・分析・情報整理を依頼できます。調査作業やブラウザ上の作業を効率化する「もう一人の目」として活用します。</p>
+          <p>Claude in Chrome は、ブラウザ上で Claude を呼び出せる拡張機能です。Web ページを見ながら、その場で要約・分析・情報整理を依頼できるほか、クリック・入力・ページ移動といった<strong>ブラウザの操作そのものを Claude に任せる</strong>こともできます。調査作業やブラウザ上の作業を効率化する「もう一人の目」として活用します。</p>
 
           <h3>Chrome 拡張で できること</h3>
 
@@ -1621,9 +1627,9 @@ const MODULES = [
               <div class="grid-desc">競合サイトや製品ページを見ながら「このサービスの特徴を5つ抜き出して」と指示。手動で読み込む手間を省く</div>
             </div>
             <div class="visual-grid-item">
-              <div class="grid-icon">✏️</div>
-              <div class="grid-title">入力作業の補助</div>
-              <div class="grid-desc">フォーム入力や文章作成時に Claude に相談。「このメールの返信案を作って」とその場で下書きを生成</div>
+              <div class="grid-icon">🖱️</div>
+              <div class="grid-title">ブラウザ操作を任せる</div>
+              <div class="grid-desc">フォームへの入力、ページの移動、複数タブの行き来を Claude が代わりに操作。「この3社の料金ページを開いて、プランと価格を書き出して」のように依頼する</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">⚖️</div>
@@ -1664,7 +1670,7 @@ const MODULES = [
           </div>
 
           <div class="info-box">
-            <p>Chrome 拡張の Chat は claude.ai の Chat と同じですが、<strong>Project の自動参照やファイルアップロードはできません</strong>。複雑な作業には claude.ai を直接使いましょう。</p>
+            <p>Chrome 拡張は、表示中のページを起点にした作業向けです。<strong>PC 内のファイルを扱う作業や、Project で案件の前提を使う作業</strong>は、claude.ai やデスクトップアプリで行いましょう。</p>
           </div>
         `
       },
@@ -1891,7 +1897,7 @@ const MODULES = [
               <div class="step-marker">2</div>
               <div class="step-body">
                 <div class="step-title">Cowork で Scheduled task を作成する</div>
-                <div class="step-desc">Cowork の中で「毎週月曜に○○を実行して」と指示すると、Claude がスケジュールを設定します。</div>
+                <div class="step-desc">Cowork の中で「毎週月曜に○○を実行して」と指示すると、Claude がスケジュールを設定します。作成したタスクは左サイドバーの「スケジュール済みタスク」で確認・編集・一時停止できます。</div>
               </div>
             </div>
             <div class="visual-step-item">
@@ -1914,25 +1920,26 @@ const MODULES = [
             <p>Scheduled tasks の出力も、Chat や Cowork と同様に「初稿」です。特にニュース収集や競合チェックの結果は、自分の目で確認してから利用してください。自動だからといって品質チェックを省略しないことが重要です。</p>
           </div>
 
+          <h3>どこで実行されるか — 使うデータで変わる</h3>
+          <p>Scheduled tasks は、タスクが<strong>何を使うか</strong>によって実行される場所が変わります。</p>
           <div class="visual-comparison">
             <div class="visual-comparison-card after">
-              <div class="comp-label">▶️ 実行される</div>
+              <div class="comp-label">☁️ クラウドで実行</div>
               <ul>
-                <li>PC 起動中</li>
-                <li>Claude Desktop を開いている</li>
+                <li>Web 検索だけで完結する作業</li>
+                <li>コネクタ（Slack・Notion など）や Claude に保存したファイルを使う作業</li>
               </ul>
-              <p style="font-size:12px;margin-top:6px;">→ 予定どおり実行</p>
+              <p style="font-size:12px;margin-top:6px;">→ PC がスリープ中・Claude Desktop を閉じていても実行</p>
             </div>
             <div class="visual-comparison-card before">
-              <div class="comp-label">⏸️ いったんスキップ</div>
+              <div class="comp-label">💻 自分の PC で実行</div>
               <ul>
-                <li>PC がスリープ中</li>
-                <li>Claude Desktop を閉じている</li>
+                <li>PC 内のフォルダのファイルを使う作業</li>
               </ul>
-              <p style="font-size:12px;margin-top:6px;">→ 次に PC を開いたとき自動実行</p>
+              <p style="font-size:12px;margin-top:6px;">→ PC 起動中・Claude Desktop を開いている間だけ実行。スキップした回は次に開いたとき実行</p>
             </div>
           </div>
-          <p style="font-size:13px;color:var(--text-secondary);">クラウドで常時動くわけではありません。</p>
+          <p style="font-size:13px;color:var(--text-secondary);">クラウドで実行できるかどうかは、利用プランや組織の設定によって異なります。</p>
         `
       },
 
@@ -2499,8 +2506,8 @@ const MODULES = [
         { q: 'Claude in Office では具体的に何ができますか？', a: 'Excel ではデータの傾向分析・集計観点の提案・グラフ化方針の相談・異常値の洗い出し、PowerPoint では構成案の作成・タイトル改善・ストーリーライン整理、Word では要約・文体統一・章立て見直し・クライアント向け表現変換ができます。Office 内で直接 Claude と対話する形で利用します。', category: '💼 Office・Chrome' },
         { q: 'Research と通常の Web 検索の違いは何ですか？', a: 'Research は複数の情報源を自動で横断調査し、要点を構造化して出典付きで報告してくれます。通常の Web 検索は自分でキーワードを考え、各サイトを読み、情報を取捨選択・整理する必要があります。ただし Research の結果も「初稿」なので、重要な数値や事実は必ず一次情報に当たって確認してください。', category: '💡 Claudeの基本' },
         { q: 'Artifact で作る「プロトタイプ」とは何ですか？', a: '診断ツール、シミュレーター、ダッシュボード、ポジショニングマップ、カスタマージャーニー可視化など、ユーザーが実際に操作できる成果物のことです。Artifact が HTML/CSS/JavaScript を生成し、ブラウザ上でそのまま動作します。提案やプロジェクトの論点を具体化する「たたき台」として活用します。', category: '💡 Claudeの基本' },
-        { q: 'プロトタイプをクライアントに見せる際の注意点は？', a: '必ず「これは認識合わせのための試作品です」と伝えてください。Artifact で作るものは本番システムではなく、論点を具体化するためのたたき台です。データの保存機能がないこと、セキュリティ対策が施されていないことなどを説明し、本番開発は別途必要であることを明確にしましょう。', category: '✍️ プロンプト・品質' },
-        { q: 'Chrome 拡張を使う際の注意点は？', a: 'Chrome 拡張を使うと、表示中のページ内容が Claude に送信されます。クライアントの機密情報や個人情報が含まれるページ（社内システム、顧客管理画面等）では、送信してよい情報かどうかを判断してから使ってください。また、Project の自動参照やファイルアップロードは Chrome 拡張では使えません。', category: '💼 Office・Chrome' },
+        { q: 'プロトタイプをクライアントに見せる際の注意点は？', a: '必ず「これは認識合わせのための試作品です」と伝えてください。Artifact で作るものは本番システムではなく、論点を具体化するためのたたき台です。本番システムとしての作り込み（セキュリティ対策など）はされていないことを説明し、本番開発は別途必要であることを明確にしましょう。', category: '✍️ プロンプト・品質' },
+        { q: 'Chrome 拡張を使う際の注意点は？', a: 'Chrome 拡張を使うと、表示中のページ内容が Claude に送信されます。クライアントの機密情報や個人情報が含まれるページ（社内システム、顧客管理画面等）では、送信してよい情報かどうかを判断してから使ってください。また、PC 内のファイルを扱う作業や Project を使う作業は、claude.ai やデスクトップアプリで行ってください。', category: '💼 Office・Chrome' },
         { q: 'Cowork はどのような作業に向いていますか？', a: '複数資料の整理、Excel の加工、Word・PowerPoint の下書き、ファイル構成の確認、レポートの初稿作成など、ファイルを直接扱う作業に向いています。Chat が「対話で相談する」のに対し、Cowork は「作業を委任する」イメージです。作業用コピーを作ってから渡すことをお勧めします。', category: '📂 Cowork' },
         { q: 'Scheduled tasks はどのような業務に使えますか？', a: '毎週の業界ニュース収集、定例会議前の確認事項整理、週次レポートの下書き、タスクのリマインド、定期的な競合情報チェックなど、「繰り返し」「定型」「準備作業」に効果を発揮します。「毎回同じようにやっている作業」を洗い出し、Claude に任せられないか考えてみてください。', category: '📂 Cowork' },
         { q: 'Claude で作った成果物はそのまま提出してよいですか？', a: '第1回の復習になりますが、どの機能で作った成果物も「たたき台」です。特に Research の数値・出典、Artifact の計算ロジック、Office 連携の分析結果は、自分で確認してから使ってください。成果物の最終責任は常に自分にあります。', category: '✍️ プロンプト・品質' },
@@ -2958,26 +2965,25 @@ const MODULES = [
             これは新しいメンバーに仕事を頼むとき、いきなり成果物ではなく、まず「手元の資料に何があるか、ざっと見て教えて」と状況把握から入るのと同じです。実際の作り方（計画の出させ方や範囲の絞り方）は、このあとの「4. 安全な指示の出し方」と 2-3 で扱います。
           </div>
 
-          <h4>最初に必ず出る「許可しますか？」の答え方</h4>
-          <p>起動して最初の指示を出すと、Claude Code は「このファイルを読んでいいですか？」「変更していいですか？」と、作業のたびに<strong>確認ダイアログ</strong>を出します。これは暴走を防ぐ安全装置なので、止まったと勘違いせず落ち着いて答えれば大丈夫です。選択肢は基本2つです。</p>
+          <h4>「許可しますか？」と聞かれたときの答え方</h4>
+          <p>Claude Code は、ファイルの読み込みや作業フォルダ内の編集など<strong>安全な操作は確認なしで進め</strong>、影響の大きい操作（作業フォルダの外を触る、ファイルを消すなど）のときだけ<strong>確認ダイアログ</strong>を出します。確認が出たら止まったと勘違いせず、何をしようとしているのかを読んでから答えれば大丈夫です。</p>
           <div class="visual-mapping">
             <div class="mapping-header">
-              <span class="mapping-from">ボタン</span>
+              <span class="mapping-from">確認が出たとき</span>
               <span class="mapping-arrow"></span>
-              <span class="mapping-to">意味と使い分け</span>
+              <span class="mapping-to">答え方</span>
             </div>
             <div class="mapping-row">
-              <span class="mapping-from">1回だけ許可</span>
+              <span class="mapping-from">内容が分かり、作業の範囲内</span>
               <span class="mapping-arrow">→</span>
-              <span class="mapping-to">この1回だけ実行を認める。次の作業ではまた確認が出る。中身をよく見てから進めたいときに</span>
+              <span class="mapping-to">許可して進める</span>
             </div>
             <div class="mapping-row">
-              <span class="mapping-from">常に許可</span>
+              <span class="mapping-from">意味が分からない／作業フォルダの外を触る</span>
               <span class="mapping-arrow">→</span>
-              <span class="mapping-to">同じフォルダ内の同種の操作（読み込みなど）は次回から確認なしで進む。安全だと納得できた操作だけに使う</span>
+              <span class="mapping-to">一旦断り、「何をしようとしているのか説明して」と聞く</span>
             </div>
           </div>
-          <p>最初は確認が何度も出て戸惑いますが、「常に許可」を押した操作はその作業フォルダ内では次から省かれ、だんだんスムーズになります。<strong>迷ったら「1回だけ許可」を選べば安全です</strong>。作業フォルダの外を触ろうとしたときほど、中身を確かめてから答えましょう。</p>
 
           <h3>4. 安全な指示の出し方</h3>
           <p>Claude Code は強力ですが、指示が曖昧だと意図しない変更を行うことがあります。以下の5点を意識して指示を出しましょう。</p>
@@ -3171,7 +3177,7 @@ const MODULES = [
               <div class="ba-label">Artifact（第1回 1-11）</div>
               <ul>
                 <li>その場で動く試作品</li>
-                <li>1画面・データ保存なし</li>
+                <li>1画面で完結し、Claude の中で動く</li>
                 <li>認識合わせ・たたき台に最適</li>
               </ul>
             </div>
@@ -3622,8 +3628,8 @@ const MODULES = [
               </div>
             </div>
             <div class="toolkit-install">
-              <h5>📁 個人のスキルを Claude Code でも使うには</h5>
-              <p>Customize の「個人のスキル」（議事録レビューなどの単体スキル）は Chat・Cowork 専用で、Claude Code には出てきません。Claude Code でも使いたい場合は、スキルのフォルダ一式を自分の PC の設定フォルダ <code>~/.claude/skills/</code> にコピーします（Windows は <code>C:\\Users\\ユーザー名\\.claude\\skills\\</code>）。コピー後、Claude Code を再起動すれば <code>/スキル名</code> で呼び出せます。</p>
+              <h5>📁 Customize のスキルは Claude Code でも使える</h5>
+              <p>Customize で追加したスキル（議事録レビューなどの単体スキル）は、同じアカウントでサインインしていれば Claude Code（デスクトップ版・CLI）にも<strong>自動で同期</strong>されます。コピーなどの作業は不要で、<code>/スキル名</code> で呼び出せます。反映されていないときは、Claude Code を起動し直してください。</p>
             </div>
             <div class="info-box">
               <strong>💡 インストール後に反映するには</strong><br>
@@ -4222,7 +4228,7 @@ const MODULES = [
           <p>Claude を使い始めるためのインストール手順です。まずは<strong>デスクトップアプリ</strong>、コマンド操作をしたい方は <strong>CLI</strong>、普段のエディタで使いたい方は <strong>IDE</strong> もどうぞ。</p>
 
           <div class="info-box">
-            <p>💡 <strong>Windows で Claude Code を使うには <a href="https://git-scm.com/downloads/win" target="_blank">Git for Windows</a> が必要です</strong>（インストール時に案内が出ます）。Chat・Cowork だけなら不要。デスクトップ版・CLI版のどちらも同じです。</p>
+            <p>💡 <strong>Windows で Claude Code の CLI 版を使う場合は、<a href="https://git-scm.com/downloads/win" target="_blank">Git for Windows</a> を入れておくことが推奨されています</strong>（必須ではありません）。デスクトップアプリで Chat・Cowork・Claude Code を使うだけなら不要です。</p>
           </div>
 
           <h3>A. デスクトップアプリ版（Mac / Windows）</h3>
@@ -4394,7 +4400,7 @@ const MODULES = [
           'Claude Code は1画面のモック専用'
         ],
         correct: 1,
-        explanation: 'Artifact はその場の試作（1画面・保存なし）に向き、Claude Code は保存・複数画面・データの読み書きに対応した、繰り返し使えるツールづくりに向きます。'
+        explanation: 'Artifact はその場の試作（1画面で完結し、Claude の中で動く）に向き、Claude Code は保存・複数画面・データの読み書きに対応した、繰り返し使えるツールづくりに向きます。'
       },
       {
         question: 'CLAUDE.md に書くべき内容として、最も適切なのはどれですか？',
@@ -5396,7 +5402,7 @@ const TIPS = [
       "取り込んだスキルを名前で名指しして、実行できるか確認する"
     ],
     "example": "「（取り込んだ）営業レポート作成スキルを使って、今月の数字でレポートを作って。」",
-    "caution": "この方法で取り込んだスキルは Chat・Cowork で使える（Claude Code とは別管理）。スキルに付属するファイル（テンプレートや素材）も一緒に含まれているか確認する。取り込んだ直後はうまく動かないこともあるので、まず簡単な内容で試してから本番に使う。",
+    "caution": "この方法で取り込んだスキルは Chat・Cowork で使え、同じアカウントの Claude Code にも自動で同期される。スキルに付属するファイル（テンプレートや素材）も一緒に含まれているか確認する。取り込んだ直後はうまく動かないこともあるので、まず簡単な内容で試してから本番に使う。",
     "relatedSession": "第2回",
     "relatedSections": [
       {
