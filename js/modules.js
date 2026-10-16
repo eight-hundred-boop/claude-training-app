@@ -1040,37 +1040,37 @@ const MODULES = [
           </div>
 
           <h3>インストール手順（PowerPoint アドインを研修中にセット）</h3>
-          <p>普段使う Office アプリ（PowerPoint / Word / Excel）に Claude のアドインを追加すると、ファイルを開いたまま Claude を呼び出せるようになります。研修中は <strong>PowerPoint アドインを実際にインストール</strong>します。Word / Excel は同じ手順なので研修後にご自身で入れてください。</p>
+          <p>普段使う Office アプリ（PowerPoint / Word / Excel）に Claude のアドインを追加すると、ファイルを開いたまま Claude を呼び出せるようになります。アドインは <strong>「Claude for Microsoft 365」1つで Excel・PowerPoint・Word に対応</strong>しています。研修中は PowerPoint から実際にインストールします。</p>
 
-          <h4>インストール対象アドイン</h4>
+          <h4>対応アプリと公式ガイド</h4>
           <table class="info-table">
             <thead>
               <tr>
-                <th>アドイン</th>
+                <th>アプリ</th>
                 <th>用途</th>
                 <th>インストール / 使い方</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Claude for PowerPoint</strong></td>
+                <td><strong>PowerPoint</strong></td>
                 <td>スライド構成・改善</td>
                 <td><a href="https://claude.com/docs/office-agents/powerpoint" target="_blank" rel="noopener">公式ガイドを開く（手順・使い方）</a></td>
               </tr>
               <tr>
-                <td><strong>Claude for Word</strong></td>
+                <td><strong>Word</strong></td>
                 <td>文書要約・校正・Tracked Changes</td>
                 <td><a href="https://claude.com/docs/office-agents/word" target="_blank" rel="noopener">公式ガイドを開く（手順・使い方）</a></td>
               </tr>
               <tr>
-                <td><strong>Claude for Excel</strong></td>
+                <td><strong>Excel</strong></td>
                 <td>データ分析・集計</td>
                 <td><a href="https://claude.com/docs/office-agents/excel" target="_blank" rel="noopener">公式ガイドを開く（手順・使い方）</a></td>
               </tr>
             </tbody>
           </table>
 
-          <p>アプリ間連携：<a href="https://support.claude.com/en/articles/13892150-work-across-microsoft-365-apps" target="_blank" rel="noopener">Microsoft 365 のアプリをまたいで使う（Excel→PowerPoint 等）</a></p>
+          <p>アプリ間連携：<a href="https://claude.com/docs/office-agents/work-across-apps" target="_blank" rel="noopener">Microsoft 365 のアプリをまたいで使う（Excel→PowerPoint 等）</a></p>
 
           <h4>PowerPoint アドインのインストール手順（研修中に実施・約3〜5分）</h4>
           <div class="visual-steps">
@@ -1092,13 +1092,13 @@ const MODULES = [
               <div class="step-marker">3</div>
               <div class="step-body">
                 <div class="step-title">ストア検索で「Claude」と入力</div>
-                <div class="step-desc">候補の中から「Claude for PowerPoint」を探す</div>
+                <div class="step-desc">候補の中から「Claude for Microsoft 365」を探す（PowerPoint 専用の「Claude by Anthropic for PowerPoint」も並ぶので、取り違えないよう注意）</div>
               </div>
             </div>
             <div class="visual-step-item">
               <div class="step-marker">4</div>
               <div class="step-body">
-                <div class="step-title">「Claude for PowerPoint」を「追加」</div>
+                <div class="step-title">「Claude for Microsoft 365」を「追加」</div>
                 <div class="step-desc">表示されたボタンをクリックする</div>
               </div>
             </div>
@@ -1139,13 +1139,8 @@ const MODULES = [
             </div>
           </div>
 
-          <h4>研修後：Word / Excel も同じ手順でインストール</h4>
-          <p><strong>手順は PowerPoint とまったく同じ</strong>です。Word / Excel をそれぞれ起動して、上記の Step 1〜9 を繰り返してください。3つとも入れると、本セクションで紹介する Office 連携が全アプリで使えるようになります。</p>
-
-          <div class="warning-box">
-            <p><strong>⚠️ 各アプリで個別にインストールが必要</strong></p>
-            <p>PowerPoint で入れても Word / Excel には自動で入りません。それぞれのアプリで同じ手順を行ってください。</p>
-          </div>
+          <h4>研修後：Word / Excel でも使えるようにする</h4>
+          <p>Word / Excel を起動し、「ホーム」タブ →「アドイン」を開きます。<strong>Claude が表示されていれば、そこから起動してサインインするだけ</strong>です。表示されない場合は、PowerPoint と同じ手順（Step 2〜9）でストアから「Claude for Microsoft 365」を追加してください。3つのアプリで使えるようにすると、本セクションで紹介する Office 連携がすべて使えます。</p>
 
           <h4>うまくいかないときの対処</h4>
           <ul>
@@ -2487,7 +2482,7 @@ const MODULES = [
         { title: '生成AIプロンプト集（社内DB）', url: 'https://app.notion.com/p/eight-hundred/22bb14ae3bcd80f4898dd3816448557c?v=22cb14ae3bcd80088278000ca2862351', desc: '社内で作成した業務別プロンプト集。業務カテゴリ別／難易度別に整理', category: '📖 プロンプトを学ぶ' },
         { title: 'Anthropic 公式ドキュメント', url: 'https://docs.claude.com/', desc: 'Claude の技術仕様・機能一覧・ベストプラクティス', category: '📚 公式リファレンス' },
         { title: 'Claude サポートサイト', url: 'https://support.claude.com/', desc: 'Project・Artifact・各機能の使い方ガイド', category: '📚 公式リファレンス' },
-        { title: 'Claude in Office（公式ガイド）', url: 'https://support.claude.com/en/articles/13892150-work-across-microsoft-365-apps', desc: 'Excel / PowerPoint / Word との連携ガイド', category: '💼 Officeで使う' },
+        { title: 'Claude in Office（公式ガイド）', url: 'https://claude.com/docs/office-agents/work-across-apps', desc: 'Excel / PowerPoint / Word との連携ガイド', category: '💼 Officeで使う' },
         { title: 'Cowork 公式ガイド', url: 'https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork', desc: 'Cowork の機能と使い方ガイド', category: '💼 Officeで使う' },
         { title: 'Claude in Chrome 拡張', url: 'https://chromewebstore.google.com/detail/claude/danfoobapigkipfachmebkhbhegkahpc', desc: 'Chrome 拡張のインストールページ', category: '🌐 Chromeで使う' },
         { title: 'Artifact ガイド', url: 'https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them', desc: 'Artifact の使い方と活用例', category: '📚 公式リファレンス' },
@@ -3596,8 +3591,8 @@ const MODULES = [
                 <button class="copy-btn" data-copy="eight-hundred-inc/consulting-toolkit-800">コピー</button>
               </div>
               <ol>
-                <li>左上の「Customize」を開きます。</li>
-                <li>左サイドバーの「個人用プラグイン」の横の「＋」→「プラグインを作成」→「マーケットプレイスを追加」（マーケットプレイス＝スキル集の配布元カタログ）を選びます。</li>
+                <li>「カスタマイズ」を開きます。</li>
+                <li>「プラグイン」タブを選び、右上の「＋ 追加」→「マーケットプレイスを追加」（マーケットプレイス＝スキル集の配布元カタログ）を選びます。</li>
                 <li>「URL」欄に上の文字列をそのまま貼り付けて「同期」を押します。</li>
                 <li>一覧に出た <code>consulting-toolkit-800</code> を「インストール」します。</li>
               </ol>
@@ -3609,8 +3604,8 @@ const MODULES = [
                 <button class="copy-btn" data-copy="eight-hundred-inc/consulting-toolkit-800">コピー</button>
               </div>
               <ol>
-                <li>左上の「Customize」を開きます。</li>
-                <li>左サイドバーの「個人用プラグイン」の横の「＋」→「プラグインを作成」→「マーケットプレイスを追加」（マーケットプレイス＝スキル集の配布元カタログ）を選びます。</li>
+                <li>「カスタマイズ」を開きます。</li>
+                <li>「プラグイン」タブを選び、右上の「＋ 追加」→「マーケットプレイスを追加」（マーケットプレイス＝スキル集の配布元カタログ）を選びます。</li>
                 <li>「URL」欄に上の文字列をそのまま貼り付けて「同期」を押します。</li>
                 <li>一覧に出た <code>consulting-toolkit-800</code> を「インストール」します。</li>
               </ol>
@@ -3628,8 +3623,8 @@ const MODULES = [
               </div>
             </div>
             <div class="toolkit-install">
-              <h5>📁 Customize のスキルは Claude Code でも使える</h5>
-              <p>Customize で追加したスキル（議事録レビューなどの単体スキル）は、同じアカウントでサインインしていれば Claude Code（デスクトップ版・CLI）にも<strong>自動で同期</strong>されます。コピーなどの作業は不要で、<code>/スキル名</code> で呼び出せます。反映されていないときは、Claude Code を起動し直してください。</p>
+              <h5>📁 カスタマイズのスキルは Claude Code でも使える</h5>
+              <p>「カスタマイズ」で追加したスキル（議事録レビューなどの単体スキル）は、同じアカウントでサインインしていれば Claude Code（デスクトップ版・CLI）にも<strong>自動で同期</strong>されます。コピーなどの作業は不要で、<code>/スキル名</code> で呼び出せます。反映されていないときは、Claude Code を起動し直してください。</p>
             </div>
             <div class="info-box">
               <strong>💡 インストール後に反映するには</strong><br>
@@ -5235,7 +5230,7 @@ const TIPS = [
     "summary": "Claudeはどのスキルを使うか自分で判断するが、指示文にスキル名をそのまま書くと、狙ったスキルが確実に発動する。",
     "whenToUse": "特定のスキルを必ず使わせたいのに、Claudeが別のやり方で処理してしまう／スキルを使ってくれないとき。",
     "howToUse": [
-      "左上の「Customize」→「スキル」で使いたいスキルをオンにしておく",
+      "「カスタマイズ」→「Skills」タブで使いたいスキルをオンにしておく",
       "指示文の中にスキル名をそのまま書く（例：「〇〇スキルを使って」）",
       "最初の応答でClaudeがそのスキル名を読み込んだと表示するので、狙いどおりのスキルが使われたか確認する"
     ],
@@ -5369,15 +5364,15 @@ const TIPS = [
     "id": "tip-043",
     "category": "💬 Chat 個別",
     "level": "basic",
-    "title": "SkillはCustomizeでオンにしてから使う",
-    "summary": "スキルは「Customize → スキル」でオンにして初めて使える。複数オンにしておけば、依頼内容からClaudeがどれを使うか判断してくれる（名指しすればより確実に発動する）。",
+    "title": "Skillは「カスタマイズ」でオンにしてから使う",
+    "summary": "スキルは「カスタマイズ」→「Skills」タブでオンにして初めて使える。複数オンにしておけば、依頼内容からClaudeがどれを使うか判断してくれる（名指しすればより確実に発動する）。",
     "whenToUse": "スキルを使った依頼をしたのに反応がない／そもそもスキルを使い始めたいとき。",
     "howToUse": [
-      "左上の「Customize」を開き、「スキル」からスキルの一覧を表示する",
+      "「カスタマイズ」を開き、「Skills」タブでスキルの一覧を表示する",
       "使いたいスキルにチェックを入れてオンにする（複数選択可）",
       "チャットに戻り、依頼する。確実に使わせたいときはスキル名を添える"
     ],
-    "example": "（Customize でスキルをオンにした後）「〇〇スキルを使って、この内容をスライドにして。」のように、スキル名を入れて依頼すると確実。",
+    "example": "（「カスタマイズ」でスキルをオンにした後）「〇〇スキルを使って、この内容をスライドにして。」のように、スキル名を入れて依頼すると確実。",
     "caution": "オンにし忘れると名指ししても発動しない。逆に関係ないスキルを大量にオンにすると選択がぶれる原因になるので、使うものに絞る。スキル自体が表示されない場合は利用環境（プランや機能の有無）による。",
     "relatedSession": "第1回",
     "relatedSections": [
@@ -5393,11 +5388,11 @@ const TIPS = [
     "category": "⚡ Claude Code 個別",
     "level": "intermediate",
     "title": "配布されたSkillはファイルから取り込んで使う",
-    "summary": "スキルはファイル（ZIPまたはスキルファイル）として保存・配布できる。同僚や講師が作ったスキルを受け取ったら、Customize から取り込んで自分の環境で使える。",
+    "summary": "スキルはファイル（ZIPまたはスキルファイル）として保存・配布できる。同僚や講師が作ったスキルを受け取ったら、「カスタマイズ」から取り込んで自分の環境で使える。",
     "whenToUse": "同僚や講師から配布されたスキルファイルを使いたいとき。自分が作ったスキルを保存して、別の環境でも使い回したいとき。",
     "howToUse": [
       "自分で作ったスキルは、画面から「ファイルとして保存」する（受け取った場合は、もらったファイルを用意する）",
-      "左上の「Customize」を開き、「スキル」の画面で「追加」を選ぶ",
+      "「カスタマイズ」を開き、「Skills」タブの「＋ 追加」を選ぶ",
       "スキルファイル（ZIPまたはスキルファイル）をアップロードする",
       "取り込んだスキルを名前で名指しして、実行できるか確認する"
     ],
