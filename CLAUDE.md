@@ -15,7 +15,7 @@ claude-training-app/
 │   ├── modules.js          - 学習コンテンツデータ（MODULES配列）
 │   └── quiz.js             - QuizEngine クラス
 ├── assets/
-│   └── ehi-logo.png        - EHI ロゴ
+│   └── ronnabyte-logo.svg  - RONNABYTE ロゴ
 ├── ai-tutor/
 │   ├── README.md           - AIチューター セットアップ手順
 │   └── project-instructions.md - Claude.ai Project 指示文
@@ -31,8 +31,8 @@ claude-training-app/
 ## デザイン原則（必ず遵守）
 
 ### カラー
-- メインカラー: `#127D70`（EHI ティールグリーン）
-- 背景: `#f7faf9`、カード: `#ffffff`
+- メインカラー: `#005486`（RONNABYTE ブルー。濃色 `#002840`）
+- 背景: `#f7f9fb`、カード: `#ffffff`
 - **カラフルにしない**。モノトーン＋アクセント1色が基本
 - 色は既存の CSS 変数（`--primary`, `--accent`, `--text-secondary` 等）を使用
 
@@ -66,7 +66,7 @@ claude-training-app/
 ### ページフロー（重要）
 ```
 起動 → ランディングページ（renderLanding / モード選択）
-         ├→ 研修モード ホーム（renderPresentHome / 800ロゴ + モジュールカード）
+         ├→ 研修モード ホーム（renderPresentHome / RONNABYTE ロゴ + モジュールカード）
          │    └→ スライド表示（renderPresentModule / 1セクション=1画面）
          └→ 自習モード ホーム（renderHome / 学習・クイズ・リンク・FAQ導線）
               └→ 各コンテンツページ（学習コンテンツ / クイズ / リンク集 / FAQ）

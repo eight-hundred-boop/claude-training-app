@@ -272,7 +272,7 @@
     container.innerHTML = `
       <div class="landing-page fade-in">
         <div class="landing-logo">
-          <img src="assets/ehi-logo.png" alt="800" height="36">
+          <img src="assets/ronnabyte-logo.svg" alt="RONNABYTE" height="36">
         </div>
         <h1 class="landing-title">Claude スキルアップ講座</h1>
         <p class="landing-subtitle">利用目的に合わせてモードを選んでください</p>
@@ -1253,7 +1253,7 @@
   function renderPresentHome(container) {
     container.innerHTML = `
       <div class="fade-in present-home">
-        <img src="assets/ehi-logo.png" alt="Eight Hundred" class="present-home-logo">
+        <img src="assets/ronnabyte-logo.svg" alt="RONNABYTE" class="present-home-logo">
         <h1 class="present-home-title">Claude スキルアップ講座</h1>
         <div class="present-session-list">
           ${MODULES.map((mod, i) => `

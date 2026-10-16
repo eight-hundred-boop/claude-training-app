@@ -187,7 +187,7 @@ Claude は初めての受講者を対象に、Claude を使って日々の業務
 - **進捗トラッカー**: localStorage で学習進捗を保持
 
 ### カラー & デザイン
-- メインカラー: `#127D70`（EHI ティールグリーン）
+- メインカラー: `#005486`（RONNABYTE ブルー）
 - モノトーン＋アクセント1色
 - コンサルタント向け：構造化・Before/After・カードグリッド・フロー図
 
@@ -240,7 +240,7 @@ claude-training-app/
 │   ├── modules.js      # 学習コンテンツデータ（MODULES配列）
 │   └── quiz.js         # QuizEngine クラス
 ├── assets/
-│   └── ehi-logo.png    # EHI ロゴ
+│   └── ronnabyte-logo.svg  # RONNABYTE ロゴ
 ├── ai-tutor/
 │   ├── README.md               # AIチューター セットアップ手順
 │   └── project-instructions.md # Claude.ai Project 指示文
