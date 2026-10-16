@@ -48,7 +48,7 @@ const MODULES = [
             <div class="visual-grid-item">
               <div class="grid-icon">🧠</div>
               <div class="grid-title">長文に強い</div>
-              <div class="grid-desc">一度に約75万字＝文庫本で数冊分（最大100万トークン）まで読み込めます。長い報告書や議事録、複数資料をそのまま渡して、要約・分析・比較を依頼できます</div>
+              <div class="grid-desc">一度に最大100万トークン（文庫本で数冊分）まで読み込めます。長い報告書や議事録、複数資料をそのまま渡して、要約・分析・比較を依頼できます</div>
             </div>
             <div class="visual-grid-item">
               <div class="grid-icon">🎯</div>
@@ -179,7 +179,7 @@ const MODULES = [
         type: 'lecture',
         content: `
           <h3>このセクションで学ぶこと</h3>
-          <p>Claude は「<strong>作業スタイル</strong>」と「<strong>利用場所</strong>」の 2 軸で整理すると分かりやすくなります。「3つのモード」（Chat / Cowork / Claude Code）は <strong>作業スタイル</strong> の話で、それぞれをどこ（Web / Desktop / Mobile / Cursor IDE / CLI）で使うかは別の軸です。</p>
+          <p>Claude は「<strong>作業スタイル</strong>」と「<strong>利用場所</strong>」の 2 軸で整理すると分かりやすくなります。「3つのモード」（Chat / Cowork / Claude Code）は <strong>作業スタイル</strong> の話で、それぞれをどこ（Web / Desktop / Mobile / IDE / CLI）で使うかは別の軸です。</p>
 
           <h3>3つの作業スタイル</h3>
           <p>まず作業スタイルから押さえます。</p>
@@ -453,7 +453,7 @@ const MODULES = [
               <div class="stat-label">コンテキストウィンドウ（一度に扱える上限）</div>
             </div>
             <div class="visual-stat">
-              <div class="stat-value">約75万字 = 文庫本で数冊分</div>
+              <div class="stat-value">文庫本で数冊分</div>
               <div class="stat-label">長い議事録・報告書・複数資料もまるごとOK</div>
             </div>
           </div>
@@ -788,7 +788,7 @@ const MODULES = [
           </div>
 
           <h3>Artifact — 会話から独立した成果物</h3>
-          <p>Artifact は、チャットの中で生成される<strong>独立した成果物</strong>です。チャットの回答は会話の流れの中に埋もれますが、Artifact は別パネルに表示され、保存・編集・コピーができます。</p>
+          <p>Artifact は、チャットの中で生成される<strong>独立した成果物</strong>です。チャットの回答は会話の流れの中に埋もれますが、Artifact は別パネルに表示されて会話の中に残り、編集・コピー・ダウンロードができます。</p>
 
           <div class="visual-grid cols-2">
             <div class="visual-grid-item">
@@ -2490,7 +2490,7 @@ const MODULES = [
       faq: [
         { q: 'Claude ではまず何から使えばよいですか？', a: 'まずは Chat から始めましょう。壁打ち（論点整理）、下書き（メール・報告書の素案）、要約（長い文書を要点に絞る）の3パターンが最も使用頻度が高いです。慣れてきたら Project で案件の背景を登録し、Artifact で成果物を残すとさらに効率が上がります。', category: '💡 Claudeの基本' },
         { q: 'Chat / Cowork / Claude Code はどう使い分けますか？', a: '「対話で済むか？」→ Chat。「ファイルを直接作ってほしいか？」→ Cowork。「毎回同じ品質で繰り返したいか？」→ Claude Code。迷ったら Chat からで問題ありません。', category: '💡 Claudeの基本' },
-        { q: 'Claude と ChatGPT / Gemini の違いは何ですか？', a: 'Claude は長文処理の安定性（200Kトークン）、指示への忠実さ（出力形式・ルール遵守）、構造化・論点整理の精度に強みがあります。また、ファイルを直接操作する Cowork モードは Claude 独自の機能です。ChatGPT は画像生成やプラグインエコシステム、Gemini は Google サービスとの連携が充実しています。タスクに応じて使い分けるのが現実的です。', category: '💡 Claudeの基本' },
+        { q: 'Claude と ChatGPT / Gemini の違いは何ですか？', a: 'Claude は長文処理の安定性（最大100万トークン）、指示への忠実さ（出力形式・ルール遵守）、構造化・論点整理の精度に強みがあります。また、ファイルを直接操作する Cowork モードは Claude 独自の機能です。ChatGPT は画像生成やプラグインエコシステム、Gemini は Google サービスとの連携が充実しています。タスクに応じて使い分けるのが現実的です。', category: '💡 Claudeの基本' },
         { q: 'Project とは何ですか？', a: 'Project は案件固有の背景情報・ルール・参照資料を Claude に覚えさせる仕組みです。Instructions（指示文）とナレッジベース（参照資料）を設定すると、その Project 内の全会話で自動参照されます。毎回同じ前提を説明し直す手間がなくなります。', category: '🖥️ Chat・Projects' },
         { q: 'Artifact とは何ですか？', a: 'Artifact は会話とは独立した成果物です。文書・表・図表・Webページ・ダッシュボードなどを生成でき、追加指示で修正するとバージョンが記録されます。チャットの回答は流れていきますが、Artifact は残ります。「これを Artifact にして」と依頼するか、Claude が自動的に生成します。', category: '🖥️ Chat・Projects' },
         { q: 'Cowork や Claude Code は最初から使うべきですか？', a: 'いいえ。まずは Chat で壁打ち・下書き・要約を使いこなすことが最優先です。ファイルを直接作ってほしい場面が出てきたら Cowork（1-13）、品質の再現性が必要になったら Claude Code（第2回）を学びましょう。', category: '💡 Claudeの基本' },
@@ -2560,7 +2560,7 @@ const MODULES = [
             </div>
             <div class="agent-team-down">↓ ここから3つの実践が広がる</div>
             <div class="agent-team-row">
-              <div class="agent-team-member"><span class="at-icon">🧠</span><strong>モデル選択</strong><span>Opus／Sonnet／Haikuでトークン量を調整</span></div>
+              <div class="agent-team-member"><span class="at-icon">🧠</span><strong>モデル選択</strong><span>Haiku／Sonnet／Opus／Fableでトークン量を調整</span></div>
               <div class="agent-team-member"><span class="at-icon">📐</span><strong>プロンプト3要素</strong><span>前提・タスク・ルールで出力を安定させる</span></div>
               <div class="agent-team-member"><span class="at-icon">✅</span><strong>出力はたたき台</strong><span>確認・修正が必須</span></div>
             </div>
@@ -5229,7 +5229,7 @@ const TIPS = [
     "summary": "Claudeはどのスキルを使うか自分で判断するが、指示文にスキル名をそのまま書くと、狙ったスキルが確実に発動する。",
     "whenToUse": "特定のスキルを必ず使わせたいのに、Claudeが別のやり方で処理してしまう／スキルを使ってくれないとき。",
     "howToUse": [
-      "設定（機能 → Skills）で使いたいスキルをオンにしておく",
+      "左上の「Customize」→「スキル」で使いたいスキルをオンにしておく",
       "指示文の中にスキル名をそのまま書く（例：「〇〇スキルを使って」）",
       "最初の応答でClaudeがそのスキル名を読み込んだと表示するので、狙いどおりのスキルが使われたか確認する"
     ],
@@ -5363,15 +5363,15 @@ const TIPS = [
     "id": "tip-043",
     "category": "💬 Chat 個別",
     "level": "basic",
-    "title": "Skillは設定でオンにしてから使う",
-    "summary": "スキルは「設定 → 機能」でオンにして初めて使える。複数オンにしておけば、依頼内容からClaudeがどれを使うか判断してくれる（名指しすればより確実に発動する）。",
+    "title": "SkillはCustomizeでオンにしてから使う",
+    "summary": "スキルは「Customize → スキル」でオンにして初めて使える。複数オンにしておけば、依頼内容からClaudeがどれを使うか判断してくれる（名指しすればより確実に発動する）。",
     "whenToUse": "スキルを使った依頼をしたのに反応がない／そもそもスキルを使い始めたいとき。",
     "howToUse": [
-      "設定を開き、「機能」からスキルの一覧を表示する",
+      "左上の「Customize」を開き、「スキル」からスキルの一覧を表示する",
       "使いたいスキルにチェックを入れてオンにする（複数選択可）",
       "チャットに戻り、依頼する。確実に使わせたいときはスキル名を添える"
     ],
-    "example": "（設定でスキルをオンにした後）「〇〇スキルを使って、この内容をスライドにして。」のように、スキル名を入れて依頼すると確実。",
+    "example": "（Customize でスキルをオンにした後）「〇〇スキルを使って、この内容をスライドにして。」のように、スキル名を入れて依頼すると確実。",
     "caution": "オンにし忘れると名指ししても発動しない。逆に関係ないスキルを大量にオンにすると選択がぶれる原因になるので、使うものに絞る。スキル自体が表示されない場合は利用環境（プランや機能の有無）による。",
     "relatedSession": "第1回",
     "relatedSections": [
@@ -5387,11 +5387,11 @@ const TIPS = [
     "category": "⚡ Claude Code 個別",
     "level": "intermediate",
     "title": "配布されたSkillはファイルから取り込んで使う",
-    "summary": "スキルはファイル（ZIPまたはスキルファイル）として保存・配布できる。同僚や講師が作ったスキルを受け取ったら、設定から取り込んで自分の環境で使える。",
+    "summary": "スキルはファイル（ZIPまたはスキルファイル）として保存・配布できる。同僚や講師が作ったスキルを受け取ったら、Customize から取り込んで自分の環境で使える。",
     "whenToUse": "同僚や講師から配布されたスキルファイルを使いたいとき。自分が作ったスキルを保存して、別の環境でも使い回したいとき。",
     "howToUse": [
       "自分で作ったスキルは、画面から「ファイルとして保存」する（受け取った場合は、もらったファイルを用意する）",
-      "Claudeの設定を開き、「機能」の画面で「追加」を選ぶ",
+      "左上の「Customize」を開き、「スキル」の画面で「追加」を選ぶ",
       "スキルファイル（ZIPまたはスキルファイル）をアップロードする",
       "取り込んだスキルを名前で名指しして、実行できるか確認する"
     ],
